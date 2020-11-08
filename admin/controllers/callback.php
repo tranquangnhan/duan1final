@@ -5,7 +5,7 @@
     
  $app_id = "782652022521704";
  $app_secret = "0acc6c7b870b57493bb5cfb65d618487";
- $redirect_uri = urlencode("http://localhost/thuexeasm/controller/callback.php");    
+ $redirect_uri = urlencode("http://localhost/duan1final/controller/callback.php");    
  
  // Get code value
  $code = $_GET['code'];

@@ -1,6 +1,6 @@
 <?php
 define('HOST_DB','localhost');
-define('NAME_DB','thuexe');
+define('NAME_DB','datvemaybay');
 define('USER_DB','root');
 define('PASS_DB','');
 define('ROOT_URL','/duan1final');
