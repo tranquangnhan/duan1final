@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 include "../models/khachhang.php";
+include "../../system/config.php";
 include "../../system/database.php";
 include "../../lib/myfunctions.php";
 if(isset($_GET['act'])&&($_GET['act'])){
@@ -13,12 +14,10 @@ switch ($act) {
     case 'login':
     if(isset($_POST['login'])&&($_POST['login'])){
         if(checkMiddleWare($_POST['token'])){//check token
-            if(!test_input($_POST['user']) || !test_input($_POST['pass']) ) {// check ký tự đb
-                $canhbao = 'Không được nhập ký tự đặc biệt!';
-            }else {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
                 $checkuser = checkUser($user,$pass);
+               
                 if(is_array($checkuser)){
                     //đăng nhâp thành công
                     $_SESSION['sid'] = $checkuser['id'];
@@ -32,7 +31,6 @@ switch ($act) {
                 else{
                     $canhbao = '<h6 style="color:red">Mày là ai mà xâm nhập vào đây</h6>';
                 }
-            }
         }else{
             $canhbao = '<h6 style="color:red">Thằng chó hack web tao</h6>';
         }

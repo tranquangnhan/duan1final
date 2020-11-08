@@ -7,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <base href="/thuexeasm/admin/">
+    <base href="/duan1final/admin/">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,7 +25,7 @@
                 <p>Chào mừng bạn đến với trang web hiện đại nhất hiện nay!</p>
                 <div class="btn-face mt-4">
                     <ul class="yoo-social-area yoo-style1 yoo-mp0">
-                        <li><a href="https://www.facebook.com/dialog/oauth?client_id=782652022521704&redirect_uri=http://localhost/thuexeasm/admin/controllers/callback.php&scope=public_profile" class="btn btn-primary  btn-dn"><i class="fa fa-facebook-f mr-4"></i><span>Đăng Nhập Với Facebook</span></a></li>
+                        <li><a href="https://www.facebook.com/dialog/oauth?client_id=782652022521704&redirect_uri=http://localhost/duan1final/admin/controllers/callback.php&scope=public_profile" class="btn btn-primary  btn-dn"><i class="fa fa-facebook-f mr-4"></i><span>Đăng Nhập Với Facebook</span></a></li>
                         <li><a href="#" class="btn btn-danger mt-3  btn-dn"><i class="fa fa-google mr-4"></i><span>Đăng Nhập Với Google</span></a></li>
                     </ul>
                 </div>

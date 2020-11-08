@@ -33,7 +33,8 @@ function editUser($id,$name,$pass,$hoten,$kichhoat,$img,$email,$vaitro,$anhien){
     execute1($sql);  
 }
 function checkUser($user,$pass){
-    $sql = "select * from khachhang where user='{$user}' and pass='{$pass}'";
-    return result1(1,$sql);
+    $sql = "select * from khachhang where user=? and pass=?";
+    return result1(1,$sql,$user,$pass);
 }
+
 ?>

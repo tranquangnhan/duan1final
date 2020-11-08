@@ -3,17 +3,10 @@ session_start();
 ob_start();
 require_once "../system/config.php";
 require_once "../system/database.php";
-require_once "models/hanghoa.php";
 require_once "models/loaihang.php";
-require_once "models/user.php";
-require_once "models/blog.php";
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
-$showSpNoiBat = showSpNoiBat();
-$showSpMoi = showSpMoi();
-$showAllDm = showAllDm();
-$showAllBlog = showAllBlog(3);
-$showAllBlog2 = showAllBlog2(3);
+
 require_once "views/layouts/header.php";
 
 if(isset($_GET['act'])){
