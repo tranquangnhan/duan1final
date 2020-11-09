@@ -8,8 +8,8 @@
         return result1(1,$sql);
     }
     function showSpEdit($id){
-        $sql = "select * from sanpham where id = '{$id}' ";
-        return result1(1,$sql);
+        $sql = "select * from sanpham where id = ?";
+        return result1(1,$sql,$id);
     }
     function showAllTenDm(){
         $sql = "select * from danhmuc where 1 limit 10";
