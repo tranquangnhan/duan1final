@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins";
+    font-size: 0.9vw;
+    line-height: 23px;
+}
+
+.float-right {
+    float: right!important;
+}
+
+header {
+    width: 100%;
+    box-shadow: 0px 0px 32px -8px #858585;
+    min-height: 97px;
+}
+
+.background-blue-color {
+    background-color: #fdbe19;
+    height: 40px !important;
+}
+
+.padding-tb-5px {
+    padding: 5px 0px;
+}
+
+.line_h_28 {
+    padding-top: 0.3rem;
+}
+
+header .header-in {
+    position: relative;
+}
+
+.margin-tb-10px {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.font-size {
+    font-size: 0.8vw;
+}
+
+header ul.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.navbar-nav>li>a {
+    font-weight: bold;
+    color: #000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+}
+
+.box_header {
+    width: 100%;
+}
+
+.active>a {
+    color: #1db8c1!important;
+}
+
+.color_main {
+    color: #1db8c1!important;
+}
+
+.title {
+    color: #F44336;
+}
+
+.baner-gb {
+    width: 100%;
+    height: 555px;
+    background-repeat: no-repeat;
+    background-image: url(../img/02fc2-ba_6.jpg);
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 20;
+}
+
+.mr-top58 {
+    margin-top: -5.8%;
+}
+
+.form-booking {
+    background: white;
+    box-shadow: 0px 0px 32px -8px #858585;
+    padding: 30px;
+}
+
+.filght {
+    color: #fff;
+    background-color: #1db8c1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.background-main-color {
+    background-color: #1db8c1;
+}
+
+.a_filght {
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+.padding-30px {
+    padding: 30px;
+}
+
+.margin-top-30px {
+    margin-top: 30px;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.padding-7px {
+    padding: 7px;
+}
+
+.background-wite {
+    background: white;
+}
+
+.box-shadow {
+    box-shadow: 0px 0px 32px -8px #858585;
+}
+
+.z-index-100 {
+    z-index: 100;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+input {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: solid 1px #eee;
+    outline: none;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 7.5%;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: none;
+}
+
+.box_main {
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.section-title-center span.section-title-des:after {
+    content: " ";
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 10px;
+    border-bottom: solid 1px #fdbe19;
+    margin: auto;
+}
+
+.background-light-grey {
+    background-color: #FAFAFA;
+}
+
+.rating ul li {
+    display: inline-block;
+    background-image: url(../img/start-black.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.hotel-grid .hotel-img {
+    position: relative;
+    overflow: hidden;
+    height: 168px;
+}
+
+.padding-20px {
+    padding: 20px;
+}
+
+.te-al-left {
+    text-align: left;
+}
+
+.text-grey-2 {
+    color: #9E9E9E;
+}
+
+.text-third-color {
+    color: #F44336;
+}
+
+.padding-right-5px {
+    padding-right: 5px;
+}
+
+.fz-14vw {
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+.font-small {
+    font-size: 0.7vw;
+}
+
+.font-medium {
+    font-size: 1.2vw;
+}
+
+.cl-grey {
+    color: #9E9E9E;
+}
+
+.mr-top-10 {
+    margin-top: 10%;
+}
+
+.mr-tb-2 {
+    margin: 2% 0px;
+}
+
+.mr-top_-20 {
+    margin-top: -9%;
+}
+
+.pd-0 {
+    padding-right: 0px!important;
+}
