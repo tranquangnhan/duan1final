@@ -1,0 +1,117 @@
+main {
+    width: 100%;
+    font-family: 'roboto';
+}
+.cl-grey1 {
+    color: #000000;
+    opacity: 0.9;
+}
+.bg-color-grey {
+    background-color: #eeeded;
+}
+.ps-relative {
+    position: relative;
+} 
+.z-id-10 {
+    z-index: -10;
+}
+.op-0p9 {
+    opacity: 0.9;
+}
+.opacity-0p5 {
+    color: black;
+    opacity: 0.5;
+}
+header {
+    position: relative;
+    z-index: 10;
+}
+.box-right {
+    width: 72%;
+    height: auto;
+    margin-left: 3%;
+}
+.bg-grey-2 {
+    background: #f1f1f1;
+}
+.pd-t-5pt {
+    padding-top: 5%;
+}
+.box-left {
+    height: auto;
+}
+.title-box-left>span {
+    text-align: center;
+    padding: 0px 10px;
+    background: white;
+    position: relative;
+    z-index: 20;
+}
+.title-box-left {
+    position: relative;
+}
+.title-box-left:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    height: 1px;
+    width: 100%;
+    background-color: #eeeded;
+}
+.bg-cl-main {
+    background-color: #1db8c1;
+}
+.cl-white {
+    color: white;
+}
+.cl-t-grey {
+    color: #424242;
+}
+.W-100 {
+    width: 100%;
+}
+.broder-none {
+    border: none;
+}
+.border-radius-2 {
+    border-radius: 2px;
+}   
+.font-family-poppins {
+    font-family: "Poppins";
+}
+.fz-1vw {
+    font-size: 1vw;
+}
+.fz-0p9vw {
+    font-size: 0.9vw;
+}
+.mr-tb-4pt {
+    margin: 4% 0px;
+}
+.pd-t-5px {
+    padding-top: 5px;
+}
+.border-grey1 {
+    border: 1px solid #eeeded;
+}
+.box_ve {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.box_ve:hover {
+    box-shadow: 0px 1px 16px -9px #858585;
+}
+.mr-0px {
+    margin: 0px;
+}
+.bt-booking {
+    background: #dfdfdf;
+    color: rgb(182, 182, 182);
+}
+.fz-1rem {
+    font-size: 1rem
+}
+.fz-0p7rem {
+    font-size: 0.7rem;
+}

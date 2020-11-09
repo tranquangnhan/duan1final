@@ -17,14 +17,17 @@ function connect(){
       echo "Lỗi Kết Nối database: " . $e->getMessage();
     }
 }
-
+// hàm này có chức năng truy vấn dữ liệu
+// truyền vào 2 hoặc nhiều hơn các giá trị
+// tham số đầu tiên: 0 là trả về tất cả sản phẩm, 1 là chỉ trả về 1 sản phẩm
+// tham số thứ 2 là câu sql
 function result1($fe,$sql){ 
     $sqlValue = array_slice(func_get_args(),2);
     try {
-        $conn = connect(); 
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($sqlValue);
-        if($fe==0)return $stmt->fetchAll();elseif($fe==1)return $stmt->fetch(PDO::FETCH_ASSOC);
+        $conn = connect(); //connect database
+        $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+        $stmt->execute($sqlValue);// thực thi
+        if($fe===0)return $stmt->fetchAll();elseif($fe===1)return $stmt->fetch(PDO::FETCH_ASSOC);// nếu tham số đầu tiên ===0 trả về tất cả sản phẩm, === 1 trả về 1 sản phẩm
     } catch (PDOException $e) {
         echo "Lỗi: " . $e->getMessage();
     }

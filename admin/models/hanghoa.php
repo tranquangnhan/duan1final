@@ -7,10 +7,14 @@
         $sql = "select count(*) as slhh from sanpham";
         return result1(1,$sql);
     }
+
+
     function showSpEdit($id){
         $sql = "select * from sanpham where id = ?";
         return result1(1,$sql,$id);
     }
+
+    
     function showAllTenDm(){
         $sql = "select * from danhmuc where 1 limit 10";
         return result1(0,$sql);
