@@ -138,7 +138,7 @@ if(isset($_GET['act'])){
             }
         break;
         case 'kichhoat':
-            if(isset($_GET['id'])&&isset($_GET['rd'])){
+            if(isset($_GET['id'])&&isset($_GET['rd'])){//rd -> random   
                 $id = $_GET['id'];
                 $rd = $_GET['rd'];
                 $user = user($id);
