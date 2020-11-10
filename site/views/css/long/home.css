@@ -251,6 +251,10 @@ a:hover {
     color: #9E9E9E;
 }
 
+.cl-grey {
+    color: red;
+}
+
 .box-map {
     background-color: #eeeded;
     min-height: 535px;

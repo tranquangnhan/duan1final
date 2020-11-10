@@ -39,15 +39,6 @@ $thutu = $showDmedit['thutu'];
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Thứ Tự</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="number" name="thutu" id=""  value="<?=$thutu?>" class="form-control" placeholder="Nhập Thứ Tự"
-                                        aria-describedby="helpId" required>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
                                     <label for=""><strong>Ẩn Hiện</strong></label>
                                 </div>
                                 <div class="col-lg-9">

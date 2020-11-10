@@ -18,12 +18,14 @@
     
                 echo json_encode($Return);
                 return;
-            case 'CheckEmailNameExist':
+            case 'CheckEmailNamePhoneExist':
                 $Return = array();
                 if(is_array(IsExist ($_POST['Login']))){
                     $Return['StatusCode'] =1;
                 }elseif(is_array(checkEmailTonTai($_POST['email']))){
                     $Return['StatusCode'] =2;
+                }elseif(is_array(checkPhoneTonTai($_POST['phone']))){
+                    $Return['StatusCode'] =3;
                 }else{
                     $Return['StatusCode'] =0;
                 }
@@ -33,15 +35,15 @@
             case 'signup':
                 $Return = array();
                 $userName = trim(stripTags($_POST['username']));
+                $phone = trim(stripTags($_POST['phone']));
                 $email = trim(stripTags($_POST['email']));
                 $passWord = trim(stripTags($_POST['password']));
 
                 $randomKey = md5(rand(0,99999));
                 $active = 0;
                 
-                $Return['StatusCode'] = (int)(is_array(addUser($userName,$passWord,$active,$email,$randomKey)) ? 0 : 1);
-            
                 
+                $Return['StatusCode']  = (int) addUser($userName,$passWord,$active,$email,$phone,$randomKey) ? 1 : 0;
                 echo json_encode($Return);
 
                 $gansi = checkUser($userName,$passWord);
@@ -57,8 +59,7 @@
                 $linkKH = sprintf($linkKH,$idUser, $randomKey);
                 $body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: ". $linkKH;
                 sendMail($userName,$passWord,$from,$email,$user,$title,$subject,$body);
-                // end mail
-                 
+                //end mail
                 return;
             break;
             default:

@@ -9,15 +9,14 @@
     }
     function xoaDanhMuc($id){
         $sql = "DELETE FROM danhmuc WHERE id=".$id;
+        return exec1($sql);
+    }
+    function addCategories($name,$anhien){
+        $sql = "INSERT INTO danhmuc(name,anhien) values('{$name}','{$anhien}')";
         exec1($sql);
     }
-    function addCategories($name,$thutu,$anhien){
-        $sql = "INSERT INTO danhmuc(name,thutu,anhien) values('{$name}','{$thutu}','{$anhien}')";
-        exec1($sql);
-        echo $sql;
-    }
-    function updateCategories($id,$name,$thutu,$anhien){
-        $sql = "UPDATE danhmuc SET name='{$name}',thutu='{$thutu}',anhien='{$anhien}' WHERE id='{$id}'";
+    function updateCategories($id,$name,$anhien){
+        $sql = "UPDATE danhmuc SET name='{$name}',anhien='{$anhien}' WHERE id='{$id}'";
         execute1($sql);
     }
     function showDmEdit($id){

@@ -20,14 +20,12 @@
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
                 $id = $_SESSION['idedit'];
                 $name = stripTags($_POST['name']);
-                $thutu = $_POST['thutu'];
                 $anhien = $_POST['anhien'];
-                settype($thutu,"int");
                 settype($anhien,"int");
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    updateCategories($id,$name,$thutu,$anhien);
+                    updateCategories($id,$name,$anhien);
                 }else{
-                    addCategories($name,$thutu,$anhien);
+                    addCategories($name,$anhien);
                 }
                 header("location: index.php?ctrl=loaihang&act=index");
             }

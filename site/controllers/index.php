@@ -40,6 +40,7 @@ if(isset($_GET['act'])){
             require_once 'views/shop.php';
             break;
         case 'login':
+          
             if(isset($_POST['login'])&&($_POST['login'])&&($_SERVER["REQUEST_METHOD"] == "POST")){
                         $user = trim(stripTags(test_input($_POST['user'])));
                         $pass = trim(stripTags(test_input($_POST['pass'])));
@@ -65,6 +66,7 @@ if(isset($_GET['act'])){
         require_once "views/login.php";
         break;
         case 'signup':
+            echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             if(isset($_POST['signup'])&&($_POST['signup'])&&($_SERVER["REQUEST_METHOD"] == "POST")){
                         $user = trim(stripTags(test_input($_POST['user'])));
                         $pass = trim(stripTags(test_input($_POST['pw1'])));
@@ -126,6 +128,7 @@ if(isset($_GET['act'])){
                         }
             }
         require_once "views/signup.php";
+        echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
         break;
         case 'user':
             if(isset($_GET['logout'])&&($_GET['logout'])==1){

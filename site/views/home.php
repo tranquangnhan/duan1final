@@ -1,4 +1,87 @@
-
+<div class="box_header">
+    <div class="baner-gb position-relative">
+      <div class="owl-carousel owl-theme owl-loaded">
+        <div class="owl-stage-outer">
+            <div class="owl-stage">
+                <div class="owl-item">
+                  <div class="pn1-img"></div>
+                  <img src="views/img/panner1.jpg" alt="">
+                  <div class="anim-pn1">
+                    <div class="anim1-pn1 animated fadeInDownBig light-hight-50px">Chúng tôi <br>  Muốn </div>
+                    <div class="animate-delay-0p4s anim2-pn1 animated fadeInRightBig">Khách hàng / Nhanh chóng / Đẳng cấp</div>
+                    <div class="animate-delay-0p7s anim3-pn1 animated fadeInRightBig">Mọi thứ bạn cần. Ở đâu rẻ hơn Travelz hoàn tiền. </div>
+                    <a href="#" class=""><div class="animate-delay-0p9s anim4-pn1 animated fadeInRightBig">Đặt vé hôm nay</div></a>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="pn2-img"></div>
+                  <img src="views/img/panner2.jpg" alt="">
+                  <div class="anim-pn2">
+                    <div class="anim1-pn2 animated fadeInUp">All Day Happy</div>
+                    <div class="animate-delay-0p4s anim2-pn2 animated fadeInUp"><img src="views/img/5saodiscount.png" alt=""></div>
+                    <div class="animate-delay-1s anim3-pn2 animated fadeInUp">info@travlez.com <br>  +222 123 333 019  <br>  usa california build no 10236 </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="pn2-img"></div>
+                  <img src="views/img/panner3.jpg" alt="">
+                  <div class="anim-pn3">
+                    <div class="anim1-pn3 animated fadeInDown">plans your trip</div>
+                    <div class="animate-delay-0p7s anim2-pn3 animated fadeInUp"><img src="views/img/86311-Holidays-today.png" alt=""></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    <div class="background-light-grey">
+      <div class="container">
+        <div id="search-filter-2" class="pull-top-8pt z-index-100 position-relative">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item filght mr-right-1pt" id="li-khuhoi">
+              <a class="nav-link a_filght text-white active show" id="a-khuhoi" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane-arrival"></i> Chuyến đi khứ hồi</a>
+            </li>
+            <li class="nav-item filght mr-right-1pt" id="li-motchieu">
+              <a class="nav-link a_filght text-white" id="a-motchieu" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane-departure"></i> Một chiều</a>
+            </li>
+          </ul>
+          <div class="padding-30px box-shadow background-white">
+            <div class="active" id="home" role="tabpanel">
+              <div class="row">
+                <div class="form-group col-lg-2" id="noiden">
+                  <label>Địa điểm</label>
+                  <div class="destination"><input type="text" class="input-text full-width" placeholder="Nhập Địa Điểm"></div>
+                </div>
+                <div class="form-group col-lg-2"id="noiden">
+                  <label>Nơi đến</label>
+                  <div class="destination"><input type="text" class="input-text full-width" placeholder="Nhập Địa Điểm"></div>
+                </div>
+                <div class="form-group col-lg-2" id="khoihanh">
+                  <label>Khởi hành</label>
+                  <div class="date-input"><input type="date" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017" id="dp1604379882087"></div>
+                </div>
+                <div class="form-group col-lg-2" id="trove">
+                  <label>Trở Về</label>
+                  <div class="date-input"><input type="date" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017" id="dp1604379882087"></div>
+                </div>
+                <div class="col-lg-2">
+                  <label>Vé</label>
+                  <div class="ticket"><input type="text" class="input-text full-width" placeholder="1"></div>
+                </div>
+                <div class="col-lg-2">
+                  <label>Trẻ em</label>
+                  <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+                </div>
+                <div class="col-lg-2 mr-0-at">
+                  <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> Flight Search</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <div class="box_main background-light-grey">
     <div class="container pd-bot-100px">
       <div class="section-title-center">

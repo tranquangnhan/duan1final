@@ -21,7 +21,6 @@
                         <thead class="thead-inverse">
                             <tr>
                                 <th width="200">#</th>
-                                <th width="200">Thứ Tự</th>
                                 <th width="400">Tên Danh Mục</th>
                                 <th width="300">Ẩn Hiện</th>
                                 <th width="300">Hành Động</th>
@@ -44,7 +43,6 @@
                                 ?>
                                 <tr>
                                     <td><?=$i?></td>
-                                    <td><?=$motdm['thutu']?></td>
                                     <td><?=$motdm['name']?></td>
                                     <td><input type="radio" <?=$anhien?>> </td>
                                     <td>

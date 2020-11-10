@@ -1,7 +1,6 @@
 <?php
 function connect(){
     try {
-
         $ConnectionOption = array
             (
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
@@ -31,17 +30,29 @@ function result1($fe,$sql){
     } catch (PDOException $e) {
         echo "Lỗi: " . $e->getMessage();
     }
+    finally{
+        unset($conn);
+    }
 }
-
-
 function exec1($sql){//thêm, xoá ....
-    $conn = connect();
-    $result = $conn->exec($sql);
-    return $result;
+    $sqlValue = array_slice(func_get_args(),1);
+    try {
+        $conn = connect(); //connect database
+        
+        $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+
+        $stmt->execute($sqlValue);// thực thi
+
+        return true;
+    } catch (PDOException $e) {
+        echo "Lỗi: " . $e->getMessage();
+    }
 }
 function execute1($sql){ //update
+    $sqlValue = array_slice(func_get_args(),2);
     $conn = connect();
     $stmt = $conn->prepare($sql);
-    $stmt->execute();
+    $result = $stmt->execute($sqlValue);
+    return $result;
 } 
 ?>
