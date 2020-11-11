@@ -1,14 +1,10 @@
 
 <?php
-    function showAllLuotXem(){
-        $sql = "select sum(luotxem) as luotxem from hoadon";
+    function showkh(){
+        $sql = "select * from khachhang where 1 limit 10";
         return result1(1,$sql);
     }
-    function showAllHangHoa(){
-        $sql = "select count(*) as slhh from hoadon";
-        return result1(1,$sql);
-    }
-    function showSpEdit($id){
+    function showhdedit($id){
         $sql = "select * from hoadon where id = '{$id}' ";
         return result1(1,$sql);
     }
@@ -16,7 +12,7 @@
         $sql = "select * from danhmuc where 1 limit 10";
         return result1(0,$sql);
     }
-    function showAllSp(){
+    function showallhd(){
         $sql = "select * from hoadon where 1 limit 10";
         return result1(0,$sql); 
     }
@@ -26,7 +22,7 @@
     }
     // admin add product
     function addhoadon($hotenkh,$ngaydatve,$trangthai,$makh){
-        $sql = "INSERT INTO hoadon (hotenKH,ngaydatve,trangthai,idkh) VALUES 
+        $sql = "INSERT INTO hoadon (hotenkh,ngaydatve,trangthai,idkh) VALUES 
         ('{$hotenkh}','{$ngaydatve}','{$trangthai}','{$makh}')";
         exec1($sql);
     }

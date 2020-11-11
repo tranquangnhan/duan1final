@@ -1,5 +1,5 @@
 <?php
-    include_once "../global.php";
+    require_once "../global.php";
       // start mailer
       use PHPMailer\PHPMailer\PHPMailer;
       use PHPMailer\PHPMailer\Exception;

@@ -8,7 +8,7 @@
     require_once "views/layouts/header.php";
     require_once "models/allmodel.php";
     // require controllers
-    define('ARR_CONTROLLER',["home","hanghoa","loaihang","binhluan","khachhang","baiviet","ve"]);
+    define('ARR_CONTROLLER',["home","hanghoa","loaihang","binhluan","khachhang","baiviet","ve","hoadon"]);
     $ctrl = 'home';
     if(isset($_GET['ctrl'])==true) $ctrl=$_GET['ctrl'];
     if(in_array($ctrl,ARR_CONTROLLER)==false) die("Không thấy địa chỉ not found 404");

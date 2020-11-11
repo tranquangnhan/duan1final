@@ -1,4 +1,4 @@
-div class="col-lg-9">
+<div class="col-lg-9">
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
@@ -28,7 +28,7 @@ div class="col-lg-9">
                                     <label for=""><strong>Ảnh Sản Phẩm</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <img src="views/img/avt.png" alt="">
+                                    <img src="" alt="">
                                     <input type="file" class="form-control-file" name="img[]" id="" placeholder="" required multiple>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ div class="col-lg-9">
                                     <label for=""><strong>Danh Mục</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="iddm" id="" required>
+                                    <select class="custom-select form-control" name="iddm" id="" >
                                         <option selected value="">Chọn </option>
                                         <?php
                                         foreach ($showdmve as $dm) {
@@ -72,51 +72,26 @@ div class="col-lg-9">
                                     <input class="form-control" type="number" name="giamgia" value="" id="">
                                 </div>
                             </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Điểm Đi</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="diemdi" id="diemdi" required>
-                                        <option selected value="">Chọn </option>
-                                        <option value="0">Hồ Chí Minh</option>
-                                        <option value="1">Hà Nội</option>
-                                        <option value="2">Đà Nẵng</option>
+                         
 
+                            <div class="row mt-4">
+                                    <div class="col-lg-3">
+                                        <label for=""><strong>Thời Gian Đi</strong></label>
+                                    </div>
+                                    <div class="col-lg-9">
+                                    <input class="form-control" name="tgdi" type="datetime-local" value="" id="">                                    </div>
                                 </div>
-                            </div>
-                            
+                                <div class="row mt-4">
+                                    <div class="col-lg-3">
+                                        <label for=""><strong>Thời Gian Đến</strong></label>
+                                    </div>
+                                    <div class="col-lg-9">
+                                    <input class="form-control" name="tgden" type="datetime-local" value="" id="">                                    </div>
+
+                                    </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Điểm Đến</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="diemdi" id="diemdi" required>
-                                        <option selected value="">Chọn </option>
-                                        <option value="0">Hồ Chí Minh</option>
-                                        <option value="1">Hà Nội</option>
-                                        <option value="2">Đà Nẵng</option>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Thời Gian Đi</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="date" name="tgdi" value="" id="" >
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Thời Gian Đến</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="date" name="tgden" value="" id="">
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Hành Lý</strong></label>
+                                    <label for="hanhly"><strong>Hành Lý</strong></label>
                                 </div>
                                 <div class="col-lg-9 d-flex">
                                     <div class="form-check mr-4">
@@ -139,43 +114,51 @@ div class="col-lg-9">
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Giải Trí</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="text" name="giaitri" id="" class="form-control" placeholder="Giải Trí" aria-describedby="helpId">
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Xuất Ăn</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="radio" name="xuatan" value="1" id="" class="form-check-input" aria-describedby="helpId">
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Loại Máy Bay</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="loaimaybay" id="loaimaybay">
-                                        <option selected value="">Chọn </option>
-                                        <option value="0">Vietnam Airlines</option>
-                                        <option value="1">Viet Jet</option>
-                                        <option value="2">Bamboo</option>
-                                </div>
-                            </div>
 
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Suất ăn</strong></label>
+                                </div>
+                                <div class="col-lg-9 d-flex">
+                                    <div class="form-check mr-4">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="suatan" value="0" id="" checked>
+                                            Có
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="suatan" value="2" id="">
+                                            Không
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-9 ">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <a href="index.php?ctrl=loaihang&act=index"> <input type="button" name="" id="" value="Huỷ" class="btn btn-cancel"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 pr-2 mr-2">
+                                            <div class="form-group">
+                                                <input type="submit" name="them" id="" value="Thêm Vé"
+                                                    class="btn btn-submit text-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-
-
-
-
                     </div>
+               
             </div>
+
             </form>
         </div>
     </div>

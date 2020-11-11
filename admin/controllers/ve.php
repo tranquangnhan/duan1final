@@ -6,17 +6,18 @@
     }
     switch ($act) {
         case 'index':
-            $showAllSp = showAllSp();
-            include_once "views/hanghoaindex.php";
+            $showAllve = showAllve();
+            include_once "views/veindex.php";
         break;
         case 'add':
             $showdmsp = showAllTenDm();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
-                $showspedit = showSpEdit($_SESSION['idedit']);
+                $showveedit = showveedit($_SESSION['idedit']);
                 include_once "views/veedit.php";
             }else{
                 include_once "views/veadd.php";
+               
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
                 $allFile = $_FILES['img'];
@@ -27,15 +28,12 @@
                 // $slug = convert_name($name);
                 $gia = $_POST['gia'];
                 $giamgia = $_POST['giamgia'];   
-                $diemdi =stripTags( $_POST['diemdi']); 
-                $diemden =stripTags( $_POST['diemden']);
-                $loaighe =stripTags( $_POST['loaighe']);
+                // $diemdi =stripTags( $_POST['diemdi']); 
+                // $diemden =stripTags( $_POST['diemden']);
+                // $loaighe =stripTags( $_POST['loaighe']);
                 $tgdi = $_POST['tgdi']; 
                 $tgden = $_POST['tgden']; 
-                $hanhly = $_POST['hangly'];
-                $giaitri = stripTags($_POST['giaitri']);
-                $loaimaybay = stripTags($_POST['loaimaybay']);
-              
+                $hanhly = $_POST['hanhly'];
                 if(isset($_POST['xuatan'])&&($_POST['xuatan'])){
                     $xuatan = $_POST['xuatan'];
                 }else{
@@ -45,15 +43,16 @@
                 settype($iddm,"int");
                 settype($giamgia,"int");
                 settype($gia,"int");
-                settype($tgdi,"int");
-                settype($tgden,"int");
+                settype($tgdi,"datetime");
+                settype($tgden,"datetime");
                 settype($hanhly,"int");  
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    updateProduct($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly,$giaitri,$loaimaybay); 
+                    updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly); 
                 }else{
-                    addProduct($img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly,$giaitri,$loaimaybay);
+                    // addve($img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
+                    addve($img,$iddm,$tenmaybay,$gia,$giamgia,$tgdi,$tgden,$hanhly);
                 }
-                header("location: index.php?ctrl=hanghoa&act=index");
+                header("location: index.php?ctrl=ve&act=index");
             }
         break;
         case 'del':
@@ -61,8 +60,8 @@
                 $id = $_GET['iddel'];
                 xoaSanPham($id);
             }
-        $showAllSp = showAllSp();
-        include_once "views/hanghoaindex.php";
+            $showAllve = showAllve();
+        include_once "views/veindex.php";
         break;
             default:
                 break;
