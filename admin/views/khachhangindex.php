@@ -20,13 +20,21 @@
                                     <table class="table table-striped table-inverse table-responsive">
                                         <thead class="thead-inverse">
                                             <tr>
+                                                <th>STT</th>
                                                 <th>ID</th>
+                                                <th >User</th>
+                                                <th >role</th> 
+                                                <th>pass</th>
+                                                <th>Kích Hoạt</th>
+                                                <th>Ngày Sinh</th> 
+                                                <th>Email</th>
+                                                <th>Số Điện Thoại</th>
+                                                <th>Địa Chỉ</th>
+                                                <th>Thành Phố</th>
+                                                <th>Quốc Gia</th>
+                                                <th>Tích Điểm</th>
+                                                <th>randomkey</th>
                                                 
-                                                <th >Mã Hóa Đơn</th>
-                                                <th >Họ Tên Khách Hàng</th> 
-                                                <th>Ngày Đặt Vé</th>
-                                                <th>Trạng Thái</th>
-                                                <th>Mã Khách Hàng</th> 
                                          
                                             </tr>
                                         </thead>
@@ -34,19 +42,28 @@
                                         <tbody id="result">
                                                    <?php
                                 $i=0;
-                                foreach ($showallhd as $hd) {
+                                foreach ($showallkh as $kh) {
                                     $i++;
-                                 $id=$hd['id'];
-                                    $linkdel = "index.php?ctrl=hoadon&act=del&iddel=".$id;
-                                    $linkedit = "index.php?ctrl=hoadon&act=add&idedit=".$id;        
+                                    $id=$kh['id'];
+                                    $linkdel = "index.php?ctrl=khachhang&act=del&iddel=".$id;
+                                    $linkedit = "index.php?ctrl=khachhang&act=add&idedit=".$id;        
                                 ?>
                                 <tr>
                                     <td><?=$i?></td>  
-                                    <td><?=$hd['id']?></td>
-                                    <td><?=$hd['hotenkh']?></td>
-                                    <td><?=$hd['ngaydatve']?></td>
-                                    <td><?=$hd['trangthai']?></td>
-                                    <td><?=$hd['idkh']?></td>
+                                    <td><?=$kh['id']?></td>
+                                    <td><?=$kh['user']?></td>
+                                    <td><?=$kh['role']?></td>
+                                    <td><?=$kh['pass']?></td>
+                                    <td><?=$kh['kichhoat']?></td>
+                                    <td><?=$kh['ngaysinh']?></td>
+                                    <td><?=$kh['email']?></td>
+                                    <td><?=$kh['sodienthoai']?></td>
+                                    <td><?=$kh['diachi']?></td>
+                                    <td><?=$kh['thanhpho']?></td>
+                                    <td><?=$kh['quocgia']?></td>
+                                    <td><?=$kh['tichdiem']?></td>
+                                    <td><?=$kh['randomkey']?></td>
+
                                     
                     
                                     <td>

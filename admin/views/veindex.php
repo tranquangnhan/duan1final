@@ -33,9 +33,9 @@
                                                 <th >Thời Gian Đi</th>
                                                 <th >Thời Gian Đến</th>
                                                 <th >Hành Lý</th>
-                                                <th >Giải Trí</th>
-                                                <th >Xuất Ăn</th>                                               
-                                                <th>Loại Máy Bay</th>
+                                             
+                                                <th >Suất Ăn</th>                                               
+                                              
 
                                             </tr>
                                         </thead>
@@ -46,7 +46,7 @@
                                 foreach ($showAllve as $ve) {
                                     $i++;
                                     $id = $ve['id'];
-                                    $img="uploads/" .$ve['anh'];
+                                    // $img= $pathimg .$ve['anh'];
                                     $linkdel = "index.php?ctrl=ve&act=del&iddel=".$id;
                                     $linkedit = "index.php?ctrl=ve&act=add&idedit=".$id;        
                                 ?>
@@ -57,21 +57,23 @@
                                     <td><?=$ve['iddm']?></td>
                                     <td><?=$ve['gia']?></td>
                                     <td><?=$ve['giamgia']?></td>
-                                    <td><?=$ve['điemdi']?></td>
+                                    <td><?=$ve['diemdi']?></td>
                                     <td><?=$ve['diemden']?></td>
                                     <td><?=$ve['loaighe']?></td>
-                                    <td><?=$ve['timestar']?></td>
-                                    <td><?=$ve['timeend']?></td>
+                                    <td><?=$ve['tgdi']?></td>
+                                    <td><?=$ve['tgden']?></td>
                                     <td><?=$ve['hanhly']?></td>
-                                    <td><?=$ve['giaitri']?></td>
-                                    <td><?=$ve['xuatan']?></td>
-                                    <td><?=$ve['loaimaybay']?></td>
+                                   
+                                    <td><?=$ve['suatan']?></td>
+                                  
                                     <td>
                                         <a href="<?=$linkdel?>"><i class="fa fa-trash mr-3" onclick="return checkDelete()"></i></a>
                                         <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
-                              <?php }?>
+                              <?php }
+                              
+                              ?>
                                         </tbody>
                                     </table>
                                 </div>

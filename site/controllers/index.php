@@ -4,9 +4,8 @@ ob_start();
 require_once "../system/config.php";
 require_once "../system/database.php";
 require_once "models/loaihang.php";
-require_once "../global.php";
+require_once "../../global.php";
 include_once '../lib/myfunctions.php';
-
 require_once "views/layouts/header.php";
 
 if(isset($_GET['act'])){
@@ -42,7 +41,7 @@ if(isset($_GET['act'])){
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
-            echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
+            echo '<script src="views/jquery/login.js" type="text/javascript"></script>';
             break;
         case 'signup':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';

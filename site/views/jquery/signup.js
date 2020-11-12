@@ -3,15 +3,7 @@ let MailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))
 let PhoneRegex = /((09|03|07|08|05)+([0-9]{8})\b)/i;
 
 // validate user, phone, mail
-function fireErr(text) {
-    Swal.fire({
-        type: 'error',
-        title: 'Oops...',
-        text: text,
-        showConfirmButton: true,
-        showCancelButton: false,
-    });
-}
+
 $("#signup").click(async function() {
     let username2 = $("#name2").val();
     let dienthoai2 = $("#dienthoai2").val();

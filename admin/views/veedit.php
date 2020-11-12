@@ -10,6 +10,7 @@ if (is_array($showveedit)) {
         return $temp;
     }
     // $mave = $showveedit['id'];
+    $id=$showveedit['id'];
     $tenmaybay = $showveedit['tenmaybay'];
     $img = $pathimg . $showveedit['anh'];
     if (is_file($img)) {
@@ -20,34 +21,32 @@ if (is_array($showveedit)) {
     $gia =  forMatTien($showveedit['gia']);
     $giamgia = forMatTien($showveedit['giamgia']);
     $iddm = $showveedit['iddm'];
-    $xuatan = $showveedit['xuatan'];
-    if ($xuatan == "1") $chon = "checked";
+    $suatan = $showveedit['suatan'];
+    if ($suatan == "1") $chon = "checked";
     else $chon = "";
-    $diemdi = $showveedit['diemdi'];
-    if ($diemdi = 0 || $diemdi = 1 || $diemdi = 2) {
-        $chonddi = "selected";
-    } else $chonddi = "";
-    $diemden = $showveedit['diemden'];
-    if ($diemden = 0 || $diemden = 1 || $diemden = 2) {
-        $chondden = "selected";
-    } else $chondden = "";
+    // $diemdi = $showveedit['diemdi'];
+    // if ($diemdi = 0 || $diemdi = 1 || $diemdi = 2) {
+    //     $chonddi = "selected";
+    // } else $chonddi = "";
+    // $diemden = $showveedit['diemden'];
+    // if ($diemden = 0 || $diemden = 1 || $diemden = 2) {
+    //     $chonden = "selected";
+    // } else $chonden = "";
     $loaighe = $showveedit['loaighe'];
     if ($loaighe = 0 || $loaighe = 1 || $loaighe = 2) {
         $chonghe = "selected";
     } else $chonghe = "";
-    if ($hanhly == "0") $chon = "checked";
+    $hanhly = $showveedit['hanhly'];
+    if ($hanhly == "0") $chonhl = "checked";
     else $chonhl = "";
-    if ($hanhly == "1") $chon = "checked";
+    if ($hanhly == "1") $chonhl = "checked";
     else $chonhl = "";
-    if ($hanhly == "2") $chon = "checked";
-    else $chon = "";
-    $tgdi = $showveedit['timestar'];
-    $tgden = $showveedit['timeend'];
+    if ($hanhly == "2") $chonhl = "checked";
+    else $chonhl = "";
+    $tgdi = $showveedit['tgdi'];
+    $tgden = $showveedit['tgden'];
     $iddm = $showveedit['iddm'];
-    $loaimaybay = $showveedit['loaimaybay'];
-    if ($loaimaybay = 0 || $loaimaybay = 1 || $loaimaybay = 2) {
-        $chonloaimaybay = "selected";
-    } else $chonloaimaybay = "";
+
    
 ?>
     <div class="col-lg-9">
@@ -97,7 +96,7 @@ if (is_array($showveedit)) {
                                         <label for=""><strong>Danh Mục</strong></label>
                                     </div>
                                     <div class="col-lg-9">
-                                        <select class="custom-select form-control" name="iddm" id="" required>
+                                        <select class="custom-select form-control" name="iddm" id="" >
                                             <option selected value="">Chọn </option>
                                             <?php
                                             foreach ($showdmve as $dm) {
@@ -124,7 +123,7 @@ if (is_array($showveedit)) {
                                         <input class="form-control" type="number" name="giamgia" value="<?= $giamgia ?>" id="">
                                     </div>
                                 </div>
-                                <div class="row mt-4">
+                                <!-- <div class="row mt-4">
                                     <div class="col-lg-3">
                                         <label for=""><strong>Điểm Đi</strong></label>
                                     </div>
@@ -134,6 +133,7 @@ if (is_array($showveedit)) {
                                             <option <?=$chonddi?>>Hồ Chí Minh</option>
                                             <option <?=$chonddi?>>Hà Nội</option>
                                             <option <?=$chonddi?>>Đà Nẵng</option>
+                                            </select>
 
                                     </div>
                                 </div>
@@ -147,24 +147,25 @@ if (is_array($showveedit)) {
                                             <option <?=$chonden?>>Hồ Chí Minh</option>
                                             <option  <?=$chonden?>>Hà Nội</option>
                                             <option  <?=$chonden?>>Đà Nẵng</option>
+                                            </select>
                                     </div>
-                                </div>
-                                <div class="row mt-4">`
+                                </div> -->
+                                <div class="row mt-4">
                                     <div class="col-lg-3">
                                         <label for=""><strong>Thời Gian Đi</strong></label>
                                     </div>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="date" name="tgdi" value=" <?=$tgdi?>" id="">
-                                    </div>
+                                    <input class="form-control" type="datetime-local" value="<?=$tgdi?>" id="example-datetime-local-input">                                    </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-3">
                                         <label for=""><strong>Thời Gian Đến</strong></label>
                                     </div>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="date" name="tgden" value=" <?=$tgden?>" id="">
+                                    <input class="form-control" type="datetime-local" value="<?=$tgden?>" id="example-datetime-local-input">                                    </div>
+
                                     </div>
-                                </div>
+                               
                                 <div class="row mt-4">
                                     <div class="col-lg-3">
                                         <label for=""><strong>Hành Lý</strong></label>
@@ -191,33 +192,44 @@ if (is_array($showveedit)) {
                                     </div>
                                 </div>
                                 <div class="row mt-4">
-                                    <div class="col-lg-3">
-                                        <label for=""><strong>Giải Trí</strong></label>
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Suất ăn</strong></label>
+                                </div>
+                                <div class="col-lg-9 d-flex">
+                                    <div class="form-check mr-4">
+                                        <input type="radio"<?=$chon?> name="suatan" id="suatan" class="form-check-input" aria-describedby="helpId">
+                                          Có
+                                        </label>
                                     </div>
-                                    <div class="col-lg-9">
-                                        <input type="text" name="giaitri" id="" class="form-control" placeholder="Giải Trí" aria-describedby="helpId">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="suatan" value="2" id="suatan">
+                                            Không
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                           
+                              
+                            <div class="row mt-5">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-9 ">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <a href="index.php?ctrl=loaihang&act=index"> <input type="button" name="" id="" value="Huỷ" class="btn btn-cancel"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 pr-2 mr-2">
+                                            <div class="form-group">
+                                                <input type="submit" name="them" id="" value="Thêm Vé"
+                                                    class="btn btn-submit text-center">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row mt-4">
-                                    <div class="col-lg-3">
-                                        <label for=""><strong>Xuất Ăn</strong></label>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <input type="radio"<?=$chon?> name="xuatan" id="" class="form-check-input" aria-describedby="helpId">
-                                    </div>
-                                </div>
-                                <div class="row mt-4">
-                                    <div class="col-lg-3">
-                                        <label for=""><strong>Loại Máy Bay</strong></label>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <select class="custom-select form-control" name="loaimaybay" id="loaimaybay">
-                                            <option   <?=$chonloaimaybay?>>Chọn </option>
-                                            <option  <?=$chonloaimaybay?>>Vietnam Airlines</option>
-                                            <option <?=$chonloaimaybay?>>Viet Jet</option>
-                                            <option <?=$chonloaimaybay?>>Bamboo</option>
-                                    </div>
-                                </div>
+                            </div>
 
 
                             </div>

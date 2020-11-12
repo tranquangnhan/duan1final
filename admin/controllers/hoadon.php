@@ -6,21 +6,22 @@
     }
     switch ($act) {
         case 'index':
-            $showAllSp = showAllSp();
+            $showallhd = showallhd();
             include_once "views/hoadonindex.php";
         break;
         case 'add':
-            $showdmsp = showAllTenDm();
+            $showkh=  showkh();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
-                $showspedit = showSpEdit($_SESSION['idedit']);
-                include_once "views/hoadonaedit.php";
+                $showhdedit = showhdedit($_SESSION['idedit']);
+                require_once "views/hoadonedit.php";
             }else{
-                include_once "views/hoadonaadd.php";
+                require_once "views/hoadonadd.php";
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){              
                 $hotenkh = stripTags($_POST['hotenkh']);                
                 $ngaydatve = $_POST['ngaydatve'];
+                $trangthai = $_POST['trangthai'];
                 if($trangthai == 0) $trangthai='Mới order';elseif($trangthai==1) $trangthai="Thanh toán";else $trangthai="Hủy";
                 $makh = $_POST['makh']; 
                 settype($ngaydatve,"date");
@@ -32,20 +33,17 @@
                 }else{
                     addhoadon($hotenkh,$ngaydatve,$trangthai,$makh);
                 }
-                header("location: index.php?ctrl=hoadon&act=index");
+                // header("location: index.php?ctrl=hoadon&act=index");
+                    
 
             }
         break;
         case 'del':
             if(isset($_GET['iddel'])&&($_GET['iddel'])>0){
                 $id = $_GET['iddel'];
-
-                xoaSanPham($id);
-
                 xoahoadon($id);
-
             }
-        $showAllSp = showAllSp();
+            $showallhd = showallhd();
         include_once "views/hoadonindex.php";
         break;
             default:

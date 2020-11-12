@@ -5,23 +5,19 @@
                 <div class="card-body">
                     <h2 class="title">Đăng Nhập</h2>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" id="name2" placeholder="Tên tài khoản" name="name">
+                            <input class="input--style-3" type="text" id="username" placeholder="Tên tài khoản" name="name">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="password" id="password2" placeholder="Nhập mật khẩu" name="email">
+                            <input class="input--style-3" type="password" id="password" placeholder="Nhập mật khẩu" name="email">
                         </div>
-                       
-                        <div class="row">
-                            
-                            
-                            <!-- <div class="col-lg-6">
-                                <div class="form-check">
-                                    <a href="">Quên Mật khẩu ?</a>
-                                </div>
-                            </div> -->
+                        <div class="">
+                            <label for="nhomk">Nhớ mật khẩu ?</label>
+                             <input type="checkbox" name="nhomk" id="nhomk" class="div-checkbox">
+                             <a href="">Quên mật khẩu ?</a>
                         </div>
+                        
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit" id="signup">Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit" id="login">Submit</button>
                         </div>
                 </div>
             </div>
