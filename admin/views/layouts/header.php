@@ -138,11 +138,18 @@
                                     </div>
                                 </div>
                             </li>
-                            <li >
-                                <a href="" class="nav-link">
-                                    <div class="nav-main__icon"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-50.22 116.82C218.45 151.39 236.28 144 256 144s37.39 7.44 50.11 20.94c12.89 13.68 19.16 32.06 17.68 51.82C320.83 256 290.43 288 256 288s-64.89-32-67.79-71.25c-1.47-19.92 4.79-38.36 17.57-51.93zM256 432a175.49 175.49 0 01-126-53.22 122.91 122.91 0 0135.14-33.44C190.63 329 222.89 320 256 320s65.37 9 90.83 25.34A122.87 122.87 0 01382 378.78 175.45 175.45 0 01256 432z"></path></svg></div>
-                                    <div class="nav-main__text">Khách Hàng</div>
-                                </a>
+                            <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="khachhang") echo "active";?>">
+                                <div class="nav-link">
+                                    <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M440.9 136.3a4 4 0 000-6.91L288.16 40.65a64.14 64.14 0 00-64.33 0L71.12 129.39a4 4 0 000 6.91L254 243.88a4 4 0 004.06 0zM54 163.51a4 4 0 00-6 3.49v173.89a48 48 0 0023.84 41.39L234 479.51a4 4 0 006-3.46V274.3a4 4 0 00-2-3.46zM272 275v201a4 4 0 006 3.46l162.15-97.23A48 48 0 00464 340.89V167a4 4 0 00-6-3.45l-184 108a4 4 0 00-2 3.45z"></path></svg></label></div>
+                                    <div class="nav-main__text "><div id="bv" class="click_title">Khách Hàng</div>
+                                        <div class="menu-alert">
+                                            <ul>
+                                                <li><a href="index.php?ctrl=Khachhang&act=add">Thêm Mới</a></li>
+                                                <li><a href="index.php?ctrl=khachhang&act=index">Danh Sách</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="hoadon") echo "active";?>">
                                 <div class="nav-link">
