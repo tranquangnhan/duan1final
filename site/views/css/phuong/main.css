@@ -570,6 +570,10 @@ input {
     display: table-cell;
 }
 
+.form-check {
+    padding-left: 0.25rem !important;
+}
+
 @media (max-width: 767px) {
     .card-3 {
         display: block;

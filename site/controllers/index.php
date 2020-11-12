@@ -40,96 +40,15 @@ if(isset($_GET['act'])){
             require_once 'views/shop.php';
             break;
         case 'login':
-          
-            if(isset($_POST['login'])&&($_POST['login'])&&($_SERVER["REQUEST_METHOD"] == "POST")){
-                        $user = trim(stripTags(test_input($_POST['user'])));
-                        $pass = trim(stripTags(test_input($_POST['pass'])));
-                        $checkuser = checkUser($user,$pass); 
-                        if(is_array($checkuser)){ 
-                            if($checkuser['role'] == 1) {
-                                $canhbao = 'Hack à! mơ đi';
-                            }elseif($checkuser['kichhoat'] == 0){
-                                $canhbao = 'Tài Khoản Chưa Được Kích Hoạt, Vui Lòng Check Gmail!';
-                            }
-                            else{
-                                $_SESSION['sid'] = $checkuser['id'];
-                                $_SESSION['suser']= $checkuser['user'];
-                                $_SESSION['role'] = $checkuser['role'];
-                                header('location: index.php');
-                            } 
-                        }
-                        else{
-                            $canhbao = 'Cảnh Báo! Username hoặc password không đúng!';
-                        }
-                        $_SESSION['canhbao'] = $canhbao;
-            }
-        require_once "views/login.php";
-        break;
+            echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
+            require_once "views/login.php";
+            echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
+            break;
         case 'signup':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
-            if(isset($_POST['signup'])&&($_POST['signup'])&&($_SERVER["REQUEST_METHOD"] == "POST")){
-                        $user = trim(stripTags(test_input($_POST['user'])));
-                        $pass = trim(stripTags(test_input($_POST['pw1'])));
-                        $email = trim(stripTags(test_input($_POST['email'])));
-                        $repass = trim(stripTags(test_input($_POST['repass'])));
-                        $checkuser2 = checkUser2($user);
-                        $checkEmail = checkEmailTonTai($email);
-                        $thongbao = "";
-                        $thanhcong = FALSE;
-    
-                        if($user == "") {
-                            $thongbao = "Username Chưa Nhập<br>"; $thanhcong = FALSE;
-                        }
-                        elseif((strlen($user))<=2){
-                            $thongbao ="Username Quá Ngắn<br>"; $thanhcong = FALSE;
-                        }
-                        elseif(!empty($checkuser2)){
-                            $thongbao ="Username Đã Tồn Tại<br>"; $thanhcong = FALSE;
-                        }
-                        elseif($pass == ""){
-                            $thongbao ="Password Chưa Nhập<br>"; $thanhcong = FALSE;
-                        }
-                        elseif((strlen($pass))<=2){
-                            $thongbao= "Password Quá Ngắn<br>"; $thanhcong = FALSE;
-                        }
-                        elseif($pass !== $repass){
-                            $thongbao= "Mật Khẩu Và Mật Khẩu Nhập Lại Không Khớp"; 
-                            $thanhcong = FALSE;
-                        }
-                        elseif($email == "") {
-                            $thongbao = "Email Chưa Nhập<br>"; $thanhcong = FALSE;
-                        }elseif(!empty($checkEmail)){
-                            $thongbao = "Email Đã Tồn Tại<br>"; $thanhcong = FALSE;
-                        }else{
-                            $thanhcong = TRUE;
-                            $randomKey = md5(rand(0,99999));
-                            $active = 0;
-                            addUser($user,$pass,$active,$email,$randomKey);
-                            $gansi = checkUser($user,$pass);
-                            $idUser = $gansi['id'];
-                            // start mail
-                            $userName = 'tranquangnhan1606@gmail.com';
-                            $passWord = 'Tranquangnhan@1606';
-                            $from = 'tranquangnhan1606@gmail.com';
-                            $title = 'Xác Nhận Đăng Ký Tài Khoản';
-                            $subject = 'Kích hoạt tài khoản';
-                            $linkKH ="<a href='". $_SERVER['HTTP_HOST'].SITE_URL.
-                            "index.php?act=kichhoat&id=%d&rd=%s'>Nhấp vào đây</a>";
-                            $linkKH = sprintf($linkKH,$idUser, $randomKey);
-                            $body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: ". $linkKH;
-                            sendMail($userName,$passWord,$from,$email,$user,$title,$subject,$body);
-                            // end mail
-                            $_SESSION['thongbao'] = "Check email để xác nhận tài khoản<br>";
-                            header("location: index.php?act=thongbao");
-                        }
-                        if($thanhcong == FALSE){
-                            $_SESSION['thongbao'] = $thongbao;
-                            header("location: index.php?act=thongbao");
-                        }
-            }
-        require_once "views/signup.php";
-        echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
-        break;
+            require_once "views/signup.php";
+            echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
+            break;
         case 'user':
             if(isset($_GET['logout'])&&($_GET['logout'])==1){
                 unset($_SESSION['sid']);
