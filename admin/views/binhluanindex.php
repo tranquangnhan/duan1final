@@ -21,26 +21,23 @@
                                         <thead class="thead-inverse">
                                             <tr>
                                                 <th>ID</th>
-                                                <th width="200">Tên Sản Phẩm</th>
-                                                <th width="100">Ảnh</th>
-                                                <th>Tác Giả</th>
-                                                <th width="450">Nội Dung</th>
-                                                <th>Hành Động</th>
+                                                <th >IDKH</th>
+                                                <th >IDSP</th>
+                                                <th>ID Bài Viết</th>
+                                                <th>Nội Dung</th>
+                                                <th>Star</th>
+                                                <th>Trạng Thái</th>
                                             </tr>
                                         </thead>
                                         <tbody >
                                             <?php 
-                                                foreach ($showBinhLuan as $motbl) {   
-                                                    $id = $motbl['id'];
-                                                    $spCmt = spCmt($motbl['idsp']);
-                                                    $name = $spCmt['name'];
-                                                    $img = $pathimg.$spCmt['img'];  
-                                                    if(is_file($img)){
-                                                        $img = $img;
-                                                    }else{
-                                                        $img = "nothing...";
-                                                    }
-                                                    $anhien = $motbl['trangthai'];
+                                                foreach ($showbl as $bl) {   
+                                                    $id = $bl['id'];
+                                                    $masp = spCmt($bl['idsp']);
+                                                    $makh = $bl['idkh'];
+                                                    $mabaiviet = $bl['idbaiviet'];  
+                                                    $noidung = $bl['noidung'];
+                                                    $anhien = $bl['trangthai'];
                                                     if($anhien == 1){
                                                         $anhien = 'checked';
                                                     }else{
@@ -50,11 +47,12 @@
                                                     $linkedit = "index.php?ctrl=binhluan&act=edit&idedit=".$id;
                                                     ?>
                                                 <tr>
-                                                    <td><strong><?=$motbl['id']?></strong></td>
-                                                    <td><?=$name?> <input type="radio" <?=$anhien?> ></td>
-                                                    <td><img width="100" src=" <?=$img?>" alt=""></td>
-                                                    <td><strong><?=showTenKh($motbl['iduser'])?></strong></td>
-                                                    <td><?=$motbl['noidung']?></td>                                         
+                                                    <td><strong><?=$id?></strong></td>
+                                                    <td><?=$mabaiviet?> </td>
+                                                    <td><?=$masp?> </td>
+                                                    <td><?= ($anhien==1)? "Dang hien":"dang an"; ?></td>
+                                                    <td><strong><?=showTenKh($bl['idkh'])?></strong></td>
+                                                    <td><?=$noidung?></td>                                         
                                                     <td><a href="<?=$linkdel?>"> <i onclick="return checkDelete()" class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
                                                 </tr>
                                             <?php }?>

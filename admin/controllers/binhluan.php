@@ -6,37 +6,38 @@
     }
     switch ($act) {
         case 'index':
-            $showBinhLuan = showBinhLuan();
+            $showbl = showbl();
             require_once "views/binhluanindex.php";
         break;
         case 'add':
-            $showAllkh = showAllkh();
+            $showallkh = showallkh();
             $showAllSp= showAllSpAdmin();
             if(isset($_POST['them'])&&($_POST['them'])){
                 $idsp = $_POST['idsp'];
+                $idbaiviet = $_POST['idbaiviet'];
                 $star = $_POST['star'];
                 $noidung = $_POST['noidung'];
-                $iduser = $_POST['idkh'];
+                $idkh = $_POST['idkh'];
                 $trangthai = $_POST['anhien'];
-                addBinhLuan($star,$iduser,$idsp,$noidung,$trangthai);
+                addBinhLuan($star,$idkh,$idbaiviet,$idsp,$noidung,$trangthai);
                 header("location: index.php?ctrl=binhluan&act=index");
             }
             require_once "views/binhluanadd.php";
         break;
         case 'edit':
-            $showAllkh = showAllkh();
-            $showAllSp= showAllSp();
+            $showallkh = showallkh();
+    
             if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showBlEdit = showBlEdit($_SESSION['idedit']);
                 if(isset($_POST['sua'])&&($_POST['sua'])){
-                    $id = $_SESSION['idedit'];
                     $idsp = $_POST['idsp'];
+                    $idbaiviet = $_POST['idbaiviet'];
                     $star = $_POST['star'];
                     $noidung = $_POST['noidung'];
-                    $iduser = $_POST['idkh'];
+                    $idkh = $_POST['idkh'];
                     $trangthai = $_POST['anhien'];
-                    editBinhLuan($id,$star,$iduser,$idsp,$noidung,$trangthai);
+                    editBinhLuan($id,$star,$idkh,$idbaiviet,$idsp,$noidung,$trangthai);
                     header("location: index.php?ctrl=binhluan&act=index");
                 }
             }
@@ -47,7 +48,7 @@
                 $id = $_GET['iddel'];
                 xoaBinhLuan($id);
             }
-        $showBinhLuan = showBinhLuan();
+            $showbl = showbl();
         require_once "views/binhluanindex.php";
         break;
             default:

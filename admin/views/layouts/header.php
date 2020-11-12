@@ -112,6 +112,20 @@
                                     </div>
                                 </div>
                             </li>
+                            <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="binhluan") echo "active";?>">
+                                <div class="nav-link">
+                                    <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M368 96H144a16 16 0 010-32h224a16 16 0 010 32zM400 144H112a16 16 0 010-32h288a16 16 0 010 32zM419.13 448H92.87A44.92 44.92 0 0148 403.13V204.87A44.92 44.92 0 0192.87 160h326.26A44.92 44.92 0 01464 204.87v198.26A44.92 44.92 0 01419.13 448z"></path></svg></label></div>
+                                    <div class="nav-main__text "><div id="bv" class="click_title">Bình Luận</div>
+                                        <div class="menu-alert">
+                                            <ul>
+                                                <li><a href="index.php?ctrl=binhluan&act=add">Thêm Mới</a></li>
+                                                <li><a href="index.php?ctrl=binhluan&act=index">Danh Sách</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
                             <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="loaihang") echo "active";?>">
                                 <div class="nav-link">
                                     <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M368 96H144a16 16 0 010-32h224a16 16 0 010 32zM400 144H112a16 16 0 010-32h288a16 16 0 010 32zM419.13 448H92.87A44.92 44.92 0 0148 403.13V204.87A44.92 44.92 0 0192.87 160h326.26A44.92 44.92 0 01464 204.87v198.26A44.92 44.92 0 01419.13 448z"></path></svg></label></div>

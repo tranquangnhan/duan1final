@@ -1,11 +1,18 @@
 
 <?php
-if(is_array($showBlEdit)){
-    $star  =$showBlEdit['star']; 
-    $idkh = $showBlEdit['iduser'];   
-    $noidung  =$showBlEdit['noidung'];    
-    $idsp =$showBlEdit['idsp'];   
-    $anhien =  $showBlEdit['trangthai'];  
+if(is_array($showbledit)){
+    $star  =$showbledit['star']; 
+    $idkh = $showbledit['idkh'];  
+    if($idkh== $showbledit['id']){
+        $chon = 'selected';
+    }else{
+        $chon = '';
+    }
+  
+    $idbaiviet=$showbledit['idbaiviet'] ;
+    $noidung  =$showbledit['noidung'];    
+    $idsp =$showbledit['idsp'];   
+    $anhien =  $showbledit['trangthai'];  
     if($anhien == 1){
         $anhien = 'checked';
     }else{
@@ -13,6 +20,9 @@ if(is_array($showBlEdit)){
     }
   
 ?>
+
+
+
 
 <div class="col-lg-9">
     <div class="container-fluid">
@@ -36,29 +46,16 @@ if(is_array($showBlEdit)){
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">SỬA BÌNH LUẬN</h3>
-                            <p class="text-center">Bạn có thể sửa bình luận ở đây!</p>
+                            <h3 class="mt-4 text-center">THÊM BÌNH LUẬN</h3>
+                            <p class="text-center">Bạn có thể thêm bình luận ở đây!</p>
                             <div class="row">
                                 <div class="col-lg-3">
                                     <label for=""><strong>ALL Sản Phẩm</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control" name="idsp" id="" required>
+                                    <select class="form-control" name="idsp" id="" >
                                         <option value="">Chọn</option>
-                                        <?php
-                                            $showDm = '';
-                                            $idsp = $showBlEdit['idsp'];    
-                                            foreach ($showAllSp as $sp) {
-                                                $sl = "selected";
-                                                if($sp['id'] == $idsp){
-                                                    $showDm .= '<option value="'.$sp['id'].'"'.$sl.'>'.$sp['name'].'</option>';
-                                                }
-                                                else{
-                                                    $showDm .= '<option value="'.$sp['id'].'">'.$sp['name'].'</option>';
-                                                }
-                                            }     
-                                            echo $showDm;
-                                            ?>     
+                                      
                                     </select>
                                 </div>
                             </div>
@@ -67,8 +64,8 @@ if(is_array($showBlEdit)){
                                     <label for=""><strong>Star</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="star" id="" class="form-control" placeholder="Star" value="<?=$star?>"
-                                        aria-describedby="helpId" required>
+                                    <input type="text" name="star" id="" class="form-control" placeholder="Star"
+                                        aria-describedby="helpId"  value="<?=$star?>">
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -76,7 +73,7 @@ if(is_array($showBlEdit)){
                                     <label for=""><strong>Bình Luận</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <textarea class="form-control" name="noidung" id="" rows="5" placeholder="Bình luận"><?=$showBlEdit['noidung']?></textarea>
+                                    <textarea class="form-control" name="noidung" id="" rows="5" placeholder="Bình luận"><?=$noidung?></textarea>
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -84,22 +81,22 @@ if(is_array($showBlEdit)){
                                     <label for=""><strong>Khách Hàng</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control" name="idkh" id="" required>
+                                    <select class="form-control" name="idkh" id="" >
                                         <option value="">Chọn</option>
-                                        <?php
-                                            $showDm = '';
-                                            $idsp = $showBlEdit['iduser'];    
-                                            foreach ($showAllkh as $sp) {
-                                                $sl = "selected";
-                                                if($sp['id'] == $idsp){
-                                                    $showDm .= '<option value="'.$sp['id'].'"'.$sl.'>'.$sp['user'].'</option>';
-                                                }
-                                                else{
-                                                    $showDm .= '<option value="'.$sp['id'].'">'.$sp['user'].'</option>';
-                                                }
-                                            }     
-                                            echo $showDm;
-                                            ?>    
+                                        <?php foreach ($showallkh as $motkh) {?>
+                                            <option <?=$chon?> value="<?=$motkh['id']?>"><?=$motkh['user']?></option>
+                                        <?php }?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Bài Viết</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-control" name="idbaiviet" id="" >
+                                        <option value="">Chọn</option>
+                                      
                                     </select>
                                 </div>
                             </div>
@@ -111,7 +108,7 @@ if(is_array($showBlEdit)){
                                     <div class="form-check">
                                     <label class="form-check-label">
                                     Hiện ?
-                                        <input type="checkbox" value="1" class="ml-2 form-check-input" name="anhien" id="" <?=$anhien?> checked>
+                                        <input type="checkbox" value="1" class="ml-2 form-check-input" name="anhien" id="" checked>
                                     </label>
                                     </div>
                                 </div>
@@ -127,7 +124,7 @@ if(is_array($showBlEdit)){
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
                                             <div class="form-group">
-                                                <input type="submit" name="sua" id="" value="Sửa Bình Luận"
+                                                <input type="submit" name="them" id="" value="Thêm Bình Luận"
                                                     class="btn btn-submit text-center">
                                             </div>
                                         </div>
@@ -141,5 +138,8 @@ if(is_array($showBlEdit)){
         </div>
     </div>
 </div>
+
+
+
 <?php }else{echo "không có bình luận này";}?>
 
