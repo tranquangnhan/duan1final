@@ -570,6 +570,15 @@ input {
     display: table-cell;
 }
 
+.form-check {
+    padding-left: 0.25rem !important;
+}
+
+.div-checkbox {
+    width: 10% !important;
+    margin-right: 3rem;
+}
+
 @media (max-width: 767px) {
     .card-3 {
         display: block;
