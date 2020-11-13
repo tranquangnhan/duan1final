@@ -40,8 +40,10 @@
           </div>
           <div class="col-sm d-none d-sm-block line_h_28">
             <ul class="user-area list-inline float-right margin-0px text-white mr-0">
-              <li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=login"><i class="fa fa-lock padding-right-5px"></i> login</a></li>
-              <li class="list-inline-item"><a class="text-white" href="?act=signup"><i class="fa fa-user-plus padding-right-5px"></i> register</a></li>
+              <?php if(isset($_SESSION['sid'])) echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=login">'.$_SESSION['suser'].'</a></li>'; else
+                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=login"><i class="fa fa-lock padding-right-5px"></i> login</a></li>
+                <li class="list-inline-item"><a class="text-white" href="?act=signup"><i class="fa fa-user-plus padding-right-5px"></i> register</a></li>';
+              ?>
             </ul>
           </div>
         </div>              

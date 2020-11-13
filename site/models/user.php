@@ -1,5 +1,11 @@
 <?php 
-    function checkUser($user,$pass){
+    session_start();     
+    function checkUser($user,$pass,$remember){
+        if($remember) {
+            $_COOKIE['sessionId'] = session_id();
+        } else{
+            unset($_COOKIE);
+        } 
         $user = str_replace(";","",$user);
         $user = str_replace("'","",$user);
         $user = str_replace('"',"",$user);
@@ -8,12 +14,20 @@
         $pass = str_replace('"',"",$pass);
         $user = addslashes($user);
         $pass = addslashes($pass);
-        $sql = "select * from khachhang where user='{$user}' and pass='{$pass}'";
-        return result1(1,$sql);
+        $sql = "select * from khachhang where user=? and pass=?";
+        $user = result1(1,$sql,$user,$pass);
+        if(is_array($user)){
+            $_SESSION['sid'] = $user['id'];
+            $_SESSION['suser']= $user['user'];
+            $_SESSION['role'] = $user['role'];
+            return true;
+        }else{
+            return false;
+        }
     }
     function checkUser2($user){
-        $sql = "select * from khachhang where user='{$user}'";
-        return result1(1,$sql);
+        $sql = "select * from khachhang where user=?";
+        return result1(1,$sql,$user);
     }
     function IsExist ($user){
         $sql = "select * from khachhang where user='{$user}'";

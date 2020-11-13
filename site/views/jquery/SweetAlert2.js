@@ -2,15 +2,7 @@
  * sweetalert2 v8.17.5
  * Released under the MIT License.
  */
-function fireErr(text) {
-    Swal.fire({
-        type: 'error',
-        title: 'Oops...',
-        text: text,
-        showConfirmButton: true,
-        showCancelButton: false,
-    });
-}
+
 (function(global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
         typeof define === 'function' && define.amd ? define(factory) :
