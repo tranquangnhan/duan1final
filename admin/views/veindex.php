@@ -2,7 +2,7 @@
                     <div class="container-fluid">
                         <div class="row d-flex justify-content-between mt-3">
                             <div class="col-lg-4 text-dark mt-3">
-                                <h2>SẢN PHẨM</h2>
+                                <h2>VÉ MÁY BAY</h2>
                             </div>
                             <div class="col-lg-3 mt-3">
                                 <nav aria-label="breadcrumb ">
