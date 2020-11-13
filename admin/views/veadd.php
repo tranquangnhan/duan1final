@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
-                <h2>SẢN PHẨM</h2>
+                <h2>VÉ MÁY BAY</h2>
             </div>
             <div class="col-lg-4 mt-3">
                 <nav aria-label="breadcrumb ">
@@ -20,7 +20,7 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM Vé</h3>
+                            <h3 class="mt-4 text-center">THÊM VÉ</h3>
                             <p class="text-center">Bạn có thể thêm vé ở đây!</p>
                             <div class="row">
 

@@ -11,7 +11,7 @@
                             <input class="input--style-3" type="password" id="password" placeholder="Nhập mật khẩu" name="email">
                         </div>
                         <div class="">
-                            <label for="nhomk">Nhớ mật khẩu ?</label>
+                            <label for="remember">Nhớ mật khẩu ?</label>
                              <input type="checkbox" name="nhomk" id="remember" class="div-checkbox">
                              <a href="">Quên mật khẩu ?</a>
                         </div>
