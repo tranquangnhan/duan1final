@@ -30,12 +30,9 @@
                                     <label for=""><strong>ALL Sản Phẩm</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control" name="idsp" id="" required>
+                                    <select class="form-control" name="idsp" id="" >
                                         <option value="">Chọn</option>
-                                        <?php
-                                        foreach ($showAllSp as $motsp) { ?>
-                                        <option value="<?=$motsp['id']?>"><?=$motsp['name']?></option>
-                                        <?php }?>
+                                      
                                     </select>
                                 </div>
                             </div>
@@ -45,7 +42,7 @@
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="text" name="star" id="" class="form-control" placeholder="Star"
-                                        aria-describedby="helpId" required>
+                                        aria-describedby="helpId" >
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -61,11 +58,22 @@
                                     <label for=""><strong>Khách Hàng</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control" name="idkh" id="" required>
+                                    <select class="form-control" name="idkh" id="" >
                                         <option value="">Chọn</option>
-                                        <?php foreach ($showAllkh as $motkh) {?>
+                                        <?php foreach ($showallkh as $motkh) {?>
                                             <option value="<?=$motkh['id']?>"><?=$motkh['user']?></option>
                                         <?php }?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Bài Viết</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-control" name="idbaiviet" id="" >
+                                        <option value="">Chọn</option>
+                                      
                                     </select>
                                 </div>
                             </div>

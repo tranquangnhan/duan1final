@@ -8,7 +8,7 @@ function editBinhLuan($id,$star,$iduser,$idsp,$noidung,$trangthai){
     $sql = "UPDATE binhluan SET star='{$star}', iduser = '{$iduser}' , idsp = '{$idsp}', noidung= '{$noidung}', trangthai= '{$trangthai}'  WHERE id=".$id;
     execute1($sql);  
 }
-function showBinhLuan(){
+function showbl(){
     $sql = "select * from binhluan where 1";
     return result1(0,$sql);
 }
@@ -20,7 +20,7 @@ function xoaBinhLuan($id){
     $sql = "DELETE FROM binhluan WHERE id=".$id;
     exec1($sql);
 }
-function showBlEdit($id){
+function showbledit($id){
     $sql = "select * from binhluan where id = $id" ;
     return result1(1,$sql);
 }
