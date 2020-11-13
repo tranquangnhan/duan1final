@@ -64,13 +64,12 @@
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Ngày Sinh</strong></label>
+                                    <div class="col-lg-3">
+                                        <label for=""><strong>Ngày Sinh</strong></label>
+                                    </div>
+                                    <div class="col-lg-9">
+                                    <input class="form-control" name="tgdi" type="date" value="" id="">                                    </div>
                                 </div>
-                                <div class="col-lg-9">
-                                    <input type="date" class="form-check-input" name="ngaysinh" value="" id="">
-                                </div>
-                            </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Số Điên Thoại</strong></label>
@@ -121,7 +120,24 @@
                                 </div>
                             </div>
                            
-                        
+                            <div class="row mt-5">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-9 ">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <a href="index.php?ctrl=loaihang&act=index"> <input type="button" name="" id="" value="Huỷ" class="btn btn-cancel"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 pr-2 mr-2">
+                                            <div class="form-group">
+                                                <input type="submit" name="them" id="" value="Thêm User"
+                                                    class="btn btn-submit text-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>

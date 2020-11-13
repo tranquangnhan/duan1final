@@ -158,7 +158,7 @@
                                     <div class="nav-main__text "><div id="bv" class="click_title">Khách Hàng</div>
                                         <div class="menu-alert">
                                             <ul>
-                                                <li><a href="index.php?ctrl=Khachhang&act=add">Thêm Mới</a></li>
+                                                <li><a href="index.php?ctrl=khachhang&act=add">Thêm Mới</a></li>
                                                 <li><a href="index.php?ctrl=khachhang&act=index">Danh Sách</a></li>
                                             </ul>
                                         </div>

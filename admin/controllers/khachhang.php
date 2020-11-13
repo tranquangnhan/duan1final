@@ -15,7 +15,7 @@
                 $showkhedit = showkhedit($_SESSION['idedit']);
                 include_once "views/khachhangedit.php";
             }else{
-                include_once "views/khachhangadd";
+                include_once "views/khachhangadd.php";
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
              
