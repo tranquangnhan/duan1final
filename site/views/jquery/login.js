@@ -1,8 +1,18 @@
 window.onload = function() {
+    function fireErr(text) {
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: text,
+            showConfirmButton: true,
+            showCancelButton: false,
+        });
+    }
     $("#login").click(async function(e) {
         e.preventDefault();
         let userName = $("#username").val();
         let passWord = $("#password").val();
+        let remember = $("#remember").val();
 
         let Loading = Swal.fire({
             allowEscapeKey: false,
@@ -42,6 +52,7 @@ window.onload = function() {
 
                         LoginData.append('Login', userName); //gửi lên user và pass để kiểm tra
                         LoginData.append('Password', passWord);
+                        LoginData.append('Remember', remember);
                         LoginData.append('Action', 'Login');
                         await $.ajax({
                             type: 'POST',

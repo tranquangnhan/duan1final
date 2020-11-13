@@ -12,12 +12,12 @@
                         </div>
                         <div class="">
                             <label for="nhomk">Nhớ mật khẩu ?</label>
-                             <input type="checkbox" name="nhomk" id="nhomk" class="div-checkbox">
+                             <input type="checkbox" name="nhomk" id="remember" class="div-checkbox">
                              <a href="">Quên mật khẩu ?</a>
                         </div>
                         
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit" id="login">Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit" id="login">Đăng Nhập</button>
                         </div>
                 </div>
             </div>

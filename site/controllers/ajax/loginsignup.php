@@ -14,8 +14,8 @@
                 break;
             case 'Login':
                 $Return = array();
-                $Return['StatusCode'] = (int)((is_array(checkUser($_POST['Login'],$_POST['Password']))) ? 0 : 1);
-    
+                $Return['StatusCode'] = (int)(((checkUser($_POST['Login'],$_POST['Password'],$remember))=== true) ? 0 : 1);
+
                 echo json_encode($Return);
                 return;
             case 'CheckEmailNamePhoneExist':
