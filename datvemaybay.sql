@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 12, 2020 lúc 05:41 PM
+-- Thời gian đã tạo: Th10 13, 2020 lúc 03:02 AM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -91,6 +91,18 @@ CREATE TABLE `hoadon` (
   `idkh` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `hoadon`
+--
+
+INSERT INTO `hoadon` (`id`, `hotenkh`, `ngaydatve`, `trangthai`, `idkh`) VALUES
+(1, '', '0000-00-00', 0, 0),
+(2, 'abc', '0000-00-00', 0, 0),
+(3, 'abcd', '0000-00-00', 0, 0),
+(4, 'abcd', '0000-00-00', 0, 0),
+(5, 'abcde', '2020-11-12', 0, 0),
+(8, 'abcdefg', '2020-11-13', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -118,7 +130,8 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`id`, `user`, `role`, `pass`, `kichhoat`, `ngaysinh`, `email`, `sodienthoai`, `diachi`, `thanhpho`, `quocgia`, `tichdiem`, `randomkey`) VALUES
-(1, 'admin', 1, '111111', 1, '2020-11-11', '', '', '', '', '', NULL, NULL);
+(1, 'admin', 1, '111111', 1, '2020-11-11', '', '', '', '', '', NULL, NULL),
+(3, 'phuong', 1, '1234', 0, '2020-11-16', '12345', '09999999', '1234', 'abc', 'abc', 12, NULL);
 
 -- --------------------------------------------------------
 
@@ -127,7 +140,7 @@ INSERT INTO `khachhang` (`id`, `user`, `role`, `pass`, `kichhoat`, `ngaysinh`, `
 --
 
 CREATE TABLE `sanbay` (
-  `id` int(11) NOT NULL,
+  `idsanbay` int(11) NOT NULL,
   `tensanbay` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `masanbay` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `tinh` varchar(150) COLLATE utf8_unicode_ci NOT NULL
@@ -137,7 +150,7 @@ CREATE TABLE `sanbay` (
 -- Đang đổ dữ liệu cho bảng `sanbay`
 --
 
-INSERT INTO `sanbay` (`id`, `tensanbay`, `masanbay`, `tinh`) VALUES
+INSERT INTO `sanbay` (`idsanbay`, `tensanbay`, `masanbay`, `tinh`) VALUES
 (1, 'Sân bay Quốc tế Cần Thơ', 'VVCT/VCA', 'Cần Thơ'),
 (2, 'Sân bay Quốc tế Đà Nẵng', 'VVDN/DAD', 'Đà Nẵng'),
 (3, 'Sân bay Quốc tế Cát Bi – Hải Phòng', 'VVCI/HPH', 'Hải Phòng'),
@@ -177,12 +190,25 @@ CREATE TABLE `sanpham` (
   `diemdi` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `diemden` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `loaighe` tinyint(1) NOT NULL,
-  `timestar` datetime NOT NULL,
-  `timeend` datetime NOT NULL,
+  `tgdi` datetime NOT NULL,
+  `tgden` datetime NOT NULL,
   `hanhly` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `giaitri` tinyint(1) DEFAULT NULL,
   `suatan` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `sanpham`
+--
+
+INSERT INTO `sanpham` (`id`, `tenmaybay`, `anh`, `gia`, `giamgia`, `iddm`, `diemdi`, `diemden`, `loaighe`, `tgdi`, `tgden`, `hanhly`, `suatan`) VALUES
+(1, '11111', 'dd3k8u7-c157e4dc-b54f-4228-a869-f09d57dc3c14.png', 124, 124455, 0, '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', NULL),
+(2, '11111', '1.jpg', 1234570, 1234, 0, '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', NULL),
+(4, 'aa', 'bai 3.jpg', 1234570, 123, 0, '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2', NULL),
+(5, 'aa', 'bai 3.jpg', 1234570, 123, 0, '', '', 0, '2020-11-12 14:32:00', '2020-11-13 14:29:00', '2', NULL),
+(6, 'aa', 'bai 3.jpg', 1234570, 123, 0, '', '', 0, '2020-11-12 14:32:00', '2020-11-13 14:29:00', '2', NULL),
+(8, 'aa', 'bai 3.jpg', 1234570, 123, 0, '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2', NULL),
+(10, '11111', '2.jpg', 113, 112, 0, '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', NULL),
+(11, 'lol', '1b7a428b694d48ec1d7f90ea209bc250.jpg', 123, 1234, 0, '', '', 0, '2020-11-11 14:58:00', '2020-11-13 18:58:00', '2', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -237,7 +263,7 @@ ALTER TABLE `khachhang`
 -- Chỉ mục cho bảng `sanbay`
 --
 ALTER TABLE `sanbay`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`idsanbay`);
 
 --
 -- Chỉ mục cho bảng `sanpham`
@@ -278,25 +304,25 @@ ALTER TABLE `hdchitiet`
 -- AUTO_INCREMENT cho bảng `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `sanbay`
 --
 ALTER TABLE `sanbay`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idsanbay` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
