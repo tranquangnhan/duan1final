@@ -10,6 +10,7 @@
             include_once "views/veindex.php";
         break;
         case 'add':
+            $showsanbay=showsanbay();
             $showdmsp = showAllTenDm();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
