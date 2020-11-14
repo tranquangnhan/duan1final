@@ -72,7 +72,37 @@
                                     <input class="form-control" type="number" name="giamgia" value="" id="">
                                 </div>
                             </div>
-                         
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Điểm Đi</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="custom-select form-control" name="diemdi" id="" >
+                                        <option selected value="">Chọn </option>
+                                        <?php
+                                        foreach ($showsanbay as $sb) {
+                                            $kq = '<option value="' . $sb['id'] . '">' . $sb['tensanbay'] . '</option>';
+                                            echo $kq;
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>   <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Điểm Đến</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="custom-select form-control" name="diemden" id="" >
+                                        <option selected value="">Chọn </option>
+                                        <?php
+                                        foreach ($showsanbay as $sb) {
+                                            $kq = '<option value="' . $sb['id'] . '">' . $sb['tensanbay'] . '</option>';
+                                            echo $kq;
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
 
                             <div class="row mt-4">
                                     <div class="col-lg-3">

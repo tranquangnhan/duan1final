@@ -17,6 +17,11 @@ function showAllve()
     return result1(0, $sql);
 }
 
+function showsanbay()
+{
+    $sql = "select * from sanbay ";
+    return result1(0, $sql);
+}
 // admin add product
 // function addve($img, $iddm, $tenmaybay, $gia, $giamgia, $diemdi, $diemden, $loaighe, $tgdi, $tgden, $hanhly)
 // {
@@ -37,7 +42,7 @@ function xoaSanPham($id)
     exec1($sql);
 }
 //admin update sp
-function updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly)
+function updateve($id, $img, $iddm, $tenmaybay, $gia, $giamgia, $diemdi, $diemden, $loaighe, $tgdi, $tgden, $hanhly)
 {
     if (!$img) {
         $sql = "UPDATE sanpham SET iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
