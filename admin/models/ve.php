@@ -57,18 +57,24 @@ function updateve($id, $img, $iddm, $tenmaybay, $gia, $giamgia, $diemdi, $diemde
     }
     execute1($sql);
 }
-// function updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly)
-// {
-//     if (!$img) {
-//         $sql = "UPDATE sanpham SET iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
-//                 giamgia='{$giamgia}',diemdi='{$diemdi}',diemden='{$diemden}',loaighe='{$loaighe}',tgdi='{$tgdi}',
-//                 tgden='{$tgden}',hanhly='{$hanhly}'
-//          WHERE id=" . $id;
-//     } else {
-//         $sql = "UPDATE sanpham SET anh='{$img},'iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
-//         giamgia='{$giamgia}',diemdi='{$diemdi}',diemden='{$diemden}',loaighe='{$loaighe}',tgdi='{$tgdi}',
-//         tgden='{$tgden}',hanhly='{$hanhly}'
-//  WHERE id=" . $id;
-//     }
-//     execute1($sql);
-// }
+// insert data from import excel
+function insertData($sheetData,$highestRow){
+    for ($i=2; $i <= $highestRow; $i++) { 
+        $tenmaybay = $sheetData[$i]['A'];
+        $anh = $sheetData[$i]['B'];
+        $gia = $sheetData[$i]['C'];
+        $giamgia = $sheetData[$i]['D'];
+        $iddm = $sheetData[$i]['E'];
+        $diemdi = $sheetData[$i]['F'];
+        $diemden = $sheetData[$i]['G'];
+        $loaighe = $sheetData[$i]['H'];
+        $tgdi = $sheetData[$i]['I'];
+        $tgden = $sheetData[$i]['J'];
+        $hanhly = $sheetData[$i]['K'];
+        $suatan = $sheetData[$i]['L'];
+        $sql = "INSERT INTO sanpham (tenmaybay,anh,gia,giamgia,iddm,diemdi,diemden,loaighe,tgdi,tgden,hanhly,suatan) VALUES 
+        (?,?,?,?,?,?,?,?,?,?,?,?)";
+        exec1($sql,$tenmaybay,$anh, $gia, $giamgia,$iddm,$diemdi,$diemden,$loaighe,$tgdi, $tgden, $hanhly,$suatan);
+    }
+    return true;
+}

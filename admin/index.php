@@ -7,6 +7,7 @@
     require_once "../lib/myfunctions.php";
     require_once "views/layouts/header.php";
     require_once "models/allmodel.php";
+    include_once '../lib/phpexcel/Classes/PHPExcel.php';
     // require controllers
     define('ARR_CONTROLLER',["home","hanghoa","loaihang","binhluan","khachhang","baiviet","ve","hoadon"]);
     $ctrl = 'home';
