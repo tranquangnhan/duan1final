@@ -29,10 +29,10 @@ function showsanbay()
 //         ('{$img}','{$iddm}','{$tenmaybay}','{$gia}','{$giamgia}','{$diemdi}','{$diemden}','{$loaighe}','{$tgdi}','{$tgden}','{$hanhly}')";
 //     exec1($sql);
 // }
-function addve($img, $iddm, $tenmaybay, $gia, $giamgia,  $tgdi, $tgden, $hanhly)
+function addve($img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly)
 {
-    $sql = "INSERT INTO sanpham (anh,iddm,tenmaybay,gia,giamgia,tgdi,tgden,hanhly) VALUES 
-        ('{$img}','{$iddm}','{$tenmaybay}','{$gia}','{$giamgia}','{$tgdi}','{$tgden}','{$hanhly}')";
+    $sql = "INSERT INTO sanpham (anh,iddm,tenmaybay,gia,giamgia,diemdi,diemden,loaighe,tgdi,tgden,hanhly) VALUES 
+        ('{$img}','{$iddm}','{$tenmaybay}','{$gia}','{$giamgia}','{$diemdi}','{$diemden}','{$loaighe}','{$tgdi}','{$tgden}','{$hanhly}')";
     exec1($sql);
 }
 // admin delete product
