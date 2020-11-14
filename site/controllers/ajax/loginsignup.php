@@ -14,7 +14,7 @@
                 break;
             case 'Login':
                 $Return = array();
-                $Return['StatusCode'] = (int)(((checkUser($_POST['Login'],$_POST['Password'],$remember))=== true) ? 0 : 1);
+                $Return['StatusCode'] = (int)(((checkUser($_POST['Login'],$_POST['Password'],$_POST['Remember']))=== true) ? 0 : 1);
 
                 echo json_encode($Return);
                 return;
