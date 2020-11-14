@@ -45,9 +45,9 @@
                 // $slug = convert_name($name);
                 $gia = $_POST['gia'];
                 $giamgia = $_POST['giamgia'];   
-                // $diemdi =stripTags( $_POST['diemdi']); 
-                // $diemden =stripTags( $_POST['diemden']);
-                // $loaighe =stripTags( $_POST['loaighe']);
+                $diemdi =stripTags( $_POST['diemdi']); 
+                $diemden =stripTags( $_POST['diemden']);
+                $loaighe = $_POST['loaighe'];
                 $tgdi = $_POST['tgdi']; 
                 $tgden = $_POST['tgden']; 
                 $hanhly = $_POST['hanhly'];
@@ -58,16 +58,16 @@
                 }
                 settype($gia,"float");
                 settype($iddm,"int");
+                settype($loaighe,"int");
                 settype($giamgia,"int");
                 settype($gia,"int");
-                settype($tgdi,"datetime");
-                settype($tgden,"datetime");
+              
                 settype($hanhly,"int");  
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
                     updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly); 
                 }else{
-                    // addve($img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
-                    addve($img,$iddm,$tenmaybay,$gia,$giamgia,$tgdi,$tgden,$hanhly);
+                    addve($img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
+                    // addve($img,$iddm,$tenmaybay,$gia,$giamgia,$tgdi,$tgden,$hanhly);
                 }
                 header("location: index.php?ctrl=ve&act=index");
             }

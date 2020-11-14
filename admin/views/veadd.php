@@ -58,6 +58,19 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
+                                    <label for=""><strong>Loại Ghế</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="custom-select form-control" name="loaighe" id="" >
+                                        <option selected value="">Chọn </option>
+                                        <option value="0">Phổ Thông</option>
+                                        <option value="0">Phổ Thông Đặt Biệt</option>
+                                        <option value="1">Thương Gia</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
                                     <label for=""><strong>Giá Tiền</strong></label>
                                 </div>
                                 <div class="col-lg-9">
@@ -87,7 +100,8 @@
                                         ?>
                                     </select>
                                 </div>
-                            </div>   <div class="row mt-4">
+                            </div>   
+                            <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Điểm Đến</strong></label>
                                 </div>

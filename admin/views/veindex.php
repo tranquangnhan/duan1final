@@ -24,19 +24,18 @@
                                                 
                                                 <th width="200">Tên Máy Bay </th>
                                                 <th width="100">Ảnh</th> 
-                                                <th>Mã Danh Mục</th>
-                                                <th>Giá</th>
-                                                <th>Giảm Giá</th> 
+                                                <th width="200">Mã Danh Mục</th>
+                                                <th width="100">Giá</th>
+                                                <th width="100">Giảm Giá</th> 
                                                 <th width="300">Điểm Đi</th>
                                                 <th width="300">Điểm Đến</th>
-                                                <th>Loại Ghế</th>
-                                                <th >Thời Gian Đi</th>
-                                                <th >Thời Gian Đến</th>
-                                                <th >Hành Lý</th>
-                                             
-                                                <th >Suất Ăn</th>                                               
+                                                <th width="200">Loại Ghế</th>
+                                                <th width="200">Thời Gian Đi</th>
+                                                <th width="200">Thời Gian Đến</th>
+                                                <th width="70">Hành Lý</th>
+                                                <th width="70">Suất Ăn</th>                                               
                                               
-
+                                                        
                                             </tr>
                                         </thead>
 
@@ -63,7 +62,6 @@
                                     <td><?=$ve['tgdi']?></td>
                                     <td><?=$ve['tgden']?></td>
                                     <td><?=$ve['hanhly']?></td>
-                                   
                                     <td><?=$ve['suatan']?></td>
                                   
                                     <td>
