@@ -9,6 +9,22 @@
             $showAllve = showAllve();
             include_once "views/veindex.php";
         break;
+        case 'import':
+            if(isset($_POST['import'])&&($_POST['import'])){
+                $file = $_FILES['file']['tmp_name'];
+                
+                $objReader = PHPExcel_IOFactory::createReaderForFile($file);
+                $objReader->setLoadSheetsOnly("vemaybay"); // tên sheet
+
+                $objExcel = $objReader->load($file); //load file
+                $sheetData = $objExcel->getActiveSheet()->toArray('null',true,true,true);
+
+                $highestRow = $objExcel->setActiveSheetIndex()->getHighestRow();
+                if(insertData($sheetData,$highestRow)) header("location: ?ctrl=ve&act=index"); 
+                else echo 'Lỗi insert dữ liệu vào database';
+            }
+            include_once "views/importexcel.php";
+        break;
         case 'add':
             $showdmsp = showAllTenDm();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){

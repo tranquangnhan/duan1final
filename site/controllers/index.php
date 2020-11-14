@@ -6,6 +6,7 @@ require_once "../system/database.php";
 require_once "models/loaihang.php";
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
+
 require_once "views/layouts/header.php";
 
 if(isset($_GET['act'])){

@@ -146,6 +146,7 @@
                                         <div class="menu-alert">
                                             <ul>
                                                 <li><a href="index.php?ctrl=ve&act=add">Thêm Mới</a></li>
+                                                <li><a href="index.php?ctrl=ve&act=import">Import File Excel</a></li>
                                                 <li><a href="index.php?ctrl=ve&act=index">Danh Sách</a></li>
                                             </ul>
                                         </div>

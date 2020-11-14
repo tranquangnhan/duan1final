@@ -52,3 +52,24 @@ function updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loai
     }
     execute1($sql);
 }
+// insert data from import excel
+function insertData($sheetData,$highestRow){
+    for ($i=2; $i <= $highestRow; $i++) { 
+        $tenmaybay = $sheetData[$i]['A'];
+        $anh = $sheetData[$i]['B'];
+        $gia = $sheetData[$i]['C'];
+        $giamgia = $sheetData[$i]['D'];
+        $iddm = $sheetData[$i]['E'];
+        $diemdi = $sheetData[$i]['F'];
+        $diemden = $sheetData[$i]['G'];
+        $loaighe = $sheetData[$i]['H'];
+        $tgdi = $sheetData[$i]['I'];
+        $tgden = $sheetData[$i]['J'];
+        $hanhly = $sheetData[$i]['K'];
+        $suatan = $sheetData[$i]['L'];
+        $sql = "INSERT INTO sanpham (tenmaybay,anh,gia,giamgia,iddm,diemdi,diemden,loaighe,tgdi,tgden,hanhly,suatan) VALUES 
+        (?,?,?,?,?,?,?,?,?,?,?,?)";
+        exec1($sql,$tenmaybay,$anh, $gia, $giamgia,$iddm,$diemdi,$diemden,$loaighe,$tgdi, $tgden, $hanhly,$suatan);
+    }
+    return true;
+}
