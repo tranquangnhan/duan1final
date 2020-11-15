@@ -39,12 +39,6 @@
                                 <div class="col-lg-9">
                                     <select class="custom-select form-control" name="iddm" id="" required>
                                         <option selected value="">Chọn </option>
-                                        <?php 
-                                            foreach ($showdmsp as $dm) {
-                                                $kq = '<option value="'.$dm['id'].'">'.$dm['name'].'</option>';
-                                                echo $kq ;
-                                            }         
-                                        ?>
                                     </select>
                                 </div>
                             </div>

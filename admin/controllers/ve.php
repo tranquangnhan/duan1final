@@ -30,7 +30,7 @@
             $showdmsp = showAllTenDm();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
-                $showveedit = showveedit($_SESSION['idedit']);
+                // $showveedit = showveedit($_SESSION['idedit']);
                 include_once "views/veedit.php";
             }else{
                 include_once "views/veadd.php";

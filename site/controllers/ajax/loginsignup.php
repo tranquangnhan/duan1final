@@ -6,15 +6,15 @@
     if ($_POST['Action'])
     {
         switch ($_POST['Action']) {
-            case 'CheckExist':
-                $Return = array();
+            case 'CheckExist': //check tài khoản có tồn tại không
+                $Return = array(); //khởi tạo array mới
                 $Return['StatusCode'] = (int)((is_array(IsExist ($_POST['Login']))) ? 0 : 1);
                 echo json_encode($Return);
                 return;
                 break;
             case 'Login':
                 $Return = array();
-                $Return['StatusCode'] = (int)(((checkUser($_POST['Login'],$_POST['Password'],$remember))=== true) ? 0 : 1);
+                $Return['StatusCode'] = (int)(((checkUser($_POST['Login'],$_POST['Password'],$_POST['Remember']))=== true) ? 0 : 1);
 
                 echo json_encode($Return);
                 return;

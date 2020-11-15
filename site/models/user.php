@@ -29,7 +29,7 @@
         $sql = "select * from khachhang where user=?";
         return result1(1,$sql,$user);
     }
-    function IsExist ($user){
+    function IsExist ($user){ // kiểm tra xem user đã tồn tại hay chưa
         $sql = "select * from khachhang where user='{$user}'";
         return result1(1,$sql);
     }

@@ -8,13 +8,14 @@ window.onload = function() {
             showCancelButton: false,
         });
     }
+    // khi click vào login
     $("#login").click(async function(e) {
         e.preventDefault();
         let userName = $("#username").val();
         let passWord = $("#password").val();
         let remember = $("#remember").val();
 
-        let Loading = Swal.fire({
+        let Loading = Swal.fire({ // sweetAlert
             allowEscapeKey: false,
             title: 'Đang kiểm tra',
             allowOutsideClick: false,
@@ -23,11 +24,13 @@ window.onload = function() {
             imageUrl: 'views/img/Default/Loading.gif',
         });
 
-        if (userName !== "" && passWord !== "") {
+        if (userName !== "" && passWord !== "") { // check nếu có tài khoản và mật khẩu
             let CheckUserIsExist = new FormData();
 
             CheckUserIsExist.append('Login', userName); //tên
             CheckUserIsExist.append('Action', 'CheckExist'); //check tài khoản đã tồn tại hay chưa
+            // khởi tạo ajax
+
             await $.ajax({
                 type: 'POST',
                 url: 'controllers/ajax/loginsignup.php',

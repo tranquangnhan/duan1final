@@ -13,7 +13,7 @@
             $showdmsp = showAllTenDm();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
-                $showspedit = showSpEdit($_SESSION['idedit']);
+                 $showspedit = showSpEdit($_SESSION['idedit']);
                 include_once "views/hanghoaedit.php";
             }else{
                 include_once "views/hanghoaadd.php";
