@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
   <link rel="stylesheet" href="views/css/long/animate.css"/>
+  <link rel="stylesheet" href="views/css/long/about.css">
+  <link rel="stylesheet" href="views/css/long/contact.css">
+  <link rel="stylesheet" href="views/css/long/danhsachve.css">
   <link rel="stylesheet" href="views/css/long/home.css">
+  <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
   <!-- end css -->
   <!-- include jquery -->
@@ -58,23 +62,14 @@
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                            <ul class="navbar-nav  W-100" id="menu-main">
+                            <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
-                                    <a class="" href="#">HOME <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="#">SÂN BAY</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="#">THÔNG TIN</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="#">DÀNH CHO BẠN</a>
+                                    <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    CHUYẾN BAY
-                  </a>
+                                        CHUYẾN BAY
+                                    </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#">Flights List View</a>
                                         <a class="dropdown-item" href="#">Flights Grid View</a>
@@ -85,7 +80,16 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="pd-0" href="#">TRAVELZ</a>
+                                    <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="<?=SITE_URL?>?act=blog">BLOG</a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="pd-0" href="<?=SITE_URL?>?act=about">TRAVELZ</a>
                                 </li>
                             </ul>
                         </div>
@@ -102,23 +106,14 @@
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                            <ul class="navbar-nav  W-100" id="menu-main">
+                            <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
-                                    <a class="" href="#">HOME <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="#">SÂN BAY</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="#">THÔNG TIN</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="#">DÀNH CHO BẠN</a>
+                                    <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    CHUYẾN BAY
-                  </a>
+                                        CHUYẾN BAY
+                                    </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#">Flights List View</a>
                                         <a class="dropdown-item" href="#">Flights Grid View</a>
@@ -129,7 +124,16 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="pd-0" href="#">TRAVELZ</a>
+                                    <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="<?=SITE_URL?>?act=blog">BLOG</a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="pd-0" href="<?=SITE_URL?>?act=about">TRAVELZ</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle fz-12vw" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

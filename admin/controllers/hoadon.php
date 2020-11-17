@@ -33,7 +33,7 @@
                 }else{
                     addhoadon($hotenkh,$ngaydatve,$trangthai,$makh);
                 }
-                // header("location: index.php?ctrl=hoadon&act=index");
+                header("location: index.php?ctrl=hoadon&act=index");
                     
 
             }
