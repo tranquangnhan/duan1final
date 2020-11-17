@@ -1,0 +1,80 @@
+/* chon ghe */
+
+.l-phothong {
+    width: 400px;
+    height: auto;
+    border: 1px solid gray;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.l-ghe-phothong {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 80px;
+    margin: 10px 2px;
+    height: auto;
+    text-align: center;
+    background-color: #1db8c1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.l-mr-right {
+    margin-right: 10%;
+}
+
+.l-thuonggia {
+    width: 600px;
+    height: auto;
+    border: 1px solid gray;
+    margin: 0 auto;
+    padding: 50px 0px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.s-large {
+    width: 15%;
+}
+
+.s-small {
+    width: 23%
+}
+
+.l-ghe-thuonggia {
+    background: #fff022;
+    height: 50px;
+    margin-bottom: 1rem;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.l-mr-right {
+    margin-right: 10%;
+}
+
+.l-div-hover:hover {
+    background-color: rgb(255, 51, 51);
+    opacity: 0.7;
+}
+
+.l-bg-gray {
+    background-color: rgb(204, 204, 204)!important;
+    cursor: default!important;
+}
+
+.l-ghe-active {
+    background-color: rgb(255, 51, 51);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+#idmaybay {
+    display: none;
+}

@@ -26,52 +26,69 @@
             include_once "views/importexcel.php";
         break;
         case 'add':
-            $showsanbay=showsanbay();
-            $showdmsp = showAllTenDm();
+            $sanBay = sanBay();
+            $dsMayBay = dsMayBay();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 // $showveedit = showveedit($_SESSION['idedit']);
                 include_once "views/veedit.php";
             }else{
                 include_once "views/veadd.php";
-               
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
-                $allFile = $_FILES['img'];
-                //upload nhiều ảnh
-                $img = checkUpLoadMany($allFile);
-                $iddm = $_POST['iddm'];
-                $tenmaybay = stripTags($_POST['tenmaybay']);
-                // $slug = convert_name($name);
-                $gia = $_POST['gia'];
-                $giamgia = $_POST['giamgia'];   
-                $diemdi =stripTags( $_POST['diemdi']); 
-                $diemden =stripTags( $_POST['diemden']);
-                $loaighe = $_POST['loaighe'];
-                $tgdi = $_POST['tgdi']; 
-                $tgden = $_POST['tgden']; 
-                $hanhly = $_POST['hanhly'];
-                if(isset($_POST['xuatan'])&&($_POST['xuatan'])){
-                    $xuatan = $_POST['xuatan'];
-                }else{
-                    $xuatan = "0";
-                }
-                settype($gia,"float");
-                settype($iddm,"int");
-                settype($loaighe,"int");
-                settype($giamgia,"int");
-                settype($gia,"int");
-              
-                settype($hanhly,"int");  
+                $idMayBay = $_POST['idmaybay'];
+                $diemDi = $_POST['iddiemdi'];
+                $diemDen = $_POST['iddiemden'];
+
+                $giaVeThuongGia = $_POST['giavethuonggia'];
+                $giaVeThuong = $_POST['giavethuong'];
+
+                $ngayDi = $_POST['ngaybay'];
+                $gioDi = $_POST['tgdi'];
+                $gioDen = $_POST['tgden'];
+                
+                settype($idMayBay,"int");
+                settype($diemDi,"int");
+                settype($diemDen,"int");
+
+                settype($giaVeThuongGia,"float");
+                settype($giaVeThuong,"float");
+
+                
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly); 
+                    //updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
                 }else{
-                    addve($img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
-                    // addve($img,$iddm,$tenmaybay,$gia,$giamgia,$tgdi,$tgden,$hanhly);
+                    $idTuyenDuong = addIdtuyenDuong($diemDi,$diemDen);
+
+                    $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
+                    
+                    addTTVe($idMayBay);
+
+                    $_SESSION['idchuyenbay'] = $idChuyenBay;
+
+                    header('location: index.php?ctrl=ve&act=chonghethuonggia');
                 }
-                header("location: index.php?ctrl=ve&act=index");
             }
         break;
+        case 'chonghethuonggia':
+            if(isset($_SESSION['idchuyenbay'])&&($_SESSION['idchuyenbay'])){
+                $soGheThuongGia = getGhe($_SESSION['idchuyenbay'],'ttghethuonggia');
+            }
+            include_once "views/chonghethuonggia.php";
+            break;
+        case 'chonghethuong':
+            if(isset($_SESSION['idchuyenbay'])&&($_SESSION['idchuyenbay'])){
+                $soGheThuong = getGhe($_SESSION['idchuyenbay'],'ttghethuong');
+            }
+            include_once "views/chonghethuong.php";
+            break;
+        case 'done':
+            if(isset($_GET['done'])&&($_GET['done'] === 1)){
+                unset($_SESSION['idchuyenbay']);
+                header('location: ?ctrl=ve&act=index');
+            }
+            include_once "views/veindex.php";
+            break;
         case 'del':
             if(isset($_GET['iddel'])&&($_GET['iddel'])>0){
                 $id = $_GET['iddel'];
