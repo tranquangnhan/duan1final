@@ -72,11 +72,11 @@
                             </div>
                             <div class="col-lg-2">
                                 <label>Vé</label>
-                                <div class="ticket"><input type="text" class="input-text full-width" placeholder="1"></div>
+                                <div class="ticket"><input type="number" class="input-text full-width" placeholder="1"></div>
                             </div>
                             <div class="col-lg-2">
                                 <label>Trẻ em</label>
-                                <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+                                <div class="children"><input type="number" class="input-text full-width" placeholder="0"></div>
                             </div>
                             <div class="col-lg-2 mr-0-at">
                                 <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
