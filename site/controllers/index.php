@@ -200,7 +200,6 @@ if(isset($_GET['act'])){
                     header("location: index.php?act=thongbao");
                 }
             }
-            // require_once "views/userprofile.php";
         break;
         default:
             require_once "views/home.php";
