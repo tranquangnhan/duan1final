@@ -214,6 +214,19 @@ if(isset($_GET['act'])){
                 }
             }
         break;
+        /**
+         * title: Chức năng tìm kiếm
+         * name: Nguyễn Quốc Hiếu
+         * date: 17-11-2020
+         * version: 1.0
+         */
+        case 'timKiem':
+            // Truyền file danh sách vé trong models vào 
+            require_once '../models/danhsachve.php';
+            break;
+        /**
+         * Kết thúc chức năng tìm kiếm
+         */
         default:
             require_once "views/home.php";
             break;
