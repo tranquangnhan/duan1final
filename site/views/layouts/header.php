@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="views/css/long/contact.css">
   <link rel="stylesheet" href="views/css/long/danhsachve.css">
   <link rel="stylesheet" href="views/css/long/home.css">
+  <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
   <!-- end css -->
   <!-- include jquery -->

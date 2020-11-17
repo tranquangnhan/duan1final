@@ -22,9 +22,13 @@ if(isset($_GET['act'])){
         case 'contact':
             require_once "views/contact.php";
             break;
-        case 'danhsachve':
+          
+        case 'danhsachve':   // để sửa css
             require_once "views/danhsachve.php";
             break;
+        case 'blog':
+            require_once "views/blog.php";
+            break; 
         case 'singleproduct':  
             if(isset($_GET['id'])&&$_GET['id']>0){
                 $id = $_GET['id'];
