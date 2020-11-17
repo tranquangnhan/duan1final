@@ -3,9 +3,12 @@ session_start();
 ob_start();
 require_once "../system/config.php";
 require_once "../system/database.php";
-require_once "models/loaihang.php";
+
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
+// require model
+require_once "models/loaihang.php";
+require_once "models/sanpham.php";
 
 require_once "views/layouts/header.php";
 
@@ -13,6 +16,7 @@ if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
         case 'home':
+           
             require_once "views/home.php";
             break;
         case 'singleproduct':  
