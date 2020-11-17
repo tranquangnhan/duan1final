@@ -42,8 +42,22 @@ function exec1($sql){//thêm, xoá ....
         $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
 
         $stmt->execute($sqlValue);// thực thi
-
         return true;
+    } catch (PDOException $e) {
+        echo "Lỗi: " . $e->getMessage();
+    }
+}
+function getLastId($sql){//get LastId
+    $sqlValue = array_slice(func_get_args(),1);
+    try {
+        $conn = connect(); //connect database
+
+        $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+
+        $stmt->execute($sqlValue);// thực thi
+
+        $last_id = $conn->lastInsertId();
+        return $last_id;
     } catch (PDOException $e) {
         echo "Lỗi: " . $e->getMessage();
     }

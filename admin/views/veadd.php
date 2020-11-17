@@ -20,69 +20,20 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM VÉ</h3>
-                            <p class="text-center">Bạn có thể thêm vé ở đây!</p>
-                            <div class="row">
-
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Ảnh Sản Phẩm</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <img src="" alt="">
-                                    <input type="file" class="form-control-file" name="img[]" id="" placeholder="" required multiple>
-                                </div>
-                            </div>
+                            <h3 class="mt-4 text-center">THÊM MÁY BAY</h3>
+                            <p class="text-center">Bạn có thể thêm máy bay ở đây!</p>
+                             
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Tên Máy Bay</strong></label>
+                                    <label for=""><strong>Chọn Máy Bay</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="tenmaybay" id="" class="form-control" placeholder="Tên Máy Bay" aria-describedby="helpId" required>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Danh Mục</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="iddm" id="" >
+                                    <select class="custom-select form-control" name="idmaybay" id="">
                                         <option selected value="">Chọn </option>
-                                        <?php
-                                        foreach ($showdmve as $dm) {
-                                            $kq = '<option value="' . $dm['id'] . '">' . $dm['name'] . '</option>';
-                                            echo $kq;
-                                        }
-                                        ?>
+                                        <?php foreach ($dsMayBay as $motmb) {
+                                            echo '<option value="'.$motmb['id'].'">'.$motmb['name'].'</option>';
+                                        } ?>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Loại Ghế</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="loaighe" id="" >
-                                        <option selected value="">Chọn </option>
-                                        <option value="0">Phổ Thông</option>
-                                        <option value="0">Phổ Thông Đặt Biệt</option>
-                                        <option value="1">Thương Gia</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Giá Tiền</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="number" name="gia" id="" class="form-control" placeholder="Giá Tiền" aria-describedby="helpId" required>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Giảm Giá</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="number" name="giamgia" value="" id="">
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -90,102 +41,78 @@
                                     <label for=""><strong>Điểm Đi</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="diemdi" id="" >
+                                    <select class="custom-select form-control" name="iddiemdi" id="">
                                         <option selected value="">Chọn </option>
-                                        <?php
-                                        foreach ($showsanbay as $sb) {
-                                            $kq = '<option value="' . $sb['id'] . '">' . $sb['tensanbay'] . '</option>';
-                                            echo $kq;
-                                        }
-                                        ?>
+                                        <?php foreach ($sanBay as $motsb) {
+                                            echo '<option value="'.$motsb['idsanbay'].'">'.$motsb['tensanbay'].'</option>';
+                                        } ?>
                                     </select>
                                 </div>
-                            </div>   
+                            </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Điểm Đến</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="diemden" id="" >
+                                    <select class="custom-select form-control" name="iddiemden" id="">
                                         <option selected value="">Chọn </option>
-                                        <?php
-                                        foreach ($showsanbay as $sb) {
-                                            $kq = '<option value="' . $sb['id'] . '">' . $sb['tensanbay'] . '</option>';
-                                            echo $kq;
-                                        }
-                                        ?>
+                                        <?php foreach ($sanBay as $motsb) {
+                                            echo '<option value="'.$motsb['idsanbay'].'">'.$motsb['tensanbay'].'</option>';
+                                        } ?>
                                     </select>
                                 </div>
                             </div>
-
-                            <div class="row mt-4">
-                                    <div class="col-lg-3">
-                                        <label for=""><strong>Thời Gian Đi</strong></label>
-                                    </div>
-                                    <div class="col-lg-9">
-                                    <input class="form-control" name="tgdi" type="datetime-local" value="" id="">                                    </div>
-                                </div>
-                                <div class="row mt-4">
-                                    <div class="col-lg-3">
-                                        <label for=""><strong>Thời Gian Đến</strong></label>
-                                    </div>
-                                    <div class="col-lg-9">
-                                    <input class="form-control" name="tgden" type="datetime-local" value="" id="">                                    </div>
-
-                                    </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for="hanhly"><strong>Hành Lý</strong></label>
+                                    <label for=""><strong>Giá tiền ghế thương gia</strong></label>
                                 </div>
-                                <div class="col-lg-9 d-flex">
-                                    <div class="form-check mr-4">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="hanhly" value="0" id="" checked>
-                                            7KG
-                                        </label>
-                                    </div>
-                                    <div class="form-check mr-4">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="hanhly" value="1" id="">
-                                            14KG
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="hanhly" value="2" id="">
-                                            20KG
-                                        </label>
-                                    </div>
+                                <div class="col-lg-9">
+                                    <input type="number" name="giavethuonggia" id="" class="form-control"
+                                        placeholder="Giá Tiền Ghế Thương Gia" aria-describedby="helpId" required>
                                 </div>
                             </div>
-
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Suất ăn</strong></label>
+                                    <label for=""><strong>Giá tiền ghế thường</strong></label>
                                 </div>
-                                <div class="col-lg-9 d-flex">
-                                    <div class="form-check mr-4">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="suatan" value="0" id="" checked>
-                                            Có
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="suatan" value="2" id="">
-                                            Không
-                                        </label>
-                                    </div>
-
+                                <div class="col-lg-9">
+                                    <input type="number" name="giavethuong" id="" class="form-control"
+                                        placeholder="Giá Tiền Ghế Thường" aria-describedby="helpId" required>
                                 </div>
                             </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Ngày Bay</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                <input class="form-control" type="date" name="ngaybay" value="2020-11-19" id="example-date-input">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Thời Gian Đi</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input class="form-control" name="tgdi" type="time" value="13:45:00" id="">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Thời Gian Đến</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input class="form-control" name="tgden" type="time" value="13:45:00" id="">
+                                </div>
+                            </div>
+                         
                             <div class="row mt-5">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9 ">
                                     <div class="row d-flex justify-content-end">
                                         <div class="col-lg-5">
                                             <div class="form-group">
-                                                <a href="index.php?ctrl=loaihang&act=index"> <input type="button" name="" id="" value="Huỷ" class="btn btn-cancel"></a>
+                                                <a href="index.php?ctrl=loaihang&act=index"> <input type="button"
+                                                        name="" id="" value="Huỷ" class="btn btn-cancel"></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
@@ -197,12 +124,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-               
-            </div>
-
+            </div
             </form>
         </div>
     </div>

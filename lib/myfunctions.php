@@ -16,7 +16,7 @@
     }
        // up load nhiều ảnh và check up load lên file upload
     function checkUpLoadMany($allFile){
-        global $pathimg;
+        $pathimg = '../uploads/';
         foreach ($allFile['name'] as $file) {
             $nameimg[] = $file;
         }
