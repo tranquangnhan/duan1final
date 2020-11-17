@@ -38,8 +38,10 @@
                     $idkh = $_POST['idkh'];
                     $trangthai = $_POST['anhien'];
                     editBinhLuan($id,$star,$idkh,$idbaiviet,$idsp,$noidung,$trangthai);
+                    print_r ($id);
                     header("location: index.php?ctrl=binhluan&act=index");
                 }
+
             }
             require_once "views/binhluanedit.php";
         break;

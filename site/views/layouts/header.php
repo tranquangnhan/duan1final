@@ -14,9 +14,10 @@
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
   <link rel="stylesheet" href="views/css/long/animate.css"/>
-  <link rel="stylesheet" href="views/css/long/home.css">
   <link rel="stylesheet" href="views/css/long/about.css">
   <link rel="stylesheet" href="views/css/long/contact.css">
+  <link rel="stylesheet" href="views/css/long/danhsachve.css">
+  <link rel="stylesheet" href="views/css/long/home.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
   <!-- end css -->
   <!-- include jquery -->
@@ -60,7 +61,7 @@
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                            <ul class="navbar-nav  W-100" id="menu-main">
+                            <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
                                     <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
                                 </li>
@@ -104,7 +105,7 @@
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                            <ul class="navbar-nav  W-100" id="menu-main">
+                            <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
                                     <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
                                 </li>

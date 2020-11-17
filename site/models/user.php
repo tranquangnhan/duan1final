@@ -25,6 +25,7 @@
             return false;
         }
     }
+ 
     function checkUser2($user){
         $sql = "select * from khachhang where user=?";
         return result1(1,$sql,$user);

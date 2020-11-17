@@ -4,6 +4,7 @@ ob_start();
 require_once "../system/config.php";
 require_once "../system/database.php";
 require_once "models/loaihang.php";
+
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
 
@@ -20,6 +21,9 @@ if(isset($_GET['act'])){
             break;
         case 'contact':
             require_once "views/contact.php";
+            break;
+        case 'danhsachve':
+            require_once "views/danhsachve.php";
             break;
         case 'singleproduct':  
             if(isset($_GET['id'])&&$_GET['id']>0){
@@ -62,6 +66,34 @@ if(isset($_GET['act'])){
                 echo '<script>window.location.href = "index.php"</script>';
             }
         break;
+        case 'hsedit':
+            echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
+            echo '<link rel="stylesheet" href="scss/buton.scss">';
+            
+            if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
+                $_SESSION['idedit'] = $_GET['idedit'];
+                $showkhedit = showkhedit($_SESSION['idedit']);
+               
+            if(isset($_POST['sua'])&&($_POST['sua'])){
+                $ten = stripTags($_POST['ten']);
+                $email = stripTags($_POST['email']);
+                $id = $_POST['id'];
+                $sdt = $_POST['sdt'];
+                $diachi= stripTags($_POST['diachi']);
+                $thanhpho= stripTags($_POST['thanhpho']);
+                updatehs($id,$ten,$email,$sdt,$diachi,$thanhpho); 
+               
+                header("location: index.php?ctrl=index&act=showhs");
+            } 
+            require_once "views/hsedit.php";
+         }
+            break;
+        case 'showhs':
+            echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
+            $iduser = $_SESSION['sid'];
+            $showhs = showhs($iduser);
+            require_once "views/showhs.php";
+            break;
         case 'kichhoat':
             if(isset($_GET['id'])&&isset($_GET['rd'])){//rd -> random   
                 $id = $_GET['id'];
@@ -177,7 +209,6 @@ if(isset($_GET['act'])){
                     header("location: index.php?act=thongbao");
                 }
             }
-            // require_once "views/userprofile.php";
         break;
         default:
             require_once "views/home.php";
