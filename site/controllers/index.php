@@ -15,6 +15,12 @@ if(isset($_GET['act'])){
         case 'home':
             require_once "views/home.php";
             break;
+        case 'about':
+            require_once "views/about.php";
+            break;
+        case 'contact':
+            require_once "views/contact.php";
+            break;
         case 'singleproduct':  
             if(isset($_GET['id'])&&$_GET['id']>0){
                 $id = $_GET['id'];
