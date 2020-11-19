@@ -3,12 +3,9 @@ session_start();
 ob_start();
 require_once "../system/config.php";
 require_once "../system/database.php";
-<<<<<<< HEAD
 require_once "models/loaihang.php";
 require_once "models/user.php";
 
-=======
->>>>>>> 183d07d032dd7640adcbaba8bf9e84cd2a1bd03a
 
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
@@ -24,62 +21,8 @@ if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
         case 'home':
-           
             require_once "views/home.php";
             break;
-<<<<<<< HEAD
-        // case 'singleproduct':  
-        //     if(isset($_GET['id'])&&$_GET['id']>0){
-        //         $id = $_GET['id'];
-        //         settype($id,"int");
-        //         $showAllCmt = showAllCmt($id);
-        //         $single = showSingleProduct($_GET['id']);
-        //     }
-        //     require_once 'views/singleproduct.php';
-        //     break;
-        // case 'cat':
-        //     if(isset($_GET['maloai'])==true&&($_GET['maloai']>0)) $maloai= $_GET['maloai'];
-        //     $pagenum=1;
-        //     if(isset($_GET['pagenum'])==true) $pagenum = $_GET['pagenum'];
-=======
-        case 'about':
-            require_once "views/about.php";
-            break;
-        case 'contact':
-            require_once "views/contact.php";
-            break;
-          
-        case 'danhsachve':   // để sửa css
-            require_once "views/danhsachve.php";
-            break;
-        case 'blog':
-            require_once "views/blog.php";
-            break; 
-        case 'singleproduct':  
-            if(isset($_GET['id'])&&$_GET['id']>0){
-                $id = $_GET['id'];
-                settype($id,"int");
-                $showAllCmt = showAllCmt($id);
-                $single = showSingleProduct($_GET['id']);
-            }
-            require_once 'views/singleproduct.php';
-            break;
-        case 'cat':
-            if(isset($_GET['maloai'])==true&&($_GET['maloai']>0)) $maloai= $_GET['maloai'];
-            $pagenum=1;
-            if(isset($_GET['pagenum'])==true) $pagenum = $_GET['pagenum'];
->>>>>>> 183d07d032dd7640adcbaba8bf9e84cd2a1bd03a
-
-        //     settype($maloai,"int");
-        //     settype($pagenum,"int");
-        //     if($pagenum<=0) $pagenum = 1;
-        //     $pagesize = PAGE_SIZE;
-        //     $ds = getHangHoaTheoLoai($maloai,$pagenum,$pagesize);
-        //     $totalrows = demHangHoaTheoLoai($maloai);
-        //     $baseurl = SITE_URL."index.php?act=cat&maloai={$maloai}";
-        //     $link = taolinks($baseurl,$pagenum,$pagesize,$totalrows);
-        //     require_once 'views/shop.php';
-        //     break;
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
@@ -99,13 +42,9 @@ if(isset($_GET['act'])){
         break;
         case 'hsedit':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
-<<<<<<< HEAD
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             $iduser = $_SESSION['sid'];
             $showhs = showhs($iduser);
-=======
-            echo '<link rel="stylesheet" href="scss/buton.scss">';
->>>>>>> 183d07d032dd7640adcbaba8bf9e84cd2a1bd03a
             if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showkhedit = showkhedit($_SESSION['idedit']);
@@ -259,10 +198,7 @@ if(isset($_GET['act'])){
                     // header("location: index.php?act=thongbao");
                 }
             }
-<<<<<<< HEAD
             require_once "views/doimk.php";
-=======
->>>>>>> 183d07d032dd7640adcbaba8bf9e84cd2a1bd03a
         break;
         /**
          * title: Chức năng tìm kiếm

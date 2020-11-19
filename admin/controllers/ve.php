@@ -65,24 +65,22 @@
                     
                     $_SESSION['idchuyenbay'] = $idChuyenBay;
 
-                    header('location: index.php?ctrl=ve&act=chonghethuonggia');
+                    header('location: index.php?ctrl=ve&act=chonghe');
                 }
             }
         break;
-        case 'chonghethuonggia':
+        case 'chonghe':
+            $idChuyenBay = $_SESSION['idchuyenbay'];
             if(isset($_SESSION['idchuyenbay'])&&($_SESSION['idchuyenbay'])){
                 $soGheThuongGia = getGhe($_SESSION['idchuyenbay'],'ttghethuonggia');
-            }
-            include_once "views/chonghethuonggia.php";
-            break;
-        case 'chonghethuong':
-            if(isset($_SESSION['idchuyenbay'])&&($_SESSION['idchuyenbay'])){
                 $soGheThuong = getGhe($_SESSION['idchuyenbay'],'ttghethuong');
+                include_once "views/chonghe.php";
+            }else{
+                echo "không có chuyến bay này !";
             }
-            include_once "views/chonghethuong.php";
             break;
         case 'done':
-            if(isset($_GET['done'])&&($_GET['done'] === 1)){
+            if(isset($_GET['done'])){
                 unset($_SESSION['idchuyenbay']);
                 header('location: ?ctrl=ve&act=index');
             }

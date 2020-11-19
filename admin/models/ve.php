@@ -154,26 +154,14 @@ function getGhe($idChuyenBay,$loaiGhe)
     }else{
         $class = 'l-ghe-phothong pt';
     }
-   
-    if(count($slTT)>8){
         for ($i=0; $i< count($slTT); $i++) {
             if($slTT[$i] == 1){
-                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large  bg-red" >' . ($i+1). '</div>';
+                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large l-ghe-active" >' . ($i+1). '</div>';
             }else{
                 $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large " >' . ($i+1). '</div>';
             }
             
         }
-    }
-    if(count($slTT)<=8){
-        for ($i=0; $i< count($slTT); $i++) {
-            if($slTT[$i] == 1){
-                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-small  bg-red">' . ($i+1). '</div>';
-            }else{
-                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large  " >' . ($i+1). '</div>';
-            }
-        }
-    }
     
     $Array = array();
     $Array['idchuyenbay'] = $idChuyenBay;
