@@ -7,6 +7,8 @@
     switch ($act) {
         case 'index':
             $showAllve = showAllve();
+            $showdiemdi=showdiemdi();
+            $showdiemden=showdiemden();
             include_once "views/veindex.php";
         break;
         case 'import':
