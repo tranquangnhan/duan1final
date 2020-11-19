@@ -2,7 +2,7 @@
 <?php
     function showkh(){
         $sql = "select * from khachhang where 1 limit 10";
-        return result1(1,$sql);
+        return result1(0,$sql);
     }
     function showhdedit($id){
         $sql = "select * from hoadon where id = '{$id}' ";

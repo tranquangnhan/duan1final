@@ -13,11 +13,11 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container bootstrap snippets bootdey">
 <div class="row">
-  <div class="profile-nav col-md-3">
+   <div class="profile-nav col-md-3">
       <div class="panel">
           <div class="user-heading round">
               <a href="#">
-                  <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                  <img src="views/img/ava.jpg" alt="">
               </a>
               <?php  foreach ($showhs as $hs ) {?>
               <h1><?=$hs['user']?></h1>
@@ -27,13 +27,13 @@
          
 
           <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
-              <li><a href="#"> <i class="fa fa-calendar"></i> Recent Activity <span class="label label-warning pull-right r-activity">9</span></a></li>
+              <li class="active"><a href="#"> <i class="fa fa-user"></i> Thông Tin Cá Nhân</a></li>
+              <li><a href="index.php?ctrl=index&act=userprofile"> <i class="fa fa-calendar"></i> Đổi Mật Khẩu </a></li>
                <?php  foreach ($showhs as $hskh ) {
               $id=$hskh['id'];
               $linkedit = "index.php?ctrl=index&act=hsedit&idedit=".$id; 
           ?>
-              <li><a href="<?=$linkedit?>"> <i class="fa fa-edit"></i> Edit profile</a></li>
+              <li><a href="<?=$linkedit?>"> <i class="fa fa-edit"></i> Chỉnh Sửa Thông Tin</a></li>
                <?php }?>
           </ul>
       </div>
@@ -128,6 +128,7 @@
           </div>
       </div>
   </div>
+</div>
 </div>
 </div>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>

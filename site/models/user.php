@@ -68,8 +68,8 @@
         $sql = "INSERT INTO khachhang (user,pass,kichhoat,email,sodienthoai,randomkey) VALUES (?,?,?,?,?,?)";
         return exec1($sql,$userName,$passWord,$active,$email,$phone,$randomKey);
     }
-    function user($id){
-        $sql = "select * from khachhang where id='{$id}'";
+    function user($idUser){
+        $sql = "select * from khachhang where id='{$idUser}'";
         return result1(1,$sql);
     }
     function setNewPass($id,$newpass){
