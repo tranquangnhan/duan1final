@@ -26,8 +26,9 @@
             include_once "views/importexcel.php";
         break;
         case 'add':
-            $sanBay = sanBay();
+            $tuyenBay = tuyenBay();
             $dsMayBay = dsMayBay();
+
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 // $showveedit = showveedit($_SESSION['idedit']);
@@ -37,8 +38,7 @@
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
                 $idMayBay = $_POST['idmaybay'];
-                $diemDi = $_POST['iddiemdi'];
-                $diemDen = $_POST['iddiemden'];
+                $idTuyenDuong = $_POST['idtuyenduong'];
 
                 $giaVeThuongGia = $_POST['giavethuonggia'];
                 $giaVeThuong = $_POST['giavethuong'];
@@ -58,12 +58,11 @@
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
                     //updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
                 }else{
-                    $idTuyenDuong = addIdtuyenDuong($diemDi,$diemDen);
 
                     $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
                     
-                    addTTVe($idMayBay);
-
+                    addTTVe($idMayBay,$idChuyenBay);
+                    
                     $_SESSION['idchuyenbay'] = $idChuyenBay;
 
                     header('location: index.php?ctrl=ve&act=chonghethuonggia');

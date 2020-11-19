@@ -20,8 +20,8 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM MÁY BAY</h3>
-                            <p class="text-center">Bạn có thể thêm máy bay ở đây!</p>
+                            <h3 class="mt-4 text-center">THÊM CHUYẾN BAY</h3>
+                            <p class="text-center">Bạn có thể thêm chuyến bay ở đây!</p>
                              
                             <div class="row mt-4">
                                 <div class="col-lg-3">
@@ -38,27 +38,14 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Điểm Đi</strong></label>
+                                    <label for=""><strong>Tuyến bay</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="iddiemdi" id="">
+                                    <select class="custom-select form-control" name="idtuyenduong" id="">
                                         <option selected value="">Chọn </option>
-                                        <?php foreach ($sanBay as $motsb) {
-                                            echo '<option value="'.$motsb['idsanbay'].'">'.$motsb['tensanbay'].'</option>';
-                                        } ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Điểm Đến</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="custom-select form-control" name="iddiemden" id="">
-                                        <option selected value="">Chọn </option>
-                                        <?php foreach ($sanBay as $motsb) {
-                                            echo '<option value="'.$motsb['idsanbay'].'">'.$motsb['tensanbay'].'</option>';
-                                        } ?>
+                                        <?php foreach ($tuyenBay as $mottb) {
+                                            echo '<option value="'.$mottb['id'].'">'.showNameSb($mottb['iddiemdi']). " - " . showNameSb($mottb['iddiemden']).'</option>';
+                                       } ?>
                                     </select>
                                 </div>
                             </div>

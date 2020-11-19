@@ -9,6 +9,7 @@ include_once '../lib/myfunctions.php';
 // require model
 require_once "models/loaihang.php";
 require_once "models/sanpham.php";
+require_once "models/danhsachve.php";
 
 require_once "views/layouts/header.php";
 
@@ -76,7 +77,6 @@ if(isset($_GET['act'])){
         case 'hsedit':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="scss/buton.scss">';
-            
             if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showkhedit = showkhedit($_SESSION['idedit']);
@@ -230,6 +230,14 @@ if(isset($_GET['act'])){
         /**
          * Kết thúc chức năng tìm kiếm
          */
+        case 'chonghe':
+            echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
+            // Truyền file danh sách vé trong models vào 
+            $showGheTg = showDsMb(1)['soghethuonggia'];
+            $showGheThuong = showDsMb(1)['soghethuong'];
+            $showHtml = showDsMb(1)['html'];
+            require_once 'views/chonghe.php';
+            break;
         default:
             require_once "views/home.php";
             break;

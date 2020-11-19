@@ -46,8 +46,14 @@
                     </div>
                     <div class="col-sm d-none d-sm-block line_h_28">
                         <ul class="float-right margin-0px text-white mr-0">
-                            <li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
-                            <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>
+                            <?php 
+                            if(isset($_SESSION['sid'])){
+                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
+                                <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
+                            }else{
+                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
+                                <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
+                            } ?>
                         </ul>
                     </div>
                 </div>
@@ -140,8 +146,13 @@
                                         <i class="far fa-user-circle"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="?act=signup">Đăng ký</a>
-                                        <a class="dropdown-item" href="?act=login">Đăng nhập</a>
+                                        <?php 
+                                        if(isset($_SESSION['sid'])){
+                                            echo '<a class="dropdown-item" href="?act=signup">'.$_SESSION['suser'].'</a>';
+                                        }else{
+                                            echo '<a class="dropdown-item" href="?act=signup">Đăng ký</a>
+                                                 <a class="dropdown-item" href="?act=login">Đăng nhập</a>';
+                                        } ?>
                                     </div>
                                 </li>
                             </ul>
