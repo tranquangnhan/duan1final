@@ -11,6 +11,7 @@ function fireErr(text) {
         text: text,
         showConfirmButton: true,
         showCancelButton: false,
+        icon: 'error',
     });
 }
 $("#signup").click(async function() {

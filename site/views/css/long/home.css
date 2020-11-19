@@ -207,27 +207,6 @@ a:hover {
     position: relative;
 }
 
-.rating ul li.active {
-    background-image: url(../img/star_1.png);
-}
-
-.rating ul li {
-    display: inline-block;
-    background-image: url(../img/star_0.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 14px;
-    width: 14px;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.hotel-grid .hotel-img {
-    position: relative;
-    overflow: hidden;
-    height: 168px;
-}
-
 .te-al-right {
     text-align: right;
 }
@@ -572,7 +551,6 @@ a:hover {
     color: #9E9E9E;
 }
 
-.box-city {}
 
 .name-city {
     color: black;
@@ -782,8 +760,6 @@ a:hover {
     font-family: Raleway;
     text-transform: capitalize;
 }
-
-.anim2-pn3 {}
 
 .owl-theme .owl-dots .owl-dot span {
     width: 15px;
@@ -1032,6 +1008,202 @@ a:hover {
 
 
 /* css trang home  */
+
+#trove {
+    display: none;
+}
+
+.fz-12px {
+    font-size: 12px;
+}
+
+.max-height-435px {
+    max-height: 435px;
+}
+
+.l-slide-ud {
+    width: 100%;
+    height: 100%;
+    margin: 30px;
+}
+
+.header-output-fixed {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+    opacity: 1;
+    box-shadow: 0px 0px 32px -8px #858585;
+}
+
+.l-bt-fixed-to-top {
+    position: fixed;
+    bottom: 25px;
+    padding: 10px;
+    right: 50px;
+    display: none;
+    opacity: 0.8;
+    animation-name: bt-to-top;
+    animation-duration: 0.2s;
+    z-index: 100;
+}
+
+@keyframes bt-to-top {
+    from {
+        bottom: -10px;
+    }
+    to {
+        bottom: 30px;
+    }
+}
+
+.l-bt-fixed-to-top .bt-icon {
+    border: none;
+    padding: 20px 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    background-color: #F44336;
+    overflow: hidden;
+    font-family: inherit;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+.l-bt-fixed-to-top .bt-icon:hover {
+    transform: scale(1.1);
+}
+
+#l-menu-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: 0.5s;
+    display: none;
+}
+
+.l-box-ud {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 23%;
+    min-height: 300px;
+    margin-right: 2.66%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.l-box-ud:hover {
+    z-index: 1;
+    transform: scale(1.05);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .5)
+}
+
+.l-ud-giam-gia {
+    transition: 0.5s;
+    transform: translateY(250px);
+}
+
+.l-box-ud:hover .l-ud-giam-gia {
+    color: #F44336;
+    transform: translateY(0px);
+}
+
+.l-box-ud-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.l-box-ud-img img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.l-box-ud .l-box-ud-img:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, #1db8c1, #000000);
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.l-box-ud:hover .l-box-ud-img:before {
+    opacity: 1;
+}
+
+.l-thongtin-ud {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    color: white;
+}
+
+.l-thongtin-ud h2 {
+    text-transform: uppercase;
+}
+
+.l-thongtin-ud p {
+    transform: translateY(250px);
+    transition: 0.3s;
+}
+
+.l-thongtin-ud:hover p {
+    transform: translateY(0px);
+}
+
+.l-thongtin-ud .l-ud-date-flight {
+    transform: translateY(250px);
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.l-thongtin-ud:hover .l-ud-date-flight {
+    transform: translateY(0px);
+}
+
+.l-button-ud {
+    font-size: 0.7vw;
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    background: #1db8c1;
+    transition: 0.5s;
+    /* transform: translateY(250px); */
+}
+
+.l-box-ud:hover .l-button-ud {
+    transform: translateY(0px);
+}
+
+.l-thongtin-ud p span {
+    text-decoration: line-through;
+}
+
+/*  */
 
 #trove {
     display: none;
