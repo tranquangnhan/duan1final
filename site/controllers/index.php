@@ -9,14 +9,13 @@ include_once '../lib/myfunctions.php';
 // require model
 require_once "models/loaihang.php";
 require_once "models/sanpham.php";
-
+require_once "models/blog.php";
 require_once "views/layouts/header.php";
 
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
-        case 'home':
-           
+        case 'home':           
             require_once "views/home.php";
             break;
         case 'about':
@@ -24,14 +23,35 @@ if(isset($_GET['act'])){
             break;
         case 'contact':
             require_once "views/contact.php";
-            break;
-          
+            break;          
         case 'danhsachve':   // để sửa css
             require_once "views/danhsachve.php";
             break;
-        case 'blog':
+        case 'blog':  
+            $getDmblog = getDmblog();       
+            $getbestBlog = getBestBlog();     
+            $page_num = 1;  	  
+            if (isset($_GET['page_num'])==true) $page_num = $_GET['page_num'];       
+            settype($page_num, "int");    
+            $page_size = PAGE_SIZE;
+            $allBlog = getallBlog($page_num, $page_size);    
+            if ($page_num<=0) $page_num=1;
+            $total_rows = countBlog();
+            $baseurl = SITE_URL . "?act=blog";
+            $links = taolinks($baseurl, $page_num, $page_size, $total_rows);            
             require_once "views/blog.php";
             break; 
+        case 'dtBlog':
+            if (isset($_GET['idbl'])==true) $id = $_GET['idbl'];
+            settype($id, "int");
+            $getBlogbyid = getBlogbyid($id);
+            $getbestBlog = getBestBlog();
+            $getDmblog = getDmblog();
+            if (isset($_GET['iddm'])==true) $iddm = $_GET['iddm'];
+            settype($iddm, "int");
+            $getBlogByiddm = getBlogByiddm($iddm);           
+            require_once "views/blogdetail.php";
+            break;
         case 'singleproduct':  
             if(isset($_GET['id'])&&$_GET['id']>0){
                 $id = $_GET['id'];

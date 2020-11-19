@@ -8,15 +8,15 @@ function checked($temp){
     }
     return $temp;
 }
-$img = $pathimg.$showspedit['img'];
+$anhien = checked($showspedit[0]['public']);
+$img = $pathimg.$showspedit[0]['img'];
 if(is_file($img)){
     $img = $img;
 }else{
     $img = "nothing...";
 }
-$anhien = checked($showspedit['public']);
 ?>
-    <div class="col-lg-9">
+<div class="col-lg-9">
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
@@ -45,32 +45,33 @@ $anhien = checked($showspedit['public']);
                                     <label for=""><strong>Ảnh bài viết</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <img src="<?=$img?>" alt="" width="200" height="200" class="img-edit">
-                                    <input type="file" class="form-control-file" name="avatar[]" id="avatar" multiple 
+                                    <img src="<?=$img?>" alt="" width="200" height="200" class="img-edit">    
+                                    <input type="text" class="form-control" name="avatar" id="avatar" value="<?=$showspedit[0]['img'];?>">                                
+                                    <input type="file" class="form-control-file" name="avatar1[]" id="avatar1" multiple
                                     multiple>
                                 </div>
                             </div>
-                            <div class="row mt-4">
+                            <div class="row mt-4 l-mr-t-40px">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Danh Mục Bài Viết</strong></label>
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="custom-select form-control" name="iddanhmuc" id="danhmuc" required>
-                                        <option selected value="">Chọn </option>
                                         <?php
                                             $showDm = '';
                                             foreach ($showdmsp as $dm) {
                                                 $sl = "selected";
-                                                $iddm = $showspedit['iddm'];
+                                                $iddm = $showspedit[0]['iddm'];
+                                                echo $iddm;
                                                 if($dm['id'] == $iddm){
                                                     $showDm .= '<option value="'.$dm['id'].'"'.$sl.'>'.$dm['name'].'</option>';
                                                 }
                                                 else{
                                                     $showDm .= '<option value="'.$dm['id'].'">'.$dm['name'].'</option>';
                                                 }
-                                            }     
-                                            echo $showDm;
-                                            ?>    
+                                            }
+                                            echo $showDm;    
+                                        ?>    
                                     </select>
                                 </div>
                             </div>
@@ -80,7 +81,7 @@ $anhien = checked($showspedit['public']);
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="text" name="title" id="title" class="form-control" placeholder="Jhon Doe"
-                                        aria-describedby="helpId" required value="<?=strip_tags($showspedit['name'])?>">
+                                        aria-describedby="helpId" required value="<?=strip_tags($showspedit[0]['name'])?>">
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -88,7 +89,7 @@ $anhien = checked($showspedit['public']);
                                     <label for=""><strong>Nội Dung</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                      <textarea class="form-control" name="content" id="editor1" rows="3" value="<?=$showspedit['noidung']?>" placeholder="Mô Tả" required></textarea>
+                                      <textarea class="form-control" name="content" id="editor1" rows="3" placeholder="Mô Tả" required><?=$showspedit[0]['noidung']?></textarea>
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -96,7 +97,7 @@ $anhien = checked($showspedit['public']);
                                     <label for=""><strong>Mô Tả</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                      <textarea class="form-control" name="mota" rows="3" placeholder="Mô Tả" required><?=strip_tags($showspedit['mota'])?></textarea>
+                                      <textarea class="form-control" name="mota" rows="3" placeholder="Mô Tả" required><?=strip_tags($showspedit[0]['mota'])?></textarea>
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -104,7 +105,7 @@ $anhien = checked($showspedit['public']);
                                     <label for=""><strong>tag</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="tag" id="tag" value="<?=$showspedit['tag']?>" class="form-control" placeholder="xedep,xexin"
+                                    <input type="text" name="tag" id="tag" value="<?=$showspedit[0]['tag']?>" class="form-control" placeholder="xedep,xexin"
                                         aria-describedby="helpId" required>
                                 </div>
                             </div>

@@ -74,7 +74,7 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
-                <h2>SẢN PHẨM</h2>
+                <h2>Bài Viết</h2>
             </div>
             <div class="col-lg-4 mt-3">
                 <nav aria-label="breadcrumb ">
@@ -112,7 +112,7 @@
                                     <select class="custom-select form-control" name="iddanhmuc" id="danhmuc" required>
                                         <option selected value="">Chọn </option>
                                         <?php 
-                                            foreach ($showdmsp as $dm) {
+                                            foreach ($showdmbv as $dm) {
                                                 $kq = '<option value="'.$dm['id'].'">'.$dm['name'].'</option>';
                                                 echo $kq ;
                                             }         
@@ -150,7 +150,7 @@
                                     <label for=""><strong>tag</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="tag" id="tag" class="form-control" placeholder="xedep,xexin"
+                                    <input type="text" name="tag" id="tag" class="form-control" placeholder="Trải Nghiệm, Du Lịch"
                                         aria-describedby="helpId" required>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                     <div class="row d-flex justify-content-end">
                                         <div class="col-lg-5">
                                             <div class="form-group">
-                                            <a href="index.php?ctrl=hanghoa&act=index"> <input type="button" name="" id="" value="Huỷ" class="btn btn-cancel"></a>
+                                            <a href="index.php?ctrl=baiviet&act=index"> <input type="button" name="" id="" value="Huỷ" class="btn btn-cancel"></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">

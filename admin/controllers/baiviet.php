@@ -11,9 +11,11 @@
             include_once "views/baivietindex.php";
         break;
         case 'add':
+            $showdmbv = showdmbv();
             $showdmsp = showAllDmBaiViet();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
+                $id = $_GET['idedit'];
                 $showspedit = motbaiviet($id);
                 include_once "views/baivietedit.php";
             }else{
@@ -21,9 +23,13 @@
             }
             if(isset($_POST['submit'])&&($_POST['submit'])){
                 $iddm = $_POST['iddanhmuc'];
-                $allFile = $_FILES['avatar'];
-                //upload nhiều ảnh
+                $allFile = $_FILES['avatar1'];                
+                // //upload nhiều ảnh
                 $imgupload = checkUpLoadMany($allFile);
+                // $img = $_POST['avatar'];
+                if ($imgupload == "") {
+                    $imgupload = $_POST['avatar'];
+                }
                 $name = stripTags($_POST['title']);
                 $noidung = $_POST['content'];
                 $tacgia = stripTags($_SESSION['suser']);
@@ -53,6 +59,7 @@
                 $id = $_GET['iddel'];
                 xoaBlog($id);
             }
+            $showAllBlog = showAllBlog(10);
         include_once "views/baivietindex.php";
         break;
             default:

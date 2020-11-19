@@ -328,3 +328,9 @@ p{
 
 
 /* STICKY CSS */
+
+
+.responsiveImg {
+    width: 100%;
+    height: auto;
+}

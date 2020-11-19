@@ -28,7 +28,7 @@
 </head>
 <body>
     <div class="l-bt-fixed-to-top" id="bt-to-top">
-        <div class="bt-icon"><i class="fas fa-helicopter"></i> TOP</div>
+        <div class="bt-icon"><i class="fab fa-telegram-plane"></i> TOP</div>
     </div>
     <header>
         <div class="background-blue-color pd-tb-2px">
