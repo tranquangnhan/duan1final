@@ -4,6 +4,8 @@ ob_start();
 require_once "../system/config.php";
 require_once "../system/database.php";
 require_once "models/loaihang.php";
+require_once "models/user.php";
+
 
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
@@ -16,30 +18,30 @@ if(isset($_GET['act'])){
         case 'home':
             require_once "views/home.php";
             break;
-        case 'singleproduct':  
-            if(isset($_GET['id'])&&$_GET['id']>0){
-                $id = $_GET['id'];
-                settype($id,"int");
-                $showAllCmt = showAllCmt($id);
-                $single = showSingleProduct($_GET['id']);
-            }
-            require_once 'views/singleproduct.php';
-            break;
-        case 'cat':
-            if(isset($_GET['maloai'])==true&&($_GET['maloai']>0)) $maloai= $_GET['maloai'];
-            $pagenum=1;
-            if(isset($_GET['pagenum'])==true) $pagenum = $_GET['pagenum'];
+        // case 'singleproduct':  
+        //     if(isset($_GET['id'])&&$_GET['id']>0){
+        //         $id = $_GET['id'];
+        //         settype($id,"int");
+        //         $showAllCmt = showAllCmt($id);
+        //         $single = showSingleProduct($_GET['id']);
+        //     }
+        //     require_once 'views/singleproduct.php';
+        //     break;
+        // case 'cat':
+        //     if(isset($_GET['maloai'])==true&&($_GET['maloai']>0)) $maloai= $_GET['maloai'];
+        //     $pagenum=1;
+        //     if(isset($_GET['pagenum'])==true) $pagenum = $_GET['pagenum'];
 
-            settype($maloai,"int");
-            settype($pagenum,"int");
-            if($pagenum<=0) $pagenum = 1;
-            $pagesize = PAGE_SIZE;
-            $ds = getHangHoaTheoLoai($maloai,$pagenum,$pagesize);
-            $totalrows = demHangHoaTheoLoai($maloai);
-            $baseurl = SITE_URL."index.php?act=cat&maloai={$maloai}";
-            $link = taolinks($baseurl,$pagenum,$pagesize,$totalrows);
-            require_once 'views/shop.php';
-            break;
+        //     settype($maloai,"int");
+        //     settype($pagenum,"int");
+        //     if($pagenum<=0) $pagenum = 1;
+        //     $pagesize = PAGE_SIZE;
+        //     $ds = getHangHoaTheoLoai($maloai,$pagenum,$pagesize);
+        //     $totalrows = demHangHoaTheoLoai($maloai);
+        //     $baseurl = SITE_URL."index.php?act=cat&maloai={$maloai}";
+        //     $link = taolinks($baseurl,$pagenum,$pagesize,$totalrows);
+        //     require_once 'views/shop.php';
+        //     break;
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
@@ -59,8 +61,9 @@ if(isset($_GET['act'])){
         break;
         case 'hsedit':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
-            echo '<link rel="stylesheet" href="scss/buton.scss">';
-            
+            echo '<link rel="stylesheet" href="views/css/buton.scss">';
+            $iduser = $_SESSION['sid'];
+            $showhs = showhs($iduser);
             if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showkhedit = showkhedit($_SESSION['idedit']);
@@ -109,14 +112,18 @@ if(isset($_GET['act'])){
             }else{
                 $thongbao = "Không có gì để thông báo";
             }
-            require_once "views/thongbao.php";
+            // require_once "views/thongbao.php";
         break;
         case 'quenmk':
+            echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
+            echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
+            echo '<link rel="stylesheet" href="scss/buton.scss">';
             if(isset($_POST['quenmk'])&&($_POST['quenmk'])){
+              
                 $email = trim(stripTags(test_input($_POST['email'])));
                 $checkEmail = checkEmailTonTai($email);
                 $idUser =  $checkEmail['id'];
-                $user = $checkEmail['name'];
+                $user = $checkEmail['user'];
                 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
                     $thongbao = "$email Nhập Không Hợp Lệ!"; $thanhcong = FALSE;
                 }elseif($email == "") {
@@ -128,9 +135,9 @@ if(isset($_GET['act'])){
                     $randomKey = rand(100000,999999);
                     setcookie("randomKey", $randomKey, time()+300); 
                     // start mail
-                    $userName = 'tranquangnhan1606@gmail.com';
-                    $passWord = 'Tranquangnhan@1606';
-                    $from = 'tranquangnhan1606@gmail.com';
+                    $userName = 'datvemaybayy@gmail.com';
+                    $passWord = 'Datvemaybay123';
+                    $from = 'datvemaybayy@gmail.com';
                     $title = 'Lấy lại Mật Khẩu';
                     $subject = 'Quên Mật Khẩu';
                     $linkKH ="<a href='". $_SERVER['HTTP_HOST'].SITE_URL.
@@ -140,16 +147,22 @@ if(isset($_GET['act'])){
                     sendMail($userName,$passWord,$from,$email,$user,$title,$subject,$body);
                     // end mail
                     $_SESSION['thongbao'] = 'Vui lòng check email để lấy lại mật khẩu!Email chỉ có hiệu lực trong 5 phút';
-                    header("location: index.php?act=thongbao");
+                    // header("location: index.php?act=thongbao");
+
                 }
                 if($thanhcong == FALSE){
                     $_SESSION['thongbao'] = $thongbao;
-                    header("location: index.php?act=thongbao");
+                    // header("location: index.php?act=thongbao");
                 }
             }
-        require_once "views/forgotpass.php";
+        require_once "views/quenmk.php";
         break;
         case 'datlaimk':
+            echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
+            echo '<link rel="stylesheet" href="views/css/buton.scss">';
+            echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
+            $iduser = $_SESSION['sid'];
+            $showhs = showhs($iduser);
             if(isset($_POST['datlaimk'])&&($_POST['datlaimk'])){
                 $id = $_GET['id'];
                 $rd = $_GET['rd'];
@@ -171,12 +184,16 @@ if(isset($_GET['act'])){
             require_once "views/datlaimk.php";
         break;
         case 'userprofile':
+            echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
+            echo '<link rel="stylesheet" href="views/css/buton.scss">';
+            $iduser = $_SESSION['sid'];
+            $showhs = showhs($iduser);
             if(isset($_POST['doimk'])&&($_POST['doimk'])){
                 $idUser = $_SESSION['sid'];
-                $mkcu = trim(stripTags(test_input($_POST['mkcu'])));
+                $mkcu = trim(stripTags(test_input($_POST['passhientai'])));
                 $user = user($idUser);
-                $pass = trim(stripTags(test_input($_POST['pw1'])));
-                $repass = trim(stripTags(test_input($_POST['repass'])));
+                $pass = trim(stripTags(test_input($_POST['passmoi'])));
+                $repass = trim(stripTags(test_input($_POST['nhaplaipass'])));
                 if($mkcu == ""){
                     $thongbao ="Password Cũ Chưa Nhập !"; $thanhcong = FALSE;
                 }elseif((strlen($mkcu))<=2){
@@ -194,13 +211,13 @@ if(isset($_GET['act'])){
                     $thanhcong = TRUE;
                     setNewPass($idUser,$pass);
                     $_SESSION['thongbao'] = "Mật Khẩu Đã được thay đổi thành công";
-                    header("location: index.php?act=thongbao");
+                    // header("location: index.php?act=thongbao");
                 }if($thanhcong == FALSE){
                     $_SESSION['thongbao'] = $thongbao;
-                    header("location: index.php?act=thongbao");
+                    // header("location: index.php?act=thongbao");
                 }
             }
-            // require_once "views/userprofile.php";
+            require_once "views/doimk.php";
         break;
         default:
             require_once "views/home.php";

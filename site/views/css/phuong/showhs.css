@@ -16,7 +16,7 @@ body {
 }
 
 .profile-nav .user-heading {
-    background: #fbc02d;
+    background: #1db8c1;
     color: #fff;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
@@ -112,7 +112,7 @@ body {
 }
 
 .bio-graph-heading {
-    background: #fbc02d;
+    background: #1db8c1;
     color: #fff;
     text-align: center;
     font-style: italic;
