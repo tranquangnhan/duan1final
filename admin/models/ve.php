@@ -121,7 +121,7 @@ function addTTVe($idMayBay,$idChuyenBay)
     exec1($sql);
 }
 
-function setValue($id,$idMayBay,$loaiGhe){
+function setGheAdmin($id,$idMayBay,$loaiGhe){
     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idMayBay;
     $result = result1(1,$sql)[$loaiGhe];
     $arr =  explode(",",$result);

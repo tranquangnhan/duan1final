@@ -10,6 +10,7 @@ include_once '../lib/myfunctions.php';
 require_once "models/loaihang.php";
 require_once "models/sanpham.php";
 require_once "models/danhsachve.php";
+require_once "models/ve.php";
 
 require_once "views/layouts/header.php";
 
@@ -231,12 +232,20 @@ if(isset($_GET['act'])){
          * Kết thúc chức năng tìm kiếm
          */
         case 'chonghe':
+            if(isset($_GET['idcb'])&&($_GET['idcb'])>0){
+
+            $idChuyenBay = $_GET['idcb'];
+
+            echo '<script src="https://js.pusher.com/7.0/pusher.min.js"></script>';
+            echo "<script src='views/jquery/chonghe.js'></script>";
             echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
-            // Truyền file danh sách vé trong models vào 
-            $showGheTg = showDsMb(1)['soghethuonggia'];
-            $showGheThuong = showDsMb(1)['soghethuong'];
-            $showHtml = showDsMb(1)['html'];
+
+            $getGheTg =  renderHtml($idChuyenBay,'ttghethuonggia');
+            $getGheThuong =  renderHtml($idChuyenBay,'ttghethuong');
             require_once 'views/chonghe.php';
+
+            echo "<script src='views/jquery/showghe.js'></script>";
+            }
             break;
         default:
             require_once "views/home.php";
