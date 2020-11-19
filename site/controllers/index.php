@@ -23,6 +23,30 @@ if(isset($_GET['act'])){
         case 'home':
             require_once "views/home.php";
             break;
+        case 'about':
+            require_once "views/about.php";
+            break;
+        case 'contact':
+            require_once "views/contact.php";
+            break;
+          
+        case 'danhsachve':   // để sửa css
+          $ds = getAllDiemDi();
+          print_r($ds);
+            require_once "views/danhsachve.php";
+            break;
+        case 'blog':
+            require_once "views/blog.php";
+            break; 
+        case 'singleproduct':  
+            if(isset($_GET['id'])&&$_GET['id']>0){
+                $id = $_GET['id'];
+                settype($id,"int");
+                $showAllCmt = showAllCmt($id);
+                $single = showSingleProduct($_GET['id']);
+            }
+            require_once 'views/singleproduct.php';
+            break;
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
@@ -209,6 +233,7 @@ if(isset($_GET['act'])){
         case 'timKiem':
             // Truyền file danh sách vé trong models vào 
             require_once '../models/danhsachve.php';
+            $search = isset($_GET['name']) ? $_GET ['name']:"";
             break;
         /**
          * Kết thúc chức năng tìm kiếm

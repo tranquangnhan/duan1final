@@ -73,7 +73,43 @@
         </div>
         
         <div class="box-right">
+     
           <div class="row box_ve mr-bot-40px background-white mr-0px">
+            <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
+                <div class="hotel-img position-relative line-height-150px">
+                    <img src="views/img/vietject.png" alt="">
+                    <div class="hover-option background-main-color opacity-6">
+                        <h3 class="text-center text-white padding-top-n-25 "></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 border-grey1 pd-0px">
+              <div class="pd-10px">
+        <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">from: </span>to: </a></h3> 
+                <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Booking Now </a>
+                <div class="date mr-lr-15px">
+                  <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
+                    <i class="fa fa-chevron-up mr-right-5px"></i>
+                    Desparture :  
+                    <span class="text-third-color mr-right-5px"></span> 
+                  </a>
+                  <small class="text-uppercase text-extra-small">
+                    <a href="#" class="cl-te-grey fz-0p7rem">
+                      <i class="fa fa-chevron-down mr-right-5px"></i>
+                      Return :  
+                      <span class="text-third-color mr-right-5px">28/3/2017</span> </a>
+                  </small>
+                </div>
+                <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
+                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold">600.000VND</strong>Person
+                    <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Oneway flight</span> 2 Sotp</i>
+                </div>                    
+              </div>
+            </div>
+          </div>
+      
+       
+      <!-- <div class="row box_ve mr-bot-40px background-white mr-0px">
             <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
                 <div class="hotel-img position-relative line-height-150px">
                     <img src="views/img/vietject.png" alt="">
@@ -369,40 +405,7 @@
                 </div>                    
               </div>
             </div>
-          </div>
-          <div class="row box_ve mr-bot-40px background-white mr-0px">
-            <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
-                <div class="hotel-img position-relative line-height-150px">
-                    <img src="views/img/vietject.png" alt="">
-                    <div class="hover-option background-main-color opacity-6">
-                        <h3 class="text-center text-white padding-top-n-25 "></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 border-grey1 pd-0px">
-              <div class="pd-10px">
-                <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">from: Riyadh</span>to: Paris</a></h3>  
-                <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Booking Now </a>
-                <div class="date mr-lr-15px">
-                  <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
-                    <i class="fa fa-chevron-up mr-right-5px"></i>
-                    Desparture :  
-                    <span class="text-third-color mr-right-5px">28/3/2017</span> 
-                  </a>
-                  <small class="text-uppercase text-extra-small">
-                    <a href="#" class="cl-te-grey fz-0p7rem">
-                      <i class="fa fa-chevron-down mr-right-5px"></i>
-                      Return :  
-                      <span class="text-third-color mr-right-5px">28/3/2017</span> </a>
-                  </small>
-                </div>
-                <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold">600.000VND</strong>Person
-                    <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Oneway flight</span> 2 Sotp</i>
-                </div>                    
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
