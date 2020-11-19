@@ -67,12 +67,11 @@ function insertData($sheetData,$highestRow){
     return true;
 }
 
-function tuyenBay()
+function sanBay()
 {
- $sql = "SELECT * FROM tuyenduong WHERE 1";
+ $sql = "SELECT * FROM sanbay WHERE 1";
  return result1(0,$sql);
 }
-
 function addIdtuyenDuong($diemdi,$diemden)
 {
     $sql = "INSERT INTO tuyenduong (iddiemdi,iddiemden) VALUES 
@@ -80,7 +79,6 @@ function addIdtuyenDuong($diemdi,$diemden)
     $lastId = getLastId($sql);
     return $lastId;
 }
-
 function addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen)
 {
     $sql = "INSERT INTO chuyenbay (idtuyenduong,idmaybay,ngaydi,giodi,gioden) VALUES 
@@ -88,14 +86,13 @@ function addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen)
      $lastId = getLastId($sql);
      return $lastId;
 }
-function getGheOfMb($idChuyenBay)
+function getGheOfMb($idMayBay)
 {
-    $sql = "SELECT * FROM dsmaybay WHERE id = '$idChuyenBay'";
+    $sql = "SELECT * FROM dsmaybay WHERE id = '$idMayBay'";
     return result1(1,$sql);
 };
 
-
-function addTTVe($idMayBay,$idChuyenBay)
+function addTTVe($idMayBay)
 {
     $soGheThuong = getGheOfMb($idMayBay)['soghethuong'];
     $soGheThuongGia = getGheOfMb($idMayBay)['soghethuonggia'];
@@ -116,12 +113,11 @@ function addTTVe($idMayBay,$idChuyenBay)
             $TTGheThuongGia .= '0,'; 
         }
     }
-    $sql = "INSERT INTO trangthaidatve (ttghethuong,ttghethuonggia,idchuyenbay) VALUES 
-        ('$TTGheThuong','$TTGheThuongGia','$idChuyenBay')";
+    $sql = "INSERT INTO trangthaidatve (ttghethuong,ttghethuonggia,idmaybay) VALUES 
+        ('$TTGheThuong','$TTGheThuongGia','$idMayBay')";
     exec1($sql);
 }
-
-function setGheAdmin($id,$idMayBay,$loaiGhe){
+function setValue($id,$idMayBay,$loaiGhe){
     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idMayBay;
     $result = result1(1,$sql)[$loaiGhe];
     $arr =  explode(",",$result);
@@ -144,7 +140,7 @@ function dsMayBay()
 
 function getGhe($idChuyenBay,$loaiGhe)
 {
-    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay ='$idChuyenBay'";
+    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay ='$idMayBay'";
     $return =  result1(1,$sql)[$loaiGhe];
     $kq = '';
     $slTT = explode(",",$return);
@@ -155,7 +151,7 @@ function getGhe($idChuyenBay,$loaiGhe)
         $class = 'l-ghe-phothong pt';
     }
    
-    if(count($slTT)>8){
+    if(count($slTT)>=18){
         for ($i=0; $i< count($slTT); $i++) {
             if($slTT[$i] == 1){
                 $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large  bg-red" >' . ($i+1). '</div>';
@@ -177,12 +173,7 @@ function getGhe($idChuyenBay,$loaiGhe)
     
     $Array = array();
     $Array['idchuyenbay'] = $idChuyenBay;
-    $Array['html'] =$kq;
+    $Array['html'] = $kq;
     
     return json_encode($Array);
-}
-
-function showNameSb($id){
-    $sql = "SELECT tensanbay FROM sanbay WHERE idsanbay =".$id;
-    return result1(1,$sql)['tensanbay'];
 }

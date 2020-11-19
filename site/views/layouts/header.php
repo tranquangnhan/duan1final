@@ -14,18 +14,11 @@
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
   <link rel="stylesheet" href="views/css/long/animate.css"/>
-  <link rel="stylesheet" href="views/css/long/about.css">
-  <link rel="stylesheet" href="views/css/long/contact.css">
-  <link rel="stylesheet" href="views/css/long/danhsachve.css">
-  
-  <link rel="stylesheet" href="views/css/dat/blog.css">
-  <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
   <link rel="stylesheet" href="views/css/long/home.css">
+  <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
   <!-- end css -->
   <!-- include jquery -->
     <script src="views/jquery/jquery.js" type="text/javascript"></script>
-    <script src="views/js/home.js" type="text/javascript"></script>
-  <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <!-- end include jquery -->
 </head>
 <body>
@@ -49,14 +42,8 @@
                     </div>
                     <div class="col-sm d-none d-sm-block line_h_28">
                         <ul class="float-right margin-0px text-white mr-0">
-                            <?php 
-                            if(isset($_SESSION['sid'])){
-                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
-                                <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
-                            }else{
-                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
-                                <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
-                            } ?>
+                            <li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
+                            <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,14 +58,23 @@
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                            <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
+                            <ul class="navbar-nav  W-100" id="menu-main">
                                 <li class="nav-item active">
-                                    <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                    <a class="" href="#">HOME <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="#">SÂN BAY</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="#">THÔNG TIN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="#">DÀNH CHO BẠN</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CHUYẾN BAY
-                                    </a>
+                    CHUYẾN BAY
+                  </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#">Flights List View</a>
                                         <a class="dropdown-item" href="#">Flights Grid View</a>
@@ -89,16 +85,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=blog">BLOG</a>
-                                </li>                                
-                                <li class="nav-item">
-                                    <a class="pd-0" href="<?=SITE_URL?>?act=about">TRAVELZ</a>
+                                    <a class="pd-0" href="#">TRAVELZ</a>
                                 </li>
                             </ul>
                         </div>
@@ -115,14 +102,23 @@
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                            <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
+                            <ul class="navbar-nav  W-100" id="menu-main">
                                 <li class="nav-item active">
-                                    <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                    <a class="" href="#">HOME <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="#">SÂN BAY</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="#">THÔNG TIN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="#">DÀNH CHO BẠN</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CHUYẾN BAY
-                                    </a>
+                    CHUYẾN BAY
+                  </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#">Flights List View</a>
                                         <a class="dropdown-item" href="#">Flights Grid View</a>
@@ -133,29 +129,15 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=blog">BLOG</a>
-                                </li>                                
-                                <li class="nav-item">
-                                    <a class="pd-0" href="<?=SITE_URL?>?act=about">TRAVELZ</a>
+                                    <a class="pd-0" href="#">TRAVELZ</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle fz-12vw" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="far fa-user-circle"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <?php 
-                                        if(isset($_SESSION['sid'])){
-                                            echo '<a class="dropdown-item" href="?act=signup">'.$_SESSION['suser'].'</a>';
-                                        }else{
-                                            echo '<a class="dropdown-item" href="?act=signup">Đăng ký</a>
-                                                 <a class="dropdown-item" href="?act=login">Đăng nhập</a>';
-                                        } ?>
+                                        <a class="dropdown-item" href="?act=signup">Đăng ký</a>
+                                        <a class="dropdown-item" href="?act=login">Đăng nhập</a>
                                     </div>
                                 </li>
                             </ul>

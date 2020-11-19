@@ -31,7 +31,7 @@
                                         <tbody >
                                             <?php foreach ($showAllBlog as $motbl) {
                                                     $id = $motbl['id'];
-                                                    $img = $pathimg.$motbl['img']; //Long test file img
+                                                    $img = $pathimg.$motbl['img'];
                                                     if(is_file($img)) $img = $img;else $img = "nothing";
                                                     $anhien = $motbl['public'];
                                                     if($anhien == 1){

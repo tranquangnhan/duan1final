@@ -1,35 +1,3 @@
-<div class="ins-img">
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-1.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-2.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-3.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-4.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-5.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-6.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-7.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-8.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-9.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="box-ins-img">
-                    <img src="views/img/instagram-10.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-            </div>
 <footer class="te-al-left">
     <div class="container">
       <div class="row pd-tb-100px">
@@ -37,27 +5,20 @@
           <div class="">
             <div class="logo mr-bot-20px"><a href="#"><img src="views/img/logo.png" alt=""></a></div>
             <p class="cl-te-grey2 fz-09">
-              <strong class="fz-12vw font-weight-bold">Đối tác hàng không</strong><br>
-              Đối tác hàng không nội địa. Những đối tác hàng không hàng đầu Việt Nam sẽ chắp cánh đưa bạn đến mọi địa điểm trên mãnh đất Việt.
+              Mauris fermentum porta sem, non hendrerit enim bibendum consectetur. Fusce diam est, porttitor vehicula gravida at, accumsan bibendum tincidunt imperdiet. Maecenas quis magna faucibus, varius ante sit amet, varius augue. Praesent aliquam, a imperdiet lacus libero ac tellus. Nunc fringilla ullamcorper quam at lacinia.
             </p>
-            <div class="">
-              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietject.png" alt=""></a></div>
-              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietnameairline.png" alt=""></a></div>
-              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/pacific.png" alt=""></a></div>
-              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/bambo.png" alt=""></a></div>            
-            </div>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Trang chủ</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Góp ý</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Hợp tác</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Báo cáo</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Ưu đãi</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Liên hệ</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Tuyển dụng</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Về chúng tôi</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Theo dõi</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Home</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Featured</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Feedback</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Ask a Question</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Team</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Maintenance</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Get a Quote</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Contact Us</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Alerts messages</a></div>
         </div>
         <div class="col-lg-3">
           <div class="col-4 padding-tb-7px dl-inline-block float-left">
@@ -82,7 +43,7 @@
       </div>
       <div class="row border-top-grey-1 pd-tb-30px">
         <div class="col-4">
-          <p class="text-lg-left"><span class="text-third-color">Travelz</span> | Copyright © 2020 Travelz</p>
+          <p class="text-lg-left"><span class="text-third-color">Travelz</span> | @2017 All copy rights reserved</p>
         </div>
         <div class="col-4">
           <div class="text-center"><img src="views/img/cardspay.png" alt=""></div>
@@ -106,6 +67,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
-  
+  <script src="views/js/home.js" type="text/javascript"></script>
+  <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
 </body>
 </html>

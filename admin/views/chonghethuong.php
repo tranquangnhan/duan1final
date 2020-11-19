@@ -1,5 +1,4 @@
-<div class="col-lg-9">
-    <div class="container text-center pt-5">
+<div class="container text-center pt-5">
      <div class="title mb-3"><h3>HÀNG GHẾ THƯỜNG</h3></div>
         <div id="idmaybay"> <?php print_r(json_decode($soGheThuong)->idchuyenbay);
         ?></div>
@@ -21,6 +20,4 @@
             </div>
         </div>
     </div>
-</div>
-
     

@@ -27,7 +27,6 @@ function result1($fe,$sql){
         $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
         $stmt->execute($sqlValue);// thực thi
         if($fe===0)return $stmt->fetchAll();elseif($fe===1)return $stmt->fetch(PDO::FETCH_ASSOC);// nếu tham số đầu tiên ===0 trả về tất cả sản phẩm, === 1 trả về 1 sản phẩm
-        
     } catch (PDOException $e) {
         echo "Lỗi: " . $e->getMessage();
     }

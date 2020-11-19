@@ -46,7 +46,7 @@
                 $Return['StatusCode']  = (int) addUser($userName,$passWord,$active,$email,$phone,$randomKey) ? 1 : 0;
                 echo json_encode($Return);
 
-                $gansi = checkUserSignup($userName,$passWord);
+                $gansi = checkUser($userName,$passWord);
                 $idUser = $gansi['id'];
                 // start mail
                 $userName = 'tranquangnhan1606@gmail.com';
