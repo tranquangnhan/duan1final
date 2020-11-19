@@ -29,6 +29,8 @@ if(isset($_GET['act'])){
             break;
           
         case 'danhsachve':   // để sửa css
+          $ds = getAllDiemDi();
+          print_r($ds);
             require_once "views/danhsachve.php";
             break;
         case 'blog':
@@ -227,6 +229,7 @@ if(isset($_GET['act'])){
         case 'timKiem':
             // Truyền file danh sách vé trong models vào 
             require_once '../models/danhsachve.php';
+            $search = isset($_GET['name']) ? $_GET ['name']:"";
             break;
         /**
          * Kết thúc chức năng tìm kiếm
