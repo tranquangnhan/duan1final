@@ -16,7 +16,7 @@
    <div class="profile-nav col-md-3">
       <div class="panel">
           <div class="user-heading round">
-              <a href="#">
+              <a href="index.php?act=showhs">
                   <img src="views/img/ava.jpg" alt="">
               </a>
               <?php  foreach ($showhs as $hs ) {?>
@@ -27,11 +27,11 @@
          
 
           <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#"> <i class="fa fa-user"></i> Thông Tin Cá Nhân</a></li>
-              <li><a href="index.php?ctrl=index&act=userprofile"> <i class="fa fa-calendar"></i> Đổi Mật Khẩu </a></li>
+              <li class="active"><a href="index.php?act=showhs"> <i class="fa fa-user"></i> Thông Tin Cá Nhân</a></li>
+              <li><a href="index.php?act=userprofile"> <i class="fa fa-calendar"></i> Đổi Mật Khẩu </a></li>
                <?php  foreach ($showhs as $hskh ) {
               $id=$hskh['id'];
-              $linkedit = "index.php?ctrl=index&act=hsedit&idedit=".$id; 
+              $linkedit = "index.php?act=hsedit&idedit=".$id; 
           ?>
               <li><a href="<?=$linkedit?>"> <i class="fa fa-edit"></i> Chỉnh Sửa Thông Tin</a></li>
                <?php }?>
