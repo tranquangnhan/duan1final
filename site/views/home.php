@@ -271,13 +271,6 @@
                   <i class="text-extra-small">Chức vụ: <span class="color_main">Quản lý nhân sự</span></i>                  
                   <i class="d-block mr-tb-20px text-medium text-grey-4">Các bạn đang tìm một công việc tốt? Làm việc văn phòng máy lạnh sẽ giúp bạn có tinh thần tốt hơn. Hãy đến với ngôi nhà chung của chúng tôi. Liên hệ 0983232323</i>
                 </div>
-                <!-- <div class="carousel-item background-white padding-30px border">
-                  <div class="float-left mr-right-20px"><img src="views/img/avt-4.png" alt=""></div>
-                  <h5 class="text-medium cl-te-black text-uppercase">Rabie Elkheir</h5>
-                  <i class="text-extra-small">Travel to <span class="color_main">Turkey</span></i>
-                   <div class="clearfix"></div>
-                  <i class="d-block mr-tb-20px text-medium text-grey-4">. </i>
-                </div> -->
               </div>
               <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="" aria-hidden="true"><i class="fas fa-chevron-left fz-2vw"></i></span>

@@ -1,3 +1,4 @@
+
 <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
             <div class="card card-3">
@@ -13,7 +14,7 @@
                         <div class="">
                             <label for="remember">Nhớ mật khẩu ?</label>
                              <input type="checkbox" name="nhomk" id="remember" class="div-checkbox">
-                             <a href="">Quên mật khẩu ?</a>
+                             <a href=" index.php?ctrl=index&act=quenmk  ">Quên mật khẩu ?</a>
                         </div>
                         
                         <div class="p-t-10">
@@ -23,3 +24,4 @@
             </div>
         </div>
     </div>
+ 

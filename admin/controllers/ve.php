@@ -26,8 +26,9 @@
             include_once "views/importexcel.php";
         break;
         case 'add':
-            $sanBay = sanBay();
+            $tuyenBay = tuyenBay();
             $dsMayBay = dsMayBay();
+
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 // $showveedit = showveedit($_SESSION['idedit']);
@@ -37,8 +38,7 @@
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
                 $idMayBay = $_POST['idmaybay'];
-                $diemDi = $_POST['iddiemdi'];
-                $diemDen = $_POST['iddiemden'];
+                $idTuyenDuong = $_POST['idtuyenduong'];
 
                 $giaVeThuongGia = $_POST['giavethuonggia'];
                 $giaVeThuong = $_POST['giavethuong'];
@@ -58,32 +58,29 @@
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
                     //updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
                 }else{
-                    $idTuyenDuong = addIdtuyenDuong($diemDi,$diemDen);
 
                     $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
                     
-                    addTTVe($idMayBay);
-
+                    addTTVe($idMayBay,$idChuyenBay);
+                    
                     $_SESSION['idchuyenbay'] = $idChuyenBay;
 
-                    header('location: index.php?ctrl=ve&act=chonghethuonggia');
+                    header('location: index.php?ctrl=ve&act=chonghe');
                 }
             }
         break;
-        case 'chonghethuonggia':
+        case 'chonghe':
+            $idChuyenBay = $_SESSION['idchuyenbay'];
             if(isset($_SESSION['idchuyenbay'])&&($_SESSION['idchuyenbay'])){
                 $soGheThuongGia = getGhe($_SESSION['idchuyenbay'],'ttghethuonggia');
-            }
-            include_once "views/chonghethuonggia.php";
-            break;
-        case 'chonghethuong':
-            if(isset($_SESSION['idchuyenbay'])&&($_SESSION['idchuyenbay'])){
                 $soGheThuong = getGhe($_SESSION['idchuyenbay'],'ttghethuong');
+                include_once "views/chonghe.php";
+            }else{
+                echo "không có chuyến bay này !";
             }
-            include_once "views/chonghethuong.php";
             break;
         case 'done':
-            if(isset($_GET['done'])&&($_GET['done'] === 1)){
+            if(isset($_GET['done'])){
                 unset($_SESSION['idchuyenbay']);
                 header('location: ?ctrl=ve&act=index');
             }

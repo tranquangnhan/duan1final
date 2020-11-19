@@ -1,11 +1,11 @@
 function ClickBtn() {
-    $('.tg').each(function() {
+    $('.l-ghe-thuonggia').each(function() {
         let ThisBox = $(this);
         ThisBox.click(async function(Events) {
             Events.preventDefault();
 
             let ID = ThisBox.text();
-            let idmaybay = $("#idmaybay").text();
+            let idmaybay = $("#idcb").val();
             let pushThemGhe = new FormData();
 
             pushThemGhe.append('id', ID); //tên
@@ -26,13 +26,13 @@ function ClickBtn() {
         })
     })
 
-    $('.pt').each(function() {
+    $('.l-ghe-phothong').each(function() {
         let ThisBox = $(this);
         ThisBox.click(async function(Events) {
             Events.preventDefault();
 
             let ID = ThisBox.text();
-            let idmaybay = $("#idmaybay").text();
+            let idmaybay = $("#idcb").val();
             let pushThemGhe = new FormData();
 
             pushThemGhe.append('id', ID); //tên
@@ -46,7 +46,7 @@ function ClickBtn() {
                 processData: false,
                 data: pushThemGhe,
                 success: function(response) {
-                    $("#kq").html(JSON.parse(response).html);
+                    $("#kq2").html(JSON.parse(response).html);
                     ClickBtn()
                 }
             });
@@ -59,29 +59,9 @@ ClickBtn()
 
 
 
-$("#xacnhan").click(function(e) {
-    e.preventDefault();
-    Swal.fire({
-        title: 'Bạn Có Chắc Không?',
-        text: "Lưu thay đổi vị trí vé thương gia!",
-        icon: 'info',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Lưu!'
-    }).then((result) => {
-        if (result.isConfirmed == true) {
-            Swal.fire(
-                'Đã lưu!',
-                'Chọn tiếp dữ liệu vé thường.',
-                'success'
-            )
-            window.location = '?ctrl=ve&act=chonghethuong';
-        }
-    })
-});
 
-$("#hoanthanh").click(function(e) {
+
+$("#xacnhan").click(function(e) {
     e.preventDefault();
     Swal.fire({
         title: 'Bạn Có Chắc Không?',

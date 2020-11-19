@@ -8,12 +8,12 @@ if ($_POST['Action'])
 {
     switch ($_POST['Action']) {
         case 'setttghetg':
-            setValue($_POST['id'],$_POST['idmaybay'],'ttghethuonggia');
+            setGheAdmin($_POST['id'],$_POST['idmaybay'],'ttghethuonggia');
             print_r(getGhe($_POST['idmaybay'],'ttghethuonggia'));
             return;
             break;
         case 'setttghept':
-            setValue($_POST['id'],$_POST['idmaybay'],'ttghethuong');
+            setGheAdmin($_POST['id'],$_POST['idmaybay'],'ttghethuong');
             print_r(getGhe($_POST['idmaybay'],'ttghethuong'));
             return;
             break;

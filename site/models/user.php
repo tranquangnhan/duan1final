@@ -25,6 +25,28 @@
             return false;
         }
     }
+
+    function checkUserSignup($user,$pass){
+        $user = str_replace(";","",$user);
+        $user = str_replace("'","",$user);
+        $user = str_replace('"',"",$user);
+        $pass = str_replace(";","",$pass);
+        $pass = str_replace("'","",$pass);
+        $pass = str_replace('"',"",$pass);
+        $user = addslashes($user);
+        $pass = addslashes($pass);
+        $sql = "select * from khachhang where user=? and pass=?";
+        $user = result1(1,$sql,$user,$pass);
+        if(is_array($user)){
+            $_SESSION['sid'] = $user['id'];
+            $_SESSION['suser']= $user['user'];
+            $_SESSION['role'] = $user['role'];
+            return true;
+        }else{
+            return false;
+        }
+    }
+ 
  
     function checkUser2($user){
         $sql = "select * from khachhang where user=?";
@@ -46,8 +68,8 @@
         $sql = "INSERT INTO khachhang (user,pass,kichhoat,email,sodienthoai,randomkey) VALUES (?,?,?,?,?,?)";
         return exec1($sql,$userName,$passWord,$active,$email,$phone,$randomKey);
     }
-    function user($id){
-        $sql = "select * from khachhang where id='{$id}'";
+    function user($idUser){
+        $sql = "select * from khachhang where id='{$idUser}'";
         return result1(1,$sql);
     }
     function setNewPass($id,$newpass){
