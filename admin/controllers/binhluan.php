@@ -11,16 +11,17 @@
         break;
         case 'add':
             $showallkh = showallkh();
+            $showallbv = showallbv();
             $showAllSp= showAllSpAdmin();
             if(isset($_POST['them'])&&($_POST['them'])){
-                $idsp = $_POST['idsp'];
+ 
                 $idbaiviet = $_POST['idbaiviet'];
                 $star = $_POST['star'];
                 $noidung = $_POST['noidung'];
                 $idkh = $_POST['idkh'];
                 $trangthai = $_POST['anhien'];
-                addBinhLuan($star,$idkh,$idbaiviet,$idsp,$noidung,$trangthai);
-                header("location: index.php?ctrl=binhluan&act=index");
+                addBinhLuan($star,$idkh,$idbaiviet,$noidung,$trangthai);
+                 header("location: index.php?ctrl=binhluan&act=index");
             }
             require_once "views/binhluanadd.php";
         break;
@@ -31,13 +32,13 @@
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showBlEdit = showBlEdit($_SESSION['idedit']);
                 if(isset($_POST['sua'])&&($_POST['sua'])){
-                    $idsp = $_POST['idsp'];
+             
                     $idbaiviet = $_POST['idbaiviet'];
                     $star = $_POST['star'];
                     $noidung = $_POST['noidung'];
                     $idkh = $_POST['idkh'];
                     $trangthai = $_POST['anhien'];
-                    editBinhLuan($id,$star,$idkh,$idbaiviet,$idsp,$noidung,$trangthai);
+                    editBinhLuan($id,$star,$idkh,$idbaiviet,$noidung,$trangthai);
                     print_r ($id);
                     header("location: index.php?ctrl=binhluan&act=index");
                 }
