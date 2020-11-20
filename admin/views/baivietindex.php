@@ -50,7 +50,10 @@
                                     <td width="100" height="100" class="imgL">                                    
                                         <img width="100" src="<?=$img?>">                              
                                     </td>                                    
-                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?><input type="radio" <?=$anhien?>></a> </td>
+                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?></td>
+                                    <td>
+                                        <input type="radio" <?=$anhien?>></a>
+                                    </td>
                                     <td><?=$motbl['tacgia']?></td>
                                     <td class="noidung"><?=substr($motbl['noidung'],0,100)?></td>
                                     <td>

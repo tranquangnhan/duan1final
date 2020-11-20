@@ -1,3 +1,19 @@
-.link-page {
+
+.sticky-content {
+    position: relative; 
+    overflow: visible; 
+    box-sizing: border-box; 
+    min-height: 1px;
+}
+
+.sticky-content-fixed {
+    position: fixed;
+    top: 100px;
+    right: 7.5%;
+    width: 28.27%;
+    display: none;
+}
+.sticky-content-ab {
+    position: absolute;
     
 }

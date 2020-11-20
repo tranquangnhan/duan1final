@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="col-lg-9">
                                     <img src="views/img/avt.png" alt="">
-                                    <input type="file" class="form-control-file" name="avatar[]" id="avatar" multiple required
+                                    <input type="file" class="form-control-file" name="avatar1[]" id="avatar1" multiple required
                                     >
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                                         <div class="form-check">
                                             <label class="form-check-label">
                                             Ẩn Hiện
-                                            <input type="checkbox" class="form-check-input ml-2" id="is_public" name="is_public" value="1" checked>
+                                            <input type="checkbox" class="form-check-input ml-2" id="is_public" name="is_public" checked>
                                             </label>
                                         </div>
                                     </div>

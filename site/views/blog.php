@@ -26,7 +26,7 @@
                                 </div>
                                     <!-- oadd -->
                                 <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
+                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
                                         <?=$allB['name']?>
                                     </a>
                                     <div class="d-block text-up-small text-grey-2 margin-bottom-15px">

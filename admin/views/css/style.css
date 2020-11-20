@@ -331,7 +331,7 @@ tr td .fa-edit {
 
 }
 
-.imgL:hover:after {
+/* .imgL:hover:after {
     cursor: pointer;
     content: 'Xem chi tiết';
     display: flex;
@@ -350,9 +350,8 @@ tr td .fa-edit {
 .l-box-imgL {
     position: fixed;
     width: 50%;
-    /* margin: 0 auto; */
     background: white;
     height: 50%;
     top: 0;
     left: 0;
-}
+} */

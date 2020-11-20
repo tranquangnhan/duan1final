@@ -872,6 +872,8 @@ a:hover {
 
 /* css trang home  */
 
+
+
 #trove {
     display: none;
 }
@@ -1260,4 +1262,7 @@ a:hover {
 
 .l-thongtin-ud p span {
     text-decoration: line-through;
+}
+.pd-r-0 {
+    padding-right: 0px;
 }

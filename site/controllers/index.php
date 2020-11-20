@@ -12,23 +12,15 @@ include_once '../lib/myfunctions.php';
 // require model
 require_once "models/loaihang.php";
 require_once "models/sanpham.php";
-<<<<<<< HEAD
 require_once "models/blog.php";
-=======
+require_once "views/layouts/header.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
-
->>>>>>> 41afc85730d64a7b983efd7113b5d67efe0c1cfb
-require_once "views/layouts/header.php";
 
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
-<<<<<<< HEAD
         case 'home':           
-=======
-        case 'home':
->>>>>>> 41afc85730d64a7b983efd7113b5d67efe0c1cfb
             require_once "views/home.php";
             break;
         case 'about':

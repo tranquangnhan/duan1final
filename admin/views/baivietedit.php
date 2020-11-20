@@ -46,7 +46,7 @@ if(is_file($img)){
                                 </div>
                                 <div class="col-lg-9">
                                     <img src="<?=$img?>" alt="" width="200" height="200" class="img-edit">    
-                                    <input type="text" class="form-control" name="avatar" id="avatar" value="<?=$showspedit[0]['img'];?>">                                
+                                    <input type="text" class="form-control d-none" name="avatar" id="avatar" value="<?=$showspedit[0]['img'];?>">                                
                                     <input type="file" class="form-control-file" name="avatar1[]" id="avatar1" multiple
                                     multiple>
                                 </div>
@@ -119,6 +119,7 @@ if(is_file($img)){
                                             </label>
                                         </div>
                                     </div>
+                                   
                                 </div>
                             <div class="row mt-5">
                                 <div class="col-lg-3"></div>
