@@ -551,7 +551,6 @@ a:hover {
     color: #9E9E9E;
 }
 
-
 .name-city {
     color: black;
     font-weight: 700;
@@ -890,14 +889,6 @@ a:hover {
     border-top: 1px solid gray;
 }
 
-.long-lien-he-header-out {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 800px;
-    background-image: url("../img/contact-bg-header.jpg");
-}
-
 .bg-black {
     background-color: black;
 }
@@ -932,14 +923,6 @@ a:hover {
 
 
 /* trang about us  */
-
-.long-ab-us-header-out {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 800px;
-    background-image: url("../img/page-title-1.jpg");
-}
 
 .pd-top-100px {
     padding-top: 100px;
@@ -1202,6 +1185,7 @@ a:hover {
 .l-thongtin-ud p span {
     text-decoration: line-through;
 }
+
 
 /*  */
 
