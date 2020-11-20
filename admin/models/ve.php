@@ -1,16 +1,9 @@
 <?php
-
-
 function showveedit($id)
 {
     $sql = "select * from chuyenbay where id = '{$id}' ";
     return result1(1, $sql);
 }
-// function showAllTenDm()
-// {
-//     $sql = "select * from danhmuc where 1 limit 10";
-//     return result1(0, $sql);
-// }
 function showAllve()
 {
     $sql = "select * from chuyenbay where 1 limit 10";
@@ -193,3 +186,9 @@ function showNameSb($id){
     $sql = "SELECT tensanbay FROM sanbay WHERE idsanbay =".$id;
     return result1(1,$sql)['tensanbay'];
 }
+
+// function showTuyenDuong(){
+//     $sql = "SELECT * FROM tuyenduong WHERE idtuyenduong IN (SELECT * FROM sanbay)";
+//     return result1(0,$sql);
+// }
+?>

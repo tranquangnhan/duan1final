@@ -21,18 +21,12 @@
                          <thead class="thead-inverse">
                              <tr>
                                  <th>ID</th>
-
                                  <th width="200">Tên Máy Bay </th>
-
-
                                  <th width="300">Điểm Đi</th>
                                  <th width="300">Điểm Đến</th>
-
+                                 <th width="300">Ngày Đi</th>
                                  <th width="200">Thời Gian Đi</th>
                                  <th width="200">Thời Gian Đến</th>
-
-
-
                              </tr>
                          </thead>
 
@@ -66,16 +60,11 @@
                                          <td><?= $ve['ngaydi'] ?></td>
                                      <td><?= $ve['giodi'] ?></td>
                                      <td><?= $ve['gioden'] ?></td>
-
-
-
                                      <td>
-                                         <a href="<?= $linkdel ?>"><i class="fa fa-trash mr-3" onclick="return checkDelete()"></i></a>
+                                         <a href="<?= $linkdel ?>" onclick="return checkDelete()"><i class="fa fa-trash mr-3" ></i></a>
                                          <a href="<?= $linkedit ?>"><i class="fa fa-edit"></i></a>
                                      </td>
                                  </tr>  
-                                
-                              
                              <?php }
 
                                 ?>

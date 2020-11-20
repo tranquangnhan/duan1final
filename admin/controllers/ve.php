@@ -30,10 +30,11 @@
         case 'add':
             $tuyenBay = tuyenBay();
             $dsMayBay = dsMayBay();
-
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
+                $showMb = dsMayBay();
+               
                 $_SESSION['idedit'] = $_GET['idedit'];
-                // $showveedit = showveedit($_SESSION['idedit']);
+                $showveedit = showveedit($_SESSION['idedit']);
                 include_once "views/veedit.php";
             }else{
                 include_once "views/veadd.php";
@@ -58,7 +59,7 @@
 
                 
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    //updateve($id,$img,$iddm,$tenmaybay,$gia,$giamgia,$diemdi,$diemden,$loaighe,$tgdi,$tgden,$hanhly);
+                    updateve($id,$idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
                 }else{
 
                     $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
