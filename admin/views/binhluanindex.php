@@ -29,6 +29,7 @@
                                             </tr>
                                         </thead>
                                         <tbody >
+                                        
                                             <?php 
                                                 foreach ($showbl as $bl) {  
                                                     $id = $bl['id'];

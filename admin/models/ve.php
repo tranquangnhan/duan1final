@@ -3,7 +3,7 @@
 
 function showveedit($id)
 {
-    $sql = "select * from sanpham where id = '{$id}' ";
+    $sql = "select * from chuyenbay where id = '{$id}' ";
     return result1(1, $sql);
 }
 // function showAllTenDm()
@@ -13,10 +13,29 @@ function showveedit($id)
 // }
 function showAllve()
 {
-    $sql = "select * from sanpham where 1 limit 10";
+    $sql = "select * from chuyenbay where 1 limit 10";
     return result1(0, $sql);
 }
-
+function showTenmaybay($id){
+    $sql ="select * from dsmaybay where id= '$id'";
+    return result1(1,$sql)['name'];
+}
+function showdiemdi(){
+    $sql = "select  tensanbay,chuyenbay.idtuyenduong,tuyenduong.id,tuyenduong.iddiemdi,sanbay.idsanbay
+     FROM chuyenbay
+    INNER JOIN tuyenduong ON chuyenbay.idtuyenduong = tuyenduong.id 
+    INNER JOIN sanbay ON tuyenduong.iddiemdi = sanbay.idsanbay
+    "
+    ;  return result1(0, $sql);
+}
+function showdiemden(){
+    $sql = "select  tensanbay,chuyenbay.idtuyenduong,tuyenduong.id,tuyenduong.iddiemden,sanbay.idsanbay
+     FROM chuyenbay
+    INNER JOIN tuyenduong ON chuyenbay.idtuyenduong = tuyenduong.id 
+    INNER JOIN sanbay ON tuyenduong.iddiemden = sanbay.idsanbay
+    "
+    ;  return result1(0, $sql);
+}
 function showsanbay()
 {
     $sql = "select * from sanbay ";
@@ -26,19 +45,19 @@ function showsanbay()
 // admin delete product
 function xoaSanPham($id)
 {
-    $sql = "DELETE FROM sanpham WHERE id=" . $id;
+    $sql = "DELETE FROM chuyenbay WHERE id=" . $id;
     exec1($sql);
 }
 //admin update sp
 function updateve($id, $img, $iddm, $tenmaybay, $gia, $giamgia, $diemdi, $diemden, $loaighe, $tgdi, $tgden, $hanhly)
 {
     if (!$img) {
-        $sql = "UPDATE sanpham SET iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
+        $sql = "UPDATE chuyenbay SET iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
                 giamgia='{$giamgia}',loaighe='{$loaighe}',tgdi='{$tgdi}',
                 tgden='{$tgden}',hanhly='{$hanhly}'
          WHERE id=" . $id;
     } else {
-        $sql = "UPDATE sanpham SET anh='{$img},'iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
+        $sql = "UPDATE chuyenbay SET anh='{$img},'iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
         giamgia='{$giamgia}',loaighe='{$loaighe}',tgdi='{$tgdi}',
         tgden='{$tgden}',hanhly='{$hanhly}'
  WHERE id=" . $id;
@@ -60,7 +79,7 @@ function insertData($sheetData,$highestRow){
         $tgden = $sheetData[$i]['J'];
         $hanhly = $sheetData[$i]['K'];
         $suatan = $sheetData[$i]['L'];
-        $sql = "INSERT INTO sanpham (tenmaybay,anh,gia,giamgia,iddm,diemdi,diemden,loaighe,tgdi,tgden,hanhly,suatan) VALUES 
+        $sql = "INSERT INTO chuyenbay (tenmaybay,anh,gia,giamgia,iddm,diemdi,diemden,loaighe,tgdi,tgden,hanhly,suatan) VALUES 
         (?,?,?,?,?,?,?,?,?,?,?,?)";
         exec1($sql,$tenmaybay,$anh, $gia, $giamgia,$iddm,$diemdi,$diemden,$loaighe,$tgdi, $tgden, $hanhly,$suatan);
     }
