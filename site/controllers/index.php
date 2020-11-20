@@ -17,35 +17,6 @@ require_once "views/layouts/header.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
 
-<<<<<<< HEAD
-=======
-require_once "views/layouts/header.php";
-// hãng máy bay
-//điểm đi - điểm đến
-//giờ đi- giờ đến
-//ngày đi
-//giá
-// $idTuyenDuong = idTuyenDuong();
-
-// foreach ($idTuyenDuong as $motTd) {
-//     $showDiaChi = showDiaChi($motTd['idtuyenduong']);
-
-//     foreach ($showDiaChi as $motDc) {
-//             $showTenDc = showTenDc($motDc['iddiemdi']);
-//             $showTenDc2 = showTenDc($motDc['iddiemden']);
-//             foreach ($showTenDc as $dc) {
-//                 print_r($dc['tensanbay']);
-//             }
-//             foreach ($showTenDc2 as $dc) {
-//                 print_r($dc['tensanbay']);
-//             }
-//     }
-
-// }
-
-
-
->>>>>>> fd54dec4ec85c0736020582f1987e1040eeab830
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
@@ -57,11 +28,7 @@ if(isset($_GET['act'])){
             break;
         case 'contact':
             require_once "views/contact.php";
-<<<<<<< HEAD
             break;          
-=======
-            break;
->>>>>>> fd54dec4ec85c0736020582f1987e1040eeab830
         case 'danhsachve':   // để sửa css
             $data = showDiemDi();
             $data1= showDiemDen();
@@ -81,7 +48,6 @@ if(isset($_GET['act'])){
             $links = taolinks($baseurl, $page_num, $page_size, $total_rows);            
             require_once "views/blog.php";
             break; 
-<<<<<<< HEAD
         case 'dtBlog':
             if (isset($_GET['idbl'])==true) $id = $_GET['idbl'];
             settype($id, "int");
@@ -102,9 +68,6 @@ if(isset($_GET['act'])){
             }
             require_once 'views/singleproduct.php';
             break;
-=======
-
->>>>>>> fd54dec4ec85c0736020582f1987e1040eeab830
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";

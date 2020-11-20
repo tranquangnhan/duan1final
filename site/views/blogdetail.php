@@ -22,7 +22,7 @@
             <div class="theiaStickySidebar">
                     <div class="blog-entry dbackground-white border-1 border-grey-1 margin-bottom-35px">
 
-                            <img src="<?=$img?>" alt="Image" style="height: 400px;" class="responsiveImg"/>
+                            <img src="../<?=$pathimg.$getBlogbyid['img']?>" alt="Image" style="height: auto;" class="responsiveImg"/>
                         <!-- noidung ne -->
                         <div class="padding-30px">
                             <!-- phan thong tin duoi img -->
@@ -58,7 +58,7 @@
                         <!-- nguoibl -->
                         <ul class="commentlist padding-0px margin-0px list-unstyled text-grey-3">
                             <li class="border-bottom-1 border-grey-1 margin-bottom-20px">
-                                <img src="./demo-img/hieu.jpg" class="float-left img100 margin-right-20px margin-bottom-20px"  alt="">
+                                <img src="../../uploads/avatar.png" class="float-left img100 margin-right-20px margin-bottom-20px max-width-4pt"  alt="">
                                 <div class="margin-left-85px">
                                     <!-- ten nguoi bl -->
                                     <a href="#" class="d-block text-dark text-uppercase text-medium font-weight-700">Hieu dep trai</a>
@@ -74,7 +74,7 @@
                             <!-- ngbl tra loi -->
 
                                 <div class="border-bottom-1 border-grey-1 margin-bottom-20px margin-left-55px">
-                                        <img src="./demo-img/hieu.jpg" class="float-left img100 margin-right-20px margin-bottom-20px" alt="">
+                                        <img src="../../uploads/avatar.png" class="float-left img100 margin-right-20px margin-bottom-20px max-width-4pt" alt="">
                                         <div class="margin-left-85px">
                                         <!-- ten -->
                                         <a href="#" class="d-block text-dark text-uppercase text-medium font-weight-700">Hieu Xau trai</a>
@@ -90,7 +90,7 @@
 
                                 <!-- ng bl 2 -->
                                 <div class="border-bottom-1 border-grey-1 margin-bottom-20px margin-left-55px">
-                                    <img src="./demo-img/hieu.jpg" class="float-left img100 margin-right-20px margin-bottom-20px" alt="">
+                                    <img src="../../uploads/avatar.png" class="float-left img100 margin-right-20px margin-bottom-20px max-width-4pt" alt="">
                                     <div class="margin-left-85px">
                                         <!-- ten -->
                                         <a href="#" class="d-block text-dark text-uppercase text-medium font-weight-700">Hieu Xau trai</a>
@@ -144,9 +144,10 @@
                             <div class="col-lg-6">
                                 <div class="background-white">
                                     <div class="post-img">
-                                        <a href="#">
-                                            <img src="<?=$pathimg.$blogByiddm['img']?>" alt="">
+                                        <a href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>">
+                                            <div class="img-in" style="background-image: url('../<?=$pathimg.$blogByiddm['img']?>'); height: 240px;"></div>
                                         </a>
+                                                                               
                                     </div>
                                     <div class="margin-top-30px">
                                         <a href="" class="d-block text-dark text-uppercase text-medium margin-bottom-10px font-weight-700"></a>
@@ -159,7 +160,7 @@
                                             <a href="#" class="text-main-color"><?=$blogByiddm['date']?></a>
                                         </span>
                                         <p class="text-grey-2 margin-top-8px">
-                                            <?=$blogByiddm['name']?>
+                                            <?=$blogByiddm['mota']?>
                                         </p>
                                     </div>
                                 </div>
@@ -202,7 +203,7 @@
                     <ul class="last-posts">
                         <li>
                         <a href="#" class="float-left margin-right-15px d-block width-60px">
-                            <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
+                            <img src="../<?=$pathimg.$bestBlog['img']?>" alt="">
                         </a>
                         <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
                         <span class="text-extra-small">
@@ -215,52 +216,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-8 sticky-content-fixed "  style=" ">
-            <div class="theiaStickySidebar " style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
-                <div class="widget">
-                    <!-- tieu de -->
-                    <h4 class="widget-title clearfix">
-                        <span>Email</span>
-                    </h4>
-                    <!-- mieu ta -->
-                    <p>Hãy cho chúng tôi email hoặc số điện thoại để nhận được những thông tin và sự kiện du lịch đặc biệt trên thế giới.
-                        Hãy để chúng tôi giúp bạn!
-                    </p>
-                    <!-- input -->
-                    <input class="form-control rounded-0" type="text" placeholder="Điền email hoặc số điện thoại">
-                    <a href="#" class="btn text-white text-uppercase text-small btn-block margin-top-15px background-grey-3 rounded-0 border-0">Gửi thông tin!</a>
-                </div>
-                <div class="widget widget_categories">
-                    <h4 class="widget-title clearfix">
-                        <span>Thư mục</span>
-                    </h4>
-                    <?php foreach($getDmblog as $dmBlog) { ?>
-                    <ul>
-                        <li><a href="<?=$dmBlog['id']?>"><?=$dmBlog['name']?></a></li>
-                    </ul>
-                    <?php } ?>
-                </div>
-                <div class="widget">
-                    <h4 class="widget-title clearfix">
-                        <span>Top blog</span>
-                    </h4>
-                    <?php foreach($getbestBlog as $bestBlog) { ?>
-                    <ul class="last-posts">
-                        <li>
-                        <a href="#" class="float-left margin-right-15px d-block width-60px">
-                            <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
-                        </a>
-                        <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
-                        <span class="text-extra-small">
-                            Date
-                            <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>
-                        </span>
-                    </ul>
-                    <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         </div>
     </div>
 </main>

@@ -19,9 +19,9 @@
                             <?php foreach ($allBlog as $allB) { ?>
                             <div class="col-lg-6">
                                 <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                    <div class="img-in">
+                                    
                                     <a href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
-                                        <img src="<?=$pathimg.$allB['img']?>" alt="Image" class="responsiveImg">
+                                        <div class="img-in" style="background-image: url('<?=$pathimg.$allB['img']?>');">
                                     </a>
                                 </div>
                                     <!-- oadd -->
