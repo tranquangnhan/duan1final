@@ -16,6 +16,30 @@ require_once "models/danhsachve.php";
 require_once "models/ve.php";
 
 require_once "views/layouts/header.php";
+// hãng máy bay
+//điểm đi - điểm đến
+//giờ đi- giờ đến
+//ngày đi
+//giá
+// $idTuyenDuong = idTuyenDuong();
+
+// foreach ($idTuyenDuong as $motTd) {
+//     $showDiaChi = showDiaChi($motTd['idtuyenduong']);
+
+//     foreach ($showDiaChi as $motDc) {
+//             $showTenDc = showTenDc($motDc['iddiemdi']);
+//             $showTenDc2 = showTenDc($motDc['iddiemden']);
+//             foreach ($showTenDc as $dc) {
+//                 print_r($dc['tensanbay']);
+//             }
+//             foreach ($showTenDc2 as $dc) {
+//                 print_r($dc['tensanbay']);
+//             }
+//     }
+
+// }
+
+
 
 if(isset($_GET['act'])){
     $act = $_GET['act'];
