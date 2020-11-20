@@ -17,7 +17,7 @@
         <div class="row mt-3">
             <div class="col-lg-12 bg-white pb-4 border">
                 <div class="row d-flex justify-content-center">
-                    <table class="table table-striped table-inverse table-responsive">
+                    <table class="table table-striped w-100">
                         <thead class="thead-inverse">
                             <tr>
                                 <th width="200">#</th>

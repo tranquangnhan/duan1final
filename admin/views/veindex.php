@@ -17,7 +17,7 @@
          <div class="row mt-3">
              <div class="col-lg-12 bg-white pb-4 border">
                  <div class="row d-flex justify-content-center">
-                     <table class="table table-striped table-inverse table-responsive">
+                     <table class="table table-striped w-100">
                          <thead class="thead-inverse">
                              <tr>
                                  <th>ID</th>
@@ -32,12 +32,7 @@
 
                          <tbody id="result">
                              <?php
-                             foreach ($showdiemden as $dden) {
-                                $diemden= $dden['tensanbay'];
-                            }
-                            foreach ($showdiemdi as $ddi) {
-                               $diemdi= $ddi['tensanbay'] ;
-                             }
+                          
                                 $i = 0;
                                 foreach ($showAllve as $ve) {
                               
@@ -54,9 +49,9 @@
                                      <td><?= $i ?></td>
                                      <td><?= showTenmaybay($ve['idmaybay']) ?></td>
                                      
-                                         <td><?= $diemden ?></td>
-                                     
-                                         <td><?= $diemdi ?></td>
+                                         <td><?=showdiemdi(showiddiemdi($ve['idtuyenduong']))?></td>
+                                         <td><?=showdiemdi(showiddiemden($ve['idtuyenduong']))?></td>
+                                       
                                          <td><?= $ve['ngaydi'] ?></td>
                                      <td><?= $ve['giodi'] ?></td>
                                      <td><?= $ve['gioden'] ?></td>
