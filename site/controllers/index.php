@@ -6,10 +6,6 @@ require_once "../system/database.php";
 require_once "models/loaihang.php";
 require_once "models/user.php";
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 41afc85730d64a7b983efd7113b5d67efe0c1cfb
 
 require_once "../global.php";
 include_once '../lib/myfunctions.php';
@@ -51,69 +47,21 @@ if(isset($_GET['act'])){
         case 'home':
             require_once "views/home.php";
             break;
-<<<<<<< HEAD
-        // case 'singleproduct':  
-        //     if(isset($_GET['id'])&&$_GET['id']>0){
-        //         $id = $_GET['id'];
-        //         settype($id,"int");
-        //         $showAllCmt = showAllCmt($id);
-        //         $single = showSingleProduct($_GET['id']);
-        //     }
-        //     require_once 'views/singleproduct.php';
-        //     break;
-        // case 'cat':
-        //     if(isset($_GET['maloai'])==true&&($_GET['maloai']>0)) $maloai= $_GET['maloai'];
-        //     $pagenum=1;
-        //     if(isset($_GET['pagenum'])==true) $pagenum = $_GET['pagenum'];
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 41afc85730d64a7b983efd7113b5d67efe0c1cfb
         case 'about':
             require_once "views/about.php";
             break;
         case 'contact':
             require_once "views/contact.php";
             break;
-          
         case 'danhsachve':   // để sửa css
-          $ds = getAllDiemDi();
-          print_r($ds);
+            $ds = getAllDiemDi();
+            print_r($ds);
             require_once "views/danhsachve.php";
             break;
         case 'blog':
             require_once "views/blog.php";
             break; 
-        case 'singleproduct':  
-            if(isset($_GET['id'])&&$_GET['id']>0){
-                $id = $_GET['id'];
-                settype($id,"int");
-                $showAllCmt = showAllCmt($id);
-                $single = showSingleProduct($_GET['id']);
-            }
-            require_once 'views/singleproduct.php';
-            break;
-<<<<<<< HEAD
-        case 'cat':
-            if(isset($_GET['maloai'])==true&&($_GET['maloai']>0)) $maloai= $_GET['maloai'];
-            $pagenum=1;
-            if(isset($_GET['pagenum'])==true) $pagenum = $_GET['pagenum'];
->>>>>>> 183d07d032dd7640adcbaba8bf9e84cd2a1bd03a
-=======
->>>>>>> Stashed changes
 
-        //     settype($maloai,"int");
-        //     settype($pagenum,"int");
-        //     if($pagenum<=0) $pagenum = 1;
-        //     $pagesize = PAGE_SIZE;
-        //     $ds = getHangHoaTheoLoai($maloai,$pagenum,$pagesize);
-        //     $totalrows = demHangHoaTheoLoai($maloai);
-        //     $baseurl = SITE_URL."index.php?act=cat&maloai={$maloai}";
-        //     $link = taolinks($baseurl,$pagenum,$pagesize,$totalrows);
-        //     require_once 'views/shop.php';
-        //     break;
-=======
->>>>>>> 41afc85730d64a7b983efd7113b5d67efe0c1cfb
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
