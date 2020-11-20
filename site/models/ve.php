@@ -6,6 +6,9 @@ function setGhe($idGhe,$idChuyenBay,$loaiGhe)
     $result = result1(1,$sql)[$loaiGhe];
     $arr =  explode(",",$result);
     $vitri =($idGhe-1);
+    
+    //Kiem tra so ghe da chon > 3 thi ko cho chon nua
+    
     if($arr[$vitri] === '2'){
         $arr[$vitri] = 0;
     }
@@ -52,4 +55,21 @@ function renderHtml($idChuyenBay,$loaiGhe)
     }
     return $kq;
 }
+
+function idTuyenDuong()
+{
+ $sql = "SELECT idtuyenduong FROM chuyenbay";
+    return result1(0,$sql);
+}
+
+function showDiaChi($idTuyenDuong)
+{
+    $sql = "SELECT * FROM tuyenduong WHERE id ='{$idTuyenDuong}'";
+    return result1(0,$sql);
+}
+function showTenDc($id){
+    $sql = "SELECT * FROM sanbay WHERE idsanbay ='{$id}'";
+    return result1(0,$sql);
+}
+
 ?>

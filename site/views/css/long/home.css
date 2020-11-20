@@ -870,144 +870,9 @@ a:hover {
 
 /* chinh 2 nut tren form tìm kiếm
 
-/* css lien he */
-
-.cl-gray3 {
-    color: #d7d7d7;
-}
-
-.breadcrumb {
-    background: none;
-}
-
-.link {
-    width: 100%;
-    text-align: center;
-    margin-top: 12%;
-}
-
-.border-top-1 {
-    border-top: 1px solid gray;
-}
-
-.long-lien-he-header-out {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 800px;
-    background-image: url("../img/contact-bg-header.jpg");
-}
-
-.bg-black {
-    background-color: black;
-}
-
-.long-div-center-head {
-    min-height: 800px;
-    opacity: 0.7;
-    text-align: center;
-    padding: 260px;
-    position: absolute;
-    width: 100%;
-    z-index: -10;
-}
-
-.te-center {
-    color: white;
-    text-align: center;
-    padding: 200px;
-    width: 81%;
-    margin: 0 auto;
-}
-
-.ct-us {
-    font-size: 4vw;
-    font-weight: bold;
-    opacity: 0.8;
-    padding: 20px;
-}
-
-
-/* css lien he */
-
-
-/* trang about us  */
-
-.long-ab-us-header-out {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 800px;
-    background-image: url("../img/page-title-1.jpg");
-}
-
-.pd-top-100px {
-    padding-top: 100px;
-}
-
-.mr-bot-30px {
-    margin-bottom: 30px;
-}
-
-.mr-right-20px {
-    margin-right: 20px;
-}
-
-.z-index-2 {
-    z-index: 2;
-}
-
-.cl-grey {
-    color: #dddddd;
-}
-
-.background-overlay {
-    position: relative;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.background-img-dark:after {
-    background-color: #000;
-}
-
-.background-overlay:after {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.background-grey-1 {
-    background-color: #eeeded;
-}
-
-.l-box-travelzsay {
-    width: 30%;
-    margin-right: 4.726%;
-    max-height: 260px;
-    padding: 30px;
-    background-color: white;
-    display: inline-block;
-}
-
-.line-hight-28 {
-    line-height: 28px;
-}
-
-.l-box-our {
-    background-color: white;
-}
-
-
 /* css trang home  */
+
+
 
 #trove {
     display: none;
@@ -1397,4 +1262,7 @@ a:hover {
 
 .l-thongtin-ud p span {
     text-decoration: line-through;
+}
+.pd-r-0 {
+    padding-right: 0px;
 }

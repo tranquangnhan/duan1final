@@ -3,8 +3,7 @@
         <div class="container">
             <div class="fz-12vw d-inline-block padding-tb-7px">BLOG</div>
             <div class="float-right">
-                <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>
-                <div class="d-inline-block pd-right-10px"><a href="#"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Pages</div></a>
+                <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>                
                 <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Blog</div>                
             </div>
         </div>
@@ -17,179 +16,45 @@
                     <div class="theiaStickySidebar"   style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
                         <div class="row">
                             <!-- noi dung ne may cha -->
+                            <?php foreach ($allBlog as $allB) { ?>
                             <div class="col-lg-6">
                                 <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
                                     <div class="img-in">
-                                    <a href="#">
-                                        <img src="views/img/quy-nhon.jpg" alt="">
+                                    <a href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
+                                        <img src="<?=$pathimg.$allB['img']?>" alt="Image" class="responsiveImg">
                                     </a>
                                 </div>
                                     <!-- oadd -->
                                 <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
-                                        Casa Marina Resort Quy Nhơn đẹp quyến rũ bên bãi biển xanh 
+                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
+                                        <?=$allB['name']?>
                                     </a>
                                     <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                        Casa Marina Resort Quy Nhơn tọa lạc tại Gềnh Ráng, một nơi còn giữ được vẻ đẹp hoang sơ, thanh tịnh, thích hợp cho các kỳ nghỉ dưỡng, 
-                                        thư giãn để tái tạo nguồn năng lượng và tìm kiếm những cảm hứng sáng tạo mới dựa trên nền thiên nhiên xanh thẳm. Hãy cùng chúng tôi trải nghiệm 
-                                        và thưởng thức Resort này nha!
+                                        <?=$allB['mota'];?>
                                     </div>
                                     <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">By : 
-                                            <a href="#" class="text-main-color">ABCXTZ</a>
+                                        <span class="margin-right-20px text-extra-small">Tác giả : 
+                                            <a href="#" class="text-main-color"><?=$allB['tacgia']?></a>
                                         </span>
-                                        <span class="text-extra-small">Categorie :   
-                                            <a href="#" class="text-main-color">ARt</a>
+                                        <span class="text-extra-small">Tag :   
+                                            <a href="#" class="text-main-color"><?=$allB['tag']?></a>
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- noi dung ne may cha -->
-                        <div class="col-lg-6">
-                            <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                <div class="img-in">
-                                    <a href="#">
-                                        <img src="views/img/quy-nhon.jpg" alt="">
-                                    </a>
-                                </div>
-                                <!-- oadd -->
-                                <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
-                                        Casa Marina Resort Quy Nhơn đẹp quyến rũ bên bãi biển xanh 
-                                    </a>
-                                    <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                        Casa Marina Resort Quy Nhơn tọa lạc tại Gềnh Ráng, một nơi còn giữ được vẻ đẹp hoang sơ, thanh tịnh, thích hợp cho các kỳ nghỉ dưỡng, 
-                                        thư giãn để tái tạo nguồn năng lượng và tìm kiếm những cảm hứng sáng tạo mới dựa trên nền thiên nhiên xanh thẳm. Hãy cùng chúng tôi trải nghiệm 
-                                        và thưởng thức Resort này nha!
-                                    </div>
-                                    <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">By : 
-                                            <a href="#" class="text-main-color">ABCXTZ</a>
-                                        </span>
-                                        <span class="text-extra-small">Categorie :   
-                                            <a href="#" class="text-main-color">ARt</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- noi dung ne may cha -->
-                        <div class="col-lg-6">
-                            <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                <div class="img-in">
-                                    <a href="#">
-                                        <img src="views/img/quy-nhon.jpg" alt="">
-                                    </a>
-                                </div>
-                                      <!-- oadd -->
-                                <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
-                                        Casa Marina Resort Quy Nhơn đẹp quyến rũ bên bãi biển xanh 
-                                    </a>
-                                    <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                        Casa Marina Resort Quy Nhơn tọa lạc tại Gềnh Ráng, một nơi còn giữ được vẻ đẹp hoang sơ, thanh tịnh, thích hợp cho các kỳ nghỉ dưỡng, 
-                                        thư giãn để tái tạo nguồn năng lượng và tìm kiếm những cảm hứng sáng tạo mới dựa trên nền thiên nhiên xanh thẳm. Hãy cùng chúng tôi trải nghiệm 
-                                        và thưởng thức Resort này nha!
-                                    </div>
-                                    <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">By : 
-                                            <a href="#" class="text-main-color">ABCXTZ</a>
-                                        </span>
-                                        <span class="text-extra-small">Categorie :   
-                                            <a href="#" class="text-main-color">ARt</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- noi dung ne may cha -->
-                        <div class="col-lg-6">
-                            <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                <div class="img-in">
-                                    <a href="#">
-                                        <img class="wh" src="views/img/da-lat.jpg" alt="">
-                                    </a>
-                                </div>
-                            <!-- oadd -->
-                                <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
-                                        5 địa điểm check-in Đà Lạt mới toanh 2020                                        </a>
-                                    <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                        Cái tên “Đà Lạt” hẳn đã quá quen thuộc trong danh sách điểm đến du lịch hot nhất Việt Nam rồi nhỉ,
-                                        thế nhưng hội mê check in đi Đà Lạt vẫn liên tục lùng ra hàng loạt địa điểm mới siêu chất để bạn đi hoài hổng chán đó!
-                                        Cùng chúng tôi điểm danh xem năm 2020 chỗ nào thú vị và thu hút nhất khi lên hình nha!
-                                    </div>
-                                    <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">By : 
-                                            <a href="#" class="text-main-color">ABCXTZ</a>
-                                        </span>
-                                        <span class="text-extra-small">Categorie :   
-                                            <a href="#" class="text-main-color">ARt</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                                    
-                        <!-- noi dung ne may cha -->
-                        <div class="col-lg-6">
-                            <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                <div class="img-in">
-                                    <a href="#">
-                                      <img class="wh" src="views/img/sing.jpg" alt="">
-                                    </a>
-                                </div>
-                                <!-- oadd -->
-                                <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
-                                        Một ngày “vui quên lối về” ở Adventure Cove Waterpark Singapore
-                                    </a>
-                                    <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                        Được mệnh danh là một đảo quốc, Singapore cũng là một điểm dừng chân lý tưởng cho các tín đồ của làn nước xanh,
-                                        và một trong những địa điểm không thể bỏ qua chính là Adventure Cove Waterpark – công viên nước hoành tráng bậc nhất đảo Sentosa.
-                                    </div>
-                                    <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">By : 
-                                            <a href="#" class="text-main-color">ABCXTZ</a>
-                                        </span>
-                                        <span class="text-extra-small">Categorie :   
-                                            <a href="#" class="text-main-color">ARt</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- noi dung ne may cha -->
-                        <div class="col-lg-6">
-                            <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                <div class="img-in">
-                                    <a href="#">
-                                        <img class="wh" src="views/img/hongkong.jpg" alt="">
-                                    </a>
-                                </div>
-                                <!-- oadd -->
-                                <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="#" >
-                                      Trải nghiệm gì khi đến Hong Kong? Khám phá ngay 9 hoạt động tại xứ Cảng Thơm
-                                    </a>
-                                    <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                      Bạn sẽ bỏ lỡ rất rất nhiều điểm đến và hoạt động thú vị nếu nghĩ rằng đến Hong Kong sẽ chỉ để mua sắm, ăn uống hoặc chụp ảnh. Tuy “nhỏ nhưng có võ”
-                                       . Đừng bỏ qua bài viết này và cùng chúng t khám phá chơi gì ở Hong Kong nhé!
-                                    </div>
-                                    <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">By : 
-                                            <a href="#" class="text-main-color">ABCXTZ</a>
-                                        </span>
-                                        <span class="text-extra-small">Categorie :   
-                                            <a href="#" class="text-main-color">ARt</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                                                  
+                    <?php } ?>                                                                  
                     </div>
                     <!-- page links -->
-                    <ul class="pagination pagination-md ">
+                    <ul>
+              
+                    </ul>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <?php echo $links; ?>
+                        </ul>
+                        </nav>
+                                            <!-- <ul class="pagination pagination-md ">
                         <li class="page-item disabled">
                             <a class="page-link rounded-0" tabindex="-1" href="">Previous</a>
                         </li>
@@ -197,7 +62,7 @@
                             <a class="page-link" href="#">1</a>
                         </li>
                         <li>
-                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#"></a>
                         </li>
                         <li>
                             <a class="page-link" href="#">3</a>
@@ -205,7 +70,7 @@
                         <li class="page-item disabled">
                             <a class="page-link rounded-0" tabindex="-1" href="">Next</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <!-- noidung2 -->
@@ -228,13 +93,11 @@
                         <h4 class="widget-title clearfix">
                             <span>Thư mục</span>
                         </h4>
+                        <?php foreach($getDmblog as $dmBlog) { ?>
                         <ul>
-                            <li>AAAAAAAAAAAAAA</li>
-                            <li>AAAAAAAAAAAAAA</li>
-                            <li>AAAAAAAAAAAAAA</li>
-                            <li>AAAAAAAAAAAAAA</li>
-                            <li>AAAAAAAAAAAAAA</li>
+                            <li><a href="<?=$dmBlog['id']?>"><?=$dmBlog['name']?></a></li>
                         </ul>
+                        <?php } ?>
                     </div>
                     <div class="widget widget_categories">
                         <h4 class="widget-title clearfix">
@@ -263,52 +126,19 @@
                         <h4 class="widget-title clearfix">
                             <span>Bài hay</span>
                         </h4>
-                        <ul class="last-posts">
-                            <li>
+                        <?php foreach($getbestBlog as $bestBlog) { ?>
+                            <ul class="last-posts">
+                                <li>
                                 <a href="#" class="float-left margin-right-15px d-block width-60px">
-                                    <img src="views/img/instagram-5.jpg" alt="">
+                                    <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                                 </a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">Bốn ngày ở Thái Lan</a>
+                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
                                 <span class="text-extra-small">
                                     Date
-                                    <a href="#" class="text-main-color">Tháng 5, 2018</a>
+                                    <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>
                                 </span>
-                                <div class="clearfix">  </div>
-                            </li>
-                            <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px">
-                                    <img src="views/img/instagram-5.jpg" alt="">
-                                </a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">Bốn ngày ở Thái Lan</a>
-                                <span class="text-extra-small">
-                                    Date
-                                    <a href="#" class="text-main-color">Tháng 5, 2018</a>
-                                </span>
-                                <div class="clearfix">  </div>
-                            </li>
-                            <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px">
-                                    <img src="views/img/instagram-5.jpg" alt="">
-                                </a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">Bốn ngày ở Thái Lan</a>
-                                <span class="text-extra-small">
-                                    Date
-                                    <a href="#" class="text-main-color">Tháng 5, 2018</a>
-                                </span>
-                                <div class="clearfix">  </div>
-                            </li>
-                            <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px">
-                                    <img src="views/img/instagram-5.jpg" alt="">
-                                </a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">Bốn ngày ở Thái Lan</a>
-                                <span class="text-extra-small">
-                                    Date
-                                    <a href="#" class="text-main-color">Tháng 5, 2018</a>
-                                </span>
-                                <div class="clearfix">  </div>
-                            </li>
-                        </ul>
+                            </ul>
+                        <?php } ?>
                     </div>
                 </div>
             </div>              

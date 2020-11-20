@@ -4,12 +4,21 @@
         return result1(1,$sql);
     }
 
-    function getAllDiemDi()
+    function showDiemDi()
     {
-      $sql = "SELECT * FROM tuyenduong";
-      return result1(1,$sql);
+        $sql = "SELECT sanbay.tinh FROM sanbay WHERE EXISTS 
+        (SELECT * FROM tuyenduong WHERE sanbay.idsanbay = tuyenduong.iddiemdi)
+        ";                     
+        return result1 (0,$sql);
     }
-
+    function showDiemDen()
+    {
+        $sql = "SELECT sanbay.tinh FROM sanbay WHERE EXISTS 
+        (SELECT * FROM tuyenduong WHERE sanbay.idsanbay = tuyenduong.iddiemden)
+        ";
+        return result1 (0,$sql);
+    }
+   
 
   
 ?>

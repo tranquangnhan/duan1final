@@ -20,15 +20,18 @@ function ClickBtn() {
                 fireErr('Ghế không còn trống !');
             })
         })
+
         let ThisBox = $(this);
         ThisBox.click(async function(Events) {
             Events.preventDefault();
-            if ($('.l-ghe-active.l-ghe-thuonggia').length >= 3) {
+            let MaxSheet = $('.l-ghe-active.l-ghe-thuonggia').length;
+            let IsRemoveSelected = (ThisBox.hasClass('l-ghe-active'));
+
+            if (MaxSheet >= 3 && IsRemoveSelected === false) {
                 fireErr('Bạn chỉ được đặt tối đa 3 vé !');
                 return;
-            }
+            } else {
 
-            if (flag === true) {
                 let ID = ThisBox.text();
                 let idChuyenBay = $("#idcb").val();
 
@@ -59,7 +62,14 @@ function ClickBtn2() {
         ThisBox.click(async function(Events) {
 
             Events.preventDefault();
-            if ($('.l-ghe-active.l-ghe-phothong').length >= 3) {
+            let MaxSheet = $('.l-ghe-active.l-ghe-phothong').length;
+
+            //Gui AJAX Len check xem geh da chon chua
+            //Neu da chon va phia nguoi dung huy ghe thi gui ajax huy
+
+            let IsRemoveSelected = (ThisBox.hasClass('l-ghe-active'));
+
+            if (MaxSheet >= 3 && IsRemoveSelected === false) {
                 fireErr('Bạn chỉ được đặt tối đa 3 vé !');
                 return;
             } else {
