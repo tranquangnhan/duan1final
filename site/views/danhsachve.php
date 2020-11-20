@@ -73,7 +73,8 @@
         </div>
         
         <div class="box-right">
-     
+     <?php foreach ($data AS $k ){?>
+      <?php foreach ($data1 AS $v){?>
           <div class="row box_ve mr-bot-40px background-white mr-0px">
             <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
                 <div class="hotel-img position-relative line-height-150px">
@@ -85,7 +86,7 @@
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
-        <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">from: </span>to: </a></h3> 
+     <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  from:<?= $k['tinh']?> </span>to: <?= $v['tinh']?>  </a></h3> 
                 <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Booking Now </a>
                 <div class="date mr-lr-15px">
                   <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
@@ -107,8 +108,9 @@
               </div>
             </div>
           </div>
-      
-       
+              
+     <?php }?>
+     <?php }?>
       <!-- <div class="row box_ve mr-bot-40px background-white mr-0px">
             <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
                 <div class="hotel-img position-relative line-height-150px">
