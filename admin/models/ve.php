@@ -20,22 +20,21 @@ function showTenmaybay($id){
     $sql ="select * from dsmaybay where id= '$id'";
     return result1(1,$sql)['name'];
 }
-function showdiemdi(){
-    $sql = "select  tensanbay,chuyenbay.idtuyenduong,tuyenduong.id,tuyenduong.iddiemdi,sanbay.idsanbay
-     FROM chuyenbay
-    INNER JOIN tuyenduong ON chuyenbay.idtuyenduong = tuyenduong.id 
-    INNER JOIN sanbay ON tuyenduong.iddiemdi = sanbay.idsanbay
-    "
-    ;  return result1(0, $sql);
-}
-function showdiemden(){
-    $sql = "select  tensanbay,chuyenbay.idtuyenduong,tuyenduong.id,tuyenduong.iddiemden,sanbay.idsanbay
-     FROM chuyenbay
-    INNER JOIN tuyenduong ON chuyenbay.idtuyenduong = tuyenduong.id 
-    INNER JOIN sanbay ON tuyenduong.iddiemden = sanbay.idsanbay
-    "
-    ;  return result1(0, $sql);
-}
+function showdiemdi($id){
+    $sql ="select * from sanbay  where idsanbay = '$id'";
+    return result1(1,$sql)['tensanbay'];
+} 
+function showiddiemdi($id){
+    $sql ="select * from tuyenduong  where id = '$id'";
+    return result1(1,$sql)['iddiemdi'];
+} 
+function showiddiemden($id){
+    $sql ="select * from tuyenduong  where id = '$id'";
+    return result1(1,$sql)['iddiemden'];
+} 
+
+
+
 function showsanbay()
 {
     $sql = "select * from sanbay ";

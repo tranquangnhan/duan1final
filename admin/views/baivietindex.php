@@ -23,6 +23,7 @@
                                                 <th>ID</th>
                                                 <th width="100">Ảnh</th>
                                                 <th width="200">Tên Sản Phẩm</th>
+                                                <th>Trạng Thái</th>
                                                 <th>Tác Giả</th>
                                                 <th width="450">Nội Dung</th>
                                                 <th>Hành Động</th>
@@ -35,9 +36,9 @@
                                                     if(is_file($img)) $img = $img;else $img = "nothing";
                                                     $anhien = $motbl['public'];
                                                     if($anhien == 1){
-                                                        $anhien = 'checked';
+                                                        $anhien = 'Đang Hiện';
                                                     }else{
-                                                        $anhien ='onclick="return false"';
+                                                        $anhien ='Đang Ẩn';
                                                     }   
                                                     $linkdel = "index.php?ctrl=baiviet&act=del&iddel=".$id;
                                                     $linkedit = "index.php?ctrl=baiviet&act=add&idedit=".$id;         
@@ -45,7 +46,8 @@
                                                 <tr>
                                                     <td><?=$motbl['id']?></td>
                                                     <td width="100"><img width="100" src="<?=$img?>"></td>
-                                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?><input type="radio" <?=$anhien?>></a> </td>
+                                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?></a> </td>      
+                                                    <td> <?=$anhien?></td>                                                                       
                                                     <td><?=$motbl['tacgia']?></td>
                                                     <td class="noidung"><?=substr($motbl['noidung'],0,100)?></td>
                                                     <td>
