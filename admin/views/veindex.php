@@ -67,10 +67,10 @@
                                          <td><?=showdiemdi(showiddiemdi($ve['idtuyenduong']))?></td>
                                          <td><?=showdiemdi(showiddiemden($ve['idtuyenduong']))?></td>
                                        
-                                         <td><?= $ve['ngaydi'] ?></td>
-                                     <td><?= $ve['giodi'] ?></td>
-                                     <td><?= $ve['gioden'] ?></td>
-                                     <td><?=$trangthai?></td>
+                                     <td class="ngaydi"><?= $ve['ngaydi'] ?></td>
+                                     <td class="giodi"><?= $ve['giodi'] ?></td>
+                                     <td class="gioden"><?= $ve['gioden'] ?></td>
+                                     <td class="trangthai"><?=$trangthai?></td>
                                      <td>
                                          <a href="<?= $linkdel ?>" onclick="return checkDelete()"><i class="fa fa-trash mr-3" ></i></a>
                                          <a href="<?= $linkedit ?>"><i class="fa fa-edit"></i></a>

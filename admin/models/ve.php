@@ -215,5 +215,8 @@ function updateGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay){
     WHERE idchuyenbay = '$idChuyenBay'";
     return exec1($sql);
 }
-
+function selectTime(){
+    $sql = "SELECT ngaydi,giodi,gioden,trangthai FROM chuyenbay";
+    return result1(0,$sql);
+}
 ?>

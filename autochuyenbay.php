@@ -15,7 +15,7 @@ function selectData()
 // giờ đi: lấy giờ đi cộng thêm 4 tiếng
 // giờ đến : lấy giờ đến công thêm 4 tiếng
 // ngày: nếu quá 24h thì tăng thêm 1 ngày
-echo 1111;
+
 if ($_POST['Action'])
 {
   
@@ -45,6 +45,12 @@ if ($_POST['Action'])
         case 'getkqghe':
             $Array = array();
             $Array['StatusCode'] = (setAutoChuyenBay() === true) ? 1 : 0;
+            echo json_encode($Array);
+            return;
+            break;
+        case 'showkqghe':
+            $Array = array();
+            $Array['StatusCode'] = selectTime();
             echo json_encode($Array);
             return;
             break;

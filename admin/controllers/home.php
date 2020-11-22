@@ -13,7 +13,6 @@
   //   $arr[0][$i] =  $arr1;
   //   $arr[1][$i] =  $arr2;
   // } 
-  echo 
-  require_once "../autochuyenbay.php"; 
+ 
 
 ?>

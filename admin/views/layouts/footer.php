@@ -22,8 +22,7 @@
     <script src="views/jquery/jquery.searchad.js"></script>
     <script src="views/jquery/themghe.js"></script>
     <script src="../site/views/jquery/SweetAlert2.js" type="text/javascript"></script>
-    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-    <script src="views/jquery/rttrangthai.js" type="text/javascript"></script>
+  
 </body>
 
 </html>

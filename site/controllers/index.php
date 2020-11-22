@@ -1,6 +1,8 @@
 <?php
 session_start();
 ob_start();
+require_once "../autochuyenbay.php"; 
+// code auto
 require_once "../system/config.php";
 require_once "../system/database.php";
 require_once "models/loaihang.php";
@@ -31,8 +33,8 @@ if(isset($_GET['act'])){
             require_once "views/contact.php";
             break;          
         case 'danhsachve':   // để sửa css
-            $data = showDiemDi();
-            $data1= showDiemDen();
+            $data = showDiemDi2();
+            $data1= showDiemDen2();
             require_once "views/danhsachve.php";
             break;
         case 'blog':  
