@@ -53,13 +53,15 @@
       </li> -->          
       <div class="padding-30px box-shadow background-white">
         <div class="active" id="home" role="tabpanel">
+            <form action="" method="get">
           <div class="row">
             <div class="form-group col-lg-2" id="noiden">
               <label>Địa điểm</label>
               <div class="form-group">
                 <select class="form-control" name="" id="">
                   <option value="" selected>Chọn</option>
-                  <?php foreach ($showAllSanBay as $motdd) {
+                  <?php $showAllSanBay = showAllSanBay();
+                  foreach ($showAllSanBay as $motdd) {
                     echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
                   } ?>
                 </select>
@@ -110,6 +112,7 @@
               <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
             </div>
           </div>
+            </form>
         </div>
       </div>
     </div>

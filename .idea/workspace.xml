@@ -16,32 +16,53 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/views/chonghethuonggia.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/views/css/chonghe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/views/jquery/themghe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controllers/ve.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/ve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/models/ve.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models/ve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/veadd.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/veadd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lamlaidatabase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lamlaidatabase.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ckfinder/core/connector/php/vendor/cksource/ckfinder" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ckfinder/core/connector/php/vendor/cksource/ckfinder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database.php" afterDir="false" />
+    <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="Nguyễn Quốc Hiếu">
+      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/duan1final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/duan1final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/views/home.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/lib/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\xampp\htdocs\duan1final\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/lib/vendor/composer" />
+      <path value="$PROJECT_DIR$/lib/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/lib/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/lib/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/lib/vendor/pusher/pusher-php-server" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1kJhv1Iguhh2itIT0TTc8NFXCyf" />
   <component name="ProjectLevelVcsManager">
@@ -53,9 +74,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pusher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,7 +87,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="" />
@@ -78,25 +115,42 @@
       <workItem from="1605443153418" duration="630000" />
       <workItem from="1605444552543" duration="4396000" />
       <workItem from="1605450541256" duration="10000" />
+      <workItem from="1606071072091" duration="638000" />
+      <workItem from="1606077338251" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="578" y="327" key="#Composer" timestamp="1606071085126">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="578" y="327" key="#Composer/0.30.1536.834@0.30.1536.834" timestamp="1606071085126" />
     <state x="59" y="208" key="#SQL_Dialects" timestamp="1605427045744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -105,10 +159,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605447941183" />
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1605448597913">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="521" y="169" key="FileChooserDialogImpl" timestamp="1606071083854">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605448597913" />
+    <state x="521" y="169" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1606071083854" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1605425372532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

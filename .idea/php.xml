@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/lib/vendor/composer" />
+      <path value="$PROJECT_DIR$/lib/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/lib/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/lib/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/lib/vendor/pusher/pusher-php-server" />
+    </include_path>
+  </component>
+</project>
