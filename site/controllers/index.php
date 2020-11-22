@@ -20,6 +20,8 @@ require_once "models/danhsachve.php";
 require_once "models/ve.php";
 
 require_once "views/layouts/header.php";
+$showAllSanBay = showAllSanBay();
+
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {

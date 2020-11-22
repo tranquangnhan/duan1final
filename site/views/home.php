@@ -56,11 +56,25 @@
           <div class="row">
             <div class="form-group col-lg-2" id="noiden">
               <label>Địa điểm</label>
-              <div class="destination"><input type="text" class="input-text full-width" placeholder="Nhập Địa Điểm"></div>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <?php foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
+              </div>
             </div>
             <div class="form-group col-lg-2" id="noiden">
               <label>Nơi đến</label>
-              <div class="destination"><input type="text" class="input-text full-width" placeholder="Nhập Địa Điểm"></div>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                    <option value="" selected>Chọn</option>
+                  <?php foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
+              </div>
             </div>
             <div class="form-group col-lg-2" id="khoihanh">
               <label>Khởi hành</label>
@@ -77,6 +91,20 @@
             <div class="col-lg-2">
               <label>Trẻ em</label>
               <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Em bé</label>
+              <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Hạng ghế</label>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <option value="0">Phổ Thông</option>
+                  <option value="1">Thương Gia</option>
+                </select>
+              </div>
             </div>
             <div class="col-lg-2 mr-0-at">
               <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
