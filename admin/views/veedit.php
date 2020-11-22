@@ -61,7 +61,7 @@ if (is_array($showveedit)) {
                                              foreach ($tuyenBay as $mottb) {
                                                 $sl = "selected";
                                                 $idtd = $showveedit['idtuyenduong'];
-                                                if($mottb['idtuyenduong'] == $idtd){
+                                                if($mottb['id'] == $idtd){
                                                     $showTuyenBay .= '<option value="'.$mottb['id'].'"'.$sl.' >'.showNameSb($mottb['iddiemdi']). " - " . showNameSb($mottb['iddiemden']).'</option>';
                                                 }else{
                                                     $showTuyenBay .= '<option value="'.$mottb['id'].'">'.showNameSb($mottb['iddiemdi']). " - " . showNameSb($mottb['iddiemden']).'</option>';
@@ -77,7 +77,7 @@ if (is_array($showveedit)) {
                                     <label for=""><strong>Giá tiền ghế thương gia</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="number" name="giavethuonggia" id="" class="form-control"
+                                    <input type="number" name="giavethuonggia" value="<?=floatVal($showGiaVe['giavethuonggia'])?>" id="" class="form-control"
                                         placeholder="Giá Tiền Ghế Thương Gia" aria-describedby="helpId" required>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ if (is_array($showveedit)) {
                                     <label for=""><strong>Giá tiền ghế thường</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="number" name="giavethuong" id="" class="form-control"
+                                    <input type="number" name="giavethuong" id="" value="<?=floatVal($showGiaVe['giavethuong'])?>" class="form-control"
                                         placeholder="Giá Tiền Ghế Thường" aria-describedby="helpId" required>
                                 </div>
                             </div>
@@ -94,8 +94,9 @@ if (is_array($showveedit)) {
                                 <div class="col-lg-3">
                                     <label for=""><strong>Ngày Bay</strong></label>
                                 </div>
+                                
                                 <div class="col-lg-9">
-                                <input class="form-control" type="date" name="ngaybay" value="2020-11-19" id="example-date-input">
+                                <input class="form-control" type="date" name="ngaybay" value="<?=$showveedit['ngaydi']?>" id="example-date-input">
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -103,7 +104,7 @@ if (is_array($showveedit)) {
                                     <label for=""><strong>Thời Gian Đi</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input class="form-control" name="tgdi" type="time" value="13:45:00" id="">
+                                    <input class="form-control" name="tgdi" type="time" value="<?=$showveedit['giodi']?>" id="">
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -111,7 +112,7 @@ if (is_array($showveedit)) {
                                     <label for=""><strong>Thời Gian Đến</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input class="form-control" name="tgden" type="time" value="13:45:00" id="">
+                                    <input class="form-control" name="tgden" type="time" value="<?=$showveedit['gioden']?>" id="">
                                 </div>
                             </div>
                          

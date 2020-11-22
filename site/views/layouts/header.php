@@ -26,7 +26,11 @@
     <script src="views/jquery/jquery.js" type="text/javascript"></script>
     <script src="views/js/blogdetail.js" type="text/javascript"></script>
     <script src="views/js/home.js" type="text/javascript"></script>
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 238893b9bdd9f3df9bb7eff0319a3ffea327067a
   <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <!-- end include jquery -->
 </head>

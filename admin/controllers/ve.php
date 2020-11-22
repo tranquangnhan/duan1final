@@ -6,8 +6,7 @@
     }
     switch ($act) {
         case 'index':
-            $showAllve = showAllve();
-         
+            $selectData = showAllve();
             include_once "views/veindex.php";
         break;
         case 'import':
@@ -29,9 +28,10 @@
         case 'add':
             $tuyenBay = tuyenBay();
             $dsMayBay = dsMayBay();
+      
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $showMb = dsMayBay();
-               
+                $showGiaVe = showGiaVe($_GET['idedit']);
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showveedit = showveedit($_SESSION['idedit']);
                 include_once "views/veedit.php";
@@ -58,17 +58,23 @@
 
                 
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    updateve($id,$idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
+                    $idChuyenBay = updateve($_GET['idedit'],$idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
+                    
+                    updateGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay);
+
+                    $_SESSION['idchuyenbay'] = $_GET['idedit'];
+
                 }else{
 
                     $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
                     
                     addTTVe($idMayBay,$idChuyenBay);
                     
+                    addGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay);
                     $_SESSION['idchuyenbay'] = $idChuyenBay;
-
-                    header('location: index.php?ctrl=ve&act=chonghe');
                 }
+                
+                header('location: index.php?ctrl=ve&act=chonghe');
             }
         break;
         case 'chonghe':

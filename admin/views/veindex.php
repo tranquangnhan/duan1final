@@ -25,8 +25,10 @@
                                  <th width="300">Điểm Đi</th>
                                  <th width="300">Điểm Đến</th>
                                  <th width="300">Ngày Đi</th>
-                                 <th width="200">Thời Gian Đi</th>
-                                 <th width="200">Thời Gian Đến</th>
+                                 <th width="150">Thời Gian Đi</th>
+                                 <th width="150">Thời Gian Đến</th>
+                                 <th width="200">Trạng Thái</th>
+                                 <th width="200">Hành Động</th>
                              </tr>
                          </thead>
 
@@ -34,14 +36,27 @@
                              <?php
                           
                                 $i = 0;
-                                foreach ($showAllve as $ve) {
-                              
+                                foreach ($selectData as $ve) {
                                     $i++;
                                     $id = $ve['id'];
-                              
-                                    
-                                    // $img= $pathimg .$ve['anh'];
+                                    // check trạng thái
+                                    $today_date = strtotime(date("Y-m-d"));
 
+                                    $today_time = strtotime(date('H:i:s'));
+                
+                                    $another_date = $ve['ngaydi'];
+
+                                    if ($today_date > strtotime($another_date)) {
+                                        $trangthai = "Hoàn Thành";
+                                        setTrangThai($ve['id']);
+                                    } else {
+                                        if($ve['ngaydi'] == date("Y-m-d")&& strtotime($ve['gioden']) <= $today_time){
+                                            $trangthai =  "Hoàn Thành";
+                                            setTrangThai($ve['id']);
+                                        }else{
+                                            $trangthai = "Chưa Bay";
+                                        }
+                                    }
                                     $linkdel = "index.php?ctrl=ve&act=del&iddel=" . $id;
                                     $linkedit = "index.php?ctrl=ve&act=add&idedit=" . $id;
                                 ?>
@@ -52,9 +67,10 @@
                                          <td><?=showdiemdi(showiddiemdi($ve['idtuyenduong']))?></td>
                                          <td><?=showdiemdi(showiddiemden($ve['idtuyenduong']))?></td>
                                        
-                                         <td><?= $ve['ngaydi'] ?></td>
-                                     <td><?= $ve['giodi'] ?></td>
-                                     <td><?= $ve['gioden'] ?></td>
+                                     <td class="ngaydi"><?= $ve['ngaydi'] ?></td>
+                                     <td class="giodi"><?= $ve['giodi'] ?></td>
+                                     <td class="gioden"><?= $ve['gioden'] ?></td>
+                                     <td class="trangthai"><?=$trangthai?></td>
                                      <td>
                                          <a href="<?= $linkdel ?>" onclick="return checkDelete()"><i class="fa fa-trash mr-3" ></i></a>
                                          <a href="<?= $linkedit ?>"><i class="fa fa-edit"></i></a>

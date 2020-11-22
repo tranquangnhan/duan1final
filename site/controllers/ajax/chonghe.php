@@ -1,7 +1,7 @@
 <?php
     include_once '../../../system/config.php';
     include_once '../../../system/database.php';
-    include_once '../../../lib/vendor/autoload.php';
+    include_once '../../../lib/vendor/autoload.php'; // require pusher
     include_once '../../models/ve.php';
     if ($_POST['Action'])
     {
