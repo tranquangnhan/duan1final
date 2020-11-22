@@ -1,5 +1,5 @@
 <?php
-define('HOST_DB','https://db.lmsq.vn');
+define('HOST_DB','db.lmsq.vn');
 define('NAME_DB','QNhan_datvemaybay');
 define('USER_DB','QNhan');
 define('PASS_DB','12345678');// anh em dung nho xoa dum pass
