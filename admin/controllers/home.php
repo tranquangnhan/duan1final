@@ -12,7 +12,8 @@
   //   array_push($arr2,$allsp[$i][16]);  
   //   $arr[0][$i] =  $arr1;
   //   $arr[1][$i] =  $arr2;
-  // }  
-  // include_once "views/home.php"; 
+  // } 
+  echo 
+  require_once "../autochuyenbay.php"; 
 
 ?>

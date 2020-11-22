@@ -11,8 +11,7 @@
             include_once "views/baivietindex.php";
         break;
         case 'add':
-            $showdmbv = showdmbv();
-            $showdmsp = showAllDmBaiViet();
+            $showdmbv = showAllDmBaiViet();
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $id = $_GET['idedit'];

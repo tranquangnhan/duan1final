@@ -7,7 +7,7 @@ require_once '../../models/ve.php';
 if ($_POST['Action'])
 {
     switch ($_POST['Action']) {
-        case 'setttghetg':
+        case 'setttghe':
             setGheAdmin($_POST['id'],$_POST['idmaybay'],'ttghethuonggia');
             print_r(getGhe($_POST['idmaybay'],'ttghethuonggia'));
             return;
