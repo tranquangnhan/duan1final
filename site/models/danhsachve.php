@@ -17,7 +17,7 @@ function showVe()
     inner join sanbay s on i.iddiemdi = s.idsanbay) as q
     
     inner join 
-    (select r.id, w.giavethuong, w.giavethuonggia  from giave w
+    (select r.id, w.giavethuong, w.giavethuonggia from giave w
     inner join chuyenbay r on w.idchuyenbay = r.id) as p
     
     on o.id=q.id and q.id=p.id";
