@@ -27,3 +27,18 @@
     background-size: 100%;
     background-repeat: no-repeat, repeat;
 }
+
+.fixed-blog-bg {
+    background-image: url("../../../../uploads/background-blog.jpg");
+    width: 100%;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.binhluan {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}

@@ -51,15 +51,26 @@ if(isset($_GET['act'])){
             break; 
         case 'dtBlog':
             if (isset($_GET['idbl'])==true) $id = $_GET['idbl'];
+             
+            if (isset($_SESSION['suser'])) {
+                $user = $_SESSION['suser'];
+            }
             settype($id, "int");
             $getBlogbyid = getBlogbyid($id);
             $getbestBlog = getBestBlog();
             $getDmblog = getDmblog();
+            $binhluan = getBlByid($id);
+            $sobinhluan = rowcountCmt($id);
+            $userr = getIdbyuser($user);
             if (isset($_GET['iddm'])==true) $iddm = $_GET['iddm'];
             settype($iddm, "int");
             $getBlogByiddm = getBlogByiddm($iddm);           
             require_once "views/blogdetail.php";
             break;
+        case 'addcmt':
+            if (isset($_SESSION['suser'])==true) $us = $_SESSION['suser'];
+            echo '11111111111111111111';
+        break;
         case 'singleproduct':  
             if(isset($_GET['id'])&&$_GET['id']>0){
                 $id = $_GET['id'];

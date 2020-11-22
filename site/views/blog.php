@@ -1,5 +1,7 @@
 <main>
+<div class="fixed-blog-bg"></div>
     <nav class="bg-color-grey pd-tb-30px ps-relative cl-grey1">
+        
         <div class="container">
             <div class="fz-12vw d-inline-block padding-tb-7px">BLOG</div>
             <div class="float-right">
@@ -20,13 +22,13 @@
                             <div class="col-lg-6">
                                 <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
                                     
-                                    <a href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
+                                    <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
                                         <div class="img-in" style="background-image: url('<?=$pathimg.$allB['img']?>');">
                                     </a>
                                 </div>
                                     <!-- oadd -->
                                 <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
+                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
                                         <?=$allB['name']?>
                                     </a>
                                     <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
@@ -53,24 +55,7 @@
                         <ul class="pagination">
                             <?php echo $links; ?>
                         </ul>
-                        </nav>
-                                            <!-- <ul class="pagination pagination-md ">
-                        <li class="page-item disabled">
-                            <a class="page-link rounded-0" tabindex="-1" href="">Previous</a>
-                        </li>
-                        <li>
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li>
-                            <a class="page-link" href="#"></a>
-                        </li>
-                        <li>
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item disabled">
-                            <a class="page-link rounded-0" tabindex="-1" href="">Next</a>
-                        </li>
-                    </ul> -->
+                    </nav>
                 </div>
             </div>
             <!-- noidung2 -->

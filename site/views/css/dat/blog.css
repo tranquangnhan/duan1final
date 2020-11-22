@@ -335,3 +335,31 @@ p{
     height: auto;
 
 }
+
+/* long */
+
+.binhluan {
+    width: 100%;
+    /* background-color: red; */
+    padding: 10px 0px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 1.5vw;
+}
+.binhluan img {
+    width: 40px;
+}
+.tenKH {
+    color: rgb(0, 89, 255);
+}
+.noidung {
+    font-size: 1.2vw;
+}
+.hinh {
+    width: 7.5%;
+    display: inline-block;
+    vertical-align: top;
+}
+.noidungbinhluan {
+    width: 70%;
+    display: inline-block;
+}

@@ -1,5 +1,6 @@
 <?php 
-    $img = $pathimg.$getBlogbyid['img'];    
+    session_start();
+    $img = $pathimg.$getBlogbyid['img'];   
 ?>
 
 <main>
@@ -22,7 +23,7 @@
             <div class="theiaStickySidebar">
                     <div class="blog-entry dbackground-white border-1 border-grey-1 margin-bottom-35px">
 
-                            <img src="../<?=$pathimg.$getBlogbyid['img']?>" alt="Image" style="height: auto;" class="responsiveImg"/>
+                            <img src="<?=$pathimg.$getBlogbyid['img']?>" alt="Image" style="height: auto;" class="responsiveImg"/>
                         <!-- noidung ne -->
                         <div class="padding-30px">
                             <!-- phan thong tin duoi img -->
@@ -53,84 +54,49 @@
                     <!-- box4 -->
                     <div class="background-white border-1 border-grey-1 margin-bottom-35px padding-30px">
                         <h4 class="table-title margin-bottom-30px">
-                            <span>Bình luận</span>
+                            <span><?php echo $sobinhluan; ?> Bình luận</span>
+                            <?php foreach ($binhluan as $bl) { ?>                            
+                                <div class="binhluan" id="binhluan">                                    
+                                        <div class="hinh">
+                                            <?php if ($userr[0]['avatar']== '') {?>
+                                            <img src="../uploads/avatar.png" alt=""> 
+                                            <?php } ?>
+                                        </div>
+                                        <div class="noidungbinhluan">
+                                            <div class="tenKH"><?=$userr[0]['tenKH']?></div>
+                                            <div class="noidung"><?=$bl['noidung']?></div>
+                                        </div>                                    
+                                </div>
+                            <?php } ?>
                         </h4>
                         <!-- nguoibl -->
-                        <ul class="commentlist padding-0px margin-0px list-unstyled text-grey-3">
-                            <li class="border-bottom-1 border-grey-1 margin-bottom-20px">
-                                <img src="../../uploads/avatar.png" class="float-left img100 margin-right-20px margin-bottom-20px max-width-4pt"  alt="">
-                                <div class="margin-left-85px">
-                                    <!-- ten nguoi bl -->
-                                    <a href="#" class="d-block text-dark text-uppercase text-medium font-weight-700">Hieu dep trai</a>
-                                    <span class="text-extra-small">
-                                        Date:
-                                        <a href="#" class="text-main-color">Ngày/tháng/năm</a>
-                                    </span>
-                                    <p class="margin-top-15px">
-                                        hay quá chời ... 
-                                    </p>
-                                </div>
-                            </li>
-                            <!-- ngbl tra loi -->
-
-                                <div class="border-bottom-1 border-grey-1 margin-bottom-20px margin-left-55px">
-                                        <img src="../../uploads/avatar.png" class="float-left img100 margin-right-20px margin-bottom-20px max-width-4pt" alt="">
-                                        <div class="margin-left-85px">
-                                        <!-- ten -->
-                                        <a href="#" class="d-block text-dark text-uppercase text-medium font-weight-700">Hieu Xau trai</a>
-                                        <span class="text-extra-small">Date:
-                                            <a href="#" class="text-main-color">ngày/tháng/năm</a>
-                                        </span>
-                                        <!-- binh luan -->
-                                        <p class="margin-top-15px">
-                                            Đúng rồi...
-                                        </p>
-                                        </div>
-                                </div>
-
-                                <!-- ng bl 2 -->
-                                <div class="border-bottom-1 border-grey-1 margin-bottom-20px margin-left-55px">
-                                    <img src="../../uploads/avatar.png" class="float-left img100 margin-right-20px margin-bottom-20px max-width-4pt" alt="">
-                                    <div class="margin-left-85px">
-                                        <!-- ten -->
-                                        <a href="#" class="d-block text-dark text-uppercase text-medium font-weight-700">Hieu Xau trai</a>
-                                        <span class="text-extra-small">Date:
-                                            <a href="#" class="text-main-color">ngày/tháng/năm</a>
-                                        </span>
-                                        <!-- binh luan -->
-                                        <p class="margin-top-15px">
-                                            tao đồng ý với thằng trên
-                                        </p>
-                                    </div>
-                                </div>
-                        </ul>
                     </div>
                     <div class="background-white border-1 border-grey-1 margin-bottom-35px padding-30px">
                         <h4 class="table-title margin-bottom-30px">
                             <span>Thêm bình luận</span>
                         </h4>
                             <!-- form -->
-                            <form action="">
-                                    <div class="form-row fz15px font-weight-700 ">
+                            <form method="post" id="form_cmt">
+                                    <div class="form-row fz15px font-weight-700 ">                                        
                                         <div class="form-group col-md-6">
-                                            <label for="inputName">Tên:</label>
-                                            <input type="text" class="form-control" id="inputName" placeholder="Nhập tên "> 
+                                            <label for="inputName"></label>
+                                            <input type="hidden" class="form-control" id="idus" name="idus" placeholder="Nhập tên" value="<?=$userr[0]['id']?>"> 
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputName">Email:</label>
-                                            <input type="text" class="form-control" id="inputName" placeholder="Nhập email hoặc số điện thoại"> 
+                                            <label for="inputName"></label>
+                                            <input type="hidden" class="form-control" id="idbaiviet" name="idbaiviet" placeholder="Nhập tên" value="<?=$getBlogbyid['id']?>"> 
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label for="Web">Website:</label>
-                                            <input type="text"class="form-control" id="Web" placeholder="Website">
+                                            <label for="content">Bình luận:</label>
+                                            <textarea class="form-control" name="content" id="content" spellcheck="false" placeholder="Bình luận" rows="3"></textarea>
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="submit" name="submit" id="submit" class="btn btn-info" value="submit"/>
                                         </div>
-                                        <div class="form-group col-md-12">
-                                            <label for="binhluan">Bình luận:</label>
-                                            <textarea class="form-control" name="binhluan" id="binhluan" spellcheck="false" placeholder="Bình luận" rows="3"></textarea>
-                                        </div>
-                                        
-                                        <a href="#" class="btn btn-primary btn-lg btn-block margin-top-15px">Gửi </a>
                                     </div>
+                                    <span id="comment_message"></span>
+                                    <br>
+                                    <div id="display_comment"></div>
                             </form>
                             </div>
                         </h4>
@@ -145,9 +111,8 @@
                                 <div class="background-white">
                                     <div class="post-img">
                                         <a href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>">
-                                            <div class="img-in" style="background-image: url('../<?=$pathimg.$blogByiddm['img']?>'); height: 240px;"></div>
-                                        </a>
-                                                                               
+                                            <div class="img-in" style="background-image: url('<?=$pathimg.$blogByiddm['img']?>'); height: 240px;"></div>
+                                        </a>                                                                               
                                     </div>
                                     <div class="margin-top-30px">
                                         <a href="" class="d-block text-dark text-uppercase text-medium margin-bottom-10px font-weight-700"></a>
@@ -203,7 +168,7 @@
                     <ul class="last-posts">
                         <li>
                         <a href="#" class="float-left margin-right-15px d-block width-60px">
-                            <img src="../<?=$pathimg.$bestBlog['img']?>" alt="">
+                            <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                         </a>
                         <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
                         <span class="text-extra-small">

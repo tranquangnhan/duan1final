@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     function getallBlog($page_num, $page_size) { 
         $start_row = ($page_num - 1) * $page_size;
         $sql="SELECT * FROM baiviet ORDER BY date DESC LIMIT $start_row, $page_size";
@@ -72,6 +73,29 @@
     }
     function getBlogByiddm($iddm) {
         $sql = "SELECT * FROM baiviet where iddm=$iddm limit 2";
+        return result1(0,$sql);
+    }
+    function addCmt($content,$idUser,$idbaiviet,$star) {
+        $sql="INSERT INTO binhluan (idkh,idbaiviet,noidung,star) VALUES ('$idUser','$idbaiviet','$content','$star')";
+        return exec1($sql);
+    }
+    function getIdbyuser($user) {
+        $sql = "SELECT * FROM `khachhang` WHERE user='$user'";
+        return result1(0,$sql);
+    }
+    function showCmt($idbaiviet){
+        $sql = "SELECT idkh,idbaiviet,noidung,star FROM `binhluan` WHERE idbaiviet='$idbaiviet'";
+        return result1(0,$sql);
+    }
+    function rowcountCmt($id) {
+        $sql = "SELECT COUNT(*) AS numberRow FROM binhluan where idbaiviet=$id";
+        $kq = query($sql);
+        $row= $kq -> fetch();
+        $rowcount = $row['numberRow'];
+        return $rowcount;
+    }
+    function getBlByid($id) {
+        $sql = "SELECT idkh,idbaiviet,noidung,star FROM `binhluan` WHERE idbaiviet='$id'";
         return result1(0,$sql);
     }
 ?>
