@@ -17,11 +17,26 @@ function showVe()
     inner join sanbay s on i.iddiemdi = s.idsanbay) as q
     
     inner join 
-    (select r.id, w.giavethuong, w.giavethuonggia  from giave w
+    (select r.id, w.giavethuong, w.giavethuonggia from giave w
     inner join chuyenbay r on w.idchuyenbay = r.id) as p
     
     on o.id=q.id and q.id=p.id";
     return result1(0,$sql);
 }
   
+
+function showDiemDi2()
+{
+    $sql = "SELECT sanbay.tinh FROM sanbay WHERE EXISTS 
+    (SELECT * FROM tuyenduong WHERE sanbay.idsanbay = tuyenduong.iddiemdi)
+    ";                     
+    return result1 (0,$sql);
+}
+function showDiemDen2()
+{
+    $sql = "SELECT sanbay.tinh FROM sanbay WHERE EXISTS 
+    (SELECT * FROM tuyenduong WHERE sanbay.idsanbay = tuyenduong.iddiemden)
+    ";
+    return result1 (0,$sql);
+}
 ?>

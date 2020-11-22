@@ -288,6 +288,11 @@ if(isset($_GET['act'])){
             echo "<script src='views/jquery/showghe.js'></script>";
             }
             break;
+        case 'thanhtoan':
+            echo ' <link rel="stylesheet" href="views/css/long/trangthanhtoan.css">';
+
+            require_once 'views/thanhtoan.php';
+            break;
         default:
             require_once "views/home.php";
             break;
