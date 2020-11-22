@@ -18,28 +18,49 @@
                 include_once "views/khachhangadd.php";
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
-             
-               
-                $user = stripTags($_POST['user']);
-                $role = $_POST['role'];
+                $allFile = $_FILES['avatar1'];                
+                // //upload nhiều ảnh
+                $imgupload = checkUpLoadMany($allFile);
+
+                $tenkh = stripTags($_POST['tenkh']);
+                $user = stripTags($_POST['tenuser']);
+
+                $gioitinh = $_POST['gioitinh'];
                 $pass= stripTags($_POST['pass']);
-                $kichhoat = $_POST['kichhoat'];
+                $role = $_POST['vaitro'];
                 $ngaysinh = $_POST['ngaysinh'];
+
                 $email =stripTags( $_POST['email']);
                 $sodienthoai = stripTags($_POST['sodienthoai']);
                 $diachi = stripTags($_POST['diachi']);
+
                 $thanhpho = stripTags($_POST['thanhpho']);
-                $quocgia = stripTags($_POST['quocgia']) ;
                 $tichdiem= $_POST['tichdiem'];
-                $randomkey =  stripTags($_POST['randomkey']);
+                $randomkey = md5(rand(0,99999));
+
+                settype( $gioitinh,"int");
                 settype($role,"int");
                 settype($kichhoat,"int");
-                settype($nngaysinh,"datetime");
+
                 settype($tichdiem,"int");
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    updatekh($id,$user,$role,$pass,$kichhoat,$ngaysinh,$email,$sodienthoai,$diachi,$thanhpho,$quocgia,$tichdiem,$randomkey); 
+                    updatekh($_GET['idedit'],$tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey); 
                 }else{
-                    addkh($user,$role,$pass,$kichhoat,$ngaysinh,$email,$sodienthoai,$diachi,$thanhpho,$quocgia,$tichdiem,$randomkey);
+                    $lastId = addkh($tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey);
+                    // start mail
+                    $idUser = $lastId;
+
+                    $userName = 'tranquangnhan1606@gmail.com';
+                    $passWord = 'Tranquangnhan@1606';
+                    $from = 'tranquangnhan1606@gmail.com';
+                    $title = 'Xác Nhận Đăng Ký Tài Khoản';
+                    $subject = 'Kích hoạt tài khoản';
+                    $linkKH ="<a href='". $_SERVER['HTTP_HOST'].SITE_URL.
+                    "index.php?act=kichhoat&id=%d&rd=%s'>Nhấp vào đây</a>";
+                    $linkKH = sprintf($linkKH,$idUser, $randomkey);
+                    $body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: ". $linkKH;
+                    sendMail($userName,$passWord,$from,$email,$user,$title,$subject,$body);
+                    //end mail
                 }
                 header("location: index.php?ctrl=khachhang&act=index");
             }

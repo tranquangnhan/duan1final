@@ -6,7 +6,7 @@
                             <div class="row no-gutters">
                                 <div class="col-lg-4">
                                     <div class="img">
-                                        <img src="./demo-img/flight-4.jpg" alt="">
+                                        <img src="views/img/flight-4.jpg" alt="">
                                     </div>
                                 </div>
 
@@ -65,12 +65,17 @@
                                     <form action="">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="name">Nhập tên:</label>
+                                                <label for="name">Họ Và Tên:</label>
                                                 <input type="text" class="form-control" id="name">
                                             </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="fname">Tên đầy đủ:</label>
-                                                <input type="text" class="form-control" id="fname">
+                                            <div class="form-group">
+                                              <label for="">Giới Tính</label>
+                                              <select class="form-control " name="" id="">
+                                                    <option value="" selected>Chọn</option>
+                                                    <option value="">Nam</option>
+                                                    <option value="">Nữ</option>
+                                                    <option value="">Khác</option>
+                                              </select>
                                             </div>
                                         </div>
                                         <div class="form-row">
@@ -85,17 +90,13 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="diachi">Địa chỉ:</label>
+                                                <label for="diachi">CMND/Passport</label>
                                                 <input type="text" class="form-control" id="diachi">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="city">Thành phố:</label>
                                                 <input type="text" class="form-control" id="city">
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="textarea">Mô tả: </label>
-                                            <textarea name="textarea" class="form-control" id="textare" rows="3" spellcheck="false"></textarea>
                                         </div>
                                         <a href="#" class="btn-sm btn-lg text-dark text-center font-weight-bold uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
                                         <a href="#" class="btn-sm btn-lg  background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px">Đặt vé</a>

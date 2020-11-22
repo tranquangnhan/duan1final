@@ -71,5 +71,9 @@ function showTenDc($id){
     $sql = "SELECT * FROM sanbay WHERE idsanbay ='{$id}'";
     return result1(0,$sql);
 }
+function showAllSanBay(){
+    $sql = "SELECT * FROM sanbay WHERE 1";
+    return result1(0,$sql);
+}
 
 ?>

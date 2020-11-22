@@ -24,8 +24,6 @@
                                                 <th>ID</th>
                                                 <th >User</th>
                                                 <th >role</th> 
-                                                <th>pass</th>
-                                                
                                                 <th>Email</th>
                                                 <th>Số Điện Thoại</th>
                                                 <th>Địa Chỉ</th>
@@ -39,6 +37,13 @@
                                 foreach ($showallkh as $kh) {
                                     $i++;
                                     $id=$kh['id'];
+                                    if($kh['role'] === 0){
+                                        $role= 'Admin';
+                                    }elseif($kh['role'] === 1){
+                                        $role= 'Sub Admin';
+                                    }else{
+                                        $role= 'Khách Hàng';
+                                    }
                                     $linkdel = "index.php?ctrl=khachhang&act=del&iddel=".$id;
                                     $linkedit = "index.php?ctrl=khachhang&act=add&idedit=".$id;        
                                 ?>
@@ -47,19 +52,12 @@
                                     <td><?=$kh['id']?></td>
                                     <td><?=$kh['user']?></td>
                                     <td><?=$kh['role']?></td>
-                                    <td><?=$kh['pass']?></td>
                                   
                                   
                                     <td><?=$kh['email']?></td>
                                     <td><?=$kh['sodienthoai']?></td>
                                     <td><?=$kh['diachi']?></td>
                                     <td><?=$kh['thanhpho']?></td>
-                                  
-                                    
-                                
-
-                                    
-                    
                                     <td>
                                         <a href="<?=$linkdel?>"><i class="fa fa-trash mr-3" onclick="return checkDelete()"></i></a>
                                         <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
