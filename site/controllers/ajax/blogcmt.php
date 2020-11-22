@@ -13,11 +13,13 @@
                 $Array = array();
                 $content = trim(stripTags($_POST['Ct']));
                 $idUser = trim(stripTags($_POST['idUs']));
-                $idbaiviet = trim(stripTags($_POST['Idbv']));
+                $id = trim(stripTags($_POST['Idbv']));
 
-                $Array['StatusCode']  = (int) (addCmt($content,$idUser,$idbaiviet,5) ==true) ? 1 : 0 ;
+                $Array['StatusCode']  = (int) (addCmt($content,$idUser,$id,5) ==true) ? 1 : 0 ;
                 // $Array['rowcount'] = rowcountCmt($idbaiviet);
-                $Array['content'] = showCmt($idbaiviet);
+                $Array['content'] = showCmt($id);
+                $Array['countCmt'] = rowcountCmt($id);
+                $Array['id'] = $Array['content'][0]['idkh'];
                 // $output = '';
                 // foreach($Array['content'] as $row) {
                 //     $output .= '

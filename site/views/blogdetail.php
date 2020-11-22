@@ -1,6 +1,12 @@
 <?php 
     session_start();
     $img = $pathimg.$getBlogbyid['img'];   
+    // //print_r ($getKhbyId);
+    // echo $user;
+    // exit();
+    // print_r ($getKhbyId);
+    // echo $getKhbyId[0]['avatar'];
+   // exit();
 ?>
 
 <main>
@@ -22,7 +28,6 @@
         <div class="col-lg-8 col-md-8">
             <div class="theiaStickySidebar">
                     <div class="blog-entry dbackground-white border-1 border-grey-1 margin-bottom-35px">
-
                             <img src="<?=$pathimg.$getBlogbyid['img']?>" alt="Image" style="height: auto;" class="responsiveImg"/>
                         <!-- noidung ne -->
                         <div class="padding-30px">
@@ -53,21 +58,26 @@
                     <!-- box3 -->                    
                     <!-- box4 -->
                     <div class="background-white border-1 border-grey-1 margin-bottom-35px padding-30px">
-                        <h4 class="table-title margin-bottom-30px">
+                        <h4 class="table-title margin-bottom-30px" id="l-box-binhluan">
                             <span><?php echo $sobinhluan; ?> Bình luận</span>
                             <?php foreach ($binhluan as $bl) { ?>                            
                                 <div class="binhluan" id="binhluan">                                    
-                                        <div class="hinh">
-                                            <?php if ($userr[0]['avatar']== '') {?>
+                                    <div class="hinh">
+                                        <?php if ($getKhbyId[0]['avatar']== '') {?>
                                             <img src="../uploads/avatar.png" alt=""> 
-                                            <?php } ?>
-                                        </div>
-                                        <div class="noidungbinhluan">
-                                            <div class="tenKH"><?=$userr[0]['tenKH']?></div>
-                                            <div class="noidung"><?=$bl['noidung']?></div>
-                                        </div>                                    
-                                </div>
+                                        <?php } else { ?>
+                                            <img src="<?=$getKhbyId[0]['avatar']?>" alt=""> 
+                                        <?php } ?>
+                                    </div>
+                                    <div class="noidungbinhluan">
+                                        <div class="tenKH"><?=$getKhbyId[0]['tenKH']?></div>
+                                        <div class="noidung"><?=$bl['noidung']?></div>
+                                    </div>                                    
+                                </div>                                
                             <?php } ?>
+                        </h4>
+                        <h4 class="table-title margin-bottom-30px" id="l-box-binhluan-display">
+                            
                         </h4>
                         <!-- nguoibl -->
                     </div>
@@ -91,14 +101,18 @@
                                             <textarea class="form-control" name="content" id="content" spellcheck="false" placeholder="Bình luận" rows="3"></textarea>
                                         </div>                                        
                                         <div class="form-group">
-                                            <input type="submit" name="submit" id="submit" class="btn btn-info" value="submit"/>
+                                        <?php if ($user != '0') { ?>
+                                            <input type="submit" name="submit" id="submit" class="btn btn-info" value="Bình luận"/>
+                                        <?php } else { ?>
+                                            <a href="?act=login" class="btn btn-info">Đăng Nhập</a>
+                                        <?php } ?>
                                         </div>
                                     </div>
                                     <span id="comment_message"></span>
                                     <br>
-                                    <div id="display_comment"></div>
+                                    <div id="display_comment"></div>                            
+                                </div>
                             </form>
-                            </div>
                         </h4>
                     </div>
                     <div class="background-white border-1 border-grey-1 margin-bottom-35px padding-30px">

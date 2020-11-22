@@ -343,16 +343,16 @@ p{
     /* background-color: red; */
     padding: 10px 0px;
     border-bottom: 1px solid #ebebeb;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 .binhluan img {
     width: 40px;
 }
 .tenKH {
-    color: rgb(0, 89, 255);
+    color: rgb(0 48 137);
 }
 .noidung {
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 .hinh {
     width: 7.5%;
@@ -362,4 +362,58 @@ p{
 .noidungbinhluan {
     width: 70%;
     display: inline-block;
+}
+
+.sticky-content {
+    position: relative; 
+    overflow: visible; 
+    box-sizing: border-box; 
+    min-height: 1px;
+}
+
+.sticky-content-fixed {
+    position: fixed;
+    top: 100px;
+    right: 7.5%;
+    width: 28.27%;
+    display: none;
+}
+.sticky-content-ab {
+    position: absolute;
+    
+}
+.max-width-4pt {
+    max-width: 4%;
+}
+
+.img-in {
+    width: 100%;
+    height: 220px;
+    background-size: 100%;
+    background-repeat: no-repeat, repeat;
+}
+
+.fixed-blog-bg {
+    background-image: url("../../../../uploads/background-blog.jpg");
+    width: 100%;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.binhluan {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin: 20px 0px;
+}
+
+.l-fontz-nor {
+    font-size: 0.8vw;
+    line-height: 15px;
+}
+
+#l-box-binhluan-display {
+    display: none;
 }

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $('#form_cmt').on('submit',async function(event) {
         event.preventDefault();
         //var form_data = $(this).serialize();
@@ -26,60 +27,29 @@ $(document).ready(function(){
                 processData: false,
                 data: contenData,
                 success : function(response) {
-                    // $('#form_cmt')[0].reset();
-                   var data = response.content;
-                   var kq = '';
-                   for (let i = 0; i < data.length; i++) {
-                    //    $(".noidung")[i].innerHTML = data[i].noidung;
-                       // alert( data[i].noidung);
-                         kq +='<div class="tenKH"></div>'
-                         kq +='<div class="noidung">'+data[i].noidung+'</div>'
+                    $('#form_cmt')[0].reset();
+                    $('#l-box-binhluan').css('display','none');
+                    $('#l-box-binhluan-display').css("display", "block");
+                    console.log(response.id);
+                    var data = response.content;
+                    var kq = '<span>'+response.countCmt+' Bình luận</span>';
+                    for (let i = 0; i < data.length; i++) {
+                        
+                       //  $("div.noidung")[i].innerHTML = data[i].noidung;
+                        // alert( data[i].noidung);
+                        //  kq +='<div class="tenKH"></div>'
+                        //  kq +='<div class="noidung">'+data[i].noidung+'</div>'
+                        kq += '<div class="binhluan" id="binhluan_display">'
+                        kq += '<div class="hinh">';
+                        kq += '<img src="../uploads/avatar.png" alt="">'
+                        kq += '</div>'
+                        kq += '<div class="noidungbinhluan">';
+                        kq += '<div class="tenKH">Nguyen quoc hieu</div>';
+                        kq += '<div class="noidung">'+data[i].noidung+'</div>'
+                        kq += '</div>'
+                        kq += '</div>'                        
                    }
-                   $("#binhluan").html(kq);
-                    //var text = JSON.stringify(response.content);
-                    //console.log(text);
-                    // data = JSON.parse(text);
-                    // var n = ('sobl', response.rowcount);
-                     //var data = JSON.parse(response.content);
-                    // for(var i = 0; i < data; i++) {
-                    //     console.log( data[i]);
-                    // }
-                     //console.log(data)
-                   
-                    // data.idkh.forEach(function(element) {
-                    //     console.log(element);
-                    // })
-                    // for (i in text.noidung) {
-                    //     x += text.noidung[i] + "<br>";
-                    //   }
-                    //   //$('#display_comment').html(x);
-                    // document.getElementById("display_comment").innerHTML = x;
-                    // $(".noidung").html(response.content['noidung']);
-                    // 
-                    //$("#noidung").html(response.content[0]['noidung']);
-                    // let arr = new FormData();
-
-                    // arr.append('Idbv', idbv);
-                    // arr.append('Action', 'getcmt');
-
-                    // $.ajax({ // gưi du lieu  len bang ạjax
-                    //     type: "POST",
-                    //     url: 'controllers/ajax/blogcmt.php',
-                    //     dataType: 'JSON',
-                    //     contentType: false,
-                    //     processData: false,
-                    //     data: arr,
-                    //     success : function(response) {
-                    //         if (response.StatusCode === 1) {
-                                
-                    //         // $('#display_comment').html(data);
-                    //             console.log(response.Status);
-                    //         //$("#ghetg").html(response.html);
-                    //         }
-                    //     }, error: function() {
-                    //         alert('loi 2');
-                    //     }  
-                    // })
+                    $("#l-box-binhluan-display").html(kq);                    
                 },
                 error: function() {
                     alert('loi');

@@ -869,7 +869,6 @@ a:hover {
 
 /* chinh 2 nut tren form tìm kiếm
 
-<<<<<<< HEAD
 /* css lien he */
 
 .cl-gray3 {
@@ -989,9 +988,6 @@ a:hover {
 .l-box-our {
     background-color: white;
 }
-=======
-/* css trang home  */
->>>>>>> c767264e6d43ece3a7b52f5deaf148ca6a7b4592
 
 
 
@@ -1045,7 +1041,7 @@ a:hover {
 
 .l-bt-fixed-to-top .bt-icon {
     border: none;
-    padding: 20px 10px;
+    padding: 14px 10px;
     border-radius: 40px;
     cursor: pointer;
     color: white;
@@ -1242,7 +1238,7 @@ a:hover {
 
 .l-bt-fixed-to-top .bt-icon {
     border: none;
-    padding: 20px 10px;
+    padding: 14px 10px;
     border-radius: 40px;
     cursor: pointer;
     color: white;
@@ -1384,10 +1380,4 @@ a:hover {
 
 .l-thongtin-ud p span {
     text-decoration: line-through;
-<<<<<<< HEAD
-=======
-}
-.pd-r-0 {
-    padding-right: 0px;
->>>>>>> c767264e6d43ece3a7b52f5deaf148ca6a7b4592
 }

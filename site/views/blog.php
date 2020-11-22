@@ -20,8 +20,7 @@
                             <!-- noi dung ne may cha -->
                             <?php foreach ($allBlog as $allB) { ?>
                             <div class="col-lg-6">
-                                <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                                    
+                                <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">                                    
                                     <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
                                         <div class="img-in" style="background-image: url('<?=$pathimg.$allB['img']?>');">
                                     </a>
@@ -117,7 +116,7 @@
                                 <a href="#" class="float-left margin-right-15px d-block width-60px">
                                     <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                                 </a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
+                                <a href="#" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700"><?=$bestBlog['name']?></a>
                                 <span class="text-extra-small">
                                     Date
                                     <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>

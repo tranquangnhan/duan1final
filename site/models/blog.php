@@ -75,16 +75,16 @@
         $sql = "SELECT * FROM baiviet where iddm=$iddm limit 2";
         return result1(0,$sql);
     }
-    function addCmt($content,$idUser,$idbaiviet,$star) {
-        $sql="INSERT INTO binhluan (idkh,idbaiviet,noidung,star) VALUES ('$idUser','$idbaiviet','$content','$star')";
+    function addCmt($content,$idUser,$id,$star) {
+        $sql="INSERT INTO binhluan (idkh,idbaiviet,noidung,star) VALUES ('$idUser','$id','$content','$star')";
         return exec1($sql);
     }
     function getIdbyuser($user) {
         $sql = "SELECT * FROM `khachhang` WHERE user='$user'";
         return result1(0,$sql);
     }
-    function showCmt($idbaiviet){
-        $sql = "SELECT idkh,idbaiviet,noidung,star FROM `binhluan` WHERE idbaiviet='$idbaiviet'";
+    function showCmt($id){
+        $sql = "SELECT idkh,idbaiviet,noidung,star FROM `binhluan` WHERE idbaiviet='$id'";
         return result1(0,$sql);
     }
     function rowcountCmt($id) {
@@ -98,4 +98,9 @@
         $sql = "SELECT idkh,idbaiviet,noidung,star FROM `binhluan` WHERE idbaiviet='$id'";
         return result1(0,$sql);
     }
+    function getKhbyId($idkh) {
+        $sql = "SELECT * FROM khachhang where id='$idkh'";
+        return result1(0,$sql);
+    }
+    
 ?>

@@ -51,18 +51,23 @@ if(isset($_GET['act'])){
             require_once "views/blog.php";
             break; 
         case 'dtBlog':
-            if (isset($_GET['idbl'])==true) $id = $_GET['idbl'];
+            if (isset($_GET['idbl'])==true) $id = $_GET['idbl']; // id blog
              
-            if (isset($_SESSION['suser'])) {
+            if (isset($_SESSION['suser'])) { // get user
                 $user = $_SESSION['suser'];
+                $userr = getIdbyuser($user); 
+            } else {
+                $user = '0';
             }
             settype($id, "int");
-            $getBlogbyid = getBlogbyid($id);
-            $getbestBlog = getBestBlog();
+            $getBlogbyid = getBlogbyid($id); //
+            $getbestBlog = getBestBlog(); // blog hay
             $getDmblog = getDmblog();
             $binhluan = getBlByid($id);
-            $sobinhluan = rowcountCmt($id);
-            $userr = getIdbyuser($user);
+            $sobinhluan = rowcountCmt($id);            
+            $idkh = $binhluan[0]['idkh'];
+            $getKhbyId = getKhbyId($idkh);
+
             if (isset($_GET['iddm'])==true) $iddm = $_GET['iddm'];
             settype($iddm, "int");
             $getBlogByiddm = getBlogByiddm($iddm);           
