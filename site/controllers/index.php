@@ -18,7 +18,7 @@ require_once "models/blog.php";
 require_once "views/layouts/header.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
-require_once "models/timve.php";
+
 
 require_once "views/layouts/header.php";
 $showAllSanBay = showAllSanBay();
@@ -288,14 +288,6 @@ if(isset($_GET['act'])){
         default:
             require_once "views/home.php";
             break;
-
-        case 'timve':
-            require_once "timve.php";
-        break;
-
-        case 'login_timve':
-            require_once "login_timve";
-        break;
     }
 
 }else{
