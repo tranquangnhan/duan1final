@@ -133,10 +133,11 @@ input.empty {
 
 input {
     background-color: #f9f9f9;
-    padding: 5px;
-    border: solid 1px #eee;
+    padding: 6px;
+    border: 1px solid #ced4da;
     outline: none;
     width: 100%;
+    border-radius: 5px;
 }
 
 
@@ -988,12 +989,15 @@ a:hover {
 .l-box-our {
     background-color: white;
 }
+<<<<<<< HEAD
 
 
 
 #trove {
     display: none;
 }
+=======
+>>>>>>> babd4749ac063fce5bf4f56e44ff7a483c239628
 
 .fz-12px {
     font-size: 12px;
@@ -1382,6 +1386,38 @@ a:hover {
     text-decoration: line-through;
 }
 
+<<<<<<< HEAD
 .h-123px {
     height: 123px;
+=======
+.pd-r-0 {
+    padding-right: 0px;
+}
+
+
+/* css đặt vé */
+
+.tab button.active {
+    color: white;
+    background-color: #1db8c1;
+    border-color: 1px solid #1db8c1!important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    border-color: white white white !important;
+}
+
+
+/* .a_filght {
+    background-color: #1db8c1;
+} */
+
+.nav-tabs .nav-link {
+    background-color: #F44336;
+}
+
+.form-control {
+    background-color: #f9f9f9 !important;
+>>>>>>> babd4749ac063fce5bf4f56e44ff7a483c239628
 }
