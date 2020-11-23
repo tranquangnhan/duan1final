@@ -5,8 +5,19 @@
         $sql="SELECT * FROM baiviet ORDER BY date DESC LIMIT $start_row, $page_size";
         return result1(0,$sql); 
     }
+    function gettwoblog() {
+        $sql="SELECT * FROM baiviet ORDER BY date DESC LIMIT 2";
+        return result1(0,$sql); 
+    }
     function countBlog() {
         $sql = "SELECT COUNT(*) AS numberRow FROM baiviet";
+        $kq = query($sql);
+        $row= $kq -> fetch();
+        $rowcount = $row['numberRow'];
+        return $rowcount;
+    }
+    function countBlogbyiddm($iddm) {
+        $sql = "SELECT COUNT(*) AS numberRow FROM baiviet where iddm=$iddm";
         $kq = query($sql);
         $row= $kq -> fetch();
         $rowcount = $row['numberRow'];
@@ -18,20 +29,6 @@
         // 5/6 = 0.83 => ceil làm tròn dương => = 1
         if ($total_pages<=1) return "";
         $links='';
-        //Trang đầu Trang trước
-        // if ($page_num>=2) {            
-        //     $links.="<li class='page-item'><a href='{$baseurl}' class='page-link'><<</a></li>"; 
-        //     $pr = $page_num-1;
-        //     $links.="<li class='page-item'><a href='{$baseurl}&page_num={$pr}' class='page-link'>Previous</a></li>";
-        // }
-        // $links.="<li class='link-page active'>{$page_num}</li>";
-        // //Trang kế , Trang cuối
-        // if ($page_num<$total_pages) {
-        //     $pn = $page_num + 1;
-        //     $links.="<li class='page-item'><a href='{$baseurl}&page_num={$pn}' class='page-link'>Next</a></li>";
-        //     $links.="<li class='page-item'><a class='page-link' href='{$baseurl}&page_num={$pn}'>Next</a></li>";        
-        //     $links.="<li class='page-item'><a href='{$baseurl}&page_num={$total_pages}' class= 'page-link'>>></a></li>";
-        // }  
         if ($page_num>=2) {            
             $pr = $page_num-1;            
             $links.="<li class='page-item'><a class='page-link' href='{$baseurl}&page_num={$pr}'>Previous</a></li>";
@@ -71,12 +68,21 @@
         $sql = "SELECT * FROM dmbaiviet";
         return result1(0,$sql);
     }
-    function getBlogByiddm($iddm) {
-        $sql = "SELECT * FROM baiviet where iddm=$iddm limit 2";
+    function getDmblogbyid ($iddm) {
+        $sql = "SELECT * FROM dmbaiviet where id=$iddm";
         return result1(0,$sql);
     }
-    function addCmt($content,$idUser,$id,$star) {
-        $sql="INSERT INTO binhluan (idkh,idbaiviet,noidung,star) VALUES ('$idUser','$id','$content','$star')";
+    function getBlogByiddm1($iddm, $page_num, $page_size) { // show trong trang blog
+        $start_row = ($page_num - 1) * $page_size;
+        $sql="SELECT * FROM baiviet WHERE iddm=$iddm ORDER BY date DESC LIMIT $start_row, $page_size";
+        return result1(0,$sql); 
+    }
+    function getBlogByiddm($iddm) {
+        $sql = "SELECT * FROM baiviet where iddm=$iddm limit 2"; // show trong chi tiet blog
+        return result1(0,$sql);
+    }
+    function addCmt($content,$idUser,$id,$star,$datetime) {
+        $sql="INSERT INTO binhluan (idkh,idbaiviet,noidung,star,thoigian) VALUES ('$idUser','$id','$content','$star','$datetime')";
         return exec1($sql);
     }
     function getIdbyuser($user) {
@@ -84,7 +90,7 @@
         return result1(0,$sql);
     }
     function showCmt($id){
-        $sql = "SELECT idkh,idbaiviet,noidung,star FROM `binhluan` WHERE idbaiviet='$id'";
+        $sql = "SELECT * FROM binhluan  WHERE idbaiviet='$id' ORDER BY thoigian DESC";
         return result1(0,$sql);
     }
     function rowcountCmt($id) {

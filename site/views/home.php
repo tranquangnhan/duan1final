@@ -129,7 +129,7 @@
           </div>
           <div class="l-thongtin-ud">
             <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-            <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia">  320.000 VNĐ</b></p>
+            <p><span>650.000VNĐ</span> <b class="l-ud-giam-gia">  320.000 VNĐ</b></p>
             <p class="l-ud-date-flight">15 08 2020</p>           
           </div>       
         </a>
@@ -141,7 +141,7 @@
           </div>
           <div class="l-thongtin-ud text-uppercase">
             <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-            <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia">  320.000 VNĐ</b></p>
+            <p><span>650.000VNĐ</span> <b class="l-ud-giam-gia">  320.000 VNĐ</b></p>
             <p class="l-ud-date-flight">15 08 2020</p>            
           </div>
         </a>
@@ -153,7 +153,7 @@
           </div>
           <div class="l-thongtin-ud">
             <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-            <p><span>650.000 VNĐ</span><b class="l-ud-giam-gia">  320.000 VNĐ</b></p>
+            <p><span>650.000VNĐ</span><b class="l-ud-giam-gia">  320.000 VNĐ</b></p>
             <p class="l-ud-date-flight">15 08 2020</p>           
           </div>
         </a>   
@@ -165,7 +165,7 @@
           </div>
           <div class="l-thongtin-ud ">
             <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-            <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia">  320.000 VNĐ</b> </p>
+            <p><span>650.000VNĐ</span> <b class="l-ud-giam-gia">  320.000 VNĐ</b> </p>
             <p class="l-ud-date-flight">15 08 2020</p>
           </div>       
           </div>
@@ -246,28 +246,19 @@
                 <h1 class="title fz-2vw"><span class="color_main">Last </span> News</h1>
                 <span class="section-title-des fz-1vw">Kênh tin tức về du lịch, trao đổi, chia sẻ kinh nghiệm</span>
               </div>
+              <?php foreach ($blog as $bl) { ?>
               <div class="news-cart background-white border mr-bottom-35px">
                 <div class="float-sm-left mr-right-30px box-img-news">
-                  <img src="views/img/news-1.jpg" alt="">
+                  <a href="?act=dtBlog&idbl=<?=$bl['id']?>&iddm=<?=$bl['iddm']?>"><img src="../uploads/<?=$bl['img']?>" alt=""></a>
                 </div>
-                <div class="padding-20px">
-                  <a href="#" class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8">Đến Sapa Chinh phục đỉnh cao Fansipan xuyên qua khu bảo tồn Vườn quốc gia Hoàng Liên Sơn.</a>
+                <div class="padding-20px h-123px">
+                  <a href="?act=dtBlog&idbl=<?=$bl['id']?>&iddm=<?=$bl['iddm']?>" class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8"><?=$bl['name']?></a>
                   <span class="fz-07 mr-right-30px">By : <a href="#" class="color_main">Rabie Elkheir</a></span>
-                  <span class="fz-07">Date :  <a href="#" class="color_main">July 15, 2020</a></span>
+                  <span class="fz-07">Date :  <a href="#" class="color_main"><?=$bl['date']?></a></span>
                 </div>
               <!-- <div class="clearfix"></div> -->
               </div>
-              <div class="news-cart background-white border mr-bottom-35px">
-                <div class="float-sm-left mr-right-30px box-img-news">
-                  <img src="views/img/news-2.jpg" alt="">
-                </div>
-                <div class="padding-20px">
-                  <a href="#" class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8">Dễ sử dụng và rẻ nữa rất là tiện lợi nha mọi người, đây là lần đầu mình mua vé trên web</a>
-                  <span class="fz-07 mr-right-30px">By : <a href="#" class="color_main">Linh Pham</a></span>
-                  <span class="fz-07">Date :  <a href="#" class="color_main">July 15, 2020</a></span>
-                </div>
-              <!-- <div class="clearfix"></div> -->
-              </div>
+              <?php } ?>
             </div>
             <div class="col-lg-6 te-al-left">
               <div class="section-title-left mr-bot-70px">

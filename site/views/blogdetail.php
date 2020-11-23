@@ -7,10 +7,14 @@
     // print_r ($getKhbyId);
     // echo $getKhbyId[0]['avatar'];
    // exit();
+//    print_r ($binhluan);
+//    exit();
+
 ?>
 
 <main>
-    <section class="background-grey-1 padding-tb-25px text-grey-4">
+    <!-- <div class="fixed-blog-bg" style="background-image: url('');"> -->
+    <section class="background-grey-1 padding-tb-25px text-grey-4">        
         <div class="container">
             <h6 class="font-weight-300 text-capitalize float-md-left font-2 padding-tb-10px">Chi tiết Blog</h6>
             <ol class="breadcrumb z-index-2 position-relative no-background padding-tb-10px padding-lr-0px  margin-0px float-md-right">
@@ -21,6 +25,7 @@
             <div class="clearfix"></div>
         </div>
     </section>
+    <!-- </div> -->
 <!-- // -->
 <div class="container dbg-lightgrey padding-tb-40px">
     <div class="row">
@@ -70,8 +75,13 @@
                                         <?php } ?>
                                     </div>
                                     <div class="noidungbinhluan">
-                                        <div class="tenKH"><?=$getKhbyId[0]['tenKH']?></div>
+                                        <div class="tenKH"><?=$getKhbyId[0]['tenKH']?></div>                                        
                                         <div class="noidung"><?=$bl['noidung']?></div>
+                                        <div class="l-bt">
+                                            <div class="like">Like</div>
+                                            <div class="traloi">Phản hồi</div>
+                                            <div class="thoigian"><?=$bl['thoigian']?></div>
+                                        </div>                                        
                                     </div>                                    
                                 </div>                                
                             <?php } ?>
@@ -124,7 +134,7 @@
                             <div class="col-lg-6">
                                 <div class="background-white">
                                     <div class="post-img">
-                                        <a href="<?=SITE_URL?>/?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>">
+                                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>">
                                             <div class="img-in" style="background-image: url('<?=$pathimg.$blogByiddm['img']?>'); height: 240px;"></div>
                                         </a>                                                                               
                                     </div>
@@ -138,7 +148,7 @@
                                             Date :
                                             <a href="#" class="text-main-color"><?=$blogByiddm['date']?></a>
                                         </span>
-                                        <p class="text-grey-2 margin-top-8px">
+                                        <p class="margin-top-10px">
                                             <?=$blogByiddm['mota']?>
                                         </p>
                                     </div>
@@ -181,10 +191,10 @@
                     <?php foreach($getbestBlog as $bestBlog) { ?>
                     <ul class="last-posts">
                         <li>
-                        <a href="#" class="float-left margin-right-15px d-block width-60px">
+                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="float-left margin-right-15px d-block width-60px">
                             <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                         </a>
-                        <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
+                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
                         <span class="text-extra-small">
                             Date
                             <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>

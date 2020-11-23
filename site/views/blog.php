@@ -1,9 +1,20 @@
+<?php 
+    if (isset($getDmblogbyid)==true) {
+        $namedm = $getDmblogbyid[0]['name'];
+    }
+?>
 <main>
 <div class="fixed-blog-bg"></div>
-    <nav class="bg-color-grey pd-tb-30px ps-relative cl-grey1">
-        
+    <nav class="bg-color-grey pd-tb-30px ps-relative cl-grey1">        
         <div class="container">
-            <div class="fz-12vw d-inline-block padding-tb-7px">BLOG</div>
+            <div class="fz-12vw d-inline-block padding-tb-7px">
+                <?php if(isset($namedm)==true) { 
+                    echo $namedm;
+                } else {
+                    echo 'BLOG';    
+                }
+                ?>
+            </div>
             <div class="float-right">
                 <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>                
                 <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Blog</div>                
@@ -15,19 +26,19 @@
             <div class="row" style="transform: none;">
                 <!-- noidung1 -->
                 <div class="col-lg-8 col-md-8 sticky-content" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1540.2px;;">
-                    <div class="theiaStickySidebar"   style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                    <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
                         <div class="row">
                             <!-- noi dung ne may cha -->
                             <?php foreach ($allBlog as $allB) { ?>
                             <div class="col-lg-6">
-                                <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">                                    
+                                <div class="blog-entry background-white border-grey-1 margin-bottom-35px">                                    
                                     <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
                                         <div class="img-in" style="background-image: url('<?=$pathimg.$allB['img']?>');">
                                     </a>
                                 </div>
                                     <!-- oadd -->
                                 <div class="padding-30px">
-                                    <a class="d-block  text-capitalize text-large text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
+                                    <a class="d-block  text-capitalize fz-20px text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
                                         <?=$allB['name']?>
                                     </a>
                                     <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
@@ -79,7 +90,7 @@
                         </h4>
                         <?php foreach($getDmblog as $dmBlog) { ?>
                         <ul>
-                            <li><a href="<?=$dmBlog['id']?>"><?=$dmBlog['name']?></a></li>
+                            <li><a href="?act=blog&iddm=<?=$dmBlog['id']?>"><?=$dmBlog['name']?></a></li>
                         </ul>
                         <?php } ?>
                     </div>
@@ -113,10 +124,10 @@
                         <?php foreach($getbestBlog as $bestBlog) { ?>
                             <ul class="last-posts">
                                 <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px">
+                                <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="float-left margin-right-15px d-block width-60px">
                                     <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                                 </a>
-                                <a href="#" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700"><?=$bestBlog['name']?></a>
+                                <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700"><?=$bestBlog['name']?></a>
                                 <span class="text-extra-small">
                                     Date
                                     <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>

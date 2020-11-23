@@ -969,7 +969,7 @@ a:hover {
 }
 
 .background-grey-1 {
-    background-color: #eeeded;
+    background-color: #f3f3f3;
 }
 
 .l-box-travelzsay {
@@ -1380,4 +1380,8 @@ a:hover {
 
 .l-thongtin-ud p span {
     text-decoration: line-through;
+}
+
+.h-123px {
+    height: 123px;
 }

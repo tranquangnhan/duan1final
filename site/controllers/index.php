@@ -26,6 +26,7 @@ if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
         case 'home':           
+            $blog = gettwoblog();
             require_once "views/home.php";
             break;
         case 'about':
@@ -39,16 +40,26 @@ if(isset($_GET['act'])){
             require_once "views/danhsachve.php";
             break;
         case 'blog':  
-            $getDmblog = getDmblog();       
-            $getbestBlog = getBestBlog();     
-            $page_num = 1;  	  
+            $page_num = 1; 
+            $page_size = PAGE_SIZE;
+            $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
+            $getDmblog = getDmblog(); 
             if (isset($_GET['page_num'])==true) $page_num = $_GET['page_num'];       
             settype($page_num, "int");    
-            $page_size = PAGE_SIZE;
-            $allBlog = getallBlog($page_num, $page_size);    
-            if ($page_num<=0) $page_num=1;
-            $total_rows = countBlog();
-            $baseurl = SITE_URL . "?act=blog";
+            if (isset($_GET['iddm'])==true)
+            {                 
+                $iddm = $_GET['iddm'];
+                $getDmblogbyid = getDmblogbyid($iddm); // để lay name danh muc
+                $allBlog = getBlogByiddm1($iddm, $page_num, $page_size); // lay blog theo id danh muc
+                $total_rows = countBlogbyiddm($iddm);
+                $baseurl = SITE_URL . "?act=blog&iddm=$iddm";
+            } else {              
+                $allBlog = getallBlog($page_num, $page_size);   // lay tat ca blog
+                $total_rows = countBlog();
+                $baseurl = SITE_URL . "?act=blog";
+            } 
+            if ($page_num<=0) $page_num=1;          
+                        
             $links = taolinks($baseurl, $page_num, $page_size, $total_rows);            
             require_once "views/blog.php";
             break; 
@@ -65,7 +76,7 @@ if(isset($_GET['act'])){
             $getBlogbyid = getBlogbyid($id); //
             $getbestBlog = getBestBlog(); // blog hay
             $getDmblog = getDmblog();
-            $binhluan = getBlByid($id);
+            $binhluan = showCmt($id);
             $sobinhluan = rowcountCmt($id);            
             $idkh = $binhluan[0]['idkh'];
             $getKhbyId = getKhbyId($idkh);

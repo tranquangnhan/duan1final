@@ -134,9 +134,12 @@ li{
 .margin-bottom-10px {
     margin-bottom: 10px;
 }
+.margin-top-10px {
+    margin-top: 10px;
+}
 .text-large {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 3vw;
+    line-height: 55px;
 }
 .text-dark {
     color: #212121;
@@ -341,9 +344,9 @@ p{
 .binhluan {
     width: 100%;
     /* background-color: red; */
-    padding: 10px 0px;
+    
     border-bottom: 1px solid #ebebeb;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 .binhluan img {
     width: 40px;
@@ -352,7 +355,7 @@ p{
     color: rgb(0 48 137);
 }
 .noidung {
-    font-size: 1vw;
+    font-size: 0.9vw;
 }
 .hinh {
     width: 7.5%;
@@ -391,6 +394,8 @@ p{
     height: 220px;
     background-size: 100%;
     background-repeat: no-repeat, repeat;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .fixed-blog-bg {
@@ -405,7 +410,8 @@ p{
 
 .binhluan {
     width: 100%;
-    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(243, 243, 243);
     margin: 20px 0px;
 }
 
@@ -416,4 +422,30 @@ p{
 
 #l-box-binhluan-display {
     display: none;
+}
+
+.l-bt {
+    font-size: 0.8vw;
+}
+.l-bt div {
+    display: inline-block;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+.like {
+    cursor: pointer;
+}
+
+.traloi {
+    cursor: pointer;
+}
+
+.blog-entry {
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 6px 30px rgba(0,0,0,.1);
+    margin-top: 0;
+}
+.fz-20px {
+    font-size: 20px;
 }
