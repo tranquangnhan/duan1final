@@ -11,6 +11,7 @@ require_once "models/loaihang.php";
 require_once "models/sanpham.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
+require_once "models/timve.php";
 
 require_once "views/layouts/header.php";
 
@@ -250,6 +251,14 @@ if(isset($_GET['act'])){
         default:
             require_once "views/home.php";
             break;
+
+        case 'timve':
+            require_once "timve.php";
+        break;
+
+        case 'login_timve':
+            require_once "login_timve";
+        break;
     }
 
 }else{
