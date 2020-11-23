@@ -20,8 +20,8 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM Vé</h3>
-                            <p class="text-center">Bạn có thể thêm vé ở đây!</p>
+                            <h3 class="mt-4 text-center">THÊM Hóa Đơn</h3>
+                            <p class="text-center">Bạn có thể thêm hóa đơn ở đây!</p>
                                 <div class="row ">
                                     <div class="col-lg-3">
                                         <label for=""><strong>Tên Khách Hàng</strong></label>

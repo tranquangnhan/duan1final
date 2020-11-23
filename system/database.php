@@ -16,6 +16,14 @@ function connect(){
       echo "Lỗi Kết Nối database: " . $e->getMessage();
     }
 }
+// Long
+function query($sql)   {
+    $conn = connect();
+    $result = $conn->query($sql);        
+    return $result;
+}
+
+
 // hàm này có chức năng truy vấn dữ liệu
 // truyền vào 2 hoặc nhiều hơn các giá trị
 // tham số đầu tiên: 0 là trả về tất cả sản phẩm, 1 là chỉ trả về 1 sản phẩm
@@ -37,6 +45,7 @@ function result1($fe,$sql){
 }
 function exec1($sql){//thêm, xoá ....
     $sqlValue = array_slice(func_get_args(),1);
+
     try {
         $conn = connect(); //connect database
         

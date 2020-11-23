@@ -22,19 +22,53 @@
                         <div class="col-lg-8">
                             <h3 class="mt-4 text-center">THÊM Khách Hàng</h3>
                             <p class="text-center">Bạn có thể thêm khách hàng ở đây!</p>
-
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Ảnh Khách Hàng</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <img src="views/img/avt.png" alt="">
+                                    <input type="file" class="form-control-file" name="avatar1[]" id="avatar1" multiple required
+                                    >
+                                </div>
+                            </div>
 
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Tên User</strong></label>
+                                    <label for=""><strong>Tên Khách Hàng</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="tenuser" id="" class="form-control" placeholder="Tên User" aria-describedby="helpId" required>
+                                    <input type="text" name="tenkh" id="" class="form-control" placeholder="Tên Khách Hàng" aria-describedby="helpId" required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Tên Đăng Nhập</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" name="tenuser" id="" class="form-control" placeholder="Tên Đăng Nhập" aria-describedby="helpId" required>
                                 </div>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Pass</strong></label>
+                                    <label for=""><strong>Giới Tính</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-group">
+                                        <select class="form-control" name="gioitinh" id="" required>
+                                            <option value="" selected>Chọn</option>
+                                            <option value="0">Nam</option>
+                                            <option value="1">Nữ</option>
+                                            <option value="2">Khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Mật Khẩu</strong></label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="text" name="pass" id="" class="form-control" placeholder="Nhập Mật Khẩu" required>
@@ -55,26 +89,20 @@
                                 </div>
                             </div>
 
+
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Kích Hoạt</strong></label>
+                                    <label for=""><strong>Email</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="number" name="kichhoat" id="" class="form-control" placeholder="Nhập 1->2 ">
+                                    <input type="email" name="email" id="" class="form-control" placeholder="Địa Chỉ" aria-describedby="helpId" required>
                                 </div>
                             </div>
-                            <div class="row mt-4">
-                                    <div class="col-lg-3">
-                                        <label for=""><strong>Ngày Sinh</strong></label>
-                                    </div>
-                                    <div class="col-lg-9">
-                                    <input class="form-control" name="tgdi" type="date" value="" id="">                                    </div>
-                                </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Số Điên Thoại</strong></label>
                                 </div>
-                          <div class="col-lg-9">
+                                <div class="col-lg-9">
 
                                     <input type="number" name="sodienthoai" id="" class="form-control" placeholder="Nhập Số Điên Thoại" aria-describedby="helpId" required>
                                 </div>
@@ -98,28 +126,12 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Quốc Gia</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="text" name="quocgia" id="" class="form-control" placeholder="Quốc Gia" aria-describedby="helpId" >
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
                                     <label for=""><strong>Tích Điểm</strong></label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="number" name="tichdiem" id="" class="form-control" placeholder="Điểm Tích Lũy" aria-describedby="helpId" >
                                 </div>
-                            </div>  <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Randomkey</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="text" name="randomkey" id="" class="form-control" placeholder="Randomkey" aria-describedby="helpId" >
-                                </div>
-                            </div>
-                           
+                            </div> 
                             <div class="row mt-5">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9 ">

@@ -7,7 +7,9 @@
     <div class="link">
       <div class="no-background padding-30px margin-0px border-top-1">
         <div class="d-inline-block"><a href="#" class="text-white">Home </a></div>
-        <div class="d-inline-block"><a href="#" class="text-white"><i class="fas fa-chevron-right pd-lr-10px"></i> Pages <i class="fas fa-chevron-right pd-lr-10px"></i></a></div>
+        <div class="d-inline-block"><a href="#" class="text-white">
+          <!-- <i class="fas fa-chevron-right pd-lr-10px"></i> Pages  -->
+          <i class="fas fa-chevron-right pd-lr-10px"></i></a></div>
         <div class="d-inline-block cl-gray3"> About us</div>
       </div>
     </div>

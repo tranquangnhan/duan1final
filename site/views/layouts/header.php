@@ -20,17 +20,20 @@
   
   <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
+  <link rel="stylesheet" href="views/css/long/blog.css">
   <link rel="stylesheet" href="views/css/long/home.css">
   <!-- end css -->
   <!-- include jquery -->
     <script src="views/jquery/jquery.js" type="text/javascript"></script>
+    <script src="views/js/blogdetail.js" type="text/javascript"></script>
     <script src="views/js/home.js" type="text/javascript"></script>
+   
   <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <!-- end include jquery -->
 </head>
 <body>
     <div class="l-bt-fixed-to-top" id="bt-to-top">
-        <div class="bt-icon"><i class="fas fa-helicopter"></i> TOP</div>
+        <div class="bt-icon"><i class="fab fa-telegram-plane"></i> TOP</div>
     </div>
     <header>
         <div class="background-blue-color pd-tb-2px">
@@ -51,8 +54,8 @@
                         <ul class="float-right margin-0px text-white mr-0">
                             <?php 
                             if(isset($_SESSION['sid'])){
-                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
-                                <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
+                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=showhs"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
+                                <li class="list-inline-item"><a class="text-white" href="?act=user&logout=1"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
                             }else{
                                 echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
                                 <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
@@ -65,11 +68,11 @@
         <div class="header-output">
             <div class="container header-in">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-3">
                         <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
                         <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
                     </div>
-                    <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
+                    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9 col-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                             <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
@@ -95,10 +98,10 @@
                                     <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=blog">BLOG</a>
+                                    <a class="" href="<?=SITE_URL?>?act=blog">BÀI VIẾT</a>
                                 </li>                                
                                 <li class="nav-item">
-                                    <a class="pd-0" href="<?=SITE_URL?>?act=about">TRAVELZ</a>
+                                    <a class="pd-r-0" style="padding-right: 0px;" href="<?=SITE_URL?>?act=about">VỀ CHÚNG TÔI</a>
                                 </li>
                             </ul>
                         </div>
@@ -109,11 +112,11 @@
         <div class="header-output-fixed" id="l-menu-fixed">
             <div class="container header-in">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <a id="logo" href="01-home.html" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
+                    <div class="col-lg-3 col-md-3 col-3">
+                        <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
                         <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
                     </div>
-                    <nav class="navbar navbar-expand-lg navbar-light col-lg-9 aligh-items-right">
+                    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9  col-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                             <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
@@ -139,10 +142,10 @@
                                     <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="" href="<?=SITE_URL?>?act=blog">BLOG</a>
+                                    <a class="" href="<?=SITE_URL?>?act=blog">BÀI VIẾT</a>
                                 </li>                                
                                 <li class="nav-item">
-                                    <a class="pd-0" href="<?=SITE_URL?>?act=about">TRAVELZ</a>
+                                    <a class="pd-r-0"href="<?=SITE_URL?>?act=about">VỀ CHÚNG TÔI</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle fz-12vw" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -151,7 +154,8 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <?php 
                                         if(isset($_SESSION['sid'])){
-                                            echo '<a class="dropdown-item" href="?act=signup">'.$_SESSION['suser'].'</a>';
+                                            echo '<a class="dropdown-item" href="?act=showhs">'.$_SESSION['suser'].'</a>
+                                                 <a class="dropdown-item" href="?act=user&logout=1">Đăng xuất</a>';
                                         }else{
                                             echo '<a class="dropdown-item" href="?act=signup">Đăng ký</a>
                                                  <a class="dropdown-item" href="?act=login">Đăng nhập</a>';

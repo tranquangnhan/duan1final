@@ -56,11 +56,25 @@
           <div class="row">
             <div class="form-group col-lg-2" id="noiden">
               <label>Địa điểm</label>
-              <div class="destination"><input type="text" class="input-text full-width" placeholder="Nhập Địa Điểm"></div>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <?php foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
+              </div>
             </div>
             <div class="form-group col-lg-2" id="noiden">
               <label>Nơi đến</label>
-              <div class="destination"><input type="text" class="input-text full-width" placeholder="Nhập Địa Điểm"></div>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                    <option value="" selected>Chọn</option>
+                  <?php foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
+              </div>
             </div>
             <div class="form-group col-lg-2" id="khoihanh">
               <label>Khởi hành</label>
@@ -77,6 +91,20 @@
             <div class="col-lg-2">
               <label>Trẻ em</label>
               <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Em bé</label>
+              <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Hạng ghế</label>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <option value="0">Phổ Thông</option>
+                  <option value="1">Thương Gia</option>
+                </select>
+              </div>
             </div>
             <div class="col-lg-2 mr-0-at">
               <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
@@ -271,13 +299,6 @@
                   <i class="text-extra-small">Chức vụ: <span class="color_main">Quản lý nhân sự</span></i>                  
                   <i class="d-block mr-tb-20px text-medium text-grey-4">Các bạn đang tìm một công việc tốt? Làm việc văn phòng máy lạnh sẽ giúp bạn có tinh thần tốt hơn. Hãy đến với ngôi nhà chung của chúng tôi. Liên hệ 0983232323</i>
                 </div>
-                <!-- <div class="carousel-item background-white padding-30px border">
-                  <div class="float-left mr-right-20px"><img src="views/img/avt-4.png" alt=""></div>
-                  <h5 class="text-medium cl-te-black text-uppercase">Rabie Elkheir</h5>
-                  <i class="text-extra-small">Travel to <span class="color_main">Turkey</span></i>
-                   <div class="clearfix"></div>
-                  <i class="d-block mr-tb-20px text-medium text-grey-4">. </i>
-                </div> -->
               </div>
               <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="" aria-hidden="true"><i class="fas fa-chevron-left fz-2vw"></i></span>

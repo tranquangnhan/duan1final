@@ -23,7 +23,7 @@
     z-index: 10;
     width: 100%;
     min-height: 800px;
-    background-image: url("../../../views/img/page-title-1.jpg");
+    background-image: url("../../img/page-title-1.jpg");
 }
 
 .pd-top-100px {
@@ -72,6 +72,7 @@
     top: 0;
     left: 0;
     z-index: 0;
+    background-color: #000;
 }
 
 .background-grey-1 {
@@ -100,7 +101,7 @@
     text-align: center;
 }
 
-.l-box-our a img{
+.l-box-our a img {
     margin-bottom: 10px;
 }
 

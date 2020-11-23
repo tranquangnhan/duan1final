@@ -2,7 +2,7 @@
                     <div class="container-fluid">
                         <div class="row d-flex justify-content-between mt-3">
                             <div class="col-lg-4 text-dark mt-3">
-                                <h2>SẢN PHẨM</h2>
+                                <h2>Binhf Luận</h2>
                             </div>
                             <div class="col-lg-3 mt-3">
                                 <nav aria-label="breadcrumb ">
@@ -22,7 +22,6 @@
                                             <tr>
                                                 <th>ID</th>
                                                 <th >IDKH</th>
-                                                <th >IDSP</th>
                                                 <th>ID Bài Viết</th>
                                                 <th>Nội Dung</th>
                                                 <th>Star</th>
@@ -30,11 +29,12 @@
                                             </tr>
                                         </thead>
                                         <tbody >
+                                        
                                             <?php 
-                                                foreach ($showbl as $bl) {   
+                                                foreach ($showbl as $bl) {  
                                                     $id = $bl['id'];
-                                                    $masp = spCmt($bl['idsp']);
                                                     $makh = $bl['idkh'];
+                                                    $star = $bl['star'];
                                                     $mabaiviet = $bl['idbaiviet'];  
                                                     $noidung = $bl['noidung'];
                                                     $anhien = $bl['trangthai'];
@@ -48,11 +48,14 @@
                                                     ?>
                                                 <tr>
                                                     <td><strong><?=$id?></strong></td>
-                                                    <td><?=$mabaiviet?> </td>
-                                                    <td><?=$masp?> </td>
+                                                   <td><strong><?=showTenKh($bl['idkh'])?></strong></td>
+                                                   <td><strong><?=showTenbv($bl['idbaiviet'])?></strong></td>
+                                              
+                                                    <td><?=$noidung?></td>   
+                                                    <td><?=$star?></td>   
                                                     <td><?= ($anhien==1)? "Dang hien":"dang an"; ?></td>
-                                                    <td><strong><?=showTenKh($bl['idkh'])?></strong></td>
-                                                    <td><?=$noidung?></td>                                         
+                                                  
+                                                                                          
                                                     <td><a href="<?=$linkdel?>"> <i onclick="return checkDelete()" class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
                                                 </tr>
                                             <?php }?>

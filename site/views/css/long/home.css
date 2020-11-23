@@ -551,7 +551,6 @@ a:hover {
     color: #9E9E9E;
 }
 
-
 .name-city {
     color: black;
     font-weight: 700;
@@ -870,6 +869,7 @@ a:hover {
 
 /* chinh 2 nut tren form tìm kiếm
 
+<<<<<<< HEAD
 /* css lien he */
 
 .cl-gray3 {
@@ -888,14 +888,6 @@ a:hover {
 
 .border-top-1 {
     border-top: 1px solid gray;
-}
-
-.long-lien-he-header-out {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 800px;
-    background-image: url("../img/contact-bg-header.jpg");
 }
 
 .bg-black {
@@ -932,14 +924,6 @@ a:hover {
 
 
 /* trang about us  */
-
-.long-ab-us-header-out {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 800px;
-    background-image: url("../img/page-title-1.jpg");
-}
 
 .pd-top-100px {
     padding-top: 100px;
@@ -1005,9 +989,11 @@ a:hover {
 .l-box-our {
     background-color: white;
 }
-
-
+=======
 /* css trang home  */
+>>>>>>> c767264e6d43ece3a7b52f5deaf148ca6a7b4592
+
+
 
 #trove {
     display: none;
@@ -1202,6 +1188,7 @@ a:hover {
 .l-thongtin-ud p span {
     text-decoration: line-through;
 }
+
 
 /*  */
 
@@ -1397,4 +1384,10 @@ a:hover {
 
 .l-thongtin-ud p span {
     text-decoration: line-through;
+<<<<<<< HEAD
+=======
+}
+.pd-r-0 {
+    padding-right: 0px;
+>>>>>>> c767264e6d43ece3a7b52f5deaf148ca6a7b4592
 }

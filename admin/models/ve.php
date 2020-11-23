@@ -1,21 +1,30 @@
 <?php
-
-
 function showveedit($id)
 {
-    $sql = "select * from sanpham where id = '{$id}' ";
+    $sql = "select * from chuyenbay where id = '{$id}' ";
     return result1(1, $sql);
 }
-// function showAllTenDm()
-// {
-//     $sql = "select * from danhmuc where 1 limit 10";
-//     return result1(0, $sql);
-// }
 function showAllve()
 {
-    $sql = "select * from sanpham where 1 limit 10";
+    $sql = "select * from chuyenbay where 1 limit 10";
     return result1(0, $sql);
 }
+function showTenmaybay($id){
+    $sql ="select * from dsmaybay where id= '$id'";
+    return result1(1,$sql)['name'];
+}
+function showdiemdi($id){
+    $sql ="select * from sanbay  where idsanbay = '$id'";
+    return result1(1,$sql)['tensanbay'];
+} 
+function showiddiemdi($id){
+    $sql ="select * from tuyenduong  where id = '$id'";
+    return result1(1,$sql)['iddiemdi'];
+} 
+function showiddiemden($id){
+    $sql ="select * from tuyenduong  where id = '$id'";
+    return result1(1,$sql)['iddiemden'];
+} 
 
 function showsanbay()
 {
@@ -26,24 +35,23 @@ function showsanbay()
 // admin delete product
 function xoaSanPham($id)
 {
-    $sql = "DELETE FROM sanpham WHERE id=" . $id;
+    $sql = "DELETE FROM chuyenbay WHERE id=" . $id;
     exec1($sql);
 }
 //admin update sp
-function updateve($id, $img, $iddm, $tenmaybay, $gia, $giamgia, $diemdi, $diemden, $loaighe, $tgdi, $tgden, $hanhly)
+function updateve($id,$idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen)
 {
-    if (!$img) {
-        $sql = "UPDATE sanpham SET iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
-                giamgia='{$giamgia}',loaighe='{$loaighe}',tgdi='{$tgdi}',
-                tgden='{$tgden}',hanhly='{$hanhly}'
-         WHERE id=" . $id;
-    } else {
-        $sql = "UPDATE sanpham SET anh='{$img},'iddm='{$iddm}',tenmaybay='{$tenmaybay}',gia='{$gia}', 
-        giamgia='{$giamgia}',loaighe='{$loaighe}',tgdi='{$tgdi}',
-        tgden='{$tgden}',hanhly='{$hanhly}'
- WHERE id=" . $id;
-    }
-    execute1($sql);
+    $sql = "UPDATE chuyenbay SET idtuyenduong='{$idTuyenDuong}',idmaybay='{$idMayBay}',ngaydi = '{$ngayDi}',giodi ='{$gioDi}',gioden = '{$gioDen}'
+        WHERE id='$id'";
+    $lastId = getLastId($sql);
+    return $lastId;
+}
+
+function updateveAuto($id,$idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen,$trangThai)
+{
+    $sql = "UPDATE chuyenbay SET idtuyenduong='{$idTuyenDuong}',idmaybay='{$idMayBay}',ngaydi = '{$ngayDi}',giodi ='{$gioDi}',gioden = '{$gioDen}',trangthai ='{$trangThai}'
+        WHERE id='$id'";
+    return exec1($sql);
 }
 // insert data from import excel
 function insertData($sheetData,$highestRow){
@@ -60,7 +68,7 @@ function insertData($sheetData,$highestRow){
         $tgden = $sheetData[$i]['J'];
         $hanhly = $sheetData[$i]['K'];
         $suatan = $sheetData[$i]['L'];
-        $sql = "INSERT INTO sanpham (tenmaybay,anh,gia,giamgia,iddm,diemdi,diemden,loaighe,tgdi,tgden,hanhly,suatan) VALUES 
+        $sql = "INSERT INTO chuyenbay (tenmaybay,anh,gia,giamgia,iddm,diemdi,diemden,loaighe,tgdi,tgden,hanhly,suatan) VALUES 
         (?,?,?,?,?,?,?,?,?,?,?,?)";
         exec1($sql,$tenmaybay,$anh, $gia, $giamgia,$iddm,$diemdi,$diemden,$loaighe,$tgdi, $tgden, $hanhly,$suatan);
     }
@@ -121,6 +129,9 @@ function addTTVe($idMayBay,$idChuyenBay)
     exec1($sql);
 }
 
+
+
+
 function setGheAdmin($id,$idMayBay,$loaiGhe){
     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idMayBay;
     $result = result1(1,$sql)[$loaiGhe];
@@ -154,26 +165,14 @@ function getGhe($idChuyenBay,$loaiGhe)
     }else{
         $class = 'l-ghe-phothong pt';
     }
-   
-    if(count($slTT)>8){
         for ($i=0; $i< count($slTT); $i++) {
             if($slTT[$i] == 1){
-                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large  bg-red" >' . ($i+1). '</div>';
+                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large l-ghe-active" >' . ($i+1). '</div>';
             }else{
                 $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large " >' . ($i+1). '</div>';
             }
             
         }
-    }
-    if(count($slTT)<=8){
-        for ($i=0; $i< count($slTT); $i++) {
-            if($slTT[$i] == 1){
-                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-small  bg-red">' . ($i+1). '</div>';
-            }else{
-                $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large  " >' . ($i+1). '</div>';
-            }
-        }
-    }
     
     $Array = array();
     $Array['idchuyenbay'] = $idChuyenBay;
@@ -186,3 +185,38 @@ function showNameSb($id){
     $sql = "SELECT tensanbay FROM sanbay WHERE idsanbay =".$id;
     return result1(1,$sql)['tensanbay'];
 }
+
+// function showTuyenDuong(){
+//     $sql = "SELECT * FROM tuyenduong WHERE idtuyenduong IN (SELECT * FROM sanbay)";
+//     return result1(0,$sql);
+// }
+
+function setTrangThai($id)
+{
+    $sql = "UPDATE chuyenbay
+    SET trangthai = '1'
+    WHERE id = '$id';";
+    return exec1($sql);
+}
+function addGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay)
+{
+    $sql = "INSERT INTO giave (giavethuong,giavethuonggia,idchuyenbay) VALUES 
+    ('$giaVeThuongGia','$giaVeThuong','$idChuyenBay')";
+    exec1($sql);
+}
+function showGiaVe($idChuyenBay)
+{
+    $sql = "SELECT * FROM giave WHERE idchuyenbay =".$idChuyenBay;
+    return result1(1,$sql);
+}
+function updateGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay){
+    $sql = "UPDATE giave
+    SET giavethuonggia = '$giaVeThuongGia', giavethuong = '$giaVeThuong'
+    WHERE idchuyenbay = '$idChuyenBay'";
+    return exec1($sql);
+}
+function selectTime(){
+    $sql = "SELECT ngaydi,giodi,gioden,trangthai FROM chuyenbay";
+    return result1(0,$sql);
+}
+?>

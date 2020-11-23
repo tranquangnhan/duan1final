@@ -1,45 +1,55 @@
 // window.onload = function() {
+function fireErr(text) {
+    Swal.fire({
+        icon: 'error',
+        type: 'error',
+        title: 'Oops...',
+        text: text,
+        showConfirmButton: true,
+        showCancelButton: false,
+    });
+}
+
 function ClickBtn() {
-    function fireErr(text) {
-        Swal.fire({
-            type: 'error',
-            title: 'Oops...',
-            text: text,
-            showConfirmButton: true,
-            showCancelButton: false,
-        });
-    }
+
     $('.l-ghe-thuonggia').each(function() {
+        $('.l-bg-gray').each(function() {
+            let ThisBox = $(this);
+            ThisBox.click(async function(Events) {
+                Events.preventDefault();
+                fireErr('Ghế không còn trống !');
+            })
+        })
+
         let ThisBox = $(this);
         ThisBox.click(async function(Events) {
-
-            let Loading = Swal.fire({ // sweetAlert
-                allowEscapeKey: false,
-                title: 'Đang kiểm tra',
-                allowOutsideClick: false,
-                showConfirmButton: false,
-                text: 'Vui lòng chờ trong giây lát...',
-                imageUrl: 'views/img/Default/Loading.gif',
-            });
-
             Events.preventDefault();
-            let ID = ThisBox.text();
-            let idChuyenBay = $("#idcb").val();
+            let MaxSheet = $('.l-ghe-active.l-ghe-thuonggia').length;
+            let IsRemoveSelected = (ThisBox.hasClass('l-ghe-active'));
 
-            var setGhe = new FormData();
-            setGhe.append('Action', 'setghetg');
-            setGhe.append('idghe', ID);
-            setGhe.append('idcb', idChuyenBay);
-            await $.ajax({
-                type: "POST",
-                url: 'controllers/ajax/chonghe.php',
-                dataType: 'JSON',
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: setGhe,
-                success: function(Data) {}
-            })
+            if (MaxSheet >= 3 && IsRemoveSelected === false) {
+                fireErr('Bạn chỉ được đặt tối đa 3 vé !');
+                return;
+            } else {
+
+                let ID = ThisBox.text();
+                let idChuyenBay = $("#idcb").val();
+
+                var setGhe = new FormData();
+                setGhe.append('Action', 'setghetg');
+                setGhe.append('idghe', ID);
+                setGhe.append('idcb', idChuyenBay);
+                await $.ajax({
+                    type: "POST",
+                    url: 'controllers/ajax/chonghe.php',
+                    dataType: 'JSON',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: setGhe,
+                    success: function(Data) {}
+                })
+            }
         })
     })
 
@@ -52,24 +62,37 @@ function ClickBtn2() {
         ThisBox.click(async function(Events) {
 
             Events.preventDefault();
-            let ID = ThisBox.text();
-            let idChuyenBay = $("#idcb").val();
+            let MaxSheet = $('.l-ghe-active.l-ghe-phothong').length;
 
-            var setGhe = new FormData();
-            setGhe.append('Action', 'setghethuong');
-            setGhe.append('idghe', ID);
-            setGhe.append('idcb', idChuyenBay);
+            //Gui AJAX Len check xem geh da chon chua
+            //Neu da chon va phia nguoi dung huy ghe thi gui ajax huy
 
-            await $.ajax({
-                type: "POST",
-                url: 'controllers/ajax/chonghe.php',
-                dataType: 'JSON',
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: setGhe,
-                success: function(Data) {}
-            })
+            let IsRemoveSelected = (ThisBox.hasClass('l-ghe-active'));
+
+            if (MaxSheet >= 3 && IsRemoveSelected === false) {
+                fireErr('Bạn chỉ được đặt tối đa 3 vé !');
+                return;
+            } else {
+                let ID = ThisBox.text();
+                let idChuyenBay = $("#idcb").val();
+
+                var setGhe = new FormData();
+                setGhe.append('Action', 'setghethuong');
+                setGhe.append('idghe', ID);
+                setGhe.append('idcb', idChuyenBay);
+
+                await $.ajax({
+                    type: "POST",
+                    url: 'controllers/ajax/chonghe.php',
+                    dataType: 'JSON',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: setGhe,
+                    success: function(Data) {}
+                });
+            }
+
         })
     })
 

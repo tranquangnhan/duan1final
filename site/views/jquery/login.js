@@ -6,6 +6,7 @@ window.onload = function() {
             text: text,
             showConfirmButton: true,
             showCancelButton: false,
+            icon: "error"
         });
     }
     // khi click vào login
@@ -85,6 +86,7 @@ window.onload = function() {
                                         text: 'Mật khẩu không chính xác hoặc tài khoản chưa được kích hoạt.',
                                         showConfirmButton: true,
                                         showCancelButton: false,
+                                        icon: "error"
                                     });
                                 }
                             }
