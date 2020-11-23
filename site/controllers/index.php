@@ -64,15 +64,7 @@ if(isset($_GET['act'])){
             $getBlogByiddm = getBlogByiddm($iddm);           
             require_once "views/blogdetail.php";
             break;
-        case 'singleproduct':  
-            if(isset($_GET['id'])&&$_GET['id']>0){
-                $id = $_GET['id'];
-                settype($id,"int");
-                $showAllCmt = showAllCmt($id);
-                $single = showSingleProduct($_GET['id']);
-            }
-            require_once 'views/singleproduct.php';
-            break;
+
         case 'login':
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
