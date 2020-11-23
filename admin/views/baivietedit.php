@@ -59,10 +59,10 @@ if(is_file($img)){
                                     <select class="custom-select form-control" name="iddanhmuc" id="danhmuc" required>
                                         <?php
                                             $showDm = '';
-                                            foreach ($showdmsp as $dm) {
+                                            foreach ($showdmbv as $dm) {
                                                 $sl = "selected";
                                                 $iddm = $showspedit[0]['iddm'];
-                                                echo $iddm;
+                                        
                                                 if($dm['id'] == $iddm){
                                                     $showDm .= '<option value="'.$dm['id'].'"'.$sl.'>'.$dm['name'].'</option>';
                                                 }

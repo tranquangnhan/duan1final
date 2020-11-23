@@ -20,14 +20,12 @@
   
   <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
-  <link rel="stylesheet" href="views/css/long/blog.css">
   <link rel="stylesheet" href="views/css/long/home.css">
   <!-- end css -->
   <!-- include jquery -->
     <script src="views/jquery/jquery.js" type="text/javascript"></script>
     <script src="views/js/blogdetail.js" type="text/javascript"></script>
     <script src="views/js/home.js" type="text/javascript"></script>
-   
   <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <!-- end include jquery -->
 </head>
