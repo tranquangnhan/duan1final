@@ -69,7 +69,7 @@
               $Return['StatusCode'] = 1;
 
               echo json_encode($Return);
-              return;
+              return;              
               break;
             default:
                 # code...

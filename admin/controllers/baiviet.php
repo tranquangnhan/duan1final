@@ -22,7 +22,7 @@
             }
             if(isset($_POST['submit'])&&($_POST['submit'])){
                 $iddm = $_POST['iddanhmuc'];
-                $allFile = $_FILES['avatar1'];                
+                $allFile = $_FILES['avatar1'];              
                 // //upload nhiều ảnh
                 $imgupload = checkUpLoadMany($allFile);
                 // $img = $_POST['avatar'];
@@ -40,7 +40,9 @@
                 }else{
                     $public = 0;
                 }
-                $iddm = settype($iddm,"int");
+                //$iddm = settype($iddm,"int"); 
+                //echo $iddm;
+                //exit();
                 $allFile = stripTags($allFile);
                 // $public = settype($public,"int");
                 if(isset($_SESSION['idedit'])&&($_SESSION['idedit'])){
