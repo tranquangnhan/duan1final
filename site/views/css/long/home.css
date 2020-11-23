@@ -133,10 +133,11 @@ input.empty {
 
 input {
     background-color: #f9f9f9;
-    padding: 5px;
-    border: solid 1px #eee;
+    padding: 6px;
+    border: 1px solid #ced4da;
     outline: none;
     width: 100%;
+    border-radius: 5px;
 }
 
 
@@ -869,7 +870,6 @@ a:hover {
 
 /* chinh 2 nut tren form tìm kiếm
 
-<<<<<<< HEAD
 /* css lien he */
 
 .cl-gray3 {
@@ -988,15 +988,6 @@ a:hover {
 
 .l-box-our {
     background-color: white;
-}
-=======
-/* css trang home  */
->>>>>>> c767264e6d43ece3a7b52f5deaf148ca6a7b4592
-
-
-
-#trove {
-    display: none;
 }
 
 .fz-12px {
@@ -1384,10 +1375,35 @@ a:hover {
 
 .l-thongtin-ud p span {
     text-decoration: line-through;
-<<<<<<< HEAD
-=======
 }
+
 .pd-r-0 {
     padding-right: 0px;
->>>>>>> c767264e6d43ece3a7b52f5deaf148ca6a7b4592
+}
+
+
+/* css đặt vé */
+
+.tab button.active {
+    color: white;
+    background-color: #1db8c1;
+    border-color: 1px solid #1db8c1!important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    border-color: white white white !important;
+}
+
+
+/* .a_filght {
+    background-color: #1db8c1;
+} */
+
+.nav-tabs .nav-link {
+    background-color: #F44336;
+}
+
+.form-control {
+    background-color: #f9f9f9 !important;
 }

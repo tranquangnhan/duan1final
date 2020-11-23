@@ -40,21 +40,18 @@
 <div class="background-light-grey">
   <div class="container">
     <div id="search-filter-2" class="pull-top-8pt z-index-21 position-relative">
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs tab" role="tablist">
         <li class="nav-item filght mr-right-1pt" id="li-motchieu">
-          <a class="nav-link a_filght text-white active show" style="border-radius: none;" id="a-motchieu" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane-departure"></i> Một chiều</a>
+          <button class="tablinks nav-link a_filght text-white active show" onclick="openCity(event, 'London')" id="defaultOpen">Một Chiều</button>
         </li>
         <li class="nav-item filght mr-right-1pt" id="li-khuhoi">
-          <a class="nav-link a_filght text-white " style="border-radius: none;" id="a-khuhoi" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane-arrival"></i> Chuyến đi khứ hồi</a>
+        <button class="tablinks nav-link a_filght text-white" style="border-radius: none;" onclick="openCity(event, 'Paris')">Khứ Hồi</button>
         </li>
-      </ul>
-              <!-- <li class="nav-item filght mr-right-1pt" id="id-nhieudiemden">
-        <a class="nav-link a_filght text-white" id="id-nhieudiemden" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane"></i> Nhiều điểm đến</a>
-      </li> -->          
+      </ul> 
       <div class="padding-30px box-shadow background-white">
-        <div class="active" id="home" role="tabpanel">
+        <div id="London" class="tabcontent">
           <div class="row">
-            <div class="form-group col-lg-2" id="noiden">
+            <div class="form-group col-lg-2" >
               <label>Địa điểm</label>
               <div class="form-group">
                 <select class="form-control" name="" id="">
@@ -65,7 +62,7 @@
                 </select>
               </div>
             </div>
-            <div class="form-group col-lg-2" id="noiden">
+            <div class="form-group col-lg-2" >
               <label>Nơi đến</label>
               <div class="form-group">
                 <select class="form-control" name="" id="">
@@ -76,12 +73,8 @@
                 </select>
               </div>
             </div>
-            <div class="form-group col-lg-2" id="khoihanh">
+            <div class="form-group col-lg-2" >
               <label>Khởi hành</label>
-              <div class="date-input"><input type="date" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017" id="dp1604379882087"></div>
-            </div>
-            <div class="form-group col-lg-2" id="trove">
-              <label>Trở Về</label>
               <div class="date-input"><input type="date" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017" id="dp1604379882087"></div>
             </div>
             <div class="col-lg-2">
@@ -107,10 +100,73 @@
               </div>
             </div>
             <div class="col-lg-2 mr-0-at">
-              <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
+                <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
+            </div>
+
+          </div>
+        </div>
+        <div id="Paris" class="tabcontent">
+        <div class="row">
+            <div class="form-group col-lg-2" >
+              <label>Địa điểm</label>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <?php foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-lg-2" >
+              <label>Nơi đến</label>
+              <div class="form-group">
+                <select class="form-control" name="" id="">
+                    <option value="" selected>Chọn</option>
+                  <?php foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-lg-2" >
+              <label>Khởi hành</label>
+              <div class="date-input"><input type="date" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017" id="dp1604379882087"></div>
+            </div>
+
+            <div class="form-group col-lg-2" id="trove">
+              <label>Trở Về</label>
+              <div class="date-input"><input type="date" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017" id="dp1604379882087"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Vé</label>
+              <div class="ticket"><input type="text" class="input-text full-width" placeholder="1"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Trẻ em</label>
+              <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Em bé</label>
+              <div class="children"><input type="text" class="input-text full-width" placeholder="0"></div>
+            </div>
+            <div class="col-lg-2">
+              <label>Hạng ghế</label>
+              <div class="form-group">
+                <select class="form-control bg-gray" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <option value="0">Phổ Thông</option>
+                  <option value="1">Thương Gia</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-2 mr-0-at">
+                <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
             </div>
           </div>
         </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
