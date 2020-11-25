@@ -53,27 +53,30 @@
       </li> -->          
       <div class="padding-30px box-shadow background-white">
         <div class="active" id="home" role="tabpanel">
-            <form action="" method="get">
+            <form method="get">
+                <input type="hidden" name="act" value="tim-kiem">
+                <input type="hidden" name="" value="danhsachve">
           <div class="row">
             <div class="form-group col-lg-2" id="noiden">
               <label>Địa điểm</label>
               <div class="form-group">
-                <select class="form-control" name="" id="">
-                  <option value="" selected>Chọn</option>
-                  <?php $showAllSanBay = showAllSanBay();
-                  foreach ($showAllSanBay as $motdd) {
-                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
-                  } ?>
-                </select>
+                  <select  class="form-control"  name="diem-di"  id="">
+                      <option value="" selected>Chọn</option>
+                      <?php
+                      $showAllSanBay = showAllSanBay();
+                      foreach ($showAllSanBay as $motdd) {
+                          echo '<option  value="'.$motdd['idsanbay'].'">'.$motdd['tinh'].'</option>';
+                      } ?>
+                  </select>
               </div>
             </div>
             <div class="form-group col-lg-2" id="noiden">
               <label>Nơi đến</label>
               <div class="form-group">
-                <select class="form-control" name="" id="">
+                <select  class="form-control" name="diem-den" id="">
                     <option value="" selected>Chọn</option>
                   <?php foreach ($showAllSanBay as $motdd) {
-                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                    echo '<option value="'.$motdd['idsanbay'].'">'.$motdd['tinh'].'</option>';
                   } ?>
                 </select>
               </div>
@@ -109,9 +112,10 @@
               </div>
             </div>
             <div class="col-lg-2 mr-0-at">
-              <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
+                <input type="submit" value="TÌM KIẾM" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px">
             </div>
           </div>
+
             </form>
         </div>
       </div>
