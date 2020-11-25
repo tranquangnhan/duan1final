@@ -285,9 +285,10 @@ if(isset($_GET['act'])){
          * date: 17-11-2020
          * version: 1.0
          */
-        case 'tim-kiem':
-
-        require_once "views/danhsachve.php";
+        case 'timKiem':
+            // Truyền file danh sách vé trong models vào 
+            require_once '../models/danhsachve.php';
+            $search = isset($_GET['name']) ? $_GET ['name']:"";
             break;
         /**
          * Kết thúc chức năng tìm kiếm
