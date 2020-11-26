@@ -22,7 +22,9 @@
     <script src="views/jquery/jquery.searchad.js"></script>
     <script src="views/jquery/themghe.js"></script>
     <script src="../site/views/jquery/SweetAlert2.js" type="text/javascript"></script>
-  
+    <script src="views/javascripts/datve.js"></script>
+    <script src="views/jquery/chonve.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/chonghe.css">
+    <link rel="stylesheet" href="views/css/timve.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../site/views/css/nhan/SweetAlert2.css">
 </head>
@@ -187,8 +188,8 @@
                                     <div class="nav-main__text "><div id="bv" class="click_title">Đặt Vé</div>
                                         <div class="menu-alert">
                                             <ul>
-                                            <li><a href="index.php?ctrl=hoadon&act=add">Thêm</a></li>
-                                                <li><a href="index.php?ctrl=hoadon&act=index">Danh Sách</a></li>
+                                            <li><a href="index.php?ctrl=timve&act=timve">Thêm</a></li>
+                                                <li><a href="index.php?ctrl=datve&act=index">Danh Sách</a></li>
                                             </ul>
                                         </div>
                                     </div>
