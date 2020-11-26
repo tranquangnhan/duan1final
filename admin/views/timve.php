@@ -151,7 +151,7 @@
                           <select class="form-control" name="" id="">
                             <option>Điểm Đi</option>
                             <option>Hà Nội</option>
-                            <option>Hồ Chí Minh</option>
+                            <optio>Hồ Chí Minh</optio>
                           </select>
                         </div>
                     </div>
