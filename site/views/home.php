@@ -53,30 +53,27 @@
       </li> -->          
       <div class="padding-30px box-shadow background-white">
         <div class="active" id="home" role="tabpanel">
-            <form method="get">
-                <input type="hidden" name="act" value="tim-kiem">
-                <input type="hidden" name="" value="danhsachve">
+            <form action="" method="get">
           <div class="row">
             <div class="form-group col-lg-2" id="noiden">
               <label>Địa điểm</label>
               <div class="form-group">
-                  <select  class="form-control"  name="diem-di"  id="">
-                      <option value="" selected>Chọn</option>
-                      <?php
-                      $showAllSanBay = showAllSanBay();
-                      foreach ($showAllSanBay as $motdd) {
-                          echo '<option  value="'.$motdd['idsanbay'].'">'.$motdd['tinh'].'</option>';
-                      } ?>
-                  </select>
+                <select class="form-control" name="" id="">
+                  <option value="" selected>Chọn</option>
+                  <?php $showAllSanBay = showAllSanBay();
+                  foreach ($showAllSanBay as $motdd) {
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
+                  } ?>
+                </select>
               </div>
             </div>
             <div class="form-group col-lg-2" id="noiden">
               <label>Nơi đến</label>
               <div class="form-group">
-                <select  class="form-control" name="diem-den" id="">
+                <select class="form-control" name="" id="">
                     <option value="" selected>Chọn</option>
                   <?php foreach ($showAllSanBay as $motdd) {
-                    echo '<option value="'.$motdd['idsanbay'].'">'.$motdd['tinh'].'</option>';
+                    echo '<option value="'.$motdd['id'].'">'.$motdd['tinh'].'</option>';
                   } ?>
                 </select>
               </div>
@@ -112,10 +109,9 @@
               </div>
             </div>
             <div class="col-lg-2 mr-0-at">
-                <input type="submit" value="TÌM KIẾM" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px">
+              <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px"> TÌM KIẾM</a>
             </div>
           </div>
-
             </form>
         </div>
       </div>
@@ -253,28 +249,20 @@
                 <h1 class="title fz-2vw"><span class="color_main">Last </span> News</h1>
                 <span class="section-title-des fz-1vw">Kênh tin tức về du lịch, trao đổi, chia sẻ kinh nghiệm</span>
               </div>
+              <?php foreach ($blog as $bl) { ?>
               <div class="news-cart background-white border mr-bottom-35px">
                 <div class="float-sm-left mr-right-30px box-img-news">
-                  <img src="views/img/news-1.jpg" alt="">
+                  <a href="?act=dtBlog&idbl=<?=$bl['id']?>&iddm=<?=$bl['iddm']?>"><img class="w-100_h-100" src="../uploads/<?=$bl['img']?>" alt=""></a>
                 </div>
-                <div class="padding-20px">
-                  <a href="#" class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8">Đến Sapa Chinh phục đỉnh cao Fansipan xuyên qua khu bảo tồn Vườn quốc gia Hoàng Liên Sơn.</a>
+                <div class="padding-20px h-123px">
+                  <a href="?act=dtBlog&idbl=<?=$bl['id']?>&iddm=<?=$bl['iddm']?>" class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8"><?=$bl['name']?></a>
                   <span class="fz-07 mr-right-30px">By : <a href="#" class="color_main">Rabie Elkheir</a></span>
-                  <span class="fz-07">Date :  <a href="#" class="color_main">July 15, 2020</a></span>
+                  <span class="fz-07">Date :  <a href="#" class="color_main"><?=$bl['date']?></a></span>
                 </div>
               <!-- <div class="clearfix"></div> -->
               </div>
-              <div class="news-cart background-white border mr-bottom-35px">
-                <div class="float-sm-left mr-right-30px box-img-news">
-                  <img src="views/img/news-2.jpg" alt="">
-                </div>
-                <div class="padding-20px">
-                  <a href="#" class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8">Dễ sử dụng và rẻ nữa rất là tiện lợi nha mọi người, đây là lần đầu mình mua vé trên web</a>
-                  <span class="fz-07 mr-right-30px">By : <a href="#" class="color_main">Linh Pham</a></span>
-                  <span class="fz-07">Date :  <a href="#" class="color_main">July 15, 2020</a></span>
-                </div>
-              <!-- <div class="clearfix"></div> -->
-              </div>
+              <?php } ?>
+        
             </div>
             <div class="col-lg-6 te-al-left">
               <div class="section-title-left mr-bot-70px">
