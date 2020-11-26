@@ -355,3 +355,40 @@ tr td .fa-edit {
     top: 0;
     left: 0;
 } */
+
+.pd-20px {
+    padding: 20px;
+}
+
+.te-al-left {
+    text-align: left;
+}
+
+.fz-20px {
+    font-size: 20px;
+}
+
+.fullcrenn {
+    display: none;
+}
+.black_box {
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;   
+}
+.box_chart {
+    width: 40%;
+    height: auto;
+    position: fixed;
+    background: white;
+    z-index: 200;
+    top: 5%;
+    left: 30%;
+    padding: 20px;
+    border-radius: 3px;
+}

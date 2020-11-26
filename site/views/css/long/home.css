@@ -989,15 +989,11 @@ a:hover {
 .l-box-our {
     background-color: white;
 }
-<<<<<<< HEAD
-
 
 
 #trove {
     display: none;
 }
-=======
->>>>>>> babd4749ac063fce5bf4f56e44ff7a483c239628
 
 .fz-12px {
     font-size: 12px;
@@ -1386,10 +1382,9 @@ a:hover {
     text-decoration: line-through;
 }
 
-<<<<<<< HEAD
 .h-123px {
     height: 123px;
-=======
+}
 .pd-r-0 {
     padding-right: 0px;
 }
@@ -1419,5 +1414,9 @@ a:hover {
 
 .form-control {
     background-color: #f9f9f9 !important;
->>>>>>> babd4749ac063fce5bf4f56e44ff7a483c239628
+}
+
+.w-100_h-100 {
+    width: 100%;
+    height: 100%;
 }

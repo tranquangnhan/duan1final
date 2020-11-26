@@ -20,21 +20,10 @@
                 $Array['StatusCode']  = (int) (addCmt($content,$idUser,$id,5,$datetime) ==true) ? 1 : 0 ;
                 // $Array['rowcount'] = rowcountCmt($idbaiviet);
                 $Array['datetim'] = $datetime;
-
                 $Array['content'] = showCmt($id);
                 $Array['countCmt'] = rowcountCmt($id);
                 $Array['id'] = $Array['content'][0]['idkh'];
                 
-                // $output = '';
-                // foreach($Array['content'] as $row) {
-                //     $output .= '
-                //         <div class="binhluan">
-                //             <div class="tenKH">'. $row[''].'</div>
-                //             <div class="noidung">'. $row[''].'</div>
-                //         </div>
-                //     '
-                
-                // }
                 echo json_encode($Array);
                 return;         
             break;
