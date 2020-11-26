@@ -1,4 +1,3 @@
-
 <div class="row no-gutters">
                         <div class="col-lg-4">
                             <div class="card">
@@ -10,8 +9,7 @@
                             </div>
                         </div>
 <?php
-foreach ($checkin as $tt) {?>
-    
+foreach ($checkin as $tt) { ?>
 
                         <div class="col-lg-8">
                             <div class="padding-20px">

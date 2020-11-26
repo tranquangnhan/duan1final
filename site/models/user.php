@@ -1,5 +1,5 @@
 <?php 
-    session_start();     
+    // session_start();     
     function checkUser($user,$pass,$remember){
         if($remember) {
             $_COOKIE['sessionId'] = session_id();

@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    // session_start();
     function getallBlog($page_num, $page_size) { 
         $start_row = ($page_num - 1) * $page_size;
         $sql="SELECT * FROM baiviet ORDER BY date DESC LIMIT $start_row, $page_size";

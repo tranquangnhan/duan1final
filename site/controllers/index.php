@@ -210,7 +210,7 @@ if(isset($_GET['act'])){
                  if (isset($_POST['checkin'])&&($_POST['checkin'])) {
                  $macho=$_POST['madatcho'];
                  $checkin=checkinonl($macho);
-                 $views ="views/showcheckin.php";
+                //  $views ="views/showcheckin.php";
                 require_once "views/checkinonline.php";
             }
             require_once "views/checkinonline.php";
