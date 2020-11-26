@@ -29,6 +29,7 @@ if ($_POST['Action'])
                 } else {
                     $array['Statuscode'] = 0;
                 }
+                
                 $array['data1'] = getThongke($ngaybatdau1,$ngayketthuc1);
                 $array['kieuchar'] = $kieuchart;
                 echo json_encode($array);

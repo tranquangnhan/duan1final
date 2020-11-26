@@ -37,6 +37,7 @@ if(isset($_GET['act'])){
             require_once "views/contact.php";
             break;          
         case 'danhsachve':   // để sửa css
+            $showVe = showVe();
             $data = showDiemDi2();
             $data1= showDiemDen2();
             require_once "views/danhsachve.php";

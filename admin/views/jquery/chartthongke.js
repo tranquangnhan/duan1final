@@ -1,6 +1,8 @@
 $(document).ready(function() {
     var dieukienchart = '';
+    var chk = true;
     $('#form_baocao').on('submit',async function(event) {
+        chk = true; 
         $("#fcreen").addClass('fullcrenn');
         event.preventDefault();
         //form_baocao
@@ -11,14 +13,29 @@ $(document).ready(function() {
         var ngayketthuc1 = $('#ngayketthuc1').val();
         var ngaybatdau2 = $('#ngaybatdau2').val();
         var ngayketthuc2 = $('#ngayketthuc2').val();
-            // console.log(kieuchart);
-            // console.log(kieubaocao);
-            // console.log(ngaybatdau1);
-            // console.log(ngayketthuc1);
-            // console.log(ngaybatdau2);
-            // console.log(ngayketthuc2);
-        if (ngaybatdau2 != '') 
-        if (kieubaocao != "") {
+        if (kieubaocao == '') {
+            chk = false;
+            alert('nhap kieu bao cao');
+        } else if (kieuchart == '') {
+            chk = false;
+            alert('nhap kieu bieu do');
+        } else  if (ngaybatdau1 == '') {
+            chk = false;
+            alert('nhap ngay bat dau');
+        } else if (ngayketthuc1 == '') {
+            chk = false;
+            alert('nhap ngay ket thuc');
+        } else if (ngaybatdau2 == '' && ngayketthuc2 == '') {
+            chk = true;
+        } else if (ngaybatdau2 != '' && ngayketthuc2 == '') {
+            chk = false;
+            alert('nhap ngay ket thuc 2');
+        } else if (ngaybatdau2 == '' && ngayketthuc2 != '') {
+            chk = false;
+            alert('nhap ngay bat dau 2');
+        }
+        if (chk == true) {
+            console.log('check', chk);
             // luu du lieu    
             let dataz = new FormData();
 
@@ -38,7 +55,6 @@ $(document).ready(function() {
                 processData: false,
                 data: dataz,
                 success : function(response) {
-                    var bien = 0;
                     // console.log('got',response.data1);
                     // console.log('1', response.a);
                     // console.log('2', response.b);
@@ -159,9 +175,10 @@ $(document).ready(function() {
                 }   
             })     
                       
-        } else {
-            alert('rỗng');
         }
+        // else {
+        //     alert('rỗng');
+        // }
     });
     $('#save_bt').click(function() {  
         $('#mychart').get(0).toBlob(function(blob) {
