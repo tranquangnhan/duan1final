@@ -2,7 +2,7 @@
 //Cronjob chay moi 5p
 //Lap qua cac hoa don co trang thai chua thanh toan
 //Va kiem tra thoi gian neu vuot khoi muc quy dinh
-//Thi tra lại trạng thái ghe là chua chon đồng thời hủy hóa đon và hdct
+//Thi tra l?i tr?ng thái ghe là chua chon d?ng th?i h?y hóa don và hdct
 require_once "system/config.php";
 require_once "system/database.php";
 require_once "admin/models/ve.php";
@@ -12,9 +12,9 @@ function selectData()
     $sql = "SELECT * FROM chuyenbay";
     return result1(0,$sql); 
 }
-// giờ đi: lấy giờ đi cộng thêm 4 tiếng
-// giờ đến : lấy giờ đến công thêm 4 tiếng
-// ngày: nếu quá 24h thì tăng thêm 1 ngày
+// gi? di: l?y gi? di c?ng thêm 4 ti?ng
+// gi? d?n : l?y gi? d?n công thêm 4 ti?ng
+// ngày: n?u quá 24h thì tang thêm 1 ngày
 
 if ($_POST['Action'])
 {

@@ -18,6 +18,7 @@ require_once "models/blog.php";
 require_once "views/layouts/header.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
+require_once "models/hoadon.php";
 
 
 require_once "views/layouts/header.php";
@@ -36,7 +37,8 @@ if(isset($_GET['act'])){
             require_once "views/contact.php";
             break;          
         case 'danhsachve':   // để sửa css
-            $showVe = showVe();
+            $data = showDiemDi2();
+            $data1= showDiemDen2();
             require_once "views/danhsachve.php";
             break;
         case 'blog':  
@@ -201,6 +203,19 @@ if(isset($_GET['act'])){
             }
         require_once "views/quenmk.php";
         break;
+        case 'checkin':
+            echo ' <link rel="stylesheet" href="views/css/long/trangthanhtoan.css">';
+          
+                 if (isset($_POST['checkin'])&&($_POST['checkin'])) {
+                 $macho=$_POST['madatcho'];
+                 $checkin=checkinonl($macho);
+                 $views ="views/showcheckin.php";
+                require_once "views/checkinonline.php";
+            }
+            require_once "views/checkinonline.php";
+            
+
+            break;
         case 'datlaimk':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
@@ -292,11 +307,6 @@ if(isset($_GET['act'])){
 
             echo "<script src='views/jquery/showghe.js'></script>";
             }
-            break;
-        case 'thanhtoan':
-            echo ' <link rel="stylesheet" href="views/css/long/trangthanhtoan.css">';
-
-            require_once 'views/thanhtoan.php';
             break;
         default:
             require_once "views/home.php";
