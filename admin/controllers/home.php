@@ -1,5 +1,7 @@
 <?php
-  // $allhx = showAllHangXe();
+  require_once "models/allmodel.php";
+  include_once "views/thongkeindex.php";
+  //$allhx = showAllHangXe();
   // $allhh = showAllHangHoa();
   // $alllx =showAllLuotXem();
   // $allkh = showSlKh();

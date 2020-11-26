@@ -13,4 +13,19 @@
 // ON chuyenbay.id = giave.idchuyenbay
 // INNER JOIN trangthaidatve
 // ON trangthaidatve.idchuyenbay = giave.idchuyenbay
+
+
+// input : điểm đi, điểm đến
+//ngày đi
+// số lượng người
+
+
+// output show ra vé trống bằng hàm show vé 
+
+//
+
+
+
+
+
 ?>

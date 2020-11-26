@@ -23,9 +23,8 @@ require_once "models/hoadon.php";
 
 require_once "views/layouts/header.php";
 $showAllSanBay = showAllSanBay();
-
 if(isset($_GET['act'])){
-    $act = $_GET['act'];
+    $act = $_GET['act']; 
     switch ($act) {
         case 'home':           
             $blog = gettwoblog();
@@ -38,6 +37,7 @@ if(isset($_GET['act'])){
             require_once "views/contact.php";
             break;          
         case 'danhsachve':   // để sửa css
+            $showVe = showVe();
             $data = showDiemDi2();
             $data1= showDiemDen2();
             require_once "views/danhsachve.php";
