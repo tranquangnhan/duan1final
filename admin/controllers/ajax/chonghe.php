@@ -4,10 +4,7 @@
     {
         switch ($_POST['Action']) {
             case 'chonghe':
-                $Array = array();
-                $_SESSION['idchuyenbay'] =  $_POST['idchuyenbay'];
-                $Array['StatusCode'] = $_SESSION['idchuyenbay'];
-                echo json_encode($Array);
+            
                 return;
                 break;
             default:

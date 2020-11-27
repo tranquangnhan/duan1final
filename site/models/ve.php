@@ -75,5 +75,9 @@ function showAllSanBay(){
     $sql = "SELECT * FROM sanbay WHERE 1";
     return result1(0,$sql);
 }
-
+function showsanbay1()
+{
+    $sql = "select * from sanbay ";
+    return result1(0, $sql);
+}
 ?>

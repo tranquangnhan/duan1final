@@ -39,4 +39,5 @@ function showDiemDen2()
     ";
     return result1 (0,$sql);
 }
+
 ?>

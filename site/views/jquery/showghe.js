@@ -30,7 +30,7 @@ channel.bind('my-event', function(data) {
     });
 });
 
-ClickBtn2();
+ClickBtn();
 // Enable pusher logging - don't include this in production
 Pusher.logToConsole = true;
 
@@ -56,7 +56,7 @@ channel.bind('my-event', function(data) {
         success: function(response) {
             if (response.StatusCode === 1) {
                 $("#ghethuong").html(response.html);
-                ClickBtn2();
+                ClickBtn();
             }
         }
     });

@@ -21,7 +21,7 @@ if ($_POST['Action'])
                 $array['bd2'] = $ngaybatdau2;
                 $array['kt2'] = $ngayketthuc2;
                 $array['kieubaocao'] = $kieubaocao; 
-                
+                $array['kieuchar'] = $kieuchart;
                
                 if ($ngaybatdau2 != '' && $ngayketthuc2 != '') {
                     $array['data2'] = getThongke2($ngaybatdau2,$ngayketthuc2);
@@ -29,9 +29,8 @@ if ($_POST['Action'])
                 } else {
                     $array['Statuscode'] = 0;
                 }
-                
                 $array['data1'] = getThongke($ngaybatdau1,$ngayketthuc1);
-                $array['kieuchar'] = $kieuchart;
+               
                 echo json_encode($array);
                 return;
             break;

@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
-                <h2>SẢN PHẨM</h2>
+                <h2>HOÁ ĐƠN</h2>
             </div>
             <div class="col-lg-4 mt-3">
                 <nav aria-label="breadcrumb ">
@@ -20,7 +20,7 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM Hóa Đơn</h3>
+                            <h3 class="mt-4 text-center">THÊM HOÁ ĐƠN</h3>
                             <p class="text-center">Bạn có thể thêm hóa đơn ở đây!</p>
                                 <div class="row ">
                                     <div class="col-lg-3">
@@ -32,41 +32,34 @@
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-3">
-                                        <label for=""><strong>Ngày Đặt Vé</strong></label>
+                                        <label for=""><strong>Giới Tính</strong></label>
                                     </div>
                                     <div class="col-lg-9">
-                                        <input type="datetime-local" name="ngaydatve" id="" class="form-control" aria-describedby="helpId" required>
+                                        <div class="form-group">
+                                          <select class="form-control" name="gioitinh" id="">
+                                            <option value="">Giới Tính</option>
+                                            <option value="0">Nam</option>
+                                            <option value="1">Nữ</option>
+                                            <option value="2">Khác</option>
+                                          </select>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row mt-4">
                                     <div class="col-lg-3">
-                                        <label for=""><strong>Mã Khách Hàng</strong></label>
+                                        <label for=""><strong>Điện Thoại</strong></label>
                                     </div>
                                     <div class="col-lg-9">
-                                        <select class="custom-select form-control" name="makh" id="" >
-                                            <option selected value="">Chọn </option>
-                                            <?php
-                                            foreach ($showkh as $kh) {
-                                                $kq = '<option value="">' . $kh['user'] . '</option>';
-                                                echo $kq;
-                                               
-                                            }
-                                            ?>
-                                        </select>
+                                        <input type="number" name="dienthoai" id="" class="form-control" placeholder="Số Điện Thoại" aria-describedby="helpId" required>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-3">
-                                        <label for=""><strong>Trạng Thái</strong></label>
+                                        <label for=""><strong>CMND/Passport</strong></label>
                                     </div>
                                     <div class="col-lg-9">
-                                        <select class="custom-select form-control" name="trangthai" id="trangthai" >
-                                            <option selected value="">Chọn </option>
-                                            <option value="0">Mới Order</option>
-                                            <option value="1">Thanh Toán </option>
-                                            <option value="2">Hủy</option>
-                                        </select>
+                                        <input type="number" name="cmnd" id="" class="form-control" placeholder="CMND/Passport" aria-describedby="helpId" required>
                                     </div>
                                 </div>
 
@@ -84,12 +77,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                         </div>
                 </form>
