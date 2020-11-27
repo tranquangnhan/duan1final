@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="views/css/timve.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../site/views/css/nhan/SweetAlert2.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/> 
 </head>
 
 <body>
@@ -182,7 +184,6 @@
                                     </div>
                                 </div>
                             </li>
-<<<<<<< HEAD
                             <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="hoadon") echo "active";?>">
                                 <div class="nav-link">
                                 <div class="nav-main__icon"><svg  width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M396 432H136c-36.44 0-70.36-12.57-95.51-35.41C14.38 372.88 0 340 0 304c0-36.58 13.39-68.12 38.72-91.22 18.11-16.53 42.22-28.25 69.18-33.87a16 16 0 0011.37-9.15 156.24 156.24 0 0142.05-56C187.76 91.69 220.5 80 256 80a153.57 153.57 0 01107.14 42.9c24.73 23.81 41.5 55.28 49.18 92a16 16 0 0012.12 12.39C470 237.42 512 270.43 512 328c0 33.39-12.24 60.78-35.41 79.23C456.23 423.43 428.37 432 396 432z"></path></svg></div>
@@ -196,8 +197,6 @@
                                     </div>
                                 </div>
                             </li>
-=======
->>>>>>> aeb49d49b164fb31eccf82a9945c67687fd44586
                         </ul>
                     </div>
                 </div>

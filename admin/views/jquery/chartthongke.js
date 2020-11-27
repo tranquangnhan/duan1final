@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var dieukienchart = '';
     var chk = true;
+    
     $('#form_baocao').on('submit',async function(event) {
         chk = true; 
         $("#fcreen").addClass('fullcrenn');
@@ -15,7 +16,7 @@ $(document).ready(function() {
         var ngayketthuc2 = $('#ngayketthuc2').val();
         if (kieubaocao == '') {
             chk = false;
-            alert('nhap kieu bao cao');
+            alertify.error('Error message');
         } else if (kieuchart == '') {
             chk = false;
             alert('nhap kieu bieu do');
