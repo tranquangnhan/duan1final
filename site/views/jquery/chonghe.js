@@ -53,10 +53,6 @@ function ClickBtn() {
         })
     })
 
-}
-ClickBtn()
-
-function ClickBtn2() {
     $('.l-ghe-phothong').each(function() {
         let ThisBox = $(this);
         ThisBox.click(async function(Events) {
@@ -97,5 +93,6 @@ function ClickBtn2() {
     })
 
 }
-ClickBtn2()
-    // }
+ClickBtn()
+
+// }

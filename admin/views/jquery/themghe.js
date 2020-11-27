@@ -5,12 +5,12 @@ function ClickBtn() {
             Events.preventDefault();
 
             let ID = ThisBox.text();
-            let idmaybay = $("#idcb").val();
+            let idchuyenbay = $("#idcb").val();
             let pushThemGhe = new FormData();
 
             pushThemGhe.append('id', ID); //tên
             pushThemGhe.append('Action', 'setttghetg');
-            pushThemGhe.append('idmaybay', idmaybay);
+            pushThemGhe.append('idchuyenbay', idchuyenbay);
             await $.ajax({
                 type: "POST",
                 url: "controllers/ajax/themghe.php",
@@ -32,12 +32,12 @@ function ClickBtn() {
             Events.preventDefault();
 
             let ID = ThisBox.text();
-            let idmaybay = $("#idcb").val();
+            let idchuyenbay = $("#idcb").val();
             let pushThemGhe = new FormData();
 
             pushThemGhe.append('id', ID); //tên
             pushThemGhe.append('Action', 'setttghept');
-            pushThemGhe.append('idmaybay', idmaybay);
+            pushThemGhe.append('idchuyenbay', idchuyenbay);
             await $.ajax({
                 type: "POST",
                 url: "controllers/ajax/themghe.php",

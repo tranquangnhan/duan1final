@@ -44,7 +44,7 @@ function result1($fe,$sql){
     }
 }
 function exec1($sql){//thêm, xoá ....
-    $sqlValue = array_slice(func_get_args(),1);
+    $sqlValue = array_slice(func_get_args(),1); 
 
     try {
         $conn = connect(); //connect database

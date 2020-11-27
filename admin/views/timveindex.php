@@ -25,6 +25,7 @@
             }
             echo '<div class="row mt-3 showve ml-3">
                          <div class="col-lg-3">
+                            <input type="hidden" id="loaighe" value="'.$loaiGhe.'">
                              <img src="'.$img.'" alt="">
                              '.$hangMb.'
                          </div>

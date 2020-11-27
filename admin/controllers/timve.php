@@ -9,6 +9,7 @@
             $showSanBay =showsanbay();
 
         require_once "views/timve.php";
+        echo '<script src="views/javascripts/datve.js"></script>';
         break;
         case 'showve':
             $Array = array();
@@ -45,16 +46,22 @@
             }
             $Array = json_encode($Array);
             require_once "views/timveindex.php";
+            echo '<script src="views/jquery/chonve.js"></script>';
         break;
         case 'chonve':
             if(isset($_GET['idcb'])&&($_GET['idcb'])){
-                $soGheThuongGia = getGhe($_GET['idcb'],'ttghethuonggia');
-                $soGheThuong = getGhe($_GET['idcb'],'ttghethuong');
-                include_once "views/chonghe.php";
+                if(isset($_GET['loaighe'])&&($_GET['loaighe'])==1){
+                    $soGheThuong = getGhe($_GET['idcb'],'ttghethuong');
+                    include_once "views/chonghethuong.php";
+                }
+                if(isset($_GET['loaighe'])&&($_GET['loaighe'])==2){
+                    $soGheThuongGia = getGhe($_GET['idcb'],'ttghethuonggia');
+                    include_once "views/chonghethuonggia.php";
+                }
             }else{
                 echo "không có chuyến bay này !";
             }
-          
+            echo '<script src="views/jquery/chonve.js"></script>';
         break;
             default:
                 break;

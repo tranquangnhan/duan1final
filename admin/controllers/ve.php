@@ -86,6 +86,7 @@
             }else{
                 echo "không có chuyến bay này !";
             }
+            echo '<script src="views/jquery/themghe.js"></script>';
             break;
         case 'done':
             if(isset($_GET['done'])){
