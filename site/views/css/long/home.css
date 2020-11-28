@@ -1420,3 +1420,59 @@ a:hover {
     width: 100%;
     height: 100%;
 }
+
+/* css form search */
+.l-search-filter {
+    background-color: white;
+    height: auto;
+    padding: 40px;
+}
+
+.l-div-tren {
+    width: 100%;
+    height: 50px;
+    opacity: 1;
+}
+
+.l-div-duoi {
+    width: 100%;
+    height: 50px;
+    opacity: 1;
+}
+
+.sel {
+    width: 240px;
+    display: inline-block;
+}
+
+.awselect.animate2 > .bg {
+    box-shadow:0 2px 5px 0 rgba(23,35,44,0.24),0 -1px 5px 0 rgba(23,35,44,0.2)!important;
+}
+
+.front_face{
+    padding: 10px 20px!important;
+}
+
+.back_face {
+    padding: 0px!important;
+}
+
+.awselect .back_face ul li a { 
+    padding: 5px 20px!important;
+}
+
+.verticle-top {
+    vertical-align: top;
+}
+
+.l-input {
+    background: #e5e5e5;
+    color: inherit;
+    padding: 10px 20px;
+    border-radius: 0px;
+    border: 0px!important;
+}
+
+.placeholder-icon {
+    font-family: 'fontawesome';
+}

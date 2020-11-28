@@ -30,6 +30,10 @@ if (isset($_GET['act'])) {
             $blog = gettwoblog();
             require_once "views/home.php";
             break;
+        case 'home_copy':
+            $blog = gettwoblog();
+            require_once "views/home_copy.php";
+            break;
         case 'about':
             require_once "views/about.php";
             break;

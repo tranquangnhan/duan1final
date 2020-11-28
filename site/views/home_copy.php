@@ -18,7 +18,7 @@
                                 <div class="animate-delay-0p9s anim4-pn1 animated fadeInRightBig">Đặt vé hôm nay</div>
                             </a>
                         </div>
-                    </div>
+                    </div>  
                     <div class="owl-item">
                         <div class="pn2-img"></div>
                         <img src="views/img/panner2.jpg" alt="">
@@ -47,218 +47,35 @@
 </div>
 <div class="background-light-grey">
     <div class="container">
-        <div id="search-filter-2" class="pull-top-8pt z-index-21 position-relative">
-            <div class="tab">
-
-                <button class=" filght mr-right-1pt tablinks  a_filght text-white active show nav-link" id="defaultOpen"
-                        onclick="openCity(event, 'London')" style="border-radius: none; float: left;">
-                    <i class="fas fa-plane-departure"></i> Một chiều
-                </button>
-                <button class=" filght mr-right-1pt tablinks  a_filght text-white active show nav-link" id="defaultOpen"
-                        onclick="openCity(event, 'Paris')" style="border-radius: none; ">
-                    <i class="fas fa-plane-departure"></i> Chuyến Đi Khứ Hồi
-                </button>
-
-
+        <div id="l-search-filter" class="l-search-filter">
+            <div class="l-div-tren">
+                          
             </div>
-            <!-- <li class="nav-item filght mr-right-1pt" id="id-nhieudiemden">
-      <a class="nav-link a_filght text-white" id="id-nhieudiemden" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane"></i> Nhiều điểm đến</a>
-    </li> -->
-            <style>
-                .tab-content {
-                    display: none;
-                }
-            </style>
-
-            <script>
-                function openCity(evt, cityName) {
-                    var i, tabcontent, tablinks;
-                    tabcontent = document.getElementsByClassName("tabcontent");
-                    for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
-                    }
-                    tablinks = document.getElementsByClassName("tablinks");
-                    for (i = 0; i < tablinks.length; i++) {
-                        tablinks[i].className = tablinks[i].className.replace(" active", "");
-                    }
-                    document.getElementById(cityName).style.display = "block";
-                    evt.currentTarget.className += " active";
-                }
-
-                // Get the element with id="defaultOpen" and click on it
-                document.getElementById("defaultOpen").click();
-            </script>
-            <div id="Paris" class="tabcontent">
-                <div class="padding-30px box-shadow background-white">
-                    <form action="" method="get">
-                        <input type="hidden" name="act" value="timkiem">
-                        <div class="active" id="" role="">
-                            <form action="" method="get">
-                                <div class="row">
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Địa điểm</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemdi" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php $showAllSanBay = showAllSanBay();
-                                                foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Nơi đến</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemden" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Khởi hành</label>
-                                        <div class="date-input"><input type="date" name="ngaydi"
-                                                                       class="input-text datepicker full-width hasDatepicker"
-                                                                       placeholder="15 / 5 / 2017" id="dp1604379882087">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Trở Về</label>
-                                        <div class="date-input"><input type="date" name="ngayve"
-                                                                       class="input-text datepicker full-width hasDatepicker"
-                                                                       placeholder="15 / 5 / 2017" id="dp1604379882087">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Vé</label>
-                                        <div class="ticket"><input type="text" name="ve" class="input-text full-width"
-                                                                   placeholder="1"></div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Người lớn</label>
-                                        <div class="children"><input type="text" name="nguoilon"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Trẻ em</label>
-                                        <div class="children"><input type="text" name="treem"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Em bé</label>
-                                        <div class="children"><input type="text" name="embe"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Hạng ghế</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="loaighe" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <option value="0">Phổ Thông</option>
-                                                <option value="1">Thương Gia</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 mr-0-at">
-
-                                        <input type="submit" value="TÌM KIẾM"
-                                               class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px">
-
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </form>
+            <div class="l-div-duoi">
+                <div class="sel">
+                    <select name="food_selector" class="selectawe" data-placeholder="TP Hồ Chí Minh (SGN)">
+                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
+                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
+                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
+                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    </select>
+                </div>  
+                <div class="sel">
+                    <select name="food_selector" class="selectawe" data-placeholder="Đến?">
+                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
+                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
+                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
+                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    </select>
                 </div>
-            </div>
-
-            <div id="London" class="tabcontent">
-                <div class="padding-30px box-shadow background-white">
-                    <form action="" method="get">
-                        <input type="hidden" name="act" value="timkiem">
-                        <div class="active" id="">
-                            <form action="" method="get">
-                                <div class="row">
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Địa điểm</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemdi" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php $showAllSanBay = showAllSanBay();
-                                                foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Nơi đến</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemden" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Khởi hành</label>
-                                        <div class="date-input"><input type="date" name="ngaydi"
-                                                                       class="input-text datepicker full-width hasDatepicker"
-                                                                       placeholder="15 / 5 / 2017" id="dp1604379882087">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Vé</label>
-                                        <div class="ticket"><input type="text" name="ve" class="input-text full-width"
-                                                                   placeholder="1"></div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Người lớn</label>
-                                        <div class="children"><input type="text" name="nguoilon"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Trẻ em</label>
-                                        <div class="children"><input type="text" name="treem"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Em bé</label>
-                                        <div class="children"><input type="text" name="embe"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Hạng ghế</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="loaighe" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <option value="0">Phổ Thông</option>
-                                                <option value="1">Thương Gia</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 mr-0-at">
-                                        <input type="submit" value="TÌM KIẾM"
-                                               class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px">
-
-                                    </div>
-                                </div>
-                        </div>
-                    </form>
+                <div class="sel verticle-top">
+                    <input type="text" name="ngaydi" class="l-input l-date placeholder-icon" id="calendar" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
-            </div>
-        </div>
+                <div class="sel verticle-top">
+                    <input type="text" name="ngayve" class="l-input l-date placeholder-icon" id="calendar_2" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
+                </div>
+            </div>       
+        </div>          
     </div>
 </div>
 <div class="box_main background-light-grey">

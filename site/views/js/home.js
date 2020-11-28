@@ -7,9 +7,7 @@ $(document).ready(function() {
         items: 1,
         loop: true,
         mouseDrag: false,
-
         autoplay: true,
-
         autoplayTimeout: 10000
     });
     var slide1 = $('#owl-2');
@@ -56,6 +54,7 @@ $(document).ready(function() {
     //   }, function(){
     //   $(".bt-datve").hide();
     // });
+    
 });
 
 // js đặt vé

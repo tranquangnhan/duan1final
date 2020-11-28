@@ -10,6 +10,10 @@
   <link rel="stylesheet" type="text/css" href="views/fontawesome-free-5.13.0-web/css/all.css">
   <title>Dự Án 1</title>
   <!-- css  -->
+  <!-- link css awselect -->
+  <link href="views/awesome-select-master/package/css/awselect.css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
@@ -20,13 +24,16 @@
   
   <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
+  
   <link rel="stylesheet" href="views/css/long/home.css">
   <!-- end css -->
   <!-- include jquery -->
     <script src="views/jquery/jquery.js" type="text/javascript"></script>
     <script src="views/js/blogdetail.js" type="text/javascript"></script>
     <script src="views/js/home.js" type="text/javascript"></script>
-  <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
+    <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- end include jquery -->
 </head>
 <body>
