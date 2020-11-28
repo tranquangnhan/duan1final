@@ -16,6 +16,7 @@ window.onload = function() {
         let passWord = $("#password").val();
         let remember = $("#remember").val();
 
+
         let Loading = Swal.fire({ // sweetAlert
             allowEscapeKey: false,
             title: 'Đang kiểm tra',
@@ -58,6 +59,7 @@ window.onload = function() {
                         LoginData.append('Password', passWord);
                         LoginData.append('Remember', remember);
                         LoginData.append('Action', 'Login');
+
                         await $.ajax({
                             type: 'POST',
                             url: 'controllers/ajax/loginsignup.php',

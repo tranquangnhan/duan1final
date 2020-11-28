@@ -28,9 +28,6 @@
                 $idChuyenBay = $_SESSION['idchuyenbay'];
                 $hangGhe = $_SESSION['hangghe'];
 
-               
-                $arrHoTen = array();
-                array_push($arrHoTen,$_POST['hotenkh']);
 
                 if($hangGhe == 1){
                     $giaTien = showGiaVe($_SESSION['idchuyenbay'])['giavethuong'];

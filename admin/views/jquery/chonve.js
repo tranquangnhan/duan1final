@@ -10,7 +10,24 @@ async function chonVe(idChuyenBay) {
     });
     if (idChuyenBay) {
         Loading.close();
-        window.location.href = ('?ctrl=timve&act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
+        let checkKhuHoi = new FormData();
+
+        checkKhuHoi.append('Action', 'checkKhuHoi');
+        await $.ajax({
+            type: "POST",
+            url: "controllers/ajax/chonghe.php",
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: checkKhuHoi,
+            success: function(response) {
+                alert(response);
+                // if (response.ngayve == 0) {
+                //     window.location.href = ('?ctrl=timve&act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
+                // }
+            }
+        });
+
     }
 }
 

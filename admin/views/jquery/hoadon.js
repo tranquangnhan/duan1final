@@ -1,5 +1,13 @@
-$("#themhd").click(function(e) {
+$("#themhd").click(async function(e) {
     e.preventDefault();
+    let Loading = Swal.fire({
+        allowEscapeKey: false,
+        title: 'Đang kiểm tra',
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        text: 'Vui lòng chờ trong giây lát...',
+        imageUrl: '../site/views/img/Default/Loading.gif',
+    });
     var arrHoten = [];
     var arrGioiTinh = [];
     var arrDienThoai = [];
@@ -28,7 +36,7 @@ $("#themhd").click(function(e) {
     form.append('dienthoai', arrDienThoai);
     form.append('cmnd', arrCmnd);
     form.append('Action', 'hoadon');
-    $.ajax({
+    await $.ajax({
         type: 'POST',
         url: 'controllers/ajax/hoadon.php',
         dataType: 'JSON',
@@ -37,7 +45,22 @@ $("#themhd").click(function(e) {
         processData: false,
         data: form,
         success: function(response) {
-            console.log(response)
+            if (response.StatusCode == 1) {
+                Loading.close();
+                Swal.fire({
+                    timer: 3000,
+                    type: 'success',
+                    title: 'Thành công',
+                    text: 'Thêm hoá đơn thành công, đang chuyển hướng về danh sách hoá đơn.',
+                    showConfirmButton: false,
+                    showCancelButton: false,
+                    icon: "success"
+                });
+
+                window.location.href = ('?ctrl=hoadon&act=index');
+            }
+
+
         }
     });
 });

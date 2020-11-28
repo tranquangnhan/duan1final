@@ -19,7 +19,7 @@
     <script src="../lib/ckeditor/ckeditor.js"></script>
     <script src="views/javascripts/javascript.configfck.js"></script>
     <script src="views/jquery/jquery.searchad.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script src="../site/views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <script src="views/javascripts/datve.js"></script>
     <script src="views/jquery/chonve.js"></script>

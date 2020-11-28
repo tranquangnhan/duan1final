@@ -210,6 +210,7 @@ function showGiaVe($idChuyenBay)
     return result1(1,$sql);
 }
 
+
 function updateGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay){
     $sql = "UPDATE giave
     SET giavethuonggia = '$giaVeThuongGia', giavethuong = '$giaVeThuong'

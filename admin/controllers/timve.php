@@ -17,6 +17,16 @@ switch ($act) {
         $diemDi = $_GET['diemdi'];
         $diemDen = $_GET['diemden'];
         $ngayDi = $_GET['ngaydi'];
+
+        if(isset($_GET['ngayve'])&&($_GET['ngayve'])){
+            $_SESSION['ngayve'] = $_GET['ngayve'];
+        }
+
+        if(isset($_GET['khuhoi'])&&($_GET['khuhoi'] == 1)){
+            $ngayDi = $_SESSION['ngayve'];
+            unset($_SESSION['ngayve']);
+        }
+
         $loaiGhe = $_GET['loaighe'];
 
         $nguoiLon = $_GET['nguoilon'];

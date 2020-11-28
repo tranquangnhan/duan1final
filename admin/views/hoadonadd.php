@@ -54,7 +54,7 @@
                                            <label for=""><strong>Tên Khách Hàng</strong></label>
                                        </div>
                                        <div class="col-lg-9">
-                                           <input type="text" name="hotenkh" id="" class="form-control hotenkh" placeholder="Tên Khách Hàng" aria-describedby="helpId" required>
+                                           <input type="text" name="hotenkh" id="" class="form-control hotenkh" placeholder="Tên Khách Hàng" aria-describedby="helpId" >
                                        </div>
                                    </div>
                                    <div class="row mt-4">
@@ -77,7 +77,7 @@
                                            <label for=""><strong>Điện Thoại</strong></label>
                                        </div>
                                        <div class="col-lg-9">
-                                           <input type="number" name="dienthoai" id="" class="form-control dienthoai" placeholder="Số Điện Thoại" aria-describedby="helpId" required>
+                                           <input type="number" name="dienthoai" id="" class="form-control dienthoai" placeholder="Số Điện Thoại" aria-describedby="helpId" >
                                        </div>
                                    </div>
                                    <div class="row mt-4">
@@ -85,7 +85,7 @@
                                            <label for=""><strong>CMND/Passport</strong></label>
                                        </div>
                                        <div class="col-lg-9">
-                                           <input type="number" name="cmnd" id="" class="form-control cmnd" placeholder="CMND/Passport" aria-describedby="helpId" required>
+                                           <input type="number" name="cmnd" id="" class="form-control cmnd" placeholder="CMND/Passport" aria-describedby="helpId" >
                                        </div>
                                    </div>
                                    <div class="row mt-3 showve">
