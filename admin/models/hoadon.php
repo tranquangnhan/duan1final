@@ -21,21 +21,25 @@
         return result1(0,$sql); 
     }
     // admin add product
-    function addhoadon($hotenkh,$ngaydatve,$trangthai,$makh){
-        $sql = "INSERT INTO hoadon (hotenkh,ngaydatve,trangthai,idkh) VALUES 
-        ('{$hotenkh}','{$ngaydatve}','{$trangthai}','{$makh}')";
-        exec1($sql);
+    function addhoadon($idChuyenBay,$ngayDatVe,$trangThai,$tongTien){
+        $sql = "INSERT INTO hoadon (idchuyenbay,ngaydatve,trangthai,tongtien) VALUES 
+        ($idChuyenBay,'$ngayDatVe','$trangThai','$tongTien')";
+        return getLastId($sql);
     }
     // admin delete product
     function xoahoadon($id){
         $sql = "DELETE FROM hoadon WHERE id=".$id;
-        exec1($sql);
+        return exec1($sql);
     }
     //admin update sp
     function updatehoadon($id,$hotenkh,$ngaydatve,$trangthai,$makh){
             $sql = "UPDATE hoadon SET hotenKH='{$hotenkh}',ngaydatve='{$ngaydatve}', trangthai = '{$trangthai}', idkh= '{$makh}'
               WHERE id=".$id;
-        execute1($sql);  
+        return execute1($sql);  
     }
-
+    function addHoaDonChiTiet($lastId,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd){
+        $sql = "INSERT INTO hdchitiet (idhd,vitringoi,hangghe,giatien,tenkh,gioitinh,dienthoai,cmnd) VALUES 
+        ('$lastId','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd')";
+        return exec1($sql);
+    }
 ?>

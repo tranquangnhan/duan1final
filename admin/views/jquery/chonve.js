@@ -62,7 +62,6 @@ function ClickBtn() {
                 processData: false,
                 data: pushThemGhe,
                 success: function(response) {
-                    alert(response);
                     $("#kq2").html(JSON.parse(response).html);
                     ClickBtn()
                 }
@@ -73,11 +72,7 @@ function ClickBtn() {
 }
 ClickBtn()
 
-
-
-
-
-
+var arr = [];
 $("#tieptucthuong").click(function(e) {
     e.preventDefault();
     Swal.fire({
@@ -95,6 +90,21 @@ $("#tieptucthuong").click(function(e) {
                 'Chọn tiếp dữ liệu vé thường.',
                 'success'
             )
+
+            let idchuyenbay = $("#idcb").val();
+            $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
+                var idGhe = $(this);
+                idGhe = idGhe.html();
+                arr.push(idGhe);
+            });
+            //push
+            $.ajax({
+                type: "POST",
+                url: "controllers/ajax/chonghe.php",
+                data: { idghe: arr, Action: 'chonghe', hangghe: '1', idcb: idchuyenbay },
+                success: function(response) {}
+            });
+            // send data
             window.location = '?ctrl=hoadon&act=add';
         }
     })

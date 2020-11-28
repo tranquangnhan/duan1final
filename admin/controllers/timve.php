@@ -39,6 +39,7 @@ switch ($act) {
                     array_push($Array, showVeAdmin($motGhe['id']));
                 }
             }
+        }
             $Array = json_encode($Array);
             require_once "views/timveindex.php";
             echo '<script src="views/jquery/chonve.js"></script>';
@@ -58,7 +59,6 @@ switch ($act) {
             }
             echo '<script src="views/jquery/chonve.js"></script>';
 
-        }
         $Array = json_encode($Array);
         require_once "views/timveindex.php";
         break;
