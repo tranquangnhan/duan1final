@@ -1,10 +1,13 @@
 $(document).ready(function() {
     var dieukienchart = '';
-    var chk = true;
-    $('#form_baocao').on('submit',async function(event) {
+    var chk = true;  
+    $('#showthongke').click(async function (e) { 
+        e.preventDefault();        
+    // });  
+    // $('#form_baocao').on('submit',async function(event) {
         chk = true; 
-        $("#fcreen").addClass('fullcrenn');
-        event.preventDefault();
+        // $("#fcreen").addClass('fullcrenn');
+        // event.preventDefault();
         //form_baocao
         // lay du lieu tu form
         var kieuchart = $('#kieuchart').val();
@@ -13,9 +16,11 @@ $(document).ready(function() {
         var ngayketthuc1 = $('#ngayketthuc1').val();
         var ngaybatdau2 = $('#ngaybatdau2').val();
         var ngayketthuc2 = $('#ngayketthuc2').val();
+       // console.log('123123');
+  
         if (kieubaocao == '') {
             chk = false;
-            alert('nhap kieu bao cao');
+            alertify.error('Error message');
         } else if (kieuchart == '') {
             chk = false;
             alert('nhap kieu bieu do');
@@ -34,8 +39,9 @@ $(document).ready(function() {
             chk = false;
             alert('nhap ngay bat dau 2');
         }
+
         if (chk == true) {
-            console.log('check', chk);
+            //console.log('check', chk);
             // luu du lieu    
             let dataz = new FormData();
 
@@ -55,12 +61,13 @@ $(document).ready(function() {
                 processData: false,
                 data: dataz,
                 success : function(response) {
+                    // console.log('bd1', response.bd1);
+                    // console.log('kt1', response.kt1);
+                    // console.log('bd2', response.bd2);
+                    // console.log('kt2', response.kt2);
+                    // console.log('kieuchart', response.kieuchart);
+                    // console.log('kieu', response.kieubaocao);
                     // console.log('got',response.data1);
-                    // console.log('1', response.a);
-                    // console.log('2', response.b);
-                    // console.log('3', response.c);
-                    // console.log('4', response.d);
-                    // console.log(response.kieubaocao); = hang bay
                     if (response.kieubaocao == "hangbay") {
                         var hang = ['VietJect', 'VietnameairLight', 'BamBoo', 'Pacific']; // tao array hang bay
                     }
@@ -176,15 +183,11 @@ $(document).ready(function() {
             })     
                       
         }
-        // else {
-        //     alert('rỗng');
-        // }
     });
     $('#save_bt').click(function() {  
         $('#mychart').get(0).toBlob(function(blob) {
             saveAs(blob, 'chart_1.png');
         })
-        //console.log(dieukienchart);
         if (dieukienchart == 1) {
             $('#mychart2').get(0).toBlob(function(blob) {
                 saveAs(blob, 'chart_2.png');
