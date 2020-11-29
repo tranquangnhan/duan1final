@@ -28,14 +28,14 @@
   <link rel="stylesheet" href="views/css/long/home.css">
   <!-- end css -->
   <!-- include jquery -->
-    
+     <script src="views/jquery/jquery.js" type="text/javascript"></script>
     <script src="views/js/blogdetail.js" type="text/javascript"></script>
     <script src="views/js/home.js" type="text/javascript"></script>
     <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- end include jquery -->
 
-    <script src="views/jquery/jquery.js" type="text/javascript"></script>
+
 </head>
 <body>
     <div class="l-bt-fixed-to-top" id="bt-to-top">
