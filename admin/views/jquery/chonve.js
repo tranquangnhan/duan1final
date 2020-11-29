@@ -88,22 +88,7 @@ $("#tieptucthuong").click(function(e) {
 
     .then(async(result) => {
         if (result.isConfirmed == true) {
-            var arr = [];
-            let idchuyenbay = $("#idcb").val();
-            //lấy tất cả ghế đánh dấu
-            $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
-                var idGhe = $(this);
-                idGhe = idGhe.html();
-                arr.push(idGhe);
-            });
 
-            //push
-            await $.ajax({
-                type: "POST",
-                url: "controllers/ajax/chonghe.php",
-                data: { idghe: arr, Action: 'chonghe', hangghe: '1', idcb: idchuyenbay },
-                success: function(response) {}
-            });
             Swal.fire(
                 'Đã lưu!',
                 'Chọn tiếp dữ liệu vé thường.',
@@ -125,25 +110,42 @@ $("#tieptucthuong").click(function(e) {
                         data: checkKhuHoi,
                         success: async function(response) {
                             if (response.StatusCode == '1') {
+                                var arr = [];
+                                let idchuyenbay = $("#idcb").val();
+                                //lấy tất cả ghế đánh dấu
+                                $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
+                                    var idGhe = $(this);
+                                    idGhe = idGhe.html();
+                                    arr.push(idGhe);
+                                });
+
+                                //push
+                                await $.ajax({
+                                    type: "POST",
+                                    url: "controllers/ajax/chonghe.php",
+                                    data: { idghe: arr, Action: 'chonghe', hangghe: '1', idcb: idchuyenbay },
+                                    success: function(response) {}
+                                });
                                 window.location.href = ('index.php?' + response.urlve + '&khuhoi=1');
                             }
                             if (response.StatusCode == '0') {
                                 var arrkh = [];
                                 let idchuyenbaykh = $("#idcb").val();
+                                //lấy tất cả ghế đánh dấu
                                 $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
                                     var idGhe = $(this);
                                     idGhe = idGhe.html();
                                     arrkh.push(idGhe);
                                 });
+
                                 //push
                                 await $.ajax({
                                     type: "POST",
                                     url: "controllers/ajax/chonghe.php",
                                     data: { idghekh: arrkh, Action: 'chonghekhuhoi', hangghekh: '1', idcbkh: idchuyenbaykh },
-                                    success: function(response) {
-                                        window.location.href = ('?ctrl=hoadon&act=add');
-                                    }
+                                    success: function(response) {}
                                 });
+                                window.location.href = ('?ctrl=hoadon&act=add');
                             }
                         }
                     });

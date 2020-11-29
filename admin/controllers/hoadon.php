@@ -12,6 +12,7 @@
         case 'add':
             $showkh=  showkh();
             $showallkh = showallkh();
+
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showhdedit = showhdedit($_SESSION['idedit']);

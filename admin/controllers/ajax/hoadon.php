@@ -8,8 +8,9 @@
     {
         switch ($_POST['Action']) {
             case 'hoadon':
+              
                 $Array = array();
-                // hoá đơn 1 chiếu
+                // hoá đơn 1 chiều
                 $Array['hotenkh'] = explode(',',$_POST['hotenkh']);
 
                 $Array['gioitinh'] = explode(',',$_POST['gioitinh']);
