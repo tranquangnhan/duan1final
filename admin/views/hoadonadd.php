@@ -1,5 +1,5 @@
 <?php 
-//print_r($_SESSION) ?>
+print_r($_SESSION) ?>
 <div class="col-lg-9">
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">

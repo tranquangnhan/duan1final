@@ -57,7 +57,7 @@ $("#themhd").click(async function(e) {
                     icon: "success"
                 });
 
-                window.location.href = ('?ctrl=hoadon&act=index');
+                // window.location.href = ('?ctrl=hoadon&act=index');
             }
 
 

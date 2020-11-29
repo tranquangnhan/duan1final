@@ -9,17 +9,23 @@
                 $_SESSION['hangghe'] = $_POST['hangghe'];
                 return;
                 break;
-            case 'checkKhuHoi':
-                // $Array = array();
-                // if(isset($_SESSION['ngayve'])){
-                //     // $Array['ngayve'] = $_SESSION['ngayve'];
-                //     $currentQuery = $_GET;
-                //     $currentQuery['ngaydi'] = $_SESSION['ngayve'];
-                //     header('location: '.http_build_query($CurrentQuery).'') ;
-                // }else{
-                //     $Array['ngayve'] = 0;
-                // }
-                print_r($_SESSION['ngayve']);
+            case 'chonghekhuhoi':
+                $_SESSION['vitrighekh'] = $_POST['idghekh'];
+                $_SESSION['idchuyenbaykh'] = $_POST['idcbkh'];
+                $_SESSION['hangghekh'] = $_POST['hangghekh'];
+                return;
+                break;
+            case 'checkkhuhoi':
+                $Array = array();
+
+                if(isset($_SESSION['ngayve'])){
+                    $Array["StatusCode"] = '1';
+                    $Array['urlve'] = $_SESSION['urlve'];
+                }else{
+                    $Array["StatusCode"] = '0';
+                }
+                echo json_encode($Array);
+                unset($_SESSION['ngayve']);
                 return;
                 break;   
             default:

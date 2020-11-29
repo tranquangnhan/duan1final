@@ -10,24 +10,7 @@ async function chonVe(idChuyenBay) {
     });
     if (idChuyenBay) {
         Loading.close();
-        let checkKhuHoi = new FormData();
-
-        checkKhuHoi.append('Action', 'checkKhuHoi');
-        await $.ajax({
-            type: "POST",
-            url: "controllers/ajax/chonghe.php",
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: checkKhuHoi,
-            success: function(response) {
-                alert(response);
-                // if (response.ngayve == 0) {
-                //     window.location.href = ('?ctrl=timve&act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
-                // }
-            }
-        });
-
+        window.location.href = ('?ctrl=timve&act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
     }
 }
 
@@ -48,6 +31,7 @@ function ClickBtn() {
                 type: "POST",
                 url: "controllers/ajax/themghe.php",
                 cache: false,
+                dataType: 'JSON',
                 contentType: false,
                 processData: false,
                 data: pushThemGhe,
@@ -89,7 +73,7 @@ function ClickBtn() {
 }
 ClickBtn()
 
-var arr = [];
+// set session vé một chiều và vé khứ hồi
 $("#tieptucthuong").click(function(e) {
     e.preventDefault();
     Swal.fire({
@@ -100,29 +84,72 @@ $("#tieptucthuong").click(function(e) {
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Lưu!'
-    }).then((result) => {
+    })
+
+    .then(async(result) => {
         if (result.isConfirmed == true) {
+            var arr = [];
+            let idchuyenbay = $("#idcb").val();
+            //lấy tất cả ghế đánh dấu
+            $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
+                var idGhe = $(this);
+                idGhe = idGhe.html();
+                arr.push(idGhe);
+            });
+
+            //push
+            await $.ajax({
+                type: "POST",
+                url: "controllers/ajax/chonghe.php",
+                data: { idghe: arr, Action: 'chonghe', hangghe: '1', idcb: idchuyenbay },
+                success: function(response) {}
+            });
             Swal.fire(
                 'Đã lưu!',
                 'Chọn tiếp dữ liệu vé thường.',
                 'success'
             )
 
-            let idchuyenbay = $("#idcb").val();
-            $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
-                var idGhe = $(this);
-                idGhe = idGhe.html();
-                arr.push(idGhe);
-            });
-            //push
-            $.ajax({
-                type: "POST",
-                url: "controllers/ajax/chonghe.php",
-                data: { idghe: arr, Action: 'chonghe', hangghe: '1', idcb: idchuyenbay },
-                success: function(response) {}
-            });
-            // send data
-            window.location = '?ctrl=hoadon&act=add';
+            .then(async(result) => {
+                if (result.isConfirmed == true) {
+                    let checkKhuHoi = new FormData();
+                    checkKhuHoi.append('Action', 'checkkhuhoi');
+
+                    await $.ajax({
+                        type: "POST",
+                        url: "controllers/ajax/chonghe.php",
+                        dataType: 'JSON',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: checkKhuHoi,
+                        success: async function(response) {
+                            if (response.StatusCode == '1') {
+                                window.location.href = ('index.php?' + response.urlve + '&khuhoi=1');
+                            }
+                            if (response.StatusCode == '0') {
+                                var arrkh = [];
+                                let idchuyenbaykh = $("#idcb").val();
+                                $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
+                                    var idGhe = $(this);
+                                    idGhe = idGhe.html();
+                                    arrkh.push(idGhe);
+                                });
+                                //push
+                                await $.ajax({
+                                    type: "POST",
+                                    url: "controllers/ajax/chonghe.php",
+                                    data: { idghekh: arrkh, Action: 'chonghekhuhoi', hangghekh: '1', idcbkh: idchuyenbaykh },
+                                    success: function(response) {
+                                        window.location.href = ('?ctrl=hoadon&act=add');
+                                    }
+                                });
+                            }
+                        }
+                    });
+
+                }
+            })
         }
     })
 });
