@@ -18,11 +18,11 @@
             case 'checkkhuhoi':
                 $Array = array();
 
-                if(isset($_SESSION['ngayve'])){
+                if(isset($_SESSION['ngayve'])&&($_SESSION['ngayve'])){
                     $Array["StatusCode"] = '1';
-                    $Array['urlve'] = $_SESSION['urlve'];
+                    $Array['urlve'] = $_SESSION['urlve']; // chuyến đi
                 }else{
-                    $Array["StatusCode"] = '0';
+                    $Array["StatusCode"] = '0'; // chuyến về
                 }
                 echo json_encode($Array);
                 unset($_SESSION['ngayve']);

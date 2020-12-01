@@ -60,7 +60,7 @@
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
                     $idChuyenBay = updateve($_GET['idedit'],$idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
                     
-                    updateGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay);
+                    updateGiaTien($giaVeThuong,$giaVeThuongGia,$idChuyenBay);
 
                     $_SESSION['idchuyenbay'] = $_GET['idedit'];
 
@@ -70,7 +70,7 @@
                     
                     addTTVe($idMayBay,$idChuyenBay);
                     
-                    addGiaTien($giaVeThuongGia,$giaVeThuong,$idChuyenBay);
+                    addGiaTien($giaVeThuong,$giaVeThuongGia,$idChuyenBay);
                     $_SESSION['idchuyenbay'] = $idChuyenBay;
                 }
                 

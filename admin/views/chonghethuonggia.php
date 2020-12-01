@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-lg-5 pr-2 mr-2">
                         <div class="form-group">
-                            <input type="submit" name="them" id="xacnhan" value="Sửa Chỗ Ngồi"
+                            <input type="submit" name="them" id="tieptucthuonggia" value="Sửa Chỗ Ngồi"
                                 class="btn btn-submit text-center">
                         </div>
                     </div>

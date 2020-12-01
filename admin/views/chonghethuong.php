@@ -6,7 +6,7 @@
                         <div class="title cl-te-black fa-w-12 fz-12vw fw-700 opacity-0p7">Sửa Chổ Ngồi</div>
                         <div class="l-chu-thich">
                             <div class="row">
-                                <input type="hidden" id="idcb" value="<?php if($_GET['idcb']) echo $_GET['idcb'];?>">
+                                <input type="hidden" id="idcb" value="<?=$idChuyenBay?>">
                                 <div class="l-box-room-bg-none">
                                     <div class="l-color-thuong-gia l-css-box-color d-inline-block"></div>
                                     <div class="l-noi-dung-chuthich d-inline-block l-w-70pt l-mr-l-3pt fz-1p1vw">Hạng Thương gia trống</div>
