@@ -8,6 +8,11 @@ body {
     float: right!important;
 }
 
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 
 /* đây thêm box shadow chổ header */
 
@@ -992,7 +997,6 @@ a:hover {
     background-color: white;
 }
 
-
 #trove {
     display: none;
 }
@@ -1387,6 +1391,7 @@ a:hover {
 .h-123px {
     height: 123px;
 }
+
 .pd-r-0 {
     padding-right: 0px;
 }
@@ -1423,7 +1428,9 @@ a:hover {
     height: 100%;
 }
 
+
 /* css form search */
+
 .l-search-filter {
     height: auto;
     background-color: white;
@@ -1452,11 +1459,11 @@ a:hover {
     display: inline-block;
 }
 
-.awselect.animate2 > .bg {
-    box-shadow:0 2px 5px 0 rgba(23,35,44,0.24),0 -1px 5px 0 rgba(23,35,44,0.2)!important;
+.awselect.animate2>.bg {
+    box-shadow: 0 2px 5px 0 rgba(23, 35, 44, 0.24), 0 -1px 5px 0 rgba(23, 35, 44, 0.2)!important;
 }
 
-.front_face{
+.front_face {
     padding: 10px 20px!important;
 }
 
@@ -1464,7 +1471,7 @@ a:hover {
     padding: 0px!important;
 }
 
-.awselect .back_face ul li a { 
+.awselect .back_face ul li a {
     padding: 5px 20px!important;
 }
 
@@ -1482,6 +1489,7 @@ a:hover {
 
 .placeholder-icon {
     font-family: 'fontawesome';
+<<<<<<< HEAD
 }
 
 .l-sel-tren {
@@ -1542,4 +1550,6 @@ a:hover {
 
 .l-w-26pt {
     width: 26.75%;
+=======
+>>>>>>> d365e0f2eebc33c40d3c6c7f7a276350ece8643f
 }

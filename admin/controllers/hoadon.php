@@ -12,6 +12,7 @@
         case 'add':
             $showkh=  showkh();
             $showallkh = showallkh();
+
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showhdedit = showhdedit($_SESSION['idedit']);
@@ -28,9 +29,6 @@
                 $idChuyenBay = $_SESSION['idchuyenbay'];
                 $hangGhe = $_SESSION['hangghe'];
 
-               
-                $arrHoTen = array();
-                array_push($arrHoTen,$_POST['hotenkh']);
 
                 if($hangGhe == 1){
                     $giaTien = showGiaVe($_SESSION['idchuyenbay'])['giavethuong'];

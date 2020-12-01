@@ -17,6 +17,25 @@ switch ($act) {
         $diemDi = $_GET['diemdi'];
         $diemDen = $_GET['diemden'];
         $ngayDi = $_GET['ngaydi'];
+  
+        $urlve = http_build_query($_GET);
+
+        if(isset($_GET['ngayve'])&&($_GET['ngayve'])){
+            $_SESSION['diemdi'] = $_GET['diemdi'];
+            $_SESSION['diemden'] = $_GET['diemden'];
+            $_SESSION['ngayve'] = $_GET['ngayve'];
+            $_SESSION['urlve'] = $urlve;
+        }
+
+        if(isset($_GET['khuhoi'])&&($_GET['khuhoi'] == 1)){
+            $ngayDi = $_SESSION['ngayve'];
+            $diemDi = $_SESSION['diemden'];
+            $diemDen = $_SESSION['diemdi'];
+            unset($_SESSION['ngayve']);
+            unset($_SESSION['diemdi']);
+            unset($_SESSION['diemden']);
+        }
+
         $loaiGhe = $_GET['loaighe'];
 
         $nguoiLon = $_GET['nguoilon'];
@@ -45,6 +64,7 @@ switch ($act) {
             echo '<script src="views/jquery/chonve.js"></script>';
         break;
         case 'chonve':
+            $idChuyenBay = $_GET['idcb'];
             if(isset($_GET['idcb'])&&($_GET['idcb'])){
                 if(isset($_GET['loaighe'])&&($_GET['loaighe'])==1){
                     $soGheThuong = getGhe($_GET['idcb'],'ttghethuong');
@@ -56,11 +76,10 @@ switch ($act) {
                 }
             }else{
                 echo "không có chuyến bay này !";
-            }
-            echo '<script src="views/jquery/chonve.js"></script>';
-
+            } 
         $Array = json_encode($Array);
         require_once "views/timveindex.php";
+        echo '<script src="views/jquery/chonve.js"></script>';
         break;
     case 'chonve':
         if (isset($_GET['idcb']) && ($_GET['idcb'])) {

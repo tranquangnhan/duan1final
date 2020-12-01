@@ -24,6 +24,7 @@
     function addhoadon($idChuyenBay,$ngayDatVe,$trangThai,$tongTien){
         $sql = "INSERT INTO hoadon (idchuyenbay,ngaydatve,trangthai,tongtien) VALUES 
         ($idChuyenBay,'$ngayDatVe','$trangThai','$tongTien')";
+      
         return getLastId($sql);
     }
     // admin delete product
@@ -40,6 +41,6 @@
     function addHoaDonChiTiet($lastId,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd){
         $sql = "INSERT INTO hdchitiet (idhd,vitringoi,hangghe,giatien,tenkh,gioitinh,dienthoai,cmnd) VALUES 
         ('$lastId','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd')";
-        return exec1($sql);
+       return exec1($sql);
     }
 ?>
