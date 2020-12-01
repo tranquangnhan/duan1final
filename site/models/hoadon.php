@@ -25,11 +25,11 @@ function checkinonl($macho){
         $sql ="select * from sanbay  where idsanbay = '$id'";
         return result1(1,$sql)['tensanbay'];
     } 
-    function showiddiemdi($id){
+    function showiddiemdi_($id){
         $sql ="select * from tuyenduong  where id = '$id'";
         return result1(1,$sql)['iddiemdi'];
     } 
-    function showiddiemden($id){
+    function showiddiemden_($id){
         $sql ="select * from tuyenduong  where id = '$id'";
         return result1(1,$sql)['iddiemden'];
     } 

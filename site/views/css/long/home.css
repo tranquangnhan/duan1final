@@ -90,8 +90,6 @@ header ul.nav-menu {
     opacity: 1;
     visibility: inherit;
     z-index: 20;
-    background-image: url("../../../views/img/hochiminh.jpeg");
-    height: 700px;
 }
 
 .form-booking {
@@ -1489,7 +1487,6 @@ a:hover {
 
 .placeholder-icon {
     font-family: 'fontawesome';
-<<<<<<< HEAD
 }
 
 .l-sel-tren {
@@ -1550,6 +1547,9 @@ a:hover {
 
 .l-w-26pt {
     width: 26.75%;
-=======
->>>>>>> d365e0f2eebc33c40d3c6c7f7a276350ece8643f
+}
+
+.bn_copy {
+    background-image: url("../../../views/img/hochiminh.jpeg");
+    height: 700px;
 }

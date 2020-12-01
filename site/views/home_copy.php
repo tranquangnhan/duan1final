@@ -1,5 +1,5 @@
 <div class="box_header">
-    <div class="baner-gb position-relative">
+    <div class="baner-gb bn_copy position-relative">
         <div class="l-banner-content">
             <div class="l-tu">SGN TO SBM</div>
         </div>      
