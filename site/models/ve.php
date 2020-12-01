@@ -80,4 +80,7 @@ function showsanbay1()
     $sql = "select * from sanbay ";
     return result1(0, $sql);
 }
-?>
+function showvekm(){
+    $sql = "SELECT * FROM giave WHERE giamgia";
+    return result1(0, $sql);
+}

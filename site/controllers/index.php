@@ -41,7 +41,6 @@ if (isset($_GET['act'])) {
             require_once "views/contact.php";
             break;
         case 'danhsachve':   // để sửa css
-            $showVe = showVe();
             $data = showDiemDi2();
             $data1 = showDiemDen2();
             require_once "views/danhsachve.php";
@@ -231,6 +230,7 @@ if (isset($_GET['act'])) {
 
 
             break;
+            
         case 'datlaimk':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
@@ -257,6 +257,10 @@ if (isset($_GET['act'])) {
             }
             require_once "views/datlaimk.php";
             break;
+            case 'khuyenmai':
+                $vekhuyenmai=showvekm();
+                require_once "views/dsvekhuyenmai.php";
+                break;
         case 'userprofile':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';

@@ -1,8 +1,8 @@
 <?php
    
 function checkinonl($macho){
-        $sql = "select * from hdchitiet where id = $macho";
-        return result1(1,$sql);
+        $sql = "select * from hdchitiet where id = '$macho'";
+        return result1(0,$sql);
     }
  
     function showidtuyenduong($id){
@@ -21,6 +21,17 @@ function checkinonl($macho){
         $sql ="select * from chuyenbay  where id = '$id'";
         return result1(1,$sql)['gioden'];
     } 
-
+    function showtensanbay($id){
+        $sql ="select * from sanbay  where idsanbay = '$id'";
+        return result1(1,$sql)['tensanbay'];
+    } 
+    function showiddiemdi($id){
+        $sql ="select * from tuyenduong  where id = '$id'";
+        return result1(1,$sql)['iddiemdi'];
+    } 
+    function showiddiemden($id){
+        $sql ="select * from tuyenduong  where id = '$id'";
+        return result1(1,$sql)['iddiemden'];
+    } 
 
 ?>
