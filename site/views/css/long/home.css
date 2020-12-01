@@ -90,6 +90,8 @@ header ul.nav-menu {
     opacity: 1;
     visibility: inherit;
     z-index: 20;
+    background-image: url("../../../views/img/hochiminh.jpeg");
+    height: 700px;
 }
 
 .form-booking {
@@ -1430,9 +1432,14 @@ a:hover {
 /* css form search */
 
 .l-search-filter {
-    background-color: white;
     height: auto;
+    background-color: white;
+    margin-top: -200px;
     padding: 40px;
+    position: relative;
+    padding-top: 20px;
+    z-index: 20;
+    box-shadow: 0px 0px 32px -8px #858585;
 }
 
 .l-div-tren {
@@ -1448,7 +1455,7 @@ a:hover {
 }
 
 .sel {
-    width: 240px;
+    width: 20%;
     display: inline-block;
 }
 
@@ -1482,4 +1489,67 @@ a:hover {
 
 .placeholder-icon {
     font-family: 'fontawesome';
+<<<<<<< HEAD
+}
+
+.l-sel-tren {
+    width: 140px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.l-div-hangchon {
+    position: relative;
+    vertical-align: top;
+    padding: 10px 20px;
+}
+
+.l-box-qlity {
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    background: white;
+    z-index: 100;
+    padding: 15px;
+    display: none;
+}
+
+#l_show_chon_ve {
+    cursor: pointer;
+}
+
+.l-bt-search {
+    padding: 10px;
+    border: none;
+    background: #F44336;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    width: 15%;
+}
+
+.l-a-search {
+    vertical-align: top;
+    padding: 12px 0px;
+    cursor: pointer;
+}
+
+.l-banner-content {
+    color: #d7d7d7;
+    width: 100%;
+    text-align: center;
+    font-size: 90px;    
+    padding-top: 15%;
+    font-weight: 600;
+}
+
+.display_none {
+    display: none;
+}
+
+.l-w-26pt {
+    width: 26.75%;
+=======
+>>>>>>> d365e0f2eebc33c40d3c6c7f7a276350ece8643f
 }

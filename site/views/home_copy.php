@@ -1,59 +1,45 @@
 <div class="box_header">
     <div class="baner-gb position-relative">
-        <div class="owl-carousel owl-theme owl-loaded" id="owl-1">
-            <div class="owl-stage-outer">
-                <div class="owl-stage">
-                    <div class="owl-item">
-                        <div class="pn1-img"></div>
-                        <img src="views/img/panner1.jpg" alt="">
-                        <div class="anim-pn1">
-                            <div class="anim1-pn1 animated fadeInDownBig light-hight-50px">Chúng tôi <br> Muốn</div>
-                            <div class="animate-delay-0p4s anim2-pn1 animated fadeInRightBig">Khách hàng / Nhanh chóng /
-                                Đẳng cấp
-                            </div>
-                            <div class="animate-delay-0p7s anim3-pn1 animated fadeInRightBig">Mọi thứ bạn cần. Ở đâu rẻ
-                                hơn Travelz hoàn tiền.
-                            </div>
-                            <a href="#" class="">
-                                <div class="animate-delay-0p9s anim4-pn1 animated fadeInRightBig">Đặt vé hôm nay</div>
-                            </a>
-                        </div>
-                    </div>  
-                    <div class="owl-item">
-                        <div class="pn2-img"></div>
-                        <img src="views/img/panner2.jpg" alt="">
-                        <div class="anim-pn2">
-                            <div class="anim1-pn2 animated fadeInUp">All Day Happy</div>
-                            <div class="animate-delay-0p4s anim2-pn2 animated fadeInUp"><img
-                                        src="views/img/5saodiscount.png" alt=""></div>
-                            <div class="animate-delay-1s anim3-pn2 animated fadeInUp">travelz@gmail.com <br> +1900 333
-                                019 <br> Tuần Lễ Vàng muôn vàng giảm giá
-                            </div>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="pn2-img"></div>
-                        <img src="views/img/panner3.jpg" alt="">
-                        <div class="anim-pn3">
-                            <div class="anim1-pn3 animated fadeInDown">plans your trip</div>
-                            <div class="animate-delay-0p7s anim2-pn3 animated fadeInUp"><img
-                                        src="views/img/86311-Holidays-today.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="l-banner-content">
+            <div class="l-tu">SGN TO SBM</div>
+        </div>      
     </div>
 </div>
 <div class="background-light-grey">
     <div class="container">
         <div id="l-search-filter" class="l-search-filter">
             <div class="l-div-tren">
-                          
+                <div class="l-sel-tren">
+                    <select name="" id="select_awe_tren-1" class="selectawe-tren l-sl-option-tren" data-callback="my_callback" data-placeholder="Khứ Hồi">
+                        <option value="khuhoi" id="khuhoi">Khứ Hồi</option>
+                        <option value="motchieu" id="motchieu">Một Chiều</option>
+                    </select>         
+                </div>     
+                <div class="l-sel-tren">
+                    <select name="" id="select_awe_tren-2" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Loại Ghế">
+                        <option value="0"><i class="fas fa-fighter-jet"></i>Phổ thông</option>
+                        <option value="1"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                    </select>         
+                </div>  
+                <div class="l-sel-tren l-div-hangchon">
+                    <div id="l_show_chon_ve">Người lớn </div>
+                    <div class="l-box-qlity" id="l-box-qlity">
+                        <div class="l-hang-chon">
+                            <div class="l-left-hang-chon">
+                                <label for="male">Người lớn</label>
+                                 <input type="number" name="" id="" value="">
+                            </div>
+                            <div class="l-right-hang-chon"><span class="number" id="qlity-nguoilon"></span></div>
+                        </div>
+                    </div>      
+                </div>   
+                <div class="l-sel-tren">
+                    
+                </div>       
             </div>
-            <div class="l-div-duoi">
+            <div class="l-div-duoi khuhoi">
                 <div class="sel">
-                    <select name="food_selector" class="selectawe" data-placeholder="TP Hồ Chí Minh (SGN)">
+                    <select name="" id="select_awe_1" class="selectawe" data-placeholder="TP Hồ Chí Minh (SGN)">
                         <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
                         <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
                         <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
@@ -61,7 +47,7 @@
                     </select>
                 </div>  
                 <div class="sel">
-                    <select name="food_selector" class="selectawe" data-placeholder="Đến?">
+                    <select name="" id="select_awe_2" class="selectawe" data-placeholder="Đến?">
                         <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
                         <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
                         <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
@@ -69,13 +55,37 @@
                     </select>
                 </div>
                 <div class="sel verticle-top">
-                    <input type="text" name="ngaydi" class="l-input l-date placeholder-icon" id="calendar" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
+                    <input type="text" name="khuhoi_ngaydi" class="l-input l-date placeholder-icon" id="khuhoi_ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
                 <div class="sel verticle-top">
-                    <input type="text" name="ngayve" class="l-input l-date placeholder-icon" id="calendar_2" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
+                    <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
                 </div>
+                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
+            </div>      
+            <div class="l-div-duoi motchieu display_none ">
+                <div class="sel l-w-26pt">
+                    <select name="" id="select_awe_1" class="selectawe" data-placeholder="TP Hồ Chí Minh (SGN)">
+                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
+                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
+                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
+                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    </select>
+                </div>  
+                <div class="sel l-w-26pt">
+                    <select name="" id="select_awe_2" class="selectawe" data-placeholder="Đến?">
+                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
+                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
+                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
+                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    </select>
+                </div>
+                <div class="sel verticle-top l-w-26pt">
+                    <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
+                </div>
+                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
             </div>       
-        </div>          
+        </div>      
+            
     </div>
 </div>
 <div class="box_main background-light-grey">

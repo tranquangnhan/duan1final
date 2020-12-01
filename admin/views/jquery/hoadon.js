@@ -45,6 +45,7 @@ $("#themhd").click(async function(e) {
         processData: false,
         data: form,
         success: function(response) {
+            alert(response)
             if (response.StatusCode == 1) {
                 Loading.close();
                 Swal.fire({
