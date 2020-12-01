@@ -32,9 +32,9 @@
     <script src="views/js/blogdetail.js" type="text/javascript"></script>
     <script src="views/js/home.js" type="text/javascript"></script>
     <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- end include jquery -->
+   
 </head>
 <body>
     <div class="l-bt-fixed-to-top" id="bt-to-top">

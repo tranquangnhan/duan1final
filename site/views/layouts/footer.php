@@ -112,9 +112,20 @@
   <script type="text/javascript" src="views/awesome-select-master/package/js/awselect.js"></script>
   <script>
     $(document).ready(function(){ 
-        $('select').awselect();      
-        $("#calendar").datepicker();
-        $("#calendar_2").datepicker();
+      $('.selectawe-tren').awselect({
+        background: "none",
+      });
+        $('.selectawe').awselect();      
+        $("#calendar").datepicker({
+          duration: "fast",
+          showAnim: "show", 
+          showOptions: {direction: "up"} 
+        });
+        $("#calendar_2").datepicker({
+          duration: "fast",
+          showAnim: "show", 
+          showOptions: {direction: "up"} 
+        });
     });
   </script>
   <!-- select awesome js -->

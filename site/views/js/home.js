@@ -48,12 +48,11 @@ $(document).ready(function() {
     $("#id-nhieudiemden").click(function() {
         $("this").removeClass("background-main-color");
     });
-    // $( ".l-box-ud" ).hover(
-    //   function() {
-    //     $(".bt-datve ").show();
-    //   }, function(){
-    //   $(".bt-datve").hide();
-    // });
+
+    $('#l_show_chon_ve').click(function() {
+        $("#l-box-qlity").toggle();
+    });
+
     
 });
 
@@ -75,4 +74,19 @@ function openCity(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 window.onload = function() {
     document.getElementById("defaultOpen").click();
+}
+
+// lay du lieu cua option
+function my_callback(value){
+    if (value == "khuhoi") {
+        $('.motchieu').addClass("display_none");
+        $('.khuhoi').removeClass("display_none");
+    } else if (value == "motchieu") {
+        $('.motchieu').removeClass("display_none");
+        $('.khuhoi').addClass("display_none");
+    }
+}
+// lay du lieu của loại ghế
+function my_callback_2(value){
+    console.log("loại ghế " + value)
 }
