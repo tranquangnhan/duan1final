@@ -192,7 +192,6 @@ $("#tieptucthuonggia").click(function(e) {
                         processData: false,
                         data: checkKhuHoi,
                         success: async function(response) {
-                            alert(response.StatusCode);
                             if (response.StatusCode == '1') {
                                 var arr = [];
                                 let idchuyenbay = $("#idcb").val();
