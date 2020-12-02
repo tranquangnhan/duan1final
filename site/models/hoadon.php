@@ -25,7 +25,7 @@ function checkinonl($macho){
         $sql ="select * from sanbay  where idsanbay = '$id'";
         return result1(1,$sql)['tensanbay'];
     } 
-    function showiddiemdi_($id){
+    function showiddiemdi_($id){ // t thêm dấu sếp gạch để sửa tạm thôi nhé
         $sql ="select * from tuyenduong  where id = '$id'";
         return result1(1,$sql)['iddiemdi'];
     } 

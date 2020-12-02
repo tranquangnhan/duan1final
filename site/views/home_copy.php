@@ -1,7 +1,9 @@
 <div class="box_header">
     <div class="baner-gb bn_copy position-relative">
         <div class="l-banner-content">
-            <div class="l-tu">SGN TO SBM</div>
+            <div class="l-tu display-inlineblock">SGN</div>
+            <div class="display-inlineblock">TO</div>
+            <div class="l-den display-inlineblock">SBM</div>
         </div>      
     </div>
 </div>
@@ -10,7 +12,7 @@
         <div id="l-search-filter" class="l-search-filter">
             <div class="l-div-tren">
                 <div class="l-sel-tren">
-                    <select name="" id="select_awe_tren-1" class="selectawe-tren l-sl-option-tren" data-callback="my_callback" data-placeholder="Khứ Hồi">
+                    <select name="" id="select_awe_tren-1" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_1" data-placeholder="Khứ Hồi">
                         <option value="khuhoi" id="khuhoi">Khứ Hồi</option>
                         <option value="motchieu" id="motchieu">Một Chiều</option>
                     </select>         
@@ -25,12 +27,47 @@
                     <div id="l_show_chon_ve">Người lớn </div>
                     <div class="l-box-qlity" id="l-box-qlity">
                         <div class="l-hang-chon">
-                            <div class="l-left-hang-chon">
-                                <label for="male">Người lớn</label>
-                                 <input type="number" name="" id="" value="">
+                            <div class="l-left-hang-chon display-inlineblock">
+                                <div class="l-title-hangchon">
+                                    Người Lớn
+                                </div>
                             </div>
-                            <div class="l-right-hang-chon"><span class="number" id="qlity-nguoilon"></span></div>
+                            <div class="l-right-hang-chon display-inlineblock">
+                                <div class="d-flex he-20px">
+                                    <i class="fas fa-minus light-hight-10px l-minus" id="l-minus-nguoilon"></i>
+                                    <input class="bg-none border-none input_qlity text-center" id="nguoilon" name="nguoilon" type="number" value="1" placeholder="1">
+                                    <i class="fas fa-plus light-hight-10px l-plus l-plus_hover" id="l-plus-nguoilon"></i>
+                                </div>
+                            </div>
                         </div>
+                        <div class="l-hang-chon">
+                            <div class="l-left-hang-chon display-inlineblock">
+                                <div class="l-title-hangchon">
+                                    Trẻ em (Dưới 2 tuổi ngồi cùng)
+                                </div>
+                            </div>
+                            <div class="l-right-hang-chon display-inlineblock">
+                                <div class="d-flex he-20px">
+                                    <i class="fas fa-minus light-hight-10px l-minus" id="l-minus-beduoi2"></i>
+                                    <input class="bg-none border-none input_qlity text-center" id="beduoi2" name="beduoi2" type="number" placeholder="0">
+                                    <i class="fas fa-plus light-hight-10px l-plus l-plus_hover" id="l-plus-beduoi2"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-hang-chon margin-0px">
+                            <div class="l-left-hang-chon display-inlineblock">
+                                <div class="l-title-hangchon">
+                                    Trẻ em (Ngồi riêng)
+                                </div>
+                            </div>
+                            <div class="l-right-hang-chon display-inlineblock">
+                                <div class="d-flex he-20px">
+                                    <i class="fas fa-minus light-hight-10px l-minus" id="l-minus-betren2"></i>
+                                    <input class="bg-none border-none input_qlity text-center" id="betren2" name="betren2" type="number" placeholder="0">
+                                    <i class="fas fa-plus light-hight-10px l-plus l-plus_hover" id="l-plus-betren2"></i>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>      
                 </div>   
                 <div class="l-sel-tren">
@@ -39,19 +76,19 @@
             </div>
             <div class="l-div-duoi khuhoi">
                 <div class="sel">
-                    <select name="" id="select_awe_1" class="selectawe" data-placeholder="TP Hồ Chí Minh (SGN)">
-                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
-                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
-                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
-                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    <select name="" id="select_awe_1" class="selectawe" data-callback="my_callback_tu" data-placeholder="Từ">
+                        <option value="SGN">TP Hồ Chí Minh (SGN)</option>
+                        <option value="BMV">TP Buông Ma Thuột (BMV)</option>
+                        <option value="VCA">TP Cần Thơ (VCA)</option>
+                        <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>  
                 <div class="sel">
-                    <select name="" id="select_awe_2" class="selectawe" data-placeholder="Đến?">
-                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
-                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
-                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
-                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    <select name="" id="select_awe_2" class="selectawe" data-callback="my_callback_den" data-placeholder="Đến">
+                        <option value="SGN">TP Hồ Chí Minh (SGN)</option>
+                        <option value="BMV">TP Buông Ma Thuột (BMV)</option>
+                        <option value="VCA">TP Cần Thơ (VCA)</option>
+                        <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>
                 <div class="sel verticle-top">
@@ -64,19 +101,19 @@
             </div>      
             <div class="l-div-duoi motchieu display_none ">
                 <div class="sel l-w-26pt">
-                    <select name="" id="select_awe_1" class="selectawe" data-placeholder="TP Hồ Chí Minh (SGN)">
-                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
-                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
-                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
-                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    <select name="" id="select_awe_1_motchieu" class="selectawe" data-callback="my_callback_tu_motchieu" data-placeholder="Từ">
+                    <option value="HCM">TP Hồ Chí Minh (SGN)</option>
+                    <option value="BMV">TP Buông Ma Thuột (SGN)</option>
+                    <option value="VCA">TP Cần Thơ (VCA)</option>
+                    <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>  
                 <div class="sel l-w-26pt">
-                    <select name="" id="select_awe_2" class="selectawe" data-placeholder="Đến?">
-                        <option value="hcm"><i class="fas fa-fighter-jet"></i>TP Hồ Chí Minh (SGN)</option>
-                        <option value="soctrang"><i class="fas fa-fighter-jet"></i>TP Sóc Trăng (SGN)</option>
-                        <option value="hanoi"><i class="fas fa-fighter-jet"></i>TP Hà Nội (SHN)</option>
-                        <option value="rachgia"><i class="fas fa-fighter-jet"></i>TP Rạch Giá (SGR)</option>
+                    <select name="" id="select_awe_2_motchieu" class="selectawe" data-callback="my_callback_den_motchieu" data-placeholder="Đến?">
+                    <option value="HCM">TP Hồ Chí Minh (SGN)</option>
+                    <option value="BMV">TP Buông Ma Thuột (SGN)</option>
+                    <option value="VCA">TP Cần Thơ (VCA)</option>
+                    <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>
                 <div class="sel verticle-top l-w-26pt">
