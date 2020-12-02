@@ -19,8 +19,11 @@ $(document).ready(function() {
         center: true,
     });
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 30) {
+        if ($(this).scrollTop() > 70) {
             $('#l-menu-fixed').show();
+            //$('#l-menu-fixed').fadeIn(600);
+            $('#menu-main-fixed li a').css("color", "#494949"); 
+            
         } else {
             $('#l-menu-fixed').hide();
         }
@@ -135,6 +138,7 @@ $(document).ready(function() {
 
     // ngày đi
     $("#khuhoi_ngaydi").datepicker({
+        dateFormat: 'dd-MM-yy',
         minDate: '0d',
         duration: "fast",
         showAnim: "show", 
@@ -152,7 +156,7 @@ $(document).ready(function() {
     });
     // ngày về
     $("#khuhoi_ngayve").datepicker({
-        //minDate: ngaydi_khuhoi,
+        dateFormat: 'dd-MM-yy',
         duration: "fast",
         showAnim: "show", 
         showOptions: {direction: "up"}, 

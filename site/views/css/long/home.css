@@ -1014,14 +1014,6 @@ a:hover {
     margin: 30px;
 }
 
-.header-output-fixed {
-    position: relative;
-    z-index: 1000;
-    width: 100%;
-    background-color: white;
-    opacity: 1;
-}
-
 .l-bt-fixed-to-top {
     position: fixed;
     bottom: 25px;
@@ -1214,9 +1206,7 @@ a:hover {
     position: relative;
     z-index: 1000;
     width: 100%;
-    background-color: white;
     opacity: 1;
-    box-shadow: 0px 0px 32px -8px #858585;
 }
 
 .l-bt-fixed-to-top {
@@ -1653,4 +1643,12 @@ input[type=number] {
     left: 0;
     background: none;
     opacity: 0.1;
+}
+
+.bg-out-op-fixed {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    box-shadow: 0px 0px 32px -8px #858585;
 }

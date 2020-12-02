@@ -1,0 +1,19 @@
+header {
+    width: 100%;
+    position: relative;
+    z-index: 30;
+    box-shadow: 0px 0px 32px -8px #858585;
+    padding: 0px;
+}
+.navbar-nav>li>a {
+    font-weight: bold;
+    color: #000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+    opacity: 0.7;
+}
+
+.header-output-fixed {
+    background-color: white;
+}

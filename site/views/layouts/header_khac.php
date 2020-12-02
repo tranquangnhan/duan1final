@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
   
   <link rel="stylesheet" href="views/css/long/home.css">
+  <link rel="stylesheet" href="views/css/long/home_khac.css">
   <!-- end css -->
   <!-- include jquery -->
      <script src="views/jquery/jquery.js" type="text/javascript"></script>
@@ -44,7 +45,7 @@
         <div class="background-blue-color pd-tb-2px">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm d-none d-sm-block text-white line_h_28">Đẳng cấp là đây</div>
+                    <div class="col-sm d-none d-sm-block text-white line_h_28">MỘT PHÚT LÀ XONG</div>
                     <div class="col-sm">
                         <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
                             <li class="list-inline-item"><a class="facebook text-white" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>

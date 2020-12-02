@@ -15,16 +15,22 @@ include_once '../lib/myfunctions.php';
 require_once "models/loaihang.php";
 require_once "models/sanpham.php";
 require_once "models/blog.php";
-require_once "views/layouts/header.php";
+//require_once "views/layouts/header.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
 require_once "models/hoadon.php";
 
-
-require_once "views/layouts/header.php";
 $showAllSanBay = showAllSanBay();
+$act = 'home';
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
+
+    if ($act == 'home' || $act == 'home_copy') {
+        require_once "views/layouts/header_home.php";
+    } else {
+        require_once "views/layouts/header_khac.php";
+    }   
+
     switch ($act) {
         case 'home':
             $blog = gettwoblog();

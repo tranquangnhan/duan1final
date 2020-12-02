@@ -5,7 +5,7 @@
                 <div class="bg-white-op"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm d-none d-sm-block text-white line_h_28">Đẳng cấp là đây</div>
+                        <div class="col-sm d-none d-sm-block text-white line_h_28">MỘT PHÚT LÀ XONG</div>
                         <div class="col-sm">
                             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
                                 <li class="list-inline-item"><a class="facebook text-white" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -77,6 +77,7 @@
                 </div>
             </div>
             <div class="header-output-fixed" id="l-menu-fixed">
+                <div class="bg-out-op-fixed"></div>
                 <div class="container header-in">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-3">
@@ -85,7 +86,7 @@
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9  col-9 aligh-items-right">
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                                <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
+                                <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main-fixed">
                                     <li class="nav-item active">
                                         <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
                                     </li>
