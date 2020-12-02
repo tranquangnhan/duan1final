@@ -15,30 +15,28 @@ include_once '../lib/myfunctions.php';
 require_once "models/loaihang.php";
 require_once "models/sanpham.php";
 require_once "models/blog.php";
-//require_once "views/layouts/header.php";
+// require_once "views/layouts/header.php";
+
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
 require_once "models/hoadon.php";
+
+if(!$_GET['act']){
+    require_once "views/layouts/header_home.php";
+}else{
+    require_once "views/layouts/header_khac.php";
+}
+$blog = gettwoblog();
 
 $showAllSanBay = showAllSanBay();
 $act = 'home';
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
 
-    if ($act == 'home' || $act == 'home_copy') {
-        require_once "views/layouts/header_home.php";
-    } else {
-        require_once "views/layouts/header_khac.php";
-    }   
-
     switch ($act) {
         case 'home':
             $blog = gettwoblog();
             require_once "views/home.php";
-            break;
-        case 'home_copy':
-            $blog = gettwoblog();
-            require_once "views/home_copy.php";
             break;
         case 'about':
             require_once "views/about.php";
