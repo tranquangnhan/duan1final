@@ -236,16 +236,3 @@ function my_callback_den_motchieu(value) {
     });
     $(".l-den").fadeIn(600);
 }
-
-// custom css menu
-window.onscroll = function() {
-    myFunction()
-};
-
-function myFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        document.getElementById("backgroundbn").className = "demo2";
-    } else {
-        document.getElementById("backgroundbn").className = "demo";
-    }
-}
