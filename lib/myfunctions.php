@@ -113,5 +113,21 @@
 		$str = preg_replace("/( )/", '-', $str);
 		return $str;
     }
-  
+    // hàm này dùng để trừ thời gian return ra giờ vd: 1h 30m
+    function tinhThoiGian($gioBatDau,$gioKetThuc){
+        
+        // convert to unix timestamps
+        $firstTime=strtotime($gioBatDau);
+        $lastTime=strtotime($gioKetThuc);
+        
+        // perform subtraction to get the difference (in seconds) between times
+        $difference=$lastTime-$firstTime;
+         
+         $years = abs(floor($difference / 31536000));
+         $days = abs(floor(($difference-($years * 31536000))/86400));
+         $hours = abs(floor(($difference-($years * 31536000)-($days * 86400))/3600));
+         $mins = abs(floor(($difference-($years * 31536000)-($days * 86400)-($hours * 3600))/60));#floor($difference / 60);
+
+         return $hours . "h, " . $mins . "m";
+    }
 ?>

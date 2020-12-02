@@ -43,7 +43,7 @@
                                      <div class="thoigiandi">'.$Arr[$i]['0']['4'].' <br>('.$maTinhDi.')</div>
                                  </div>
                                  <div class="col-lg-4">
-                                     <div class="thoigiandi">2h 5m</div>
+                                     <div class="thoigiandi">'.tinhThoiGian($Arr[$i]['0']['giodi'],$Arr[$i]['0']['gioden']).'</div>
                                      <div class="thoigiandi">Bay thẳng</div>
                                  </div>
                              </div>

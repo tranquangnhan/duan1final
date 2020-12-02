@@ -17,10 +17,12 @@ function showdiemdi($id){
     $sql ="select * from sanbay  where idsanbay = '$id'";
     return result1(1,$sql)['tensanbay'];
 } 
+
 function showiddiemdi($id){
     $sql ="select * from tuyenduong  where id = '$id'";
     return result1(1,$sql)['iddiemdi'];
 } 
+
 function showiddiemden($id){
     $sql ="select * from tuyenduong  where id = '$id'";
     return result1(1,$sql)['iddiemden'];
@@ -221,4 +223,6 @@ function selectTime(){
     $sql = "SELECT ngaydi,giodi,gioden,trangthai FROM chuyenbay";
     return result1(0,$sql);
 }
+
+
 ?>

@@ -61,3 +61,8 @@ function checkUserSignupAdmin($user,$pass){
         return false;
     }
 }
+
+function showHdCt($idhd){
+    $sql = "SELECT * FROM hdchitiet WHERE idhd=".$idhd;
+    return result1(1,$sql);
+}

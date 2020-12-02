@@ -43,4 +43,17 @@
         ('$lastId','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd')";
        return exec1($sql);
     }
+    function demSoluong($idhd){
+        $sql = "SELECT count(*) as 'sl' FROM `hdchitiet` WHERE idhd='$idhd' GROUP BY idhd ";
+        return result1(1,$sql);
+    }
+    function showHoaDonCt($idHd){
+        $sql = 'SELECT * FROM hdchitiet WHERE idhd='.$idHd;
+        return result1(0,$sql);
+    }
+
+    function showHoaDon($idHd){
+        $sql = 'SELECT * FROM hoadon WHERE id='.$idHd;
+        return result1(1,$sql);
+    }
 ?>

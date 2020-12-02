@@ -59,9 +59,10 @@ switch ($act) {
                 }
             }
         }
-            $Array = json_encode($Array);
-            require_once "views/timveindex.php";
-            echo '<script src="views/jquery/chonve.js"></script>';
+        ($Array) ?  $Array = json_encode($Array) :  $Array = 'Không có chuyến bay nào cả';
+
+        require_once "views/timveindex.php";
+        echo '<script src="views/jquery/chonve.js"></script>';
         break;
         case 'chonve':
             $idChuyenBay = $_GET['idcb'];

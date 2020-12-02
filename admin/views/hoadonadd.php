@@ -49,7 +49,8 @@
                                     $maTinhDi = $Arr['0']['masb_di'];
                                     $maTinhDen =  explode("/",$maTinhDen)[1];
                                     $maTinhDi =  explode("/",$maTinhDi)[1];
-                                    echo
+                                    
+                                echo
                                     '<div>
                                     <div class="row  mt-5">
                                        <div class="col-lg-3">
