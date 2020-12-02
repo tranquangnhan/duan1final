@@ -7,6 +7,7 @@
     switch ($act) {
         case 'index':
             $showallhd = showallhd();
+             
             include_once "views/hoadonindex.php";
         break;
         case 'add':
@@ -29,16 +30,20 @@
             settype($idHd,'int');
 
             $showHoaDonCt = showHoaDonCt($idHd);
-
-            $showHoaDon = showHoaDon($idHd);
-
-            $idCb = $showHoaDon['idchuyenbay'];
-
+            $idCb = $showHoaDonCt['0']['idchuyenbay'];
             $showTTCb = showVeAdmin($idCb);
-        
-            // print_r($showTTCb);
+
             include_once "views/hoadonchitiet.php";
             break;
+        case 'hoantat':
+            if(isset($_GET['idhd'])&&($_GET['idhd'])>0){
+                $idhd = $_GET['idhd'];
+                settype($idhd,"int");
+                setHoanTatHd($idhd);
+            }
+            $showallhd = showallhd();
+            include_once "views/hoadonindex.php";
+        break;
         case 'del':
             if(isset($_GET['iddel'])&&($_GET['iddel'])>0){
                 $id = $_GET['iddel'];
