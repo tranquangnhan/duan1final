@@ -143,7 +143,7 @@ $(document).ready(function() {
             var ngayve = $('#khuhoi_ngayve').datepicker('getDate');
             var newDate = $(this).datepicker('getDate');
             if (newDate) { // Not null
-                newDate.setDate(newDate.getDate() + 1);
+                newDate.setDate(newDate.getDate());
             }
             if (ngayve == null) {
                 $('#khuhoi_ngayve').datepicker('option', 'minDate', newDate);    //datepicker('setDate', newDate).  setDate có thể set ngày vừa chọn vào datepicker thứ 2 theo id
