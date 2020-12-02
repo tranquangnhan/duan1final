@@ -58,7 +58,7 @@
         </div>
         <div class="row">
           <div class="l-box-our d-inline-block">          
-            <a href=""><img src="views/img/nguyenquochieu.jpg" width="100%" alt=""></a>
+            <a href=""><img src="" width="100%" alt=""></a>
             <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
@@ -79,7 +79,7 @@
             </ul>
           </div>
           <div class="l-box-our d-inline-block">          
-            <a href=""><img src="views/img/nguyenquochieu.jpg" width="100%" alt=""></a>
+            <a href=""><img src="" width="100%" alt=""></a>
             <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
@@ -100,7 +100,7 @@
             </ul>
           </div>
           <div class="l-box-our d-inline-block">          
-            <a href=""><img src="views/img/nguyenquochieu.jpg" width="100%" alt=""></a>
+            <a href=""><img src="" width="100%" alt=""></a>
             <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
@@ -121,7 +121,7 @@
             </ul>
           </div>
           <div class="l-box-our d-inline-block mr-0">          
-            <a href=""><img src="views/img/nguyenquochieu.jpg" width="100%" alt=""></a>
+            <a href=""><img src="" width="100%" alt=""></a>
             <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
