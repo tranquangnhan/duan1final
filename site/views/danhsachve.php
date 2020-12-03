@@ -84,6 +84,7 @@
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
+          
      <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?= $k['tinh_di']?> </span>Đến:<?= $k['tinh_den']?> </a></h3> 
                 <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Đặt Ngay</a>
                 <div class="date mr-lr-15px">

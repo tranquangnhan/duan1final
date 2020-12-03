@@ -1721,8 +1721,18 @@ input[type=number] {
 
 #menu-main-fixed li a {
     color: rgb(56, 56, 56);
+    
 }
 
 .alertify-notifier.ajs-right {
-    font-weight: 600;
+    font-weight: 500;
+    color: white;
+}
+
+.alertify-notifier .ajs-message.ajs-warning {
+    background-color: rgba(217, 92, 92, 0.95);
+    border-radius: 1px;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+    border: white solid 1px;
+    text-align: center;
 }

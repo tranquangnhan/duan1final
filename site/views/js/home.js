@@ -80,14 +80,19 @@ $(document).ready(function() {
         $('#nguoilon').val(sove_nl);
     });
     $('#l-minus-nguoilon').click(function() {
-        if (sove_nl > 1) {
-            sove_nl--;
-            $('#l-plus-nguoilon').addClass('l-plus_hover');
+        var beduoi2 = $('#beduoi2').val();
+        if (beduoi2 < sove_nl) {
+            if (sove_nl > 1) {
+                sove_nl--;
+                $('#l-plus-nguoilon').addClass('l-plus_hover');
+            }
+            if (sove_nl == 1) {
+                $('#l-minus-nguoilon').removeClass('l-minus_hover');
+            }
+            $('#nguoilon').val(sove_nl);
+        } else if (sove_nl > 1) {
+            alertify.warning('Em bé không được hơn số người lớn!');   
         }
-        if (sove_nl == 1) {
-            $('#l-minus-nguoilon').removeClass('l-minus_hover');
-        }
-        $('#nguoilon').val(sove_nl);
     });
     // trẻ em dưới 2
     var sove_beduoi2 = 0;
@@ -120,19 +125,14 @@ $(document).ready(function() {
     // trẻ em trên 2
     var sove_betren2 = 0;
     $('#l-plus-betren2').click(function() {
-        var sonl = $('#nguoilon').val();
-        if (sove_betren2 < sonl) {
-            if (sove_betren2 < 5) {
-                sove_betren2++;
-                $('#l-minus-betren2').addClass('l-minus_hover');
-            }
-            if (sove_betren2 == 5) {
-                $('#l-plus-betren2').removeClass('l-plus_hover');
-            }
-            $('#betren2').val(sove_betren2);
-        } else {
-            alertify.warning('Trẻ em không được hơn số người lớn!'); 
+        if (sove_betren2 < 5) {
+            sove_betren2++;
+            $('#l-minus-betren2').addClass('l-minus_hover');
         }
+        if (sove_betren2 == 5) {
+            $('#l-plus-betren2').removeClass('l-plus_hover');
+        }
+        $('#betren2').val(sove_betren2);
     });
     $('#l-minus-betren2').click(function() {
         if (sove_betren2 > 0) {

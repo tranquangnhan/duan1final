@@ -118,3 +118,12 @@ header {
 .fz-0p7rem {
     font-size: 0.7rem;
 }
+
+.l-w-tenduong>a {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.color_red {
+    color: #F44336;
+}
