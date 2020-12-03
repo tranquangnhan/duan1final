@@ -288,7 +288,7 @@
         $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
         $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
 
-        $vjdiemdi = timSanBay   ($vietject['iddiemdi']);
+        $vjdiemdi = timSanBay ($vietject['iddiemdi']);
         $vjdiemden = timSanBay($vietject['iddiemden']);
         $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
         $vndiemden = timSanBay($vietnameairline['iddiemden']);

@@ -13,4 +13,4 @@ on o.id=q.id and q.id=p.id and q.tinh_di like '%$diemDi%' and o.tinh_den like '%
     return result1(0, $sql);
 }
 
-
+?>
