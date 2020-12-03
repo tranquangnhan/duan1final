@@ -166,6 +166,7 @@ $(document).ready(function() {
 
     // ngày về
     $("#khuhoi_ngayve").datepicker({
+        minDate: '0d',
         dateFormat: 'dd-mm-yy',
         duration: "fast",
         showAnim: "show",

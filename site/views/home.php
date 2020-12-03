@@ -276,7 +276,7 @@
             <div class="l-box-ud">
                 <a href="google.com">
                     <div class="l-box-ud-img">
-                        <img src="views/img/phanthiet.jpg" alt="">
+                        <img src="views/img/vietject_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
                         <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
@@ -295,7 +295,7 @@
             <div class="l-box-ud">
                 <a href="google.com">
                     <div class="l-box-ud-img">
-                        <img src="views/img/phanthiet.jpg" alt="">
+                        <img src="views/img/vietnameairline_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
                         <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
@@ -314,7 +314,7 @@
             <div class="l-box-ud">
                 <a href="google.com">
                     <div class="l-box-ud-img">
-                        <img src="views/img/phanthiet.jpg" alt="">
+                        <img src="views/img/bamboairline_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
                         <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
@@ -333,7 +333,7 @@
             <div class="l-box-ud mr-0">
                 <a href="google.com">
                     <div class="l-box-ud-img">
-                        <img src="views/img/phanthiet.jpg" alt="">
+                        <img src="views/img/pacificairlines_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
                         <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>

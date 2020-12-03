@@ -1118,16 +1118,25 @@ a:hover {
 .l-box-ud:hover .l-btn-dat {
     transform: translateY(0px);
 }
+
 .l-box-ud:hover .l-khuyenmai {
-    color: #F44336;
+    color: #ffffff;
     font-weight: 600;
     transition: 0.5s;
 }
 
 .l-box-ud:hover .l-giagoc {
+    color: #444444;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+
+.l-box-ud:hover .l-giagoc {
     text-decoration: line-through;
     text-decoration-color: rgb(32, 32, 32);
 }
+
 .l-bt_bg_datngay {
     background: #F44336;
 }
@@ -1312,9 +1321,9 @@ a:hover {
     position: relative;
     background-position: center;
     background-size: cover;
-    width: 23%;
+    width: 24.25%;
     min-height: 300px;
-    margin-right: 2.66%;
+    margin-right: 1%;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -1584,7 +1593,7 @@ a:hover {
     text-align: center;
     font-size: 90px;    
     font-weight: 600;
-    line-height: 450px;
+    line-height: 350px;
 }
 
 .display_none {

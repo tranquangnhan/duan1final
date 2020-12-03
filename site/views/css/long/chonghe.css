@@ -280,3 +280,28 @@
 .dl-block {
     display: block;
 }
+
+.l-bt_next_fixed {
+    position: fixed;
+    top: 150px;
+    right: 420px;
+    padding: 20px;
+    color: white;
+    z-index: 100;
+}
+
+.l-bt_next_fixed a {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 60px;
+    color: white;
+   
+}
+
+.l-bt_next_fixed a i {
+    transition: 0.5s;
+}
+
+.l-bt_next_fixed a:hover i {
+    transform: scale(1.1);
+}
