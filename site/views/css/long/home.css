@@ -1131,7 +1131,6 @@ a:hover {
     transition: 0.5s;
 }
 
-
 .l-box-ud:hover .l-giagoc {
     text-decoration: line-through;
     text-decoration-color: rgb(32, 32, 32);
@@ -1198,6 +1197,10 @@ a:hover {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     text-indent: 0;
+}
+
+.l-tuyenduong {
+    max-width: 100px;
 }
 
 /* .l-thongtin-ud p {

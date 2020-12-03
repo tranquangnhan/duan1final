@@ -20,14 +20,14 @@ require_once "models/blog.php";
 require_once "models/danhsachve.php";
 require_once "models/ve.php";
 require_once "models/hoadon.php";
-
+require_once "models/giamgia.php";
 if(!$_GET['act']){
     require_once "views/layouts/header_home.php";
 }else{
     require_once "views/layouts/header_khac.php";
 }
-$blog = gettwoblog();
 
+$blog = gettwoblog();
 $showAllSanBay = showAllSanBay();
 // print_r($showAllSanBay);
 $act = 'home';

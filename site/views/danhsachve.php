@@ -3,8 +3,8 @@
       <div class="fz-12vw d-inline-block padding-tb-7px">Danh Sách Chuyến Bay</div>
       <div class="float-right">
           <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>
-          <div class="d-inline-block pd-right-10px"><a href="#"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Pages</div></a>
-          <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Flights</div>                
+          <!-- <div class="d-inline-block pd-right-10px"><a href="#"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Pages</div></a> -->
+          <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Danh Sách Vé</div>                
       </div>
     </div>
   </nav>
