@@ -3,8 +3,7 @@
       <div class="fz-12vw d-inline-block padding-tb-7px">Danh Sách Chuyến Bay</div>
       <div class="float-right">
           <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>
-          <div class="d-inline-block pd-right-10px"><a href="#"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Pages</div></a>
-          <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Flights</div>                
+          <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Khuyến Mãi</div>                
       </div>
     </div>
   </nav>
@@ -84,7 +83,12 @@
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
-     <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?=  showtensanbay(showiddiemdi(showidtuyenduong($k['idchuyenbay'])))?> </span>Đến:<?= showtensanbay(showiddiemden(showidtuyenduong($k['idchuyenbay'])))?> </a></h3> 
+                <div class="l-w-tenduong">
+                  <a href="#" class="text-dark mr-lr-15px">
+                    <span class="mr-right-30px">  Từ: <?=  showtensanbay(showiddiemdi(showidtuyenduong($k['idchuyenbay'])))?> </span>
+                    Đến:<?= showtensanbay(showiddiemden(showidtuyenduong($k['idchuyenbay'])))?> 
+                  </a>
+                </div>           
                 <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Đặt Ngay</a>
                 <div class="date mr-lr-15px">
                   <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
@@ -95,13 +99,16 @@
                   <small class="text-uppercase text-extra-small">
                     <a href="#" class="cl-te-grey fz-0p7rem">
                       <i class="fa fa-chevron-down mr-right-5px"></i>
-                  Giở đến:  
+                  Giờ đến:  
                       <span class="text-third-color mr-right-5px"><?= showgioden($k['idchuyenbay'])?></span> </a>
                   </small>
                 </div>
                 <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"><span class="mr-1" style="color: black;">Tiền:</span> <?= $k['giavethuong']?> <span class="mr-1" style="color: black;">VNĐ</span></strong>
-                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold"><span class="mr-1" style="color: black;">Giảm Giá:</span> <?= $k['giamgia']?><span class="mr-1" style="color: black;">VNĐ</span></strong>
+                  <?php 
+                    $giamcon = ($k['giavethuong'] * (100 - $k['giamgia'])) / 100;
+                  ?>
+                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1">Giá:</span><?=number_format($k['giavethuong'],0,",",".");?> <span class="mr-1">VNĐ</span></a>
+                    <a class="text-medium padding-right-5px"><span class="mr-1">Giảm Còn:</span><span class="color_red"><?=number_format($giamcon,0,",",".");?></span><span class="mr-1"> VNĐ</span></a>
 
                     <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?= showngaydi($k['idchuyenbay']) ?></i>
                 </div>   

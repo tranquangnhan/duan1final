@@ -271,6 +271,41 @@
     </div>
 </div>
 <div class="box_main background-light-grey">
+    <?php 
+        // hãng máy bay
+        $vietject = 1;
+        $vietnameairline = 2;
+        $bammbo = 3;
+        $pacific = 4;
+        // lấy giảm giá theo hãng limit 1
+        $vietject = topgiamGiaTheoHang($vietject);
+        $vietnameairline = topgiamGiaTheoHang($vietnameairline);
+        $bammbo = topgiamGiaTheoHang($bammbo);
+        $pacific = topgiamGiaTheoHang($pacific);  
+        // gía giảm còn
+        $giamgia_1 = ($vietject['giavethuonggia'] * (100 - $vietject['giamgia'])) / 100;
+        $giamgia_2 = ($vietnameairline['giavethuonggia'] * (100 - $vietnameairline['giamgia'])) / 100;
+        $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
+        $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
+
+        $vjdiemdi = timSanBay   ($vietject['iddiemdi']);
+        $vjdiemden = timSanBay($vietject['iddiemden']);
+        $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
+        $vndiemden = timSanBay($vietnameairline['iddiemden']);
+        $bbdiemdi = timSanBay($bammbo['iddiemdi']);
+        $bbdiemden = timSanBay($bammbo['iddiemden']);
+        $pcfdiemdi = timSanBay($pacific['iddiemdi']);
+        $pcfidiemden = timSanBay($pacific['iddiemden']);
+
+        $maSb_vj_di = explode("/",$vjdiemdi['masanbay'])[1];
+        $maSb_vj_den = explode("/",$vjdiemden['masanbay'])[1];
+        $maSb_vn_di = explode("/",$vndiemdi['masanbay'])[1];
+        $maSb_vn_den = explode("/",$vndiemden['masanbay'])[1];
+        $maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
+        $maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
+        $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
+        $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];
+    ?>
     <div class="container pd-bot-100px">
         <div class="section-title-center">
             <h1 class="title fz-2vw"><span class="color_main">Ưu</span> Đãi</h1>
@@ -278,77 +313,76 @@
         </div>
         <div class="row mr-top-8pt">
             <div class="l-box-ud">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/vietject_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
-                        <div class="l-giagoc">560.000 VND</div>
-                        <div class="l-khuyenmai">400.000 VND</div>
-                        <div class="l-ngaydi">15 - 12 - 2020</div>
-                        
+                        <div class="l-tuyenduong"><?=$vjdiemdi['tinh']?> (<?=$maSb_vj_di?>) To <br> <?=$vjdiemden['tinh']?> (<?=$maSb_vj_den?>)</div>
+                        <div class="l-giagoc"><?=number_format($vietject['giavethuonggia'],0,",",".");?> VND</div>
+                        <div class="l-khuyenmai"><?=number_format($giamgia_1,0,",",".");?> VND</div>
+                        <div class="l-ngaydi"><?=$vietject['ngaydi']?></div>                        
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">VietJetAir</a>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="l-box-ud">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/vietnameairline_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
-                        <div class="l-giagoc">560.000 VND</div>
-                        <div class="l-khuyenmai">400.000 VND</div>
-                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        <div class="l-tuyenduong"><?=$vndiemdi['tinh']?> (<?=$maSb_vn_di?>) To <br> <?=$vndiemden['tinh']?> (<?=$maSb_vn_den?>)</div>
+                        <div class="l-giagoc"><?=number_format($vietnameairline['giavethuonggia'],0,",",".");?> VND</div>
+                        <div class="l-khuyenmai"><?=number_format($giamgia_2,0,",",".");?> VND</div>
+                        <div class="l-ngaydi"><?=$vietnameairline['ngaydi']?></div>
                         
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">Vietnam Airline</a>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="l-box-ud">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/bamboairline_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
-                        <div class="l-giagoc">560.000 VND</div>
-                        <div class="l-khuyenmai">400.000 VND</div>
-                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        <div class="l-tuyenduong"><?=$bbdiemdi['tinh']?> (<?=$maSb_bb_di?>) To <br> <?=$bbdiemden['tinh']?> (<?=$maSb_bb_den?>)</div>
+                        <div class="l-giagoc"><?=number_format($bammbo['giavethuonggia'],0,",",".");?> VND</div>
+                        <div class="l-khuyenmai"><?=number_format($giamgia_3,0,",",".");?> VND</div>
+                        <div class="l-ngaydi"><?=$bammbo['ngaydi']?></div>
                         
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">Bamboo Airlines</a>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="l-box-ud mr-0">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/pacificairlines_bg.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
-                        <div class="l-giagoc">560.000 VND</div>
-                        <div class="l-khuyenmai">400.000 VND</div>
-                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        <div class="l-tuyenduong"><?=$pcfdiemdi['tinh']?> (<?=$maSb_pcf_di?>) To <br> <?=$pcfidiemden['tinh']?> (<?=$maSb_pcf_den?>)</div>
+                        <div class="l-giagoc"><?=number_format($pacific['giavethuonggia'],0,",",".");?> VND</div>
+                        <div class="l-khuyenmai"><?=number_format($giamgia_4,0,",",".");?> VND</div>
+                        <div class="l-ngaydi"><?=$pacific['ngaydi']?></div>
                         
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">Pacific Airlines</a>
                         </div>
                     </div>
                 </a>

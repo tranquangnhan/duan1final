@@ -1131,7 +1131,6 @@ a:hover {
     transition: 0.5s;
 }
 
-
 .l-box-ud:hover .l-giagoc {
     text-decoration: line-through;
     text-decoration-color: rgb(32, 32, 32);
@@ -1198,6 +1197,10 @@ a:hover {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     text-indent: 0;
+}
+
+.l-tuyenduong {
+    max-width: 100px;
 }
 
 /* .l-thongtin-ud p {
@@ -1508,6 +1511,7 @@ a:hover {
     width: 20.97%;
     float: left;
     margin-right: 0.281%;
+    font-size: 13px;
 }
 
 .awselect.animate2>.bg {
@@ -1532,7 +1536,7 @@ a:hover {
 
 .l-input {
     background: #e5e5e5;
-    color: inherit;
+    color: black;
     padding: 10px 20px;
     border-radius: 0px;
     border: 0px!important;
@@ -1717,6 +1721,18 @@ input[type=number] {
 
 #menu-main-fixed li a {
     color: rgb(56, 56, 56);
+    
 }
 
+.alertify-notifier.ajs-right {
+    font-weight: 500;
+    color: white;
+}
 
+.alertify-notifier .ajs-message.ajs-warning {
+    background-color: rgba(217, 92, 92, 0.95);
+    border-radius: 1px;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+    border: white solid 1px;
+    text-align: center;
+}

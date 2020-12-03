@@ -3,8 +3,8 @@
       <div class="fz-12vw d-inline-block padding-tb-7px">Danh Sách Chuyến Bay</div>
       <div class="float-right">
           <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>
-          <div class="d-inline-block pd-right-10px"><a href="#"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Pages</div></a>
-          <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Flights</div>                
+          <!-- <div class="d-inline-block pd-right-10px"><a href="#"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Pages</div></a> -->
+          <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Danh Sách Vé</div>                
       </div>
     </div>
   </nav>
@@ -84,6 +84,7 @@
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
+          
      <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?= $k['tinh_di']?> </span>Đến:<?= $k['tinh_den']?> </a></h3> 
                 <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Đặt Ngay</a>
                 <div class="date mr-lr-15px">
