@@ -308,22 +308,58 @@ if (isset($_GET['act'])) {
             }
             require_once "views/doimk.php";
             break;
-        case 'timkiem';
+        case 'showve';
             $Array = array();
-            $showSanBay = showAllSanBay();
+            $showSanBay = showsanbay();
             $diemDi = $_GET['diemdi'];
             $diemDen = $_GET['diemden'];
             $ngayDi = $_GET['ngaydi'];
+    
+            $urlve = http_build_query($_GET);
+
+            if(isset($_GET['ngayve'])&&($_GET['ngayve'])){
+                $_SESSION['diemdi'] = $_GET['diemdi'];
+                $_SESSION['diemden'] = $_GET['diemden'];
+                $_SESSION['ngayve'] = $_GET['ngayve'];
+                $_SESSION['urlve'] = $urlve;
+            }
+
+            if(isset($_GET['khuhoi'])&&($_GET['khuhoi'] == 1)){
+                $ngayDi = $_SESSION['ngayve'];
+                $diemDi = $_SESSION['diemden'];
+                $diemDen = $_SESSION['diemdi'];
+                unset($_SESSION['ngayve']);
+                unset($_SESSION['diemdi']);
+                unset($_SESSION['diemden']);
+            }
+
             $loaiGhe = $_GET['loaighe'];
 
             $nguoiLon = $_GET['nguoilon'];
             $treEm = $_GET['treem'];
             $emBe = $_GET['embe'];
+
             $soNguoi = $nguoiLon + $treEm;
-            $showVeMotChieu1 = showVeMotChieu1($diemDi, $diemDen, $ngayDi);
+            $showVeMotChieu = showVeMotChieu($diemDi, $diemDen, $ngayDi, $loaiGhe);
+            if ($loaiGhe == 1) {
+                foreach ($showVeMotChieu as $motGhe) {
+                    $arr = explode(',', $motGhe['ttghethuong']);
+                    if (array_count_values($arr)['0'] >= $soNguoi) {
+                        array_push($Array, showVeSite($motGhe['id']));
+                    }
+                }
+            } elseif ($loaiGhe == 2) {
+                foreach ($showVeMotChieu as $motGhe) {
+                    $arr = explode(',', $motGhe['ttghethuonggia']);
+                    if (array_count_values($arr)['0'] >= $soNguoi) {
+                        array_push($Array, showVeSite($motGhe['id']));
+                    }
+                }
+            }
+            ($Array) ?  $Array = json_encode($Array) :  $Array = 'Không có chuyến bay nào cả';
             include 'views/timkiem.php';
             break;
-        case 'chonghe':
+        case 'chonve':
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
 
                 $idChuyenBay = $_GET['idcb'];
@@ -331,13 +367,20 @@ if (isset($_GET['act'])) {
                 echo '<script src="https://js.pusher.com/7.0/pusher.min.js"></script>';
                 echo "<script src='views/jquery/chonghe.js'></script>";
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
-
-                $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
-                $getGheThuong = renderHtml($idChuyenBay, 'ttghethuong');
-                require_once 'views/chonghe.php';
+                $loaiGhe = $_GET['loaighe'];
+                if($loaiGhe == 1){
+                    $getGheThuong = renderHtml($idChuyenBay, 'ttghethuong');
+                    require_once 'views/chonghethuong.php';
+                }elseif($loaiGhe == 2){
+                    $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
+                    require_once 'views/chonghethuonggia.php';
+                }
 
                 echo "<script src='views/jquery/showghe.js'></script>";
             }
+            break;
+        case 'thanhtoan':
+            require_once "views/thanhtoan.php";
             break;
         default:
             require_once "views/home.php";

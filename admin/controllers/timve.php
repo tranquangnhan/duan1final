@@ -19,7 +19,8 @@ switch ($act) {
         $ngayDi = $_GET['ngaydi'];
   
         $urlve = http_build_query($_GET);
-
+        
+        // lưu session
         if(isset($_GET['ngayve'])&&($_GET['ngayve'])){
             $_SESSION['diemdi'] = $_GET['diemdi'];
             $_SESSION['diemden'] = $_GET['diemden'];
