@@ -1,7 +1,7 @@
 
 <main class="">
     <div class="l-bt_next_fixed">
-        <a href=""><i class="fas fa-arrow-circle-right"></i></a>
+        <a href=""><i class="fas fa-arrow-circle-right" id="tieptucthuong"></i></a>
     </div>
     <div class="text-center">
             <div class="row w-100 mr-0 pd-tb-100px background-cl-3">

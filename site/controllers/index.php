@@ -375,8 +375,7 @@ if (isset($_GET['act'])) {
                     $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
                     require_once 'views/chonghethuonggia.php';
                 }
-
-                echo "<script src='views/jquery/showghe.js'></script>";
+                
             }
             break;
         case 'thanhtoan':
