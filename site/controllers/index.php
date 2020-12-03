@@ -344,6 +344,7 @@ if (isset($_GET['act'])) {
 
                     echo "<script src='views/jquery/showghe.js'></script>";
                 }
+<<<<<<< HEAD
                 break;
             default:
                 require_once "views/home.php";
@@ -352,6 +353,17 @@ if (isset($_GET['act'])) {
 
     } else {
         require_once "views/home.php";
+=======
+                
+            }
+            break;
+        case 'thanhtoan':
+            require_once "views/thanhtoan.php";
+            break;
+        default:
+            require_once "views/home.php";
+            break;
+>>>>>>> dc67ef610226f34b10a0d23b255d313732ffece8
     }
     require_once "views/layouts/footer.php";
 ?>

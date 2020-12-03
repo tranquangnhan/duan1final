@@ -243,18 +243,22 @@
             <div class="l-div-duoi motchieu display_none ">
                 <div class="sel l-w-28pt">
                     <select name="" id="select_awe_1_motchieu" class="selectawe" data-callback="my_callback_tu_motchieu" data-placeholder="Từ">
-                    <option value="HCM">TP Hồ Chí Minh (SGN)</option>
-                    <option value="BMV">TP Buông Ma Thuột (SGN)</option>
-                    <option value="VCA">TP Cần Thơ (VCA)</option>
-                    <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                    <?php
+                            foreach ($showAllSanBay as $motsb) {
+                            $maSb = explode("/",$motsb['masanbay'])[1];
+                            echo '<option data-id="'.$motsb['idsanbay'].'" value="'.$maSb.'">'.$motsb['tinh'].'('.$maSb.')</option>';
+                        }             
+                    ?>
                     </select>
                 </div>  
                 <div class="sel l-w-28pt">
                     <select name="" id="select_awe_2_motchieu" class="selectawe" data-callback="my_callback_den_motchieu" data-placeholder="Đến?">
-                    <option value="HCM">TP Hồ Chí Minh (SGN)</option>
-                    <option value="BMV">TP Buông Ma Thuột (SGN)</option>
-                    <option value="VCA">TP Cần Thơ (VCA)</option>
-                    <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                    <?php
+                            foreach ($showAllSanBay as $motsb) {
+                            $maSb = explode("/",$motsb['masanbay'])[1];
+                            echo '<option data-id="'.$motsb['idsanbay'].'" value="'.$maSb.'">'.$motsb['tinh'].'('.$maSb.')</option>';
+                        }             
+                    ?>
                     </select>
                 </div>
                 <div class="sel verticle-top l-w-28pt">
