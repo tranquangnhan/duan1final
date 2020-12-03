@@ -205,10 +205,10 @@ window.onload = function() {
 
 // lay du lieu cua option
 function my_callback_1(value) {
-    if (value == "khuhoi") {
+    if (value == "1") {
         $('.motchieu').addClass("display_none");
         $('.khuhoi').removeClass("display_none");
-    } else if (value == "motchieu") {
+    } else if (value == "0") {
         $('.motchieu').removeClass("display_none");
         $('.khuhoi').addClass("display_none");
     }

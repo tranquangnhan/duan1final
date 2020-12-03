@@ -77,6 +77,7 @@
                 </div>
             </div>
             <div class="header-output-fixed" id="l-menu-fixed">
+                <div class="bg-out-op-fixed"></div>
                 <div class="container header-in">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-3">
@@ -85,7 +86,7 @@
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9  col-9 aligh-items-right">
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
-                                <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
+                                <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main-fixed">
                                     <li class="nav-item active">
                                         <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
                                     </li>
@@ -240,7 +241,7 @@
                 <a href="" class="l-a-search"><button class="l-bt-search" id="l-bt-search" type="button">Tìm kiếm</button></a>
             </div>      
             <div class="l-div-duoi motchieu display_none ">
-                <div class="sel l-w-26pt">
+                <div class="sel l-w-28pt">
                     <select name="" id="select_awe_1_motchieu" class="selectawe" data-callback="my_callback_tu_motchieu" data-placeholder="Từ">
                     <option value="HCM">TP Hồ Chí Minh (SGN)</option>
                     <option value="BMV">TP Buông Ma Thuột (SGN)</option>
@@ -248,7 +249,7 @@
                     <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>  
-                <div class="sel l-w-26pt">
+                <div class="sel l-w-28pt">
                     <select name="" id="select_awe_2_motchieu" class="selectawe" data-callback="my_callback_den_motchieu" data-placeholder="Đến?">
                     <option value="HCM">TP Hồ Chí Minh (SGN)</option>
                     <option value="BMV">TP Buông Ma Thuột (SGN)</option>
@@ -256,7 +257,7 @@
                     <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>
-                <div class="sel verticle-top l-w-26pt">
+                <div class="sel verticle-top l-w-28pt">
                     <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
                 <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
@@ -268,7 +269,7 @@
 <div class="box_main background-light-grey">
     <div class="container pd-bot-100px">
         <div class="section-title-center">
-            <h1 class="title fz-2vw"><span class="color_main">Hot</span> Flight</h1>
+            <h1 class="title fz-2vw"><span class="color_main">Ưu</span> Đãi</h1>
             <span class="section-title-des fz-1vw">Nhấp vào đăng kí để nhận nhiều thông tin ưu đãi ngay</span>
         </div>
         <div class="row mr-top-8pt">
@@ -278,21 +279,16 @@
                         <img src="views/img/phanthiet.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
                     </div>
-                </a>
-            </div>
-            <div class="l-box-ud">
-                <a href="google.com">
-                    <div class="l-box-ud-img">
-                        <img src="views/img/phanthiet.jpg" alt="">
-                    </div>
-                    <div class="l-thongtin-ud text-uppercase">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -302,9 +298,35 @@
                         <img src="views/img/phanthiet.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span><b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
+                    </div>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="l-box-ud">
+                <a href="google.com">
+                    <div class="l-box-ud-img">
+                        <img src="views/img/phanthiet.jpg" alt="">
+                    </div>
+                    <div class="l-thongtin-ud">
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
+                    </div>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -313,13 +335,20 @@
                     <div class="l-box-ud-img">
                         <img src="views/img/phanthiet.jpg" alt="">
                     </div>
-                    <div class="l-thongtin-ud ">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                    <div class="l-thongtin-ud">
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
                     </div>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
+                    </div>
+                </a>
             </div>
-            </a>
         </div>
     </div>
     <div class="row box-map">
