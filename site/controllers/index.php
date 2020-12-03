@@ -31,38 +31,38 @@ $blog = gettwoblog();
 $showAllSanBay = showAllSanBay();
 // print_r($showAllSanBay);
 $act = 'home';
-$vietject = 1;
-$vietnameairline = 2;
-$bammbo = 3;
-$pacific = 4;
-// lấy giảm giá theo hãng limit 1
-$vietject = topgiamGiaTheoHang($vietject);
-$vietnameairline = topgiamGiaTheoHang($vietnameairline);
-$bammbo = topgiamGiaTheoHang($bammbo);
-$pacific = topgiamGiaTheoHang($pacific);  
-// gía giảm còn
-$giamgia_1 = ($vietject['giavethuonggia'] * (100 - $vietject['giamgia'])) / 100;
-$giamgia_2 = ($vietnameairline['giavethuonggia'] * (100 - $vietnameairline['giamgia'])) / 100;
-$giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
-$giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
+// $vietject = 1;
+// $vietnameairline = 2;
+// $bammbo = 3;
+// $pacific = 4;
+// // lấy giảm giá theo hãng limit 1
+// $vietject = topgiamGiaTheoHang($vietject);
+// $vietnameairline = topgiamGiaTheoHang($vietnameairline);
+// $bammbo = topgiamGiaTheoHang($bammbo);
+// $pacific = topgiamGiaTheoHang($pacific);  
+// // gía giảm còn
+// $giamgia_1 = ($vietject['giavethuonggia'] * (100 - $vietject['giamgia'])) / 100;
+// $giamgia_2 = ($vietnameairline['giavethuonggia'] * (100 - $vietnameairline['giamgia'])) / 100;
+// $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
+// $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
 
-$vjdiemdi = timSanBay   ($vietject['iddiemdi']);
-$vjdiemden = timSanBay($vietject['iddiemden']);
-$vndiemdi = timSanBay($vietnameairline['iddiemdi']);
-$vndiemden = timSanBay($vietnameairline['iddiemden']);
-$bbdiemdi = timSanBay($bammbo['iddiemdi']);
-$bbdiemden = timSanBay($bammbo['iddiemden']);
-$pcfdiemdi = timSanBay($pacific['iddiemdi']);
-$pcfidiemden = timSanBay($pacific['iddiemden']);
+// $vjdiemdi = timSanBay   ($vietject['iddiemdi']);
+// $vjdiemden = timSanBay($vietject['iddiemden']);
+// $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
+// $vndiemden = timSanBay($vietnameairline['iddiemden']);
+// $bbdiemdi = timSanBay($bammbo['iddiemdi']);
+// $bbdiemden = timSanBay($bammbo['iddiemden']);
+// $pcfdiemdi = timSanBay($pacific['iddiemdi']);
+// $pcfidiemden = timSanBay($pacific['iddiemden']);
 
-$maSb_vj_di = explode("/",$vjdiemdi['masanbay'])[1];
-$maSb_vj_den = explode("/",$vjdiemden['masanbay'])[1];
-$maSb_vn_di = explode("/",$vndiemdi['masanbay'])[1];
-$maSb_vn_den = explode("/",$vndiemden['masanbay'])[1];
-$maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
-$maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
-$maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
-$maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];
+// $maSb_vj_di = explode("/",$vjdiemdi['masanbay'])[1];
+// $maSb_vj_den = explode("/",$vjdiemden['masanbay'])[1];
+// $maSb_vn_di = explode("/",$vndiemdi['masanbay'])[1];
+// $maSb_vn_den = explode("/",$vndiemden['masanbay'])[1];
+// $maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
+// $maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
+// $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
+// $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];
 
 $blog = gettwoblog();
 if (isset($_GET['act'])) {
@@ -399,7 +399,6 @@ if (isset($_GET['act'])) {
                 $idChuyenBay = $_GET['idcb'];
 
                 echo '<script src="https://js.pusher.com/7.0/pusher.min.js"></script>';
-                echo "<script src='views/jquery/chonghe.js'></script>";
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
                 $loaiGhe = $_GET['loaighe'];
                 if($loaiGhe == 1){
