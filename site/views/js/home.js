@@ -52,8 +52,16 @@ $(document).ready(function() {
         $("this").removeClass("background-main-color");
     });
 
-    $('#l_show_chon_ve').click(function() {
-        $("#l-box-qlity").toggle();
+    $('#l_show_chon_ve').click(function(e) {
+        $("#l-box-qlity").slideDown();
+        return false;
+    });
+    $(document).click(function() {
+        $("#l-box-qlity").slideUp();
+    });
+    $('#l-box-qlity').click(function(e) {
+        e.stopPropagation();
+        return false;
     });
 
 
@@ -138,7 +146,7 @@ $(document).ready(function() {
 
     // ngày đi
     $("#khuhoi_ngaydi").datepicker({
-        dateFormat: 'dd-MM-yy',
+        dateFormat: 'dd-mm-yy',
         minDate: '0d',
         duration: "fast",
         showAnim: "show",
@@ -154,9 +162,11 @@ $(document).ready(function() {
             }
         }
     });
+
+
     // ngày về
     $("#khuhoi_ngayve").datepicker({
-        dateFormat: 'dd-MM-yy',
+        dateFormat: 'dd-mm-yy',
         duration: "fast",
         showAnim: "show",
         showOptions: { direction: "up" },
