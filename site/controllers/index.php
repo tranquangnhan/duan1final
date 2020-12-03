@@ -29,6 +29,7 @@ if(!$_GET['act']){
 $blog = gettwoblog();
 
 $showAllSanBay = showAllSanBay();
+// print_r($showAllSanBay);
 $act = 'home';
 if (isset($_GET['act'])) {
     $act = $_GET['act'];

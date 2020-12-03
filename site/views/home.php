@@ -150,8 +150,8 @@
             <div class="l-div-tren">
                 <div class="l-sel-tren">
                     <select name="" id="select_awe_tren-1" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_1" data-placeholder="Khứ Hồi">
-                        <option value="khuhoi" id="khuhoi">Khứ Hồi</option>
-                        <option value="motchieu" id="motchieu">Một Chiều</option>
+                        <option value="1" id="khuhoi">Khứ Hồi</option>
+                        <option value="0" id="motchieu">Một Chiều</option>
                     </select>         
                 </div>     
                 <div class="l-sel-tren">
@@ -214,18 +214,22 @@
             <div class="l-div-duoi khuhoi">
                 <div class="sel">
                     <select name="" id="select_awe_1" class="selectawe" data-callback="my_callback_tu" data-placeholder="Từ">
-                        <option value="SGN">TP Hồ Chí Minh (SGN)</option>
-                        <option value="BMV">TP Buông Ma Thuột (BMV)</option>
-                        <option value="VCA">TP Cần Thơ (VCA)</option>
-                        <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                        <?php
+                            foreach ($showAllSanBay as $motsb) {
+                                $maSb = explode("/",$motsb['masanbay'])[1];
+                                echo '<option data-id="'.$motsb['idsanbay'].'" value="'.$maSb.'">'.$motsb['tinh'].'('.$maSb.')</option>';
+                            }             
+                        ?>
                     </select>
                 </div>  
                 <div class="sel">
                     <select name="" id="select_awe_2" class="selectawe" data-callback="my_callback_den" data-placeholder="Đến">
-                        <option value="SGN">TP Hồ Chí Minh (SGN)</option>
-                        <option value="BMV">TP Buông Ma Thuột (BMV)</option>
-                        <option value="VCA">TP Cần Thơ (VCA)</option>
-                        <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                        <?php
+                            foreach ($showAllSanBay as $motsb) {
+                                $maSb = explode("/",$motsb['masanbay'])[1];
+                                echo '<option data-id="'.$motsb['idsanbay'].'" value="'.$maSb.'">'.$motsb['tinh'].'('.$maSb.')</option>';
+                            }             
+                        ?>
                     </select>
                 </div>
                 <div class="sel verticle-top">
@@ -234,10 +238,10 @@
                 <div class="sel verticle-top">
                     <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
                 </div>
-                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
+                <a href="" class="l-a-search"><button class="l-bt-search" id="l-bt-search" type="button">Tìm kiếm</button></a>
             </div>      
             <div class="l-div-duoi motchieu display_none ">
-                <div class="sel l-w-26pt">
+                <div class="sel l-w-28pt">
                     <select name="" id="select_awe_1_motchieu" class="selectawe" data-callback="my_callback_tu_motchieu" data-placeholder="Từ">
                     <option value="HCM">TP Hồ Chí Minh (SGN)</option>
                     <option value="BMV">TP Buông Ma Thuột (SGN)</option>
@@ -245,7 +249,7 @@
                     <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>  
-                <div class="sel l-w-26pt">
+                <div class="sel l-w-28pt">
                     <select name="" id="select_awe_2_motchieu" class="selectawe" data-callback="my_callback_den_motchieu" data-placeholder="Đến?">
                     <option value="HCM">TP Hồ Chí Minh (SGN)</option>
                     <option value="BMV">TP Buông Ma Thuột (SGN)</option>
@@ -253,7 +257,7 @@
                     <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
                     </select>
                 </div>
-                <div class="sel verticle-top l-w-26pt">
+                <div class="sel verticle-top l-w-28pt">
                     <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
                 <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>

@@ -52,8 +52,16 @@ $(document).ready(function() {
         $("this").removeClass("background-main-color");
     });
 
-    $('#l_show_chon_ve').click(function() {
-        $("#l-box-qlity").toggle();
+    $('#l_show_chon_ve').click(function(e) {
+        $("#l-box-qlity").slideDown();
+        return false;
+    });
+    $(document).click(function() {
+        $("#l-box-qlity").slideUp();
+    });
+    $('#l-box-qlity').click(function(e) {
+        e.stopPropagation();
+        return false;
     });
 
 
@@ -154,6 +162,8 @@ $(document).ready(function() {
             }
         }
     });
+
+
     // ngày về
     $("#khuhoi_ngayve").datepicker({
         dateFormat: 'dd-mm-yy',
@@ -195,10 +205,10 @@ window.onload = function() {
 
 // lay du lieu cua option
 function my_callback_1(value) {
-    if (value == "khuhoi") {
+    if (value == "1") {
         $('.motchieu').addClass("display_none");
         $('.khuhoi').removeClass("display_none");
-    } else if (value == "motchieu") {
+    } else if (value == "0") {
         $('.motchieu').removeClass("display_none");
         $('.khuhoi').addClass("display_none");
     }

@@ -108,6 +108,7 @@
   <script src="views/js/binhluan-ajax.js" type="text/javascript"></script>  
   <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
   <script src="views/jquery/rttrangthai.js" type="text/javascript"></script>
+  <script src="views/jquery/timve.js" type="text/javascript"></script>
   <!-- select awesome js -->
   <script type="text/javascript" src="views/awesome-select-master/package/js/awselect.js"></script>
   <script>
