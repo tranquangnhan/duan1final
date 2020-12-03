@@ -310,17 +310,53 @@ if (isset($_GET['act'])) {
             break;
         case 'timkiem';
             $Array = array();
-            $showSanBay = showAllSanBay();
+            $showSanBay = showsanbay();
             $diemDi = $_GET['diemdi'];
             $diemDen = $_GET['diemden'];
             $ngayDi = $_GET['ngaydi'];
+    
+            $urlve = http_build_query($_GET);
+
+            if(isset($_GET['ngayve'])&&($_GET['ngayve'])){
+                $_SESSION['diemdi'] = $_GET['diemdi'];
+                $_SESSION['diemden'] = $_GET['diemden'];
+                $_SESSION['ngayve'] = $_GET['ngayve'];
+                $_SESSION['urlve'] = $urlve;
+            }
+
+            if(isset($_GET['khuhoi'])&&($_GET['khuhoi'] == 1)){
+                $ngayDi = $_SESSION['ngayve'];
+                $diemDi = $_SESSION['diemden'];
+                $diemDen = $_SESSION['diemdi'];
+                unset($_SESSION['ngayve']);
+                unset($_SESSION['diemdi']);
+                unset($_SESSION['diemden']);
+            }
+
             $loaiGhe = $_GET['loaighe'];
 
             $nguoiLon = $_GET['nguoilon'];
             $treEm = $_GET['treem'];
             $emBe = $_GET['embe'];
+
             $soNguoi = $nguoiLon + $treEm;
-            $showVeMotChieu1 = showVeMotChieu1($diemDi, $diemDen, $ngayDi);
+            $showVeMotChieu = showVeMotChieu($diemDi, $diemDen, $ngayDi, $loaiGhe);
+            if ($loaiGhe == 1) {
+                foreach ($showVeMotChieu as $motGhe) {
+                    $arr = explode(',', $motGhe['ttghethuong']);
+                    if (array_count_values($arr)['0'] >= $soNguoi) {
+                        array_push($Array, showVeSite($motGhe['id']));
+                    }
+                }
+            } elseif ($loaiGhe == 2) {
+                foreach ($showVeMotChieu as $motGhe) {
+                    $arr = explode(',', $motGhe['ttghethuonggia']);
+                    if (array_count_values($arr)['0'] >= $soNguoi) {
+                        array_push($Array, showVeSite($motGhe['id']));
+                    }
+                }
+            }
+            ($Array) ?  $Array = json_encode($Array) :  $Array = 'Không có chuyến bay nào cả';
             include 'views/timkiem.php';
             break;
         case 'chonghe':

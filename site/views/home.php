@@ -155,8 +155,8 @@
                 </div>     
                 <div class="l-sel-tren">
                     <select name="" id="select_awe_tren-2" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Loại Ghế">
-                        <option value="0"><i class="fas fa-fighter-jet"></i>Phổ thông</option>
-                        <option value="1"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                        <option value="1"><i class="fas fa-fighter-jet"></i>Phổ thông</option>
+                        <option value="2"><i class="fas fa-fighter-jet"></i>Thương gia</option>
                     </select>         
                 </div>  
                 <div class="l-sel-tren l-div-hangchon">

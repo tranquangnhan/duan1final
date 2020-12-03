@@ -38,9 +38,8 @@ $("#l-bt-search").click(function(e) {
         processData: false,
         data: dataSearch,
         success: function(response) {
-            // alert(response);
-            window.location.href = 'index.php?' + response;
             Loading.close();
+            window.location.href = 'index.php?' + response;
         }
     });
 
