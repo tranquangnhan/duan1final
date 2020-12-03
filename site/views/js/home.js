@@ -78,7 +78,6 @@ $(document).ready(function() {
             $('#l-plus-nguoilon').removeClass('l-plus_hover');
         }
         $('#nguoilon').val(sove_nl);
-        console.log(sove_nl);
     });
     $('#l-minus-nguoilon').click(function() {
         if (sove_nl > 1) {
@@ -88,20 +87,25 @@ $(document).ready(function() {
         if (sove_nl == 1) {
             $('#l-minus-nguoilon').removeClass('l-minus_hover');
         }
-        console.log(sove_nl);
         $('#nguoilon').val(sove_nl);
     });
     // trẻ em dưới 2
     var sove_beduoi2 = 0;
     $('#l-plus-beduoi2').click(function() {
-        if (sove_beduoi2 < 5) {
-            sove_beduoi2++;
-            $('#l-minus-beduoi2').addClass('l-minus_hover');
+        var sonl = $('#nguoilon').val();
+        if (sove_beduoi2 < sonl) {
+            console.log(sonl);
+            if (sove_beduoi2 < 5) {
+                sove_beduoi2++;
+                $('#l-minus-beduoi2').addClass('l-minus_hover');
+            }
+            if (sove_beduoi2 == 5) {
+                $('#l-plus-beduoi2').removeClass('l-plus_hover');
+            }
+            $('#beduoi2').val(sove_beduoi2);
+        } else {
+            alertify.warning('Em bé không được hơn số người lớn!');   
         }
-        if (sove_beduoi2 == 5) {
-            $('#l-plus-beduoi2').removeClass('l-plus_hover');
-        }
-        $('#beduoi2').val(sove_beduoi2);
     });
     $('#l-minus-beduoi2').click(function() {
         if (sove_beduoi2 > 0) {
@@ -116,14 +120,19 @@ $(document).ready(function() {
     // trẻ em trên 2
     var sove_betren2 = 0;
     $('#l-plus-betren2').click(function() {
-        if (sove_betren2 < 5) {
-            sove_betren2++;
-            $('#l-minus-betren2').addClass('l-minus_hover');
+        var sonl = $('#nguoilon').val();
+        if (sove_betren2 < sonl) {
+            if (sove_betren2 < 5) {
+                sove_betren2++;
+                $('#l-minus-betren2').addClass('l-minus_hover');
+            }
+            if (sove_betren2 == 5) {
+                $('#l-plus-betren2').removeClass('l-plus_hover');
+            }
+            $('#betren2').val(sove_betren2);
+        } else {
+            alertify.warning('Trẻ em không được hơn số người lớn!'); 
         }
-        if (sove_betren2 == 5) {
-            $('#l-plus-betren2').removeClass('l-plus_hover');
-        }
-        $('#betren2').val(sove_betren2);
     });
     $('#l-minus-betren2').click(function() {
         if (sove_betren2 > 0) {
@@ -145,6 +154,14 @@ $(document).ready(function() {
     $('.selectawe').awselect();
 
     // ngày đi
+    $("#motchieu-ngaydi").datepicker({
+        dateFormat: 'yy-mm-dd',
+        minDate: '0d',
+        duration: "fast",
+        showAnim: "show",
+        showOptions: { direction: "up" }
+    });
+
     $("#khuhoi_ngaydi").datepicker({
         dateFormat: 'yy-mm-dd',
         minDate: '0d',

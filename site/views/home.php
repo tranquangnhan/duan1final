@@ -309,7 +309,7 @@
         </div>
         <div class="row mr-top-8pt">
             <div class="l-box-ud">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/vietject_bg.jpg" alt="">
                     </div>
@@ -321,13 +321,13 @@
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">VietJetAir</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">VietJetAir</a>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="l-box-ud">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/vietnameairline_bg.jpg" alt="">
                     </div>
@@ -340,13 +340,13 @@
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Vietnam Airline</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">Vietnam Airline</a>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="l-box-ud">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/bamboairline_bg.jpg" alt="">
                     </div>
@@ -359,13 +359,13 @@
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Bamboo Airlines</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">Bamboo Airlines</a>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="l-box-ud mr-0">
-                <a href="google.com">
+                <a href="<?=SITE_URL?>?act=khuyenmai">
                     <div class="l-box-ud-img">
                         <img src="views/img/pacificairlines_bg.jpg" alt="">
                     </div>
@@ -378,7 +378,7 @@
                     </div>
                     <div class="l-btn-dat">
                         <div class="button-effect">
-                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Pacific Airlines</a>
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="<?=SITE_URL?>?act=khuyenmai" title="dat ngay">Pacific Airlines</a>
                         </div>
                     </div>
                 </a>

@@ -110,6 +110,7 @@
   <script src="views/jquery/rttrangthai.js" type="text/javascript"></script>
   <script src="views/jquery/timve.js" type="text/javascript"></script>
   <script src="views/jquery/chonve.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js" type="text/javascript"></script>
   <!-- select awesome js -->
   <script type="text/javascript" src="views/awesome-select-master/package/js/awselect.js"></script>
   <script>

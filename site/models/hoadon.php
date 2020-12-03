@@ -23,7 +23,7 @@ function checkinonl($macho){
     } 
     function showtensanbay($id){
         $sql ="select * from sanbay  where idsanbay = '$id'";
-        return result1(1,$sql)['tensanbay'];
+        return result1(1,$sql)['tinh'];
     } 
     function showiddiemdi_($id){ // t thêm dấu sếp gạch để sửa tạm thôi nhé
         $sql ="select * from tuyenduong  where id = '$id'";
