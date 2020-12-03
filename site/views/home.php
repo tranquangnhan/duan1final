@@ -238,7 +238,7 @@
                 <div class="sel verticle-top">
                     <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
                 </div>
-                <a href="" class="l-a-search"><button class="l-bt-search" id="l-bt-search" type="button">Tìm kiếm</button></a>
+                <a class="l-a-search"><button class="l-bt-search" id="l-bt-searchkh" type="button">Tìm kiếm</button></a>
             </div>      
             <div class="l-div-duoi motchieu display_none ">
                 <div class="sel l-w-28pt">
@@ -264,48 +264,13 @@
                 <div class="sel verticle-top l-w-28pt">
                     <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
-                <a href="" class="l-a-search"><button class="l-bt-search" type="button" id="l-bt-searchmc">Tìm kiếm</button></a>
+                <a class="l-a-search"><button class="l-bt-search" type="button" id="l-bt-searchmc">Tìm kiếm</button></a>
             </div>       
         </div>      
             
     </div>
 </div>
 <div class="box_main background-light-grey">
-    <?php 
-        // hãng máy bay
-        $vietject = 1;
-        $vietnameairline = 2;
-        $bammbo = 3;
-        $pacific = 4;
-        // lấy giảm giá theo hãng limit 1
-        $vietject = topgiamGiaTheoHang($vietject);
-        $vietnameairline = topgiamGiaTheoHang($vietnameairline);
-        $bammbo = topgiamGiaTheoHang($bammbo);
-        $pacific = topgiamGiaTheoHang($pacific);  
-        // gía giảm còn
-        $giamgia_1 = ($vietject['giavethuonggia'] * (100 - $vietject['giamgia'])) / 100;
-        $giamgia_2 = ($vietnameairline['giavethuonggia'] * (100 - $vietnameairline['giamgia'])) / 100;
-        $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
-        $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
-
-        $vjdiemdi = timSanBay ($vietject['iddiemdi']);
-        $vjdiemden = timSanBay($vietject['iddiemden']);
-        $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
-        $vndiemden = timSanBay($vietnameairline['iddiemden']);
-        $bbdiemdi = timSanBay($bammbo['iddiemdi']);
-        $bbdiemden = timSanBay($bammbo['iddiemden']);
-        $pcfdiemdi = timSanBay($pacific['iddiemdi']);
-        $pcfidiemden = timSanBay($pacific['iddiemden']);
-
-        $maSb_vj_di = explode("/",$vjdiemdi['masanbay'])[1];
-        $maSb_vj_den = explode("/",$vjdiemden['masanbay'])[1];
-        $maSb_vn_di = explode("/",$vndiemdi['masanbay'])[1];
-        $maSb_vn_den = explode("/",$vndiemden['masanbay'])[1];
-        $maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
-        $maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
-        $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
-        $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];
-    ?>
     <div class="container pd-bot-100px">
         <div class="section-title-center">
             <h1 class="title fz-2vw"><span class="color_main">Ưu</span> Đãi</h1>
