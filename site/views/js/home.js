@@ -138,7 +138,7 @@ $(document).ready(function() {
 
     // ngày đi
     $("#khuhoi_ngaydi").datepicker({
-        dateFormat: 'dd-MM-yy',
+        format: 'dd/mm/yyyy',
         minDate: '0d',
         duration: "fast",
         showAnim: "show", 
@@ -156,7 +156,7 @@ $(document).ready(function() {
     });
     // ngày về
     $("#khuhoi_ngayve").datepicker({
-        dateFormat: 'dd-MM-yy',
+        format: 'dd/mm/yyyy',
         duration: "fast",
         showAnim: "show", 
         showOptions: {direction: "up"}, 
