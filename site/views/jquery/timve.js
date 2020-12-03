@@ -1,4 +1,4 @@
-$("#l-bt-search").click(function(e) {
+$("#l-bt-search").click(async function(e) {
     e.preventDefault();
     // var loaiVe = $('#select_awe_tren-1').val();
     var loaiGhe = $('#select_awe_tren-2').val();
@@ -28,8 +28,8 @@ $("#l-bt-search").click(function(e) {
     dataSearch.append('diemden', diemDen);
     dataSearch.append('ngaydi', ngayDi);
     dataSearch.append('ngayve', ngayVe);
-    dataSearch.append('Action', 'timve');
-    $.ajax({
+    dataSearch.append('Action', 'showve');
+    await $.ajax({
         type: 'POST',
         url: 'controllers/ajax/timve.php',
         dataType: 'JSON',

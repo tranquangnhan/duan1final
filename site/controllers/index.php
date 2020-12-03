@@ -308,7 +308,7 @@ if (isset($_GET['act'])) {
             }
             require_once "views/doimk.php";
             break;
-        case 'timkiem';
+        case 'showve';
             $Array = array();
             $showSanBay = showsanbay();
             $diemDi = $_GET['diemdi'];
@@ -359,7 +359,7 @@ if (isset($_GET['act'])) {
             ($Array) ?  $Array = json_encode($Array) :  $Array = 'Không có chuyến bay nào cả';
             include 'views/timkiem.php';
             break;
-        case 'chonghe':
+        case 'chonve':
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
 
                 $idChuyenBay = $_GET['idcb'];
@@ -367,13 +367,20 @@ if (isset($_GET['act'])) {
                 echo '<script src="https://js.pusher.com/7.0/pusher.min.js"></script>';
                 echo "<script src='views/jquery/chonghe.js'></script>";
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
-
-                $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
-                $getGheThuong = renderHtml($idChuyenBay, 'ttghethuong');
-                require_once 'views/chonghe.php';
+                $loaiGhe = $_GET['loaighe'];
+                if($loaiGhe == 1){
+                    $getGheThuong = renderHtml($idChuyenBay, 'ttghethuong');
+                    require_once 'views/chonghethuong.php';
+                }elseif($loaiGhe == 2){
+                    $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
+                    require_once 'views/chonghethuonggia.php';
+                }
 
                 echo "<script src='views/jquery/showghe.js'></script>";
             }
+            break;
+        case 'thanhtoan':
+            require_once "views/thanhtoan.php";
             break;
         default:
             require_once "views/home.php";

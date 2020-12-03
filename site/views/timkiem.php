@@ -107,33 +107,30 @@
                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                     </div>
                 </div>
+                <input type="hidden" id="loaighe" value="<?=$loaiGhe?>">
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
-    <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?=$Arr[$i]['0']['tinh_di']?> </span>Đến:<?=$Arr[$i]['0']['tinh_den']?> </a></h3> 
-                <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Đặt Ngay</a>
+                <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?=$Arr[$i]['0']['tinh_di']?> </span>Đến:<?=$Arr[$i]['0']['tinh_den']?> </a></h3> 
+                <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase" onclick="chonVe(<?=$Arr[$i]['0']['id']?>)">Đặt Ngay</a>
                 <div class="date mr-lr-15px">
                   <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
                     <i class="fa fa-chevron-up mr-right-5px"></i>
                     Giờ đi:  
-                    <span class="text-third-color mr-right-5px"><?= showgiodi($k['idchuyenbay'])?></span> 
+                    <span class="text-third-color mr-right-5px"><?=$Arr[$i]['0']['giodi']?></span> 
                   </a>
                   <small class="text-uppercase text-extra-small">
                     <a href="#" class="cl-te-grey fz-0p7rem">
                       <i class="fa fa-chevron-down mr-right-5px"></i>
                   Giở đến:  
-                      <span class="text-third-color mr-right-5px"><?= showgioden($k['idchuyenbay'])?></span> </a>
+                      <span class="text-third-color mr-right-5px"><?= $Arr[$i]['0']['gioden']?></span> </a>
                   </small>
                 </div>
                 <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"><span class="mr-1" style="color: black;">Tiền:</span> <?= $k['giavethuong']?> <span class="mr-1" style="color: black;">VNĐ</span></strong>
-                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold"><span class="mr-1" style="color: black;">Giảm Giá:</span> <?= $k['giamgia']?><span class="mr-1" style="color: black;">VNĐ</span></strong>
+                    <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"><span class="mr-1" style="color: black;">Tiền:</span> <?= $giaVe?> <span class="mr-1" style="color: black;">VNĐ</span></strong>
 
-                    <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?= showngaydi($k['idchuyenbay']) ?></i>
+                    <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?=$Arr[$i]['0']['ngaydi'] ?></i>
                 </div>   
-                <!-- <div class="text-uppercase  mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold"><span class="mr-1" style="color: black;">Giảm Giá:</span> <?= $k['giamgia']?></strong>VNĐ
-                </div>                  -->
               </div>
             </div>
           </div>

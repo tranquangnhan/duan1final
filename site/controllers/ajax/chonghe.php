@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once '../../../system/config.php';
     include_once '../../../system/database.php';
     include_once '../../../lib/vendor/autoload.php'; // require pusher
@@ -63,14 +64,39 @@
                 return;
                 break;
             case 'showghethuong': 
-              $Return = array(); 
-          
-              $Return['html'] = renderHtml ($_POST['idcb'],'ttghethuong');
-              $Return['StatusCode'] = 1;
+                $Return = array(); 
+            
+                $Return['html'] = renderHtml ($_POST['idcb'],'ttghethuong');
+                $Return['StatusCode'] = 1;
 
-              echo json_encode($Return);
-              return;              
-              break;
+                echo json_encode($Return);
+                return;              
+                break;
+                case 'chonghe':
+                  $_SESSION['vitrighe'] = $_POST['idghe'];
+                  $_SESSION['idchuyenbay'] = $_POST['idcb'];
+                  $_SESSION['hangghe'] = $_POST['hangghe'];
+                  return;
+                  break;
+              case 'chonghekhuhoi':
+                  $_SESSION['vitrighekh'] = $_POST['idghekh'];
+                  $_SESSION['idchuyenbaykh'] = $_POST['idcbkh'];
+                  $_SESSION['hangghekh'] = $_POST['hangghekh'];
+                  return;
+                  break;
+              case 'checkkhuhoi':
+                  $Array = array();
+  
+                  if($_SESSION['ngayve']){
+                      $Array["StatusCode"] = '1';
+                      $Array['urlve'] = $_SESSION['urlve']; // chuyến đi
+                  }else{
+                      $Array["StatusCode"] = '0'; // chuyến về
+                  }
+                  echo json_encode($Array);
+                  unset($_SESSION['ngayve']);
+                  return;
+                  break;   
             default:
                 # code...
                 break;

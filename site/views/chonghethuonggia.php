@@ -1,7 +1,7 @@
 
 <main class="">
     <div class="l-bt_next_fixed">
-        <a href=""><i class="fas fa-arrow-circle-right"></i></a>
+        <a href=""><i class="fas fa-arrow-circle-right" id="tieptucthuonggia"></i></a>
     </div>
     <div class="text-center">
             <div class="row w-100 mr-0 pd-tb-100px background-cl-3">
@@ -75,25 +75,6 @@
                             <div class="l-loi-thoat-left"><i class="fas fa-caret-left"></i> LỐI THOÁT HIỂM</div>
                             <div class="l-loi-thoat-right">
                                 <p>LỐI <i class="fas fa-caret-right"></i> THOÁT HIỂM </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="l-phothong text-center">
-                        <div id="ghethuong">
-                            <?=$getGheThuong?>
-                        </div>
-                        <div class="l-loi-thoat">
-                            <div class="row">
-                                <div class="l-box-room l-wc-trenmaybay">
-                                    <i class="fas fa-restroom"></i>
-                                </div>
-                                <div class="l-box-room l-wc-trenmaybay mr-0">
-                                    <i class="fas fa-restroom"></i>
-                                </div>
-                                <div class="l-loi-thoat-left"><i class="fas fa-caret-left"></i> LỐI THOÁT HIỂM</div>
-                                <div class="l-loi-thoat-right">
-                                    <p>LỐI <i class="fas fa-caret-right"></i> THOÁT HIỂM </p>
-                                </div>
                             </div>
                         </div>
                     </div>

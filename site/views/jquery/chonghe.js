@@ -18,6 +18,7 @@ function ClickBtn() {
             ThisBox.click(async function(Events) {
                 Events.preventDefault();
                 fireErr('Ghế không còn trống !');
+                return;
             })
         })
 
@@ -27,8 +28,8 @@ function ClickBtn() {
             let MaxSheet = $('.l-ghe-active.l-ghe-thuonggia').length;
             let IsRemoveSelected = (ThisBox.hasClass('l-ghe-active'));
 
-            if (MaxSheet >= 3 && IsRemoveSelected === false) {
-                fireErr('Bạn chỉ được đặt tối đa 3 vé !');
+            if (MaxSheet >= 5 && IsRemoveSelected === false) {
+                fireErr('Bạn chỉ được đặt tối đa 5 vé !');
                 return;
             } else {
 
@@ -65,8 +66,8 @@ function ClickBtn() {
 
             let IsRemoveSelected = (ThisBox.hasClass('l-ghe-active'));
 
-            if (MaxSheet >= 3 && IsRemoveSelected === false) {
-                fireErr('Bạn chỉ được đặt tối đa 3 vé !');
+            if (MaxSheet >= 5 && IsRemoveSelected === false) {
+                fireErr('Bạn chỉ được đặt tối đa 5 vé !');
                 return;
             } else {
                 let ID = ThisBox.text();

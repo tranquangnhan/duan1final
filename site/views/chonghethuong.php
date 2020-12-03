@@ -49,27 +49,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="l-thuonggia text-center">
-                        <div class="l-loi-thoat">
-                            <div class="row">
-                                <div class="l-box-room l-wc-trenmaybay">
-                                    <i class="fas fa-restroom"></i>
-                                </div>
-                                <div class="l-box-room l-wc-trenmaybay mr-0">
-                                    <i class="fas fa-restroom"></i>
-                                </div>
-                                <div class="l-loi-thoat-left">
-                                    <p><i class="fas fa-caret-left"></i> LỐI THOÁT HIỂM</p>
-                                </div>
-                                <div class="l-loi-thoat-right">
-                                    <p>LỐI <i class="fas fa-caret-right"></i> THOÁT HIỂM </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="ghetg">
-                            <?=$getGheTg?>
-                        </div>
-                    </div>
                     <div class="l-loi-thoat">
                         <div class="row">
                             <div class="l-loi-thoat-left"><i class="fas fa-caret-left"></i> LỐI THOÁT HIỂM</div>
