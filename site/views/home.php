@@ -264,7 +264,7 @@
                 <div class="sel verticle-top l-w-28pt">
                     <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
-                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
+                <a href="" class="l-a-search"><button class="l-bt-search" type="button" id="l-bt-searchmc">Tìm kiếm</button></a>
             </div>       
         </div>      
             
