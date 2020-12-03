@@ -90,7 +90,6 @@ header ul.nav-menu {
     background-position: center center;
     opacity: 1;
     visibility: inherit;
-    z-index: 20;
 }
 
 .form-booking {
@@ -1035,29 +1034,8 @@ a:hover {
     }
 }
 
-.l-bt-fixed-to-top .bt-icon {
-    border: none;
-    padding: 14px 10px;
-    border-radius: 40px;
-    cursor: pointer;
-    color: white;
-    background-color: #F44336;
-    overflow: hidden;
-    font-family: inherit;
-    transition: 0.5s;
-    font-weight: 700;
-}
-
 .l-bt-fixed-to-top .bt-icon:hover {
     transform: scale(1.1);
-}
-
-#l-menu-fixed {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    transition: 0.5s;
-    display: none;
 }
 
 .l-box-ud {
@@ -1079,12 +1057,12 @@ a:hover {
 
 .l-ud-giam-gia {
     transition: 0.5s;
-    transform: translateY(250px);
+    /* transform: translateY(250px); */
 }
 
 .l-box-ud:hover .l-ud-giam-gia {
     color: #F44336;
-    transform: translateY(0px);
+    /* transform: translateY(0px); */
 }
 
 .l-box-ud-img {
@@ -1112,7 +1090,7 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: linear-gradient(180deg, #1db8c1, #000000);
+    background: linear-gradient(180deg, #d5fdff, #000000);
     mix-blend-mode: multiply;
     opacity: 0;
     transition: 0.5s;
@@ -1122,33 +1100,107 @@ a:hover {
     opacity: 1;
 }
 
-.l-thongtin-ud {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    padding: 20px;
-    align-items: flex-end;
-    color: white;
-}
-
 .l-thongtin-ud h2 {
     text-transform: uppercase;
 }
 
-.l-thongtin-ud p {
+.l-btn-dat {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 150px;
+    margin-left: -25%;
+    z-index: 2;
+    transition: 0.5s;
+    transform: translateX(-250px);
+}
+
+.l-box-ud:hover .l-btn-dat {
+    transform: translateY(0px);
+}
+.l-box-ud:hover .l-khuyenmai {
+    color: #F44336;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.l-box-ud:hover .l-giagoc {
+    text-decoration: line-through;
+    text-decoration-color: rgb(32, 32, 32);
+}
+.l-bt_bg_datngay {
+    background: #F44336;
+}
+
+.l-hover_a_effect {
+    color: white!important;
+}
+
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 10px 0px;
+    width: 150px;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
+
+/* effect-5 styles */
+.effect.effect-5 {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+.effect.effect-5:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0 50% 50% 0;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+.effect.effect-5:hover {
+    text-indent: 30px;
+}
+.effect.effect-5:hover:before {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    text-indent: 0;
+}
+
+/* .l-thongtin-ud p {
     transform: translateY(250px);
     transition: 0.3s;
 }
 
 .l-thongtin-ud:hover p {
     transform: translateY(0px);
-}
+} */
 
-.l-thongtin-ud .l-ud-date-flight {
+/* .l-thongtin-ud .l-ud-date-flight {
     transform: translateY(250px);
     transition: 0.3s;
     transition-delay: 0.3s;
@@ -1156,7 +1208,7 @@ a:hover {
 
 .l-thongtin-ud:hover .l-ud-date-flight {
     transform: translateY(0px);
-}
+} */
 
 .l-button-ud {
     font-size: 0.7vw;
@@ -1252,6 +1304,7 @@ a:hover {
     top: 0px;
     left: 0px;
     transition: 0.5s;
+    z-index: 200;
     display: none;
 }
 
@@ -1272,7 +1325,7 @@ a:hover {
     box-shadow: 0 25px 40px rgba(0, 0, 0, .5)
 }
 
-.l-ud-giam-gia {
+/* .l-ud-giam-gia {
     transition: 0.5s;
     transform: translateY(250px);
 }
@@ -1280,7 +1333,7 @@ a:hover {
 .l-box-ud:hover .l-ud-giam-gia {
     color: #F44336;
     transform: translateY(0px);
-}
+} */
 
 .l-box-ud-img {
     position: absolute;
@@ -1307,7 +1360,7 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: linear-gradient(180deg, #1db8c1, #000000);
+    /* background: linear-gradient(180deg, #1db8c1, #000000); */
     mix-blend-mode: multiply;
     opacity: 0;
     transition: 0.5s;
@@ -1325,7 +1378,7 @@ a:hover {
     height: 100%;
     z-index: 2;
     display: flex;
-    padding: 20px;
+    padding: 20px 10px;
     align-items: flex-end;
     color: white;
 }
@@ -1333,8 +1386,8 @@ a:hover {
 .l-thongtin-ud h2 {
     text-transform: uppercase;
 }
-
-.l-thongtin-ud p {
+ /* animation uu dai */
+/* .l-thongtin-ud p {
     transform: translateY(250px);
     transition: 0.3s;
 }
@@ -1347,11 +1400,11 @@ a:hover {
     transform: translateY(250px);
     transition: 0.3s;
     transition-delay: 0.3s;
-}
+} */
 
-.l-thongtin-ud:hover .l-ud-date-flight {
+/* .l-thongtin-ud:hover .l-ud-date-flight {
     transform: translateY(0px);
-}
+} */
 
 .l-button-ud {
     font-size: 0.7vw;
@@ -1652,3 +1705,9 @@ input[type=number] {
     position: absolute;
     box-shadow: 0px 0px 32px -8px #858585;
 }
+
+#menu-main-fixed li a {
+    color: rgb(56, 56, 56);
+}
+
+

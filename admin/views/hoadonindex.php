@@ -44,12 +44,14 @@
                                                     $linkhdct = "index.php?ctrl=hoadon&act=hdct&idhd=".$id;
 
                                                     $tenKh = showHdCt($hd['id'])['tenkh'];
+
                                                     $trangThai = $hd['trangthai'];
                                                     if($trangThai == 1){
                                                         $trangThai = 'Chưa Thanh Toán';
                                                     }elseif($trangThai == 2){
                                                         $trangThai = 'Đã Thanh Toán';
                                                     }
+                                                    
                                                     $soLuong = demSoluong($hd['id']);
                                                     if($soLuong['sl'] > 1){
                                                         $loaiVe ='Khứ Hồi';
@@ -60,10 +62,10 @@
                                                 <tr>
                                                     <td><?=$i?></td>  
                                                     <td><?=$tenKh?></td>
-                                                    <td><?=showVeAdmin($hd['idchuyenbay'])['0']['tinh_di']?></td>
-                                                    <td><?=showVeAdmin($hd['idchuyenbay'])['0']['tinh_den']?></td>
-                                                    <td><?=showVeAdmin($hd['idchuyenbay'])['0']['ngaydi']?></td>
-                                                    <td><?=showVeAdmin($hd['idchuyenbay'])['0']['giodi']?></td>
+                                                    <td><?=showVeAdmin(showHdCt($hd['id'])['idchuyenbay'])['0']['tinh_di']?></td>
+                                                    <td><?=showVeAdmin(showHdCt($hd['id'])['idchuyenbay'])['0']['tinh_den']?></td>
+                                                    <td><?=showVeAdmin(showHdCt($hd['id'])['idchuyenbay'])['0']['ngaydi']?></td>
+                                                    <td><?=showVeAdmin(showHdCt($hd['id'])['idchuyenbay'])['0']['giodi']?></td>
                                                     <td><?= $loaiVe?></td>
                                                     <td><?=$trangThai?></td>
                                                     <td><a href="<?=$linkhdct?>">Xem Chi Tiết</a></td>

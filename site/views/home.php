@@ -1,270 +1,271 @@
 <div class="box_header">
-    <div class="baner-gb position-relative">
-        <div class="owl-carousel owl-theme owl-loaded" id="owl-1">
-            <div class="owl-stage-outer">
-                <div class="owl-stage">
-                    <div class="owl-item">
-                        <div class="pn1-img"></div>
-                        <img src="views/img/panner1.jpg" alt="">
-                        <div class="anim-pn1">
-                            <div class="anim1-pn1 animated fadeInDownBig light-hight-50px">Chúng tôi <br> Muốn</div>
-                            <div class="animate-delay-0p4s anim2-pn1 animated fadeInRightBig">Khách hàng / Nhanh chóng /
-                                Đẳng cấp
-                            </div>
-                            <div class="animate-delay-0p7s anim3-pn1 animated fadeInRightBig">Mọi thứ bạn cần. Ở đâu rẻ
-                                hơn Travelz hoàn tiền.
-                            </div>
-                            <a href="#" class="">
-                                <div class="animate-delay-0p9s anim4-pn1 animated fadeInRightBig">Đặt vé hôm nay</div>
-                            </a>
+    <div class="baner-gb bn_copy position-relative">
+        <header>            
+            <div class="pd-tb-2px position-relative">
+                <div class="bg-white-op"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm d-none d-sm-block text-white line_h_28">Đẳng cấp là đây</div>
+                        <div class="col-sm">
+                            <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
+                                <li class="list-inline-item"><a class="facebook text-white" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a class="youtube text-white" href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a class="linkedin text-white" href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a class="google text-white" href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a class="twitter text-white" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="list-inline-item"><a class="rss text-white" href="#"><i class="fas fa-rss" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="pn2-img"></div>
-                        <img src="views/img/panner2.jpg" alt="">
-                        <div class="anim-pn2">
-                            <div class="anim1-pn2 animated fadeInUp">All Day Happy</div>
-                            <div class="animate-delay-0p4s anim2-pn2 animated fadeInUp"><img
-                                        src="views/img/5saodiscount.png" alt=""></div>
-                            <div class="animate-delay-1s anim3-pn2 animated fadeInUp">travelz@gmail.com <br> +1900 333
-                                019 <br> Tuần Lễ Vàng muôn vàng giảm giá
-                            </div>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="pn2-img"></div>
-                        <img src="views/img/panner3.jpg" alt="">
-                        <div class="anim-pn3">
-                            <div class="anim1-pn3 animated fadeInDown">plans your trip</div>
-                            <div class="animate-delay-0p7s anim2-pn3 animated fadeInUp"><img
-                                        src="views/img/86311-Holidays-today.png" alt=""></div>
+                        <div class="col-sm d-none d-sm-block line_h_28">
+                            <ul class="float-right margin-0px text-white mr-0">
+                                <?php 
+                                if(isset($_SESSION['sid'])){
+                                    echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=showhs"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
+                                    <li class="list-inline-item"><a class="text-white" href="?act=user&logout=1"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
+                                }else{
+                                    echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
+                                    <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
+                                } ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="header-output position-relative">
+                <div class="bg-out-op"></div>
+                <div class="container header-in">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-3">
+                            <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
+                            <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                        </div>
+                        <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9 col-9 aligh-items-right">
+                            <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
+                                <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
+                                    <li class="nav-item active">
+                                        <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            CHUYẾN BAY
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Flights List View</a>
+                                            <a class="dropdown-item" href="#">Flights Grid View</a>
+                                            <a class="dropdown-item" href="#">Flights Grid View 2</a>
+                                            <a class="dropdown-item" href="#">Flights Details</a>
+                                            <a class="dropdown-item" href="#">Flights Booking</a>
+                                            <a class="dropdown-item" href="#">Flights Thanks page</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="" href="<?=SITE_URL?>?act=blog">BÀI VIẾT</a>
+                                    </li>                                
+                                    <li class="nav-item">
+                                        <a class="pd-r-0" style="padding-right: 0px;" href="<?=SITE_URL?>?act=about">VỀ CHÚNG TÔI</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="header-output-fixed" id="l-menu-fixed">
+                <div class="bg-out-op-fixed"></div>
+                <div class="container header-in">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-3">
+                            <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
+                            <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                        </div>
+                        <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9  col-9 aligh-items-right">
+                            <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
+                                <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main-fixed">
+                                    <li class="nav-item active">
+                                        <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            CHUYẾN BAY
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Flights List View</a>
+                                            <a class="dropdown-item" href="#">Flights Grid View</a>
+                                            <a class="dropdown-item" href="#">Flights Grid View 2</a>
+                                            <a class="dropdown-item" href="#">Flights Details</a>
+                                            <a class="dropdown-item" href="#">Flights Booking</a>
+                                            <a class="dropdown-item" href="#">Flights Thanks page</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="" href="<?=SITE_URL?>?act=blog">BÀI VIẾT</a>
+                                    </li>                                
+                                    <li class="nav-item">
+                                        <a class="pd-r-0"href="<?=SITE_URL?>?act=about">VỀ CHÚNG TÔI</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class=" dropdown-toggle fz-12vw" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="far fa-user-circle"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <?php 
+                                            if(isset($_SESSION['sid'])){
+                                                echo '<a class="dropdown-item" href="?act=showhs">'.$_SESSION['suser'].'</a>
+                                                    <a class="dropdown-item" href="?act=user&logout=1">Đăng xuất</a>';
+                                            }else{
+                                                echo '<a class="dropdown-item" href="?act=signup">Đăng ký</a>
+                                                    <a class="dropdown-item" href="?act=login">Đăng nhập</a>';
+                                            } ?>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="l-banner-content">
+            <div class="l-tu display-inlineblock">SGN</div>
+            <div class="display-inlineblock">TO</div>
+            <div class="l-den display-inlineblock">SBM</div>
+        </div>      
     </div>
 </div>
 <div class="background-light-grey">
     <div class="container">
-        <div id="search-filter-2" class="pull-top-8pt z-index-21 position-relative">
-            <div class="tab">
-
-                <button class=" filght mr-right-1pt tablinks  a_filght text-white active show nav-link" id="defaultOpen"
-                        onclick="openCity(event, 'London')" style="border-radius: none; float: left;">
-                    <i class="fas fa-plane-departure"></i> Một chiều
-                </button>
-                <button class=" filght mr-right-1pt tablinks  a_filght text-white active show nav-link" id="defaultOpen"
-                        onclick="openCity(event, 'Paris')" style="border-radius: none; ">
-                    <i class="fas fa-plane-departure"></i> Chuyến Đi Khứ Hồi
-                </button>
-
-
-            </div>
-            <!-- <li class="nav-item filght mr-right-1pt" id="id-nhieudiemden">
-      <a class="nav-link a_filght text-white" id="id-nhieudiemden" data-toggle="tab" href="#home" role="tab"><i class="fas fa-plane"></i> Nhiều điểm đến</a>
-    </li> -->
-            <style>
-                .tab-content {
-                    display: none;
-                }
-            </style>
-
-            <script>
-                function openCity(evt, cityName) {
-                    var i, tabcontent, tablinks;
-                    tabcontent = document.getElementsByClassName("tabcontent");
-                    for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
-                    }
-                    tablinks = document.getElementsByClassName("tablinks");
-                    for (i = 0; i < tablinks.length; i++) {
-                        tablinks[i].className = tablinks[i].className.replace(" active", "");
-                    }
-                    document.getElementById(cityName).style.display = "block";
-                    evt.currentTarget.className += " active";
-                }
-
-                // Get the element with id="defaultOpen" and click on it
-                document.getElementById("defaultOpen").click();
-            </script>
-            <div id="Paris" class="tabcontent">
-                <div class="padding-30px box-shadow background-white">
-                    <form action="" method="get">
-                        <input type="hidden" name="act" value="timkiem">
-                        <div class="active" id="" role="">
-                            <form action="" method="get">
-                                <div class="row">
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Địa điểm</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemdi" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php $showAllSanBay = showAllSanBay();
-                                                foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Nơi đến</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemden" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Khởi hành</label>
-                                        <div class="date-input"><input type="date" name="ngaydi"
-                                                                       class="input-text datepicker full-width hasDatepicker"
-                                                                       placeholder="15 / 5 / 2017" id="dp1604379882087">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Trở Về</label>
-                                        <div class="date-input"><input type="date" name="ngayve"
-                                                                       class="input-text datepicker full-width hasDatepicker"
-                                                                       placeholder="15 / 5 / 2017" id="dp1604379882087">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Vé</label>
-                                        <div class="ticket"><input type="text" name="ve" class="input-text full-width"
-                                                                   placeholder="1"></div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Người lớn</label>
-                                        <div class="children"><input type="text" name="nguoilon"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Trẻ em</label>
-                                        <div class="children"><input type="text" name="treem"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Em bé</label>
-                                        <div class="children"><input type="text" name="embe"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Hạng ghế</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="loaighe" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <option value="0">Phổ Thông</option>
-                                                <option value="1">Thương Gia</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 mr-0-at">
-
-                                        <input type="submit" value="TÌM KIẾM"
-                                               class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px">
-
-                                    </div>
+        <div id="l-search-filter" class="l-search-filter">
+            <div class="l-div-tren">
+                <div class="l-sel-tren">
+                    <select name="" id="select_awe_tren-1" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_1" data-placeholder="Khứ Hồi">
+                        <option value="khuhoi" id="khuhoi">Khứ Hồi</option>
+                        <option value="motchieu" id="motchieu">Một Chiều</option>
+                    </select>         
+                </div>     
+                <div class="l-sel-tren">
+                    <select name="" id="select_awe_tren-2" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Loại Ghế">
+                        <option value="0"><i class="fas fa-fighter-jet"></i>Phổ thông</option>
+                        <option value="1"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                    </select>         
+                </div>  
+                <div class="l-sel-tren l-div-hangchon">
+                    <div id="l_show_chon_ve">Người lớn </div>
+                    <div class="l-box-qlity" id="l-box-qlity">
+                        <div class="l-hang-chon">
+                            <div class="l-left-hang-chon display-inlineblock">
+                                <div class="l-title-hangchon">
+                                    Người Lớn
                                 </div>
-                            </form>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div id="London" class="tabcontent">
-                <div class="padding-30px box-shadow background-white">
-                    <form action="" method="get">
-                        <input type="hidden" name="act" value="timkiem">
-                        <div class="active" id="">
-                            <form action="" method="get">
-                                <div class="row">
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Địa điểm</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemdi" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php $showAllSanBay = showAllSanBay();
-                                                foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Nơi đến</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="diemden" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <?php foreach ($showAllSanBay as $motdd) {
-                                                    echo '<option value="' . $motdd['idsanbay'] . '">' . $motdd['tinh'] . '</option>';
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2" id="">
-                                        <label>Khởi hành</label>
-                                        <div class="date-input"><input type="date" name="ngaydi"
-                                                                       class="input-text datepicker full-width hasDatepicker"
-                                                                       placeholder="15 / 5 / 2017" id="dp1604379882087">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Vé</label>
-                                        <div class="ticket"><input type="text" name="ve" class="input-text full-width"
-                                                                   placeholder="1"></div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Người lớn</label>
-                                        <div class="children"><input type="text" name="nguoilon"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Trẻ em</label>
-                                        <div class="children"><input type="text" name="treem"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Em bé</label>
-                                        <div class="children"><input type="text" name="embe"
-                                                                     class="input-text full-width" placeholder="0">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Hạng ghế</label>
-                                        <div class="form-group">
-                                            <select class="form-control" name="loaighe" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <option value="0">Phổ Thông</option>
-                                                <option value="1">Thương Gia</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 mr-0-at">
-                                        <input type="submit" value="TÌM KIẾM"
-                                               class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase margin-top-32px padding-7px">
-
-                                    </div>
+                            </div>
+                            <div class="l-right-hang-chon display-inlineblock">
+                                <div class="d-flex he-20px">
+                                    <i class="fas fa-minus light-hight-10px l-minus" id="l-minus-nguoilon"></i>
+                                    <input class="bg-none border-none input_qlity text-center" id="nguoilon" name="nguoilon" type="number" value="1" placeholder="1">
+                                    <i class="fas fa-plus light-hight-10px l-plus l-plus_hover" id="l-plus-nguoilon"></i>
                                 </div>
+                            </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="l-hang-chon">
+                            <div class="l-left-hang-chon display-inlineblock">
+                                <div class="l-title-hangchon">
+                                    Trẻ em (Dưới 2 tuổi ngồi cùng)
+                                </div>
+                            </div>
+                            <div class="l-right-hang-chon display-inlineblock">
+                                <div class="d-flex he-20px">
+                                    <i class="fas fa-minus light-hight-10px l-minus" id="l-minus-beduoi2"></i>
+                                    <input class="bg-none border-none input_qlity text-center" id="beduoi2" name="beduoi2" type="number" placeholder="0">
+                                    <i class="fas fa-plus light-hight-10px l-plus l-plus_hover" id="l-plus-beduoi2"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-hang-chon margin-0px">
+                            <div class="l-left-hang-chon display-inlineblock">
+                                <div class="l-title-hangchon">
+                                    Trẻ em (Ngồi riêng)
+                                </div>
+                            </div>
+                            <div class="l-right-hang-chon display-inlineblock">
+                                <div class="d-flex he-20px">
+                                    <i class="fas fa-minus light-hight-10px l-minus" id="l-minus-betren2"></i>
+                                    <input class="bg-none border-none input_qlity text-center" id="betren2" name="betren2" type="number" placeholder="0">
+                                    <i class="fas fa-plus light-hight-10px l-plus l-plus_hover" id="l-plus-betren2"></i>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>      
+                </div>   
+                <div class="l-sel-tren">
+                    
+                </div>       
             </div>
-        </div>
+            <div class="l-div-duoi khuhoi">
+                <div class="sel">
+                    <select name="" id="select_awe_1" class="selectawe" data-callback="my_callback_tu" data-placeholder="Từ">
+                        <option value="SGN">TP Hồ Chí Minh (SGN)</option>
+                        <option value="BMV">TP Buông Ma Thuột (BMV)</option>
+                        <option value="VCA">TP Cần Thơ (VCA)</option>
+                        <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                    </select>
+                </div>  
+                <div class="sel">
+                    <select name="" id="select_awe_2" class="selectawe" data-callback="my_callback_den" data-placeholder="Đến">
+                        <option value="SGN">TP Hồ Chí Minh (SGN)</option>
+                        <option value="BMV">TP Buông Ma Thuột (BMV)</option>
+                        <option value="VCA">TP Cần Thơ (VCA)</option>
+                        <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                    </select>
+                </div>
+                <div class="sel verticle-top">
+                    <input type="text" name="khuhoi_ngaydi" class="l-input l-date placeholder-icon" id="khuhoi_ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
+                </div>
+                <div class="sel verticle-top">
+                    <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
+                </div>
+                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
+            </div>      
+            <div class="l-div-duoi motchieu display_none ">
+                <div class="sel l-w-26pt">
+                    <select name="" id="select_awe_1_motchieu" class="selectawe" data-callback="my_callback_tu_motchieu" data-placeholder="Từ">
+                    <option value="HCM">TP Hồ Chí Minh (SGN)</option>
+                    <option value="BMV">TP Buông Ma Thuột (SGN)</option>
+                    <option value="VCA">TP Cần Thơ (VCA)</option>
+                    <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                    </select>
+                </div>  
+                <div class="sel l-w-26pt">
+                    <select name="" id="select_awe_2_motchieu" class="selectawe" data-callback="my_callback_den_motchieu" data-placeholder="Đến?">
+                    <option value="HCM">TP Hồ Chí Minh (SGN)</option>
+                    <option value="BMV">TP Buông Ma Thuột (SGN)</option>
+                    <option value="VCA">TP Cần Thơ (VCA)</option>
+                    <option value="PQC">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                    </select>
+                </div>
+                <div class="sel verticle-top l-w-26pt">
+                    <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
+                </div>
+                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
+            </div>       
+        </div>      
+            
     </div>
 </div>
 <div class="box_main background-light-grey">
     <div class="container pd-bot-100px">
         <div class="section-title-center">
-            <h1 class="title fz-2vw"><span class="color_main">Hot</span> Flight</h1>
+            <h1 class="title fz-2vw"><span class="color_main">Ưu</span> Đãi</h1>
             <span class="section-title-des fz-1vw">Nhấp vào đăng kí để nhận nhiều thông tin ưu đãi ngay</span>
         </div>
         <div class="row mr-top-8pt">
@@ -274,21 +275,16 @@
                         <img src="views/img/phanthiet.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
                     </div>
-                </a>
-            </div>
-            <div class="l-box-ud">
-                <a href="google.com">
-                    <div class="l-box-ud-img">
-                        <img src="views/img/phanthiet.jpg" alt="">
-                    </div>
-                    <div class="l-thongtin-ud text-uppercase">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -298,9 +294,35 @@
                         <img src="views/img/phanthiet.jpg" alt="">
                     </div>
                     <div class="l-thongtin-ud">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span><b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
+                    </div>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="l-box-ud">
+                <a href="google.com">
+                    <div class="l-box-ud-img">
+                        <img src="views/img/phanthiet.jpg" alt="">
+                    </div>
+                    <div class="l-thongtin-ud">
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
+                    </div>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -309,13 +331,20 @@
                     <div class="l-box-ud-img">
                         <img src="views/img/phanthiet.jpg" alt="">
                     </div>
-                    <div class="l-thongtin-ud ">
-                        <h2 class="fz-1vw te-al-left">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</h2>
-                        <p><span>650.000 VNĐ</span> <b class="l-ud-giam-gia"> 320.000 VNĐ</b></p>
-                        <p class="l-ud-date-flight">15 08 2020</p>
+                    <div class="l-thongtin-ud">
+                        <div class="l-tuyenduong">Hồ Chí Minh (SGN) To <br> Phan Thiết (PTN)</div>
+                        <div class="l-giagoc">560.000 VND</div>
+                        <div class="l-khuyenmai">400.000 VND</div>
+                        <div class="l-ngaydi">15 - 12 - 2020</div>
+                        
                     </div>
+                    <div class="l-btn-dat">
+                        <div class="button-effect">
+                            <a class="effect effect-5 l-hover_a_effect l-bt_bg_datngay" href="#" title="dat ngay">Đặt Ngay</a>
+                        </div>
+                    </div>
+                </a>
             </div>
-            </a>
         </div>
     </div>
     <div class="row box-map">

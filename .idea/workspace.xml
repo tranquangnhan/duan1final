@@ -25,20 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="Nguyễn Quốc Hiếu">
-      <change afterPath="$PROJECT_DIR$/site/models/timkiem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/views/timkiem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controllers/timve.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/timve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/timve.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/timve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/controllers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/models/danhsachve.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/models/danhsachve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/models/ve.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/models/ve.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/config.php" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="Nguyễn Quốc Hiếu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +71,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kJhv1Iguhh2itIT0TTc8NFXCyf" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -96,6 +83,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -104,22 +92,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -139,6 +115,8 @@
       <workItem from="1606077338251" duration="23000" />
       <workItem from="1606141477171" duration="744000" />
       <workItem from="1606401011979" duration="15980000" />
+      <workItem from="1606930344532" duration="1632000" />
+      <workItem from="1606936024329" duration="268000" />
     </task>
     <servers />
   </component>
@@ -168,6 +146,11 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="578" y="327" key="#Composer" timestamp="1606071085126">
       <screen x="0" y="30" width="1536" height="834" />
@@ -186,10 +169,11 @@
     </state>
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605448597913" />
     <state x="521" y="169" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1606071083854" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1605425372532">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="207" y="40" key="SettingsEditor" timestamp="1606930366064">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605425372532" />
+    <state x="207" y="40" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1606930366064" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1605427578683">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

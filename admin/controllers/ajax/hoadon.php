@@ -35,9 +35,9 @@
                     }
                     $tongTien =  $giaTien * count($_SESSION['vitrighekh']);
                     
-                    $lastId = addhoadon( $idChuyenBay,$ngayDatVe,1,$tongTien);
+                    $lastId = addhoadon($ngayDatVe,1,$tongTien);
                     for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
                     }
                 }
                
@@ -58,9 +58,9 @@
                     }
                     $tongTien =  $giaTien * count($_SESSION['vitrighe']);
                     
-                    $lastId = addhoadon( $idChuyenBay,$ngayDatVe,1,$tongTien);
+                    $lastId = addhoadon($ngayDatVe,1,$tongTien);
                     for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$_SESSION['vitrighe'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
                     }
 
                     //add lượt về
@@ -78,9 +78,9 @@
 
                     $tongTienKh =  $giaTienKh * count($_SESSION['vitrighekh']);
 
-                    $lastIdKh = addhoadon($idChuyenBayKh,$ngayDatVe,1,$tongTienKh);
+                    $lastId = addhoadon($ngayDatVe,1,$tongTien);
                     for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastIdKh,$_SESSION['vitrighekh'][$i],$hangGheKh,$giaTienKh,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBayKh,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
                     }
                 }
                 unset($_SESSION['idchuyenbay']);
