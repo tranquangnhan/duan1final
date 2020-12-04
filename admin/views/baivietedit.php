@@ -16,7 +16,7 @@ if(is_file($img)){
     $img = "nothing...";
 }
 ?>
-<div class="col-lg-9">
+<div class="col-lg-10">
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">

@@ -30,6 +30,7 @@
     
             if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
                 $_SESSION['idedit'] = $_GET['idedit'];
+                
                 $showBlEdit = showBlEdit($_SESSION['idedit']);
                 if(isset($_POST['sua'])&&($_POST['sua'])){
              

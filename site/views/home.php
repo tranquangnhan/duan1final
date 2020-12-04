@@ -43,7 +43,7 @@
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                                 <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                     <li class="nav-item active">
-                                        <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                        <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,7 +88,7 @@
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                                 <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main-fixed">
                                     <li class="nav-item active">
-                                        <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                        <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -238,7 +238,7 @@
                 <div class="sel verticle-top">
                     <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome">
                 </div>
-                <a href="" class="l-a-search"><button class="l-bt-search" id="l-bt-search" type="button">Tìm kiếm</button></a>
+                <a class="l-a-search"><button class="l-bt-search" id="l-bt-searchkh" type="button">Tìm kiếm</button></a>
             </div>      
             <div class="l-div-duoi motchieu display_none ">
                 <div class="sel l-w-28pt">
@@ -264,16 +264,13 @@
                 <div class="sel verticle-top l-w-28pt">
                     <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
                 </div>
-                <a href="" class="l-a-search"><button class="l-bt-search" type="button">Tìm kiếm</button></a>
+                <a class="l-a-search"><button class="l-bt-search" type="button" id="l-bt-searchmc">Tìm kiếm</button></a>
             </div>       
         </div>      
             
     </div>
 </div>
 <div class="box_main background-light-grey">
-    <?php 
-        
-    ?>
     <div class="container pd-bot-100px">
         <div class="section-title-center">
             <h1 class="title fz-2vw"><span class="color_main">Ưu</span> Đãi</h1>
