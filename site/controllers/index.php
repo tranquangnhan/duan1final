@@ -397,8 +397,6 @@ if (isset($_GET['act'])) {
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
 
                 $idChuyenBay = $_GET['idcb'];
-
-                echo '<script src="https://js.pusher.com/7.0/pusher.min.js"></script>';
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
                 $loaiGhe = $_GET['loaighe'];
                 if($loaiGhe == 1){
@@ -408,7 +406,6 @@ if (isset($_GET['act'])) {
                     $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
                     require_once 'views/chonghethuonggia.php';
                 }
-                
             }
             break;
         case 'thanhtoan':

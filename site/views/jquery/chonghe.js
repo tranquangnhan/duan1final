@@ -83,9 +83,7 @@ function ClickBtn() {
                     contentType: false,
                     processData: false,
                     data: setGhe,
-                    success: function(Data) {
-                        alert(Data);
-                    }
+                    success: function(Data) {}
                 });
             }
 
