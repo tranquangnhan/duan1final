@@ -132,4 +132,14 @@ function showVeSite($id)
     on o.id=q.id and q.id=p.id and o.id=b.id where o.id='$id'";
     return result1(0,$sql);
 }
+function unsetSs(){
+    unset($_SESSION['idchuyenbay']);
+    unset($_SESSION['hangghe']);
+    unset($_SESSION['urlve']);
+    unset($_SESSION['vitrighe']);
+    unset($_SESSION['vitrighekh']);
+    unset($_SESSION['idchuyenbaykh']);
+    unset($_SESSION['hangghekh']);
+}
+
 ?>

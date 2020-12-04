@@ -64,19 +64,22 @@ $act = 'home';
 // $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
 // $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];
 
+
 $blog = gettwoblog();
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
-
     switch ($act) {
         case 'home':
+            unsetSs();
             $blog = gettwoblog();
             require_once "views/home.php";
             break;
         case 'about':
+            unsetSs();
             require_once "views/about.php";
             break;
         case 'contact':
+            unsetSs();
             require_once "views/contact.php";
             break;
         case 'danhsachve':   // để sửa css
