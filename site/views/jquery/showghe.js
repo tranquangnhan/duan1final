@@ -39,13 +39,13 @@ var pusher = new Pusher('166bbd5af4fcbf088045', {
 });
 
 var channel = pusher.subscribe('my-channel');
-channel.bind('my-event', function(data) {
+channel.bind('my-event', async function(data) {
     let idChuyenBay = $("#idcb").val();
     var showGhe = new FormData();
 
     showGhe.append('Action', 'showghethuong');
     showGhe.append('idcb', idChuyenBay);
-    $.ajax({
+    await $.ajax({
         type: "POST",
         url: 'controllers/ajax/chonghe.php',
         dataType: 'JSON',
@@ -58,6 +58,16 @@ channel.bind('my-event', function(data) {
                 $("#ghethuong").html(response.html);
                 ClickBtn();
             }
+        },
+        error: function() {
+            Loading.close();
+            Swal.fire({
+                timer: 3000,
+                type: 'error',
+                title: 'Có lỗi xảy ra trong quá trình xử lý dữ liệu. Vui lòng thử lại sau.',
+                showConfirmButton: false,
+                showCancelButton: false,
+            });
         }
     });
 });

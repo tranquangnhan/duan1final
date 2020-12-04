@@ -3,6 +3,7 @@
     include_once '../../../system/config.php';
     include_once '../../../system/database.php';
     include_once '../../../lib/vendor/autoload.php'; // require pusher
+    include_once '../../../lib/myfunctions.php';
     include_once '../../models/ve.php';
     if ($_POST['Action'])
     {
@@ -31,25 +32,28 @@
                 break;
             
             case 'setghethuong': 
-              $Return = array(); 
+             
+                $Return = array(); 
 
-              $options = array(
-                  'cluster' => 'ap1',
-                  'useTLS' => true
-                );
+                $options = array(
+                    'cluster' => 'ap1',
+                    'useTLS' => true
+                  );
                 $pusher = new Pusher\Pusher(
-                  '166bbd5af4fcbf088045',
-                  '14c083c06113b8053d69',
-                  '1103344',
+                    '166bbd5af4fcbf088045',
+                    '14c083c06113b8053d69',
+                    '1103344',
                   $options
                 );
-
-                if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuong')){
-                  $data['message'] = $id ;
-                  $Return['StatusCode'] = 1; 
-                  $pusher->trigger('my-channel', 'my-event', $data);
-                }    
-
+                try {
+                  if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuong')){
+                    $data['message'] = $id ;
+                    $Return['StatusCode'] = 1; 
+                    $pusher->trigger('my-channel', 'my-event', $data);
+                  }   
+                } catch (TypeException $Error) {  
+                  LogFile($Error -> getMessage(), 'pusher', get_defined_vars());
+                }
               echo json_encode($Return);
               return;
               break;
@@ -65,10 +69,13 @@
                 break;
             case 'showghethuong': 
                 $Return = array(); 
-            
-                $Return['html'] = renderHtml ($_POST['idcb'],'ttghethuong');
-                $Return['StatusCode'] = 1;
-
+                try {
+                  $Return['html'] = renderHtml ($_POST['idcb'],'ttghethuong');
+                  $Return['StatusCode'] = 1;
+                } 
+                catch (TypeException $Error) {  
+                  LogFile($Error -> getMessage(), 'showghethuong', get_defined_vars());
+                }
                 echo json_encode($Return);
                 return;              
                 break;
@@ -78,25 +85,25 @@
                   $_SESSION['hangghe'] = $_POST['hangghe'];
                   return;
                   break;
-              case 'chonghekhuhoi':
-                  $_SESSION['vitrighekh'] = $_POST['idghekh'];
-                  $_SESSION['idchuyenbaykh'] = $_POST['idcbkh'];
-                  $_SESSION['hangghekh'] = $_POST['hangghekh'];
-                  return;
-                  break;
-              case 'checkkhuhoi':
-                  $Array = array();
-  
-                  if($_SESSION['ngayve']){
-                      $Array["StatusCode"] = '1';
-                      $Array['urlve'] = $_SESSION['urlve']; // chuyến đi
-                  }else{
-                      $Array["StatusCode"] = '0'; // chuyến về
-                  }
-                  echo json_encode($Array);
-                  unset($_SESSION['ngayve']);
-                  return;
-                  break;   
+            case 'chonghekhuhoi':
+                $_SESSION['vitrighekh'] = $_POST['idghekh'];
+                $_SESSION['idchuyenbaykh'] = $_POST['idcbkh'];
+                $_SESSION['hangghekh'] = $_POST['hangghekh'];
+                return;
+                break;
+            case 'checkkhuhoi':
+                $Array = array();
+
+                if($_SESSION['ngayve']){
+                    $Array["StatusCode"] = '1';
+                    $Array['urlve'] = $_SESSION['urlve']; // chuyến đi
+                }else{
+                    $Array["StatusCode"] = '0'; // chuyến về
+                }
+                echo json_encode($Array);
+                unset($_SESSION['ngayve']);
+                return;
+                break;   
             default:
                 # code...
                 break;
