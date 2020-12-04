@@ -103,7 +103,19 @@
                 echo json_encode($Array);
                 unset($_SESSION['ngayve']);
                 return;
-                break;   
+                break; 
+
+            case 'checkslghe':
+              $Array = array();
+              if(count($_SESSION['vitrighe']) !== count($_SESSION['vitrighekh'])){
+                $Array['StatusCode'] = 1;
+                $Array['slghe'] = count($_SESSION['vitrighe']);
+              }else{
+                $Array['StatusCode'] = 0;
+              }
+              echo json_encode($Array);
+              return;
+              break;   
             default:
                 # code...
                 break;

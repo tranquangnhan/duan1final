@@ -21,99 +21,98 @@ require_once "models/ve.php";
 require_once "models/hoadon.php";
 require_once "models/giamgia.php";
 
-if(!$_GET['act']){
+
+if (!$_GET['act']) {
     require_once "views/layouts/header_home.php";
-}else{
-    require_once "views/layouts/header_khac.php";
+    $blog = gettwoblog();
+    $showAllSanBay = showAllSanBay();
+
+    // print_r($showAllSanBay);
+    $vietject = 1;
+    $vietnameairline = 2;
+    $bammbo = 3;
+    $pacific = 4;
+    // lấy giảm giá theo hãng limit 1
+    $vietject = topgiamGiaTheoHang($vietject);
+    $vietnameairline = topgiamGiaTheoHang($vietnameairline);
+    $bammbo = topgiamGiaTheoHang($bammbo);
+    $pacific = topgiamGiaTheoHang($pacific);
+    // gía giảm còn
+    $giamgia_1 = ($vietject['giavethuonggia'] * (100 - $vietject['giamgia'])) / 100;
+    $giamgia_2 = ($vietnameairline['giavethuonggia'] * (100 - $vietnameairline['giamgia'])) / 100;
+    $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
+    $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
+
+    $vjdiemdi = timSanBay($vietject['iddiemdi']);
+    $vjdiemden = timSanBay($vietject['iddiemden']);
+    $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
+    $vndiemden = timSanBay($vietnameairline['iddiemden']);
+    $bbdiemdi = timSanBay($bammbo['iddiemdi']);
+    $bbdiemden = timSanBay($bammbo['iddiemden']);
+    $pcfdiemdi = timSanBay($pacific['iddiemdi']);
+    $pcfidiemden = timSanBay($pacific['iddiemden']);
+       
+    $maSb_vj_di = explode("/",$vjdiemdi['masanbay'])[1];
+    $maSb_vj_den = explode("/",$vjdiemden['masanbay'])[1];
+    $maSb_vn_di = explode("/",$vndiemdi['masanbay'])[1];
+    $maSb_vn_den = explode("/",$vndiemden['masanbay'])[1];
+    $maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
+    $maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
+    $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
+    $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];   
 }
 
-$blog = gettwoblog();
-$showAllSanBay = showAllSanBay();
-// print_r($showAllSanBay);
-$act = 'home';
-// $vietject = 1;
-// $vietnameairline = 2;
-// $bammbo = 3;
-// $pacific = 4;
-// // lấy giảm giá theo hãng limit 1
-// $vietject = topgiamGiaTheoHang($vietject);
-// $vietnameairline = topgiamGiaTheoHang($vietnameairline);
-// $bammbo = topgiamGiaTheoHang($bammbo);
-// $pacific = topgiamGiaTheoHang($pacific);  
-// // gía giảm còn
-// $giamgia_1 = ($vietject['giavethuonggia'] * (100 - $vietject['giamgia'])) / 100;
-// $giamgia_2 = ($vietnameairline['giavethuonggia'] * (100 - $vietnameairline['giamgia'])) / 100;
-// $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
-// $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
-
-// $vjdiemdi = timSanBay   ($vietject['iddiemdi']);
-// $vjdiemden = timSanBay($vietject['iddiemden']);
-// $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
-// $vndiemden = timSanBay($vietnameairline['iddiemden']);
-// $bbdiemdi = timSanBay($bammbo['iddiemdi']);
-// $bbdiemden = timSanBay($bammbo['iddiemden']);
-// $pcfdiemdi = timSanBay($pacific['iddiemdi']);
-// $pcfidiemden = timSanBay($pacific['iddiemden']);
-
-// $maSb_vj_di = explode("/",$vjdiemdi['masanbay'])[1];
-// $maSb_vj_den = explode("/",$vjdiemden['masanbay'])[1];
-// $maSb_vn_di = explode("/",$vndiemdi['masanbay'])[1];
-// $maSb_vn_den = explode("/",$vndiemden['masanbay'])[1];
-// $maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
-// $maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
-// $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
-// $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];
-
-
-$blog = gettwoblog();
-if (isset($_GET['act'])) {
-    $act = $_GET['act'];
-    switch ($act) {
-        case 'home':
-            unsetSs();
-            $blog = gettwoblog();
-            require_once "views/home.php";
-            break;
-        case 'about':
-            unsetSs();
-            require_once "views/about.php";
-            break;
-        case 'contact':
-            unsetSs();
-            require_once "views/contact.php";
-            break;
-        case 'danhsachve':   // để sửa css
-            $data = showDiemDi2();
-            $data1 = showDiemDen2();
-            require_once "views/danhsachve.php";
-            break;
-        case 'blog':
-            $page_num = 1;
-            $page_size = PAGE_SIZE;
-            $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
-            $getDmblog = getDmblog();
-            if (isset($_GET['page_num']) == true) {
-                $page_num = $_GET['page_num'];
-            }
-            settype($page_num, "int");
-            if (isset($_GET['iddm']) == true) {
-                $iddm = $_GET['iddm'];
-                $getDmblogbyid = getDmblogbyid($iddm); // để lay name danh muc
-                $allBlog = getBlogByiddm1($iddm, $page_num, $page_size); // lay blog theo id danh muc
-                $total_rows = countBlogbyiddm($iddm);
-                $baseurl = SITE_URL . "?act=blog&iddm=$iddm";
-            } else {
-                $allBlog = getallBlog($page_num, $page_size);   // lay tat ca blog
-                $total_rows = countBlog();
-                $baseurl = SITE_URL . "?act=blog";
-            }
-            if ($page_num <= 0) {
+if (isset($_GET['act'])) {   
+    $act = $_GET['act'];  
+    if ($act == 'home'){
+        require_once "views/layouts/header_home.php";
+    }else{
+        require_once "views/layouts/header_khac.php";
+    }
+        switch ($act) {            
+            case 'home':                 
+                // hãng máy bay                
+                // $blog = gettwoblog();
+                require_once "views/home.php";
+                break;
+            case 'about':
+                require_once "views/about.php";
+                break;
+            case 'contact':
+                require_once "views/contact.php";
+                break;
+            case 'danhsachve':   // để sửa css
+                $data = showDiemDi2();
+                $data1 = showDiemDen2();
+                require_once "views/danhsachve.php";
+                break;
+            case 'blog':
                 $page_num = 1;
-            }
-
-            $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
-            require_once "views/blog.php";
-            break;
+                $page_size = PAGE_SIZE;
+                $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
+                $getDmblog = getDmblog();
+                if (isset($_GET['page_num']) == true) {
+                    $page_num = $_GET['page_num'];
+                }
+                settype($page_num, "int");
+                if (isset($_GET['iddm']) == true) {
+                    $iddm = $_GET['iddm'];
+                    $getDmblogbyid = getDmblogbyid($iddm); // để lay name danh muc
+                    $allBlog = getBlogByiddm1($iddm, $page_num, $page_size); // lay blog theo id danh muc
+                    $total_rows = countBlogbyiddm($iddm);
+                    $baseurl = SITE_URL . "?act=blog&iddm=$iddm";
+                } else {
+                    $allBlog = getallBlog($page_num, $page_size);   // lay tat ca blog
+                    $total_rows = countBlog();
+                    $baseurl = SITE_URL . "?act=blog";
+                }
+                if ($page_num <= 0) {
+                    $page_num = 1;
+                }
+    
+                $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
+                require_once "views/blog.php";
+                break;
         case 'dtBlog':
             if (isset($_GET['idbl']) == true) {
                 $id = $_GET['idbl'];
@@ -403,9 +402,11 @@ if (isset($_GET['act'])) {
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
                 $loaiGhe = $_GET['loaighe'];
                 if($loaiGhe == 1){
+                    echo "<script src='views/jquery/showghept.js'></script>";
                     $getGheThuong = renderHtml($idChuyenBay, 'ttghethuong');
                     require_once 'views/chonghethuong.php';
                 }elseif($loaiGhe == 2){
+                    echo "<script src='views/jquery/showghetg.js'></script>";
                     $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
                     require_once 'views/chonghethuonggia.php';
                 }

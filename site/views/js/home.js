@@ -99,7 +99,6 @@ $(document).ready(function() {
     $('#l-plus-beduoi2').click(function() {
         var sonl = $('#nguoilon').val();
         if (sove_beduoi2 < sonl) {
-            console.log(sonl);
             if (sove_beduoi2 < 5) {
                 sove_beduoi2++;
                 $('#l-minus-beduoi2').addClass('l-minus_hover');
@@ -108,7 +107,7 @@ $(document).ready(function() {
                 $('#l-plus-beduoi2').removeClass('l-plus_hover');
             }
             $('#beduoi2').val(sove_beduoi2);
-        } else {
+        } else if (sove_beduoi2 < 5) {
             alertify.warning('Em bé không được hơn số người lớn!');   
         }
     });

@@ -75,7 +75,7 @@
           <div class="row box_ve mr-bot-40px background-white mr-0px">
             <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
                 <div class="hotel-img position-relative line-height-150px">
-                    <img src="views/img/vietject.png" alt="">
+                    <img src="views/img/vietjet.png" alt="">
                     <div class="hover-option background-main-color opacity-6">
                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                     </div>

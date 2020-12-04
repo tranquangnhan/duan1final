@@ -34,6 +34,8 @@
     <script src="views/js/home.js" type="text/javascript"></script>
     <script src="views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="views/jquery/chonghe.js" type="text/javascript"></script>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <!-- end include jquery -->
    
 </head>

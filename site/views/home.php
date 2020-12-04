@@ -43,7 +43,7 @@
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                                 <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                     <li class="nav-item active">
-                                        <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                        <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,7 +88,7 @@
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                                 <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main-fixed">
                                     <li class="nav-item active">
-                                        <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                        <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -155,8 +155,8 @@
                     </select>         
                 </div>     
                 <div class="l-sel-tren">
-                    <select name="" id="select_awe_tren-2" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Loại Ghế">
-                        <option value="1"><i class="fas fa-fighter-jet"></i>Phổ thông</option>
+                    <select name="" id="select_awe_tren-2" class="selectawe-tren l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Phổ Thông">
+                        <option value="1"><i class="fas fa-fighter-jet" selected></i>Phổ thông</option>
                         <option value="2"><i class="fas fa-fighter-jet"></i>Thương gia</option>
                     </select>         
                 </div>  

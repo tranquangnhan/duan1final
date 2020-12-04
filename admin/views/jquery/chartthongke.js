@@ -20,24 +20,24 @@ $(document).ready(function() {
   
         if (kieubaocao == '') {
             chk = false;
-            alertify.error('Error message');
+            alertify.alert('Thông báo', 'Chưa chọn kiểu báo cáo!');
         } else if (kieuchart == '') {
             chk = false;
-            alert('nhap kieu bieu do');
+            alertify.alert('Thông báo', 'Chưa chọn kiểu chart!');
         } else  if (ngaybatdau1 == '') {
             chk = false;
-            alert('nhap ngay bat dau');
+            alertify.alert('Thông báo', 'Chưa chọn ngày bắt đầu!');
         } else if (ngayketthuc1 == '') {
             chk = false;
-            alert('nhap ngay ket thuc');
+            alertify.alert('Thông báo', 'Chưa chọn ngày kết thúc!');
         } else if (ngaybatdau2 == '' && ngayketthuc2 == '') {
             chk = true;
         } else if (ngaybatdau2 != '' && ngayketthuc2 == '') {
             chk = false;
-            alert('nhap ngay ket thuc 2');
+            alertify.alert('Thông báo', 'Chưa chọn ngày bắt đầu!');
         } else if (ngaybatdau2 == '' && ngayketthuc2 != '') {
             chk = false;
-            alert('nhap ngay bat dau 2');
+            alertify.alert('Thông báo', 'Chưa chọn ngày kết thúc!');
         }
 
         if (chk == true) {
@@ -178,7 +178,7 @@ $(document).ready(function() {
                     }
                 },
                 error: function() {
-                    alert('loi');
+                    
                 }   
             })     
                       

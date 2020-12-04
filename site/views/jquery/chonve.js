@@ -50,6 +50,7 @@ $("#tieptucthuong").click(function(e) {
                         processData: false,
                         data: checkKhuHoi,
                         success: async function(response) {
+                            // đây là lấy ghế chuyến khứ hồi
                             if (response.StatusCode == '1') {
                                 var arr = [];
                                 let idchuyenbay = $("#idcb").val();
@@ -69,8 +70,10 @@ $("#tieptucthuong").click(function(e) {
                                 });
                                 window.location.href = ('index.php?' + response.urlve + '&khuhoi=1');
                             }
+                            // lấy là lấy ghế chuyến 1 chiều
                             if (response.StatusCode == '0') {
-                                var arrkh = [];
+
+                                var arrkh = []; // khi đó mảng này chứa [6,7]
                                 let idchuyenbaykh = $("#idcb").val();
                                 //lấy tất cả ghế đánh dấu
                                 $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
@@ -78,15 +81,38 @@ $("#tieptucthuong").click(function(e) {
                                     idGhe = idGhe.html();
                                     arrkh.push(idGhe);
                                 });
-
                                 //push
                                 await $.ajax({
                                     type: "POST",
                                     url: "controllers/ajax/chonghe.php",
                                     data: { idghekh: arrkh, Action: 'chonghekhuhoi', hangghekh: '1', idcbkh: idchuyenbaykh },
-                                    success: function(response) {}
+                                    success: async function(response) {
+                                        // kiểm tra xem ghế đặt có bằng số lượng k
+                                        let checkSoLuongGhe = new FormData();
+                                        checkSoLuongGhe.append('Action', 'checkslghe')
+                                        await $.ajax({
+                                            type: 'POST',
+                                            url: 'controllers/ajax/chonghe.php',
+                                            dataType: 'JSON',
+                                            cache: false,
+                                            contentType: false,
+                                            processData: false,
+                                            data: checkSoLuongGhe,
+                                            success: function(response) {
+                                                if (response.StatusCode == 1) {
+                                                    Swal.fire(
+                                                        'Lỗi!',
+                                                        'Số lượng ghế đi và ghế khứ hồi không bằng nhau.(Số ghế đi: ' + response.slghe + ')',
+                                                        'error'
+                                                    )
+                                                } else if (response.StatusCode == 0) {
+                                                    window.location.href = ('?act=thanhtoan');
+                                                }
+                                            }
+                                        });
+                                    }
                                 });
-                                window.location.href = ('?act=thanhtoan');
+
                             }
                         }
                     });

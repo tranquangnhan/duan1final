@@ -1,4 +1,6 @@
-<div class="col-lg-9 mt-5 boxdatve">
+<!-- <div class="col-lg-9 mt-5 "> -->
+<div class="col-lg-10 text-center boxdatve ">
+    <div class="col-lg-12 l-box-white">
     <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Một Chiều</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Khứ Hồi</button>
@@ -285,3 +287,4 @@
         </div>
     </form>
 </div>
+                                </div>
