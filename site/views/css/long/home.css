@@ -1736,3 +1736,9 @@ input[type=number] {
     border: white solid 1px;
     text-align: center;
 }
+
+ /* reponsive home */
+@media only screen and (max-width:800px) {
+
+    
+  }

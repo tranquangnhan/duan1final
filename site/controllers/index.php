@@ -300,10 +300,26 @@ if (isset($_GET['act'])) {
             }
             require_once "views/datlaimk.php";
             break;
-            case 'khuyenmai':
-                $vekhuyenmai=showvekm();
-                require_once "views/dsvekhuyenmai.php";
-                break;
+        case 'khuyenmai':
+            
+            $page_num = 1;
+            $page_size = PAGE_SIZE;
+
+            if (isset($_GET['page_num']) == true) {
+                $page_num = $_GET['page_num'];
+            }
+            settype($page_num, "int");
+
+            $vekhuyenmai=showvekm($page_num, $page_size);   // lay tat ca blog
+            $total_rows_km = countvekm();
+            $baseurl = SITE_URL . "?act=khuyenmai";
+            if ($page_num <= 0) {
+                $page_num = 1;
+            }
+
+            $links = taolinks($baseurl, $page_num, $page_size, $total_rows_km);
+            require_once "views/dsvekhuyenmai.php";
+            break;
         case 'userprofile':
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
@@ -408,7 +424,7 @@ if (isset($_GET['act'])) {
                     echo "<script src='views/jquery/showghept.js'></script>";
                     $getGheThuong = renderHtml($idChuyenBay, 'ttghethuong');
                     require_once 'views/chonghethuong.php';
-                }elseif($loaiGhe == 2){
+                }else if($loaiGhe == 2){
                     echo "<script src='views/jquery/showghetg.js'></script>";
                     $getGheTg = renderHtml($idChuyenBay, 'ttghethuonggia');
                     require_once 'views/chonghethuonggia.php';

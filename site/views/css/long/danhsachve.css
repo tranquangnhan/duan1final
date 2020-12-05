@@ -127,3 +127,7 @@ header {
 .color_red {
     color: #F44336;
 }
+
+.text-line-through {
+    text-decoration: line-through;
+}

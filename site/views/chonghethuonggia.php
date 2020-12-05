@@ -1,11 +1,10 @@
-
 <main class="">
     <div class="l-bt_next_fixed">
         <a href=""><i class="fas fa-arrow-circle-right" id="tieptucthuonggia"></i></a>
     </div>
     <div class="text-center">
             <div class="row w-100 mr-0 pd-tb-100px background-cl-3">
-                <div class="l-canh-trai"></div>
+                <div class="l-canh-trai l-position-absolute"></div>
                 <div class="l-ghe-may-bay">
                     <div class="title cl-te-black fa-w-12 fz-12vw fw-700 opacity-0p7">Tùy Chọn Chổ Ngồi</div>
                     <div class="l-chu-thich">
@@ -68,6 +67,7 @@
                         </div>
                         <div id="ghetg">
                             <?=$getGheTg?>
+                            
                         </div>
                     </div>
                     <div class="l-loi-thoat">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="l-canh-phai"></div>
+                <div class="l-canh-phai l-position-absolute"></div>
             </div>
         </div>
         </div>
