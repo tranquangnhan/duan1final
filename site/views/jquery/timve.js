@@ -154,3 +154,15 @@ $("#l-bt-searchmc").click(async function(e) {
     }
 
 });
+// $("#timkiemhang").click(function() {
+//     var radios = document.getElementsByName('hangmb');
+
+//     for (var i = 0, length = radios.length; i < length; i++) {
+//         if (radios[i].checked) {
+//             // do whatever you want with the checked radio
+//             window.location.href = window.location.href + "&hangmb=" + radios[i].value;
+//             // only one radio can be logically checked, don't check the rest
+//             break;
+//         }
+//     }
+// })

@@ -42,7 +42,9 @@
                   <!-- Loại -->
                   <input type="hidden"  id="select_awe_tren-1" value="1">
                       <!-- người lớn  -->
-                  <input type="hidden" id="nguoilon" value="1">        
+                  <input type="hidden" id="nguoilon" value="1">  
+                  <input type="hidden" id="betren2" value="0">        
+                  <input type="hidden" id="beduoi2" value="0">       
               </div>
               <div class="form-ground">
                 <div>Ngày Đi</div>
@@ -85,31 +87,16 @@
                   <input type="hidden"  id="select_awe_tren-1" value="0">
                       <!-- người lớn  -->
                   <input type="hidden" id="nguoilon" value="1">        
+                  <input type="hidden" id="betren2" value="0">        
+                  <input type="hidden" id="beduoi2" value="0">         
               </div>
               <div class="form-ground">
                 <div>Ngày Đi</div>
                 <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
               </div>
-              <button  id="l-bt-searchmc" type="submit" class="W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
+              <button  id="l-bt-searchmc" type="submit" class="mt-3 W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
           </div>   
-          <div class="background-white pd-35px pd-top-25px border-grey1 mr-top-30px">
-            <div class="title-box-left color_main fz-12vw font-weight-bold text-center pd-bot-20px"><span>Mức Giá</span></div>
-            <form action="">
-              <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
-                <label class="custom-control-label" for="customRadio">500.000 VND</label>
-              </div>
-              <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
-                <label class="custom-control-label" for="customRadio2">1.000.000 VND</label>
-              </div>
-              <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="customRadio3" name="example" value="customEx">
-                <label class="custom-control-label" for="customRadio3">1.500.000 VND</label>
-              </div>
-              <button type="submit" class="W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
-            </form>
-          </div>   
+            
         </div>
         <div class="box-right">
       <?php

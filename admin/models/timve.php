@@ -17,6 +17,7 @@ function showVeMotChieu($diemDi,$diemDen,$ngayDi,$loaiGhe){
     INNER JOIN trangthaidatve
     ON trangthaidatve.idchuyenbay = giave.idchuyenbay
     WHERE iddiemdi ='$diemDi' AND iddiemden = '$diemDen' AND ngaydi = '$ngayDi'";
+
     return result1(0,$sql);
 }
 function showVeAdmin($id)
