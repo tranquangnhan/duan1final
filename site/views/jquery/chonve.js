@@ -1,5 +1,6 @@
 async function chonVe(idChuyenBay) {
     var loaighe = $("#loaighe").val();
+    
     let Loading = Swal.fire({ // sweetAlert
         allowEscapeKey: false,
         title: 'Đang kiểm tra',
@@ -128,7 +129,7 @@ $("#tieptucthuonggia").click(function(e) {
     e.preventDefault();
     Swal.fire({
         title: 'Bạn Có Chắc Không?',
-        text: "Lưu thay đổi vị trí vé thường!",
+        text: "Lưu thay đổi vị trí vé thương gia!",
         icon: 'info',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

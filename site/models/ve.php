@@ -80,9 +80,18 @@ function showsanbay1()
     $sql = "select * from sanbay ";
     return result1(0, $sql);
 }
-function showvekm(){
-    $sql = "SELECT * FROM giave WHERE giamgia";
+function showvekm($page_num, $page_size){
+    $start_row_vekm = ($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM giave WHERE giamgia LIMIT $start_row_vekm, $page_size";
     return result1(0, $sql);
+}
+
+function countvekm() {
+    $sql = "SELECT COUNT(*) AS numberRow FROM giave WHERE giamgia";
+    $kq = query($sql);
+    $row = $kq -> fetch();
+    $rowcount = $row['numberRow'];
+    return $rowcount;
 }
 
 function showVeMotChieu($diemDi,$diemDen,$ngayDi,$loaiGhe){
@@ -133,4 +142,8 @@ function showVeSite($id)
     return result1(0,$sql);
 }
 
+function showhangmb($id) {
+    $sql ="SELECT * FROM chuyenbay cb INNER JOIN dsmaybay dsmb on dsmb.id = cb.idmaybay WHERE cb.id = '$id'";
+        return result1(1,$sql)['hangmb'];
+}
 ?>

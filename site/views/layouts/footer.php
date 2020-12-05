@@ -41,7 +41,7 @@
               Đối tác hàng không nội địa. Những đối tác hàng không hàng đầu Việt Nam sẽ chắp cánh đưa bạn đến mọi địa điểm trên mãnh đất Việt.
             </p>
             <div class="">
-              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietject.png" alt=""></a></div>
+              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietjet.png" alt=""></a></div>
               <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietnameairline.png" alt=""></a></div>
               <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/pacific.png" alt=""></a></div>
               <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/bambo.png" alt=""></a></div>            
@@ -49,15 +49,15 @@
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Trang chủ</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Góp ý</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Hợp tác</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Báo cáo</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Ưu đãi</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Liên hệ</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Tuyển dụng</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Về chúng tôi</a></div>
-          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="#" class="color_main">Theo dõi</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="index.php" class="color_main">Trang chủ</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=lienhe" class="color_main">Góp ý</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=lienhe" class="color_main">Hợp tác</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=lienhe" class="color_main">Báo cáo</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=khuyenmai" class="color_main">Ưu đãi</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=lienhe" class="color_main">Liên hệ</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=lienhe" class="color_main">Tuyển dụng</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=about" class="color_main">Về chúng tôi</a></div>
+          <div class="col-6 padding-tb-7px dl-inline-block float-left"><a href="<?=SITE_URL?>?act=signup" class="color_main">Theo dõi</a></div>
         </div>
         <div class="col-lg-3">
           <div class="col-4 padding-tb-7px dl-inline-block float-left">

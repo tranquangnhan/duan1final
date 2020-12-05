@@ -279,12 +279,7 @@
 
 .l-position-absolute-top-2000 {
     position: absolute;
-    top: 2000px;
-}
-
-.l-position-absolute-top-1860 {
-    position: absolute;
-    top: 1900px;
+    top: 2200px;
 }
 
 .dl-none {
@@ -296,12 +291,12 @@
 }
 
 .l-bt_next_fixed {
-    position: fixed;
+    position: absolute;
     top: 150px;
     right: 420px;
     padding: 20px;
     color: white;
-    z-index: 100;
+    z-index: 19;
 }
 
 .l-bt_next_fixed a {
@@ -317,4 +312,9 @@
 
 .l-bt_next_fixed a:hover i {
     transform: scale(1.1);
+}
+
+
+.l-position-absolute {
+    position: absolute!important;
 }
