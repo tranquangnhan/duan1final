@@ -504,20 +504,14 @@ if (isset($_GET['act'])) {
   
                // goi function
                $timve = timve($user, $sodienthoai);
-                print_r($timve);
-                exit();
-                // $ltt = laythongtin();
-                    // $idUser = $_SESSION['$id'];
-                        // $laytt = laythongtin();
-                if($timve != ''){                
-                    echo"dung";
-                    // header("location: ./?act=thongtinve");
+                if($timve != '' ){     
+
+                    header("location: ./?act=thongtinve");
                 }else{
-                    echo"sai";
-                    // header("location: ./?act=timve");
+                    header("location: ./?act=timve");
                 }
             }else{
-                    echo "nhap thong tin ";
+                echo "Vui nhap thong tin";
             }
 
             require_once "views/timve.php";
