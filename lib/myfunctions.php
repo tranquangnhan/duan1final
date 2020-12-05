@@ -144,4 +144,14 @@
         @fwrite($Error, 'Variable JSON: ' . (print_r($Variable, true)));
         @fclose($Error);
     }
+    // xoá session
+    function unsetSs(){
+        unset($_SESSION['idchuyenbay']);
+        unset($_SESSION['hangghe']);
+        unset($_SESSION['urlve']);
+        unset($_SESSION['vitrighe']);
+        unset($_SESSION['vitrighekh']);
+        unset($_SESSION['idchuyenbaykh']);
+        unset($_SESSION['hangghekh']);
+    }
 ?>

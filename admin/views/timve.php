@@ -56,7 +56,7 @@
                             <div class="form-group">
                                 <label for=""></label>
                                 <input type="date"
-                                class="form-control" name="ngaydi" id="" value="25-11-2020" aria-describedby="helpId" placeholder="">
+                                class="form-control" name="ngaydi" id="" value="" aria-describedby="helpId" placeholder="">
                             </div>
                         </div>
                     </div>

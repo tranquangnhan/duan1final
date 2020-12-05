@@ -107,7 +107,7 @@
 
             case 'checkslghe':
               $Array = array();
-              if(count($_SESSION['vitrighe']) !== count($_SESSION['vitrighekh'])){
+              if(isset($_SESSION['vitrighe'])&&isset($_SESSION['vitrighekh'])&&count($_SESSION['vitrighe']) !== count($_SESSION['vitrighekh'])){
                 $Array['StatusCode'] = 1;
                 $Array['slghe'] = count($_SESSION['vitrighe']);
               }else{

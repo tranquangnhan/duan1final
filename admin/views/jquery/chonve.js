@@ -143,9 +143,33 @@ $("#tieptucthuong").click(function(e) {
                                     type: "POST",
                                     url: "controllers/ajax/chonghe.php",
                                     data: { idghekh: arrkh, Action: 'chonghekhuhoi', hangghekh: '1', idcbkh: idchuyenbaykh },
-                                    success: function(response) {}
+                                    success: async function(response) {
+                                        // kiểm tra xem ghế đặt có bằng số lượng k
+                                        let checkSoLuongGhe = new FormData();
+                                        checkSoLuongGhe.append('Action', 'checkslghe');
+                                        await $.ajax({
+                                            type: 'POST',
+                                            url: 'controllers/ajax/chonghe.php',
+                                            dataType: 'JSON',
+                                            cache: false,
+                                            contentType: false,
+                                            processData: false,
+                                            data: checkSoLuongGhe,
+                                            success: function(response) {
+                                                if (response.StatusCode == 1) {
+                                                    Swal.fire(
+                                                        'Lỗi!',
+                                                        'Số lượng ghế đi và ghế khứ hồi không bằng nhau.(Số ghế đi: ' + response.slghe + ')',
+                                                        'error'
+                                                    )
+                                                } else if (response.StatusCode == 0) {
+                                                    window.location.href = ('?ctrl=hoadon&act=add');
+                                                }
+                                            }
+                                        });
+
+                                    }
                                 });
-                                window.location.href = ('?ctrl=hoadon&act=add');
                             }
                         }
                     });
