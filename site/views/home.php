@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-3">
                             <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
-                            <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                            <!-- <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a> -->
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9 col-9 aligh-items-right">
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
@@ -82,7 +82,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-3">
                             <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
-                            <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                            <!-- <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a> -->
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9  col-9 aligh-items-right">
                             <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
@@ -437,7 +437,7 @@
             <div class="row">
                 <div class="col-lg-6 te-al-left">
                     <div class="section-title-left mr-bot-70px">
-                        <h1 class="title fz-2vw"><span class="color_main">Last </span> News</h1>
+                        <h1 class="title fz-2vw"><span class="color_main">Bài </span> Viết</h1>
                         <span class="section-title-des fz-1vw">Kênh tin tức về du lịch, trao đổi, chia sẻ kinh nghiệm</span>
                     </div>
                     <?php foreach ($blog as $bl) { ?>
@@ -459,7 +459,7 @@
                 </div>
                 <div class="col-lg-6 te-al-left">
                     <div class="section-title-left mr-bot-70px">
-                        <h1 class="title fz-2vw"><span class="color_main">Traveler </span> Say</h1>
+                        <h1 class="title fz-2vw"><span class="color_main">Travelz </span> Nói</h1>
                         <span class="section-title-des fz-1vw">Hãy góp ý cho chúng tôi giúp chúng tôi phục vụ bạn tốt hơn</span>
                     </div>
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

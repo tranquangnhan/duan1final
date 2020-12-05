@@ -78,13 +78,13 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-3">
                         <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
-                        <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                        <!-- <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a> -->
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9 col-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                             <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
-                                    <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                    <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -122,13 +122,13 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-3">
                         <a id="logo" href="index.php" class="d-inline-block margin-tb-10px"><img src="views/img/logo.png" alt=""></a>
-                        <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                        <!-- <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a> -->
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light col-lg-9 col-md-9  col-9 aligh-items-right">
                         <div class="collapse navbar-collapse  link-padding-tb-20px dropdown-dark d-flex justify-content-end " id="navbarNav">
                             <ul class="navbar-nav W-100 d-flex justify-content-end" id="menu-main">
                                 <li class="nav-item active">
-                                    <a class="" href="<?=SITE_URL?>?act=home">HOME <span class="sr-only">(current)</span></a>
+                                    <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

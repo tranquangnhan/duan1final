@@ -71,11 +71,25 @@
           </div>   
         </div>
         <div class="box-right">
-      <?php foreach ($vekhuyenmai AS $k){ ?>
+      <?php
+      $pImg = 'views/img/';
+      foreach ($vekhuyenmai AS $k){
+          $hangmb = showhangmb($k['idchuyenbay']);
+          if ($hangmb == 1) {
+            $img = $pImg.'vietjet.png';
+          } else if ($hangmb == 2) {
+            $img = $pImg.'vietnamairlines.png';
+          } else if ($hangmb == 3) {
+            $img = $pImg.'pacific.png';
+          } else if ($hangmb == 4) {
+            $img = $pImg.'bambo.png';
+          }
+        ?>
+     
           <div class="row box_ve mr-bot-40px background-white mr-0px">
             <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
                 <div class="hotel-img position-relative line-height-150px">
-                    <img src="views/img/vietjet.png" alt="">
+                    <img src="<?=$img?>" alt="">
                     <div class="hover-option background-main-color opacity-6">
                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                     </div>
@@ -86,10 +100,10 @@
                 <div class="l-w-tenduong">
                   <a href="#" class="text-dark mr-lr-15px">
                     <span class="mr-right-30px">  Từ: <?=  showtensanbay(showiddiemdi(showidtuyenduong($k['idchuyenbay'])))?> </span>
-                    Đến:<?= showtensanbay(showiddiemden(showidtuyenduong($k['idchuyenbay'])))?> 
+                    Đến: <?= showtensanbay(showiddiemden(showidtuyenduong($k['idchuyenbay'])))?> 
                   </a>
                 </div>           
-                <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Đặt Ngay</a>
+                <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase" onclick="chonVe(<?=$k['idchuyenbay']?>);">Đặt Ngay</a>
                 <div class="date mr-lr-15px">
                   <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
                     <i class="fa fa-chevron-up mr-right-5px"></i>
@@ -105,9 +119,9 @@
                 </div>
                 <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
                   <?php 
-                    $giamcon = ($k['giavethuong'] * (100 - $k['giamgia'])) / 100;
+                    $giamcon = ($k['giavethuonggia'] * (100 - $k['giamgia'])) / 100;
                   ?>
-                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1">Giá:</span><?=number_format($k['giavethuong'],0,",",".");?> <span class="mr-1">VNĐ</span></a>
+                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1">Giá:</span class="text-line-through"><?=number_format($k['giavethuonggia'],0,",",".");?> <span class="mr-1">VNĐ</span></a>
                     <a class="text-medium padding-right-5px"><span class="mr-1">Giảm Còn:</span><span class="color_red"><?=number_format($giamcon,0,",",".");?></span><span class="mr-1"> VNĐ</span></a>
 
                     <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?= showngaydi($k['idchuyenbay']) ?></i>
@@ -116,10 +130,15 @@
                     <strong class="text-medium text-third-color padding-right-5px font-weight-bold"><span class="mr-1" style="color: black;">Giảm Giá:</span> <?= $k['giamgia']?></strong>VNĐ
                 </div>                  -->
               </div>
-            </div>
-             
+            </div>           
           </div>
      <?php }?>
+          <input type="hidden" id="loaighe" value="2">
+          <nav aria-label="...">
+            <ul class="pagination">
+                <?php echo $links; ?>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

@@ -121,7 +121,7 @@
                                             </small>
                                           </div>
                                           <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                                              <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"> '.forMatTien($giaTienKh) .' <span >VNĐ</span></strong>
+                                              <strong class="text-medium text-third-color padding-right-5px mr-4"> '.forMatTien($giaTienKh) .' <span >VNĐ</span></strong>
                                               <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> '.$ArrKh['0']['ngaydi'].' </i>
                                           </div>  
                                         </div>
@@ -169,8 +169,8 @@
                                   ';
                             }
                             ?>
-                                    <a href="#" class="btn-sm btn-lg text-dark text-center font-weight-bold uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
-                                    <a href="#" class="btn-sm btn-lg  background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px">Đặt vé</a>
+                                    <a href="<?=SITE_URL?>index.php" class="btn-sm btn-lg text-dark text-center uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
+                                    <a href="#" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px">Đặt vé</a>
                                 </form>
                             </div>
 
