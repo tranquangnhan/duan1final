@@ -59,7 +59,6 @@ header ul.nav-menu {
     padding-bottom: 20px;
     padding-right: 25px;
     color: white;
-    font-size: 1vw;
 }
 
 .navbar-nav>li>a:hover {
@@ -1737,6 +1736,11 @@ input[type=number] {
     text-align: center;
 }
 
+
+.l-cl-fw {
+    font-weight: 600;
+    color: rgb(93 93 93);
+}
  /* reponsive home */
 @media only screen and (max-width:800px) {
 

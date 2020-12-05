@@ -113,7 +113,6 @@ $("#tieptucthuong").click(function(e) {
                                         });
                                     }
                                 });
-
                             }
                         }
                     });

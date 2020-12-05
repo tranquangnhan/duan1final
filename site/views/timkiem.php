@@ -126,6 +126,9 @@
         }elseif($Arr[$i]['0']['hangmb']==3){
             $hangMb = "Bamboo Airways";
             $img = 'views/img/bamboo.png';
+        }elseif($Arr[$i]['0']['hangmb']==4){
+          $hangMb = "Pacific Airlines";
+          $img = 'views/img/pacific.png';
         }
         $maTinhDen = $Arr[$i]['0']['masb_den'];
         $maTinhDi = $Arr[$i]['0']['masb_di'];
@@ -151,25 +154,31 @@
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
-                <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?=$Arr[$i]['0']['tinh_di']?> </span>Đến:<?=$Arr[$i]['0']['tinh_den']?> </a></h3> 
+              <div class="l-w-tenduong">
+                  <a href="#" class="text-dark mr-lr-15px">
+                    <span class="mr-right-30px">  Từ: <?=$Arr[$i]['0']['tinh_di']?> </span>Đến: <?=$Arr[$i]['0']['tinh_den']?>
+                  </a>
+                </div>
+              
                 <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase" onclick="chonVe(<?=$Arr[$i]['0']['id']?>)">Đặt Ngay</a>
                 <div class="date mr-lr-15px">
                   <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
                     <i class="fa fa-chevron-up mr-right-5px"></i>
-                    Giờ đi:  
+                      Giờ đi:  
                     <span class="text-third-color mr-right-5px"><?=$Arr[$i]['0']['giodi']?></span> 
                   </a>
                   <small class="text-uppercase text-extra-small">
                     <a href="#" class="cl-te-grey fz-0p7rem">
                       <i class="fa fa-chevron-down mr-right-5px"></i>
-                  Giở đến:  
+                        Giở đến:  
                       <span class="text-third-color mr-right-5px"><?= $Arr[$i]['0']['gioden']?></span> </a>
                   </small>
                 </div>
-                <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"><span class="mr-1" style="color: black;">Tiền:</span> <?= $giaVe?> <span class="mr-1" style="color: black;">VNĐ</span></strong>
-
-                    <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?=$Arr[$i]['0']['ngaydi'] ?></i>
+                <div class="border-top-grey-1 pd-top-10 mr-15px">
+                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1"><?php if($loaiGhe == 1) echo 'Phổ thông'; else echo 'Thương gia';?>:</span class="text-line-through"><?=number_format($giaVe,0,",",".");?> <span class="mr-1">VNĐ</span></a>
+                    
+                    <i class="d-block padding-tb-8px l-cl-fw float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?=$Arr[$i]['0']['ngaydi'] ?></i>
+                    <i class="d-block padding-tb-8px l-cl-fw float-lg-right"><span class="mr-right-30px">Một chiều</span></i>
                 </div>   
               </div>
             </div>

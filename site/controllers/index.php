@@ -414,8 +414,8 @@ if (isset($_GET['act'])) {
             break;
         case 'chonve':
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
-
-                $idChuyenBay = $_GET['idcb'];
+                
+                $idChuyenBay = $_GET['idcb'];        
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
                 $loaiGhe = $_GET['loaighe'];
                 if($loaiGhe == 1){
