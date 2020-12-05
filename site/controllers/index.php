@@ -21,6 +21,8 @@ require_once "models/ve.php";
 require_once "models/hoadon.php";
 require_once "models/giamgia.php";
 
+require_once "models/timve.php";
+
 
 if (!$_GET['act']) {
     require_once "views/layouts/header_home.php";
@@ -489,9 +491,43 @@ if (isset($_GET['act'])) {
                 }
             }
             break;
+
         case 'thanhtoan':
             require_once "views/thanhtoan.php";
             break;
+
+        case 'timve':
+            
+            if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {
+                $user = $_POST["user"];   
+                $sodienthoai = $_POST["sodienthoai"];
+  
+               // goi function
+               $timve = timve($user, $sodienthoai);
+                print_r($timve);
+                exit();
+                // $ltt = laythongtin();
+                    // $idUser = $_SESSION['$id'];
+                        // $laytt = laythongtin();
+                if($timve != ''){                
+                    echo"dung";
+                    // header("location: ./?act=thongtinve");
+                }else{
+                    echo"sai";
+                    // header("location: ./?act=timve");
+                }
+            }else{
+                    echo "nhap thong tin ";
+            }
+
+            require_once "views/timve.php";
+
+        break;
+
+        case 'thongtinve':
+            require_once "views/thongtinve.php";
+        break;
+
         default:
             require_once "views/home.php";
             break;

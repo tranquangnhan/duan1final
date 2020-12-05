@@ -1,3 +1,5 @@
+
+
 <?php
 define('HOST_DB','db.lmsq.vn');
 define('NAME_DB','QNhan_datvemaybay');
