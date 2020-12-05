@@ -509,10 +509,17 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thanhtoan':
-            print_r($_SESSION);
+            $hoten = $_POST['hoten'];
+                $gioitinh = $_POST['gioitinh'];
+                $sodienthoai =$_POST['sodienthoai'];
+                $cmnd = $_POST['cmnd'];
+                thongtindatve($hoten,$gioitinh,$sodienthoai,$cmnd);
+
             require_once "views/thanhtoan.php";
             break;
+            case 'tinhtien':
 
+                break ;
         case 'timve':
             
             if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {

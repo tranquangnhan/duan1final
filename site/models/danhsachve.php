@@ -39,5 +39,16 @@ function showDiemDen2()
     ";
     return result1 (0,$sql);
 }
+// Lay id bang hoa don va hoa don chi tiet de so sanh
+function hdSoSanh($idhd){
+        $sql = "select * from hoadon inner  join  hdchitiet on hoadon,id = hdchitiet.idhd where idhd ='$idhd'";
+        return result1(1,$sql);
+}
+// Chèn thông tin dữ liệu khách hàng vào trong bảng hóa đơn chi tiết
+function thongtindatve($hoten,$gioitinh,$sodienthoai,$cmnd){
+    $sql = "INSERT INTO thongtindatve(hoten,gioitinh, sodienthoai ,cmnd)
+                        VALUES ('$hoten','$gioitinh','$sodienthoai ','$cmnd')";
+    return exec1($sql);
+}
 
 ?>
