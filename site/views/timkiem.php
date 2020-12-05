@@ -37,8 +37,13 @@
                 </select>
               </div>
               <div class="form-ground">
-                        <!-- hạng ghế -->
-                  <input type="hidden" id="select_awe_tren-2" value="1">
+                <div>Hạng ghế</div>
+                <select name="" id="select_awe_tren-2" class="selectawe l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Phổ Thông">
+                        <option value="1"><i class="fas fa-fighter-jet" selected></i>Phổ thông</option>
+                        <option value="2"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                </select>         
+              </div>
+              <div class="form-ground">
                   <!-- Loại -->
                   <input type="hidden"  id="select_awe_tren-1" value="1">
                       <!-- người lớn  -->
@@ -81,8 +86,13 @@
                 </select>
               </div>
               <div class="form-ground">
-                        <!-- hạng ghế -->
-                  <input type="hidden" id="select_awe_tren-2" value="1">
+                <div>Hạng ghế</div>
+                <select name="" id="select_awe_tren-2" class="selectawe l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Phổ Thông">
+                        <option value="1"><i class="fas fa-fighter-jet" selected></i>Phổ thông</option>
+                        <option value="2"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                </select>         
+              </div>
+              <div class="form-ground">
                   <!-- Loại(khứ hồi, một chiều) -->
                   <input type="hidden"  id="select_awe_tren-1" value="0">
                       <!-- người lớn  -->
@@ -154,7 +164,7 @@
                   </small>
                 </div>
                 <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"><span class="mr-1" style="color: black;">Tiền:</span> <?= $giaVe?> <span class="mr-1" style="color: black;">VNĐ</span></strong>
+                    <strong class="text-medium text-third-color padding-right-5px mr-4 font-weight-bold"><span class="mr-1" style="color: black;">Tiền:</span> <?= forMatTien($giaVe)?> <span class="mr-1" style="color: black;">VNĐ</span></strong>
 
                     <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?=$Arr[$i]['0']['ngaydi'] ?></i>
                 </div>   
