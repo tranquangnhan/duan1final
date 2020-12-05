@@ -60,7 +60,7 @@
                 <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome"> 
               </div>
               <button type="submit" id="l-bt-searchkh" class="mt-3 W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>    
-          </div>      
+            </div>      
           <div class="background-white pd-35px pd-top-25px border-grey1 mr-top-30px">
             <div class="title-box-left color_main fz-12vw font-weight-bold text-center pd-bot-20px"><span>MỘT CHIỀU</span></div>
               <div class="form-ground">
@@ -105,7 +105,7 @@
                 <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
               </div>
               <button  id="l-bt-searchmc" type="submit" class="mt-3 W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
-          </div>   
+            </div>   
             
         </div>
         <div class="box-right">

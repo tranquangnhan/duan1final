@@ -72,23 +72,28 @@ if (isset($_GET['act'])) {
         require_once "views/layouts/header_khac.php";
     }
         switch ($act) {            
-            case 'home':                 
+            case 'home': 
+                unsetSs();             
                 // hãng máy bay                
                 // $blog = gettwoblog();
                 require_once "views/home.php";
                 break;
             case 'about':
+                unsetSs();
                 require_once "views/about.php";
                 break;
             case 'contact':
+                unsetSs();
                 require_once "views/contact.php";
                 break;
             case 'danhsachve':   // để sửa css
+                unsetSs();
                 $data = showDiemDi2();
                 $data1 = showDiemDen2();
                 require_once "views/danhsachve.php";
                 break;
             case 'blog':
+                unsetSs();
                 $page_num = 1;
                 $page_size = PAGE_SIZE;
                 $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
@@ -116,6 +121,7 @@ if (isset($_GET['act'])) {
                 require_once "views/blog.php";
                 break;
         case 'dtBlog':
+            unsetSs();
             if (isset($_GET['idbl']) == true) {
                 $id = $_GET['idbl'];
             } // id blog
@@ -143,16 +149,19 @@ if (isset($_GET['act'])) {
             require_once "views/blogdetail.php";
             break;
         case 'login':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
             echo '<script src="views/jquery/login.js" type="text/javascript"></script>';
             break;
         case 'signup':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/signup.php";
             echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
             break;
         case 'user':
+            unsetSs();
             if (isset($_GET['logout']) && ($_GET['logout']) == 1) {
                 unset($_SESSION['sid']);
                 unset($_SESSION['suser']);
@@ -160,6 +169,7 @@ if (isset($_GET['act'])) {
             }
             break;
         case 'hsedit':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             $iduser = $_SESSION['sid'];
@@ -183,12 +193,14 @@ if (isset($_GET['act'])) {
             }
             break;
         case 'showhs':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
             $iduser = $_SESSION['sid'];
             $showhs = showhs($iduser);
             require_once "views/showhs.php";
             break;
         case 'kichhoat':
+            unsetSs();
             if (isset($_GET['id']) && isset($_GET['rd'])) {//rd -> random
                 $id = $_GET['id'];
                 $rd = $_GET['rd'];
@@ -206,6 +218,7 @@ if (isset($_GET['act'])) {
             require_once "views/userprofile.php";
             break;
         case 'thongbao':
+            unsetSs();
             if (isset($_SESSION['thongbao'])) {
                 $thongbao = $_SESSION['thongbao'];
                 unset($_SESSION['thongbao']);
@@ -261,6 +274,7 @@ if (isset($_GET['act'])) {
             require_once "views/quenmk.php";
             break;
         case 'checkin':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/long/trangthanhtoan.css">';
 
             if (isset($_POST['checkin']) && ($_POST['checkin'])) {
@@ -275,6 +289,7 @@ if (isset($_GET['act'])) {
             break;
             
         case 'datlaimk':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
@@ -301,7 +316,7 @@ if (isset($_GET['act'])) {
             require_once "views/datlaimk.php";
             break;
         case 'khuyenmai':
-            
+            unsetSs();
             $page_num = 1;
             $page_size = PAGE_SIZE;
 
@@ -321,6 +336,7 @@ if (isset($_GET['act'])) {
             require_once "views/dsvekhuyenmai.php";
             break;
         case 'userprofile':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             $iduser = $_SESSION['sid'];
@@ -493,6 +509,7 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thanhtoan':
+            print_r($_SESSION);
             require_once "views/thanhtoan.php";
             break;
 
@@ -525,8 +542,9 @@ if (isset($_GET['act'])) {
         break;
 
         case 'thongtinve':
+            unsetSs();
             require_once "views/thongtinve.php";
-        break;
+            break;
 
         default:
             require_once "views/home.php";

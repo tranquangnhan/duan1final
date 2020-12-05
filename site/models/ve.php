@@ -116,8 +116,6 @@ function showVeMotChieu($diemDi,$diemDen,$ngayDi,$loaiGhe){
 
 function showVeSite($id)
 {
-
-
     $sql = "select o.id,o.gioden,o.giodi,o.ngaydi,o.tinh_den,q.tinh_di,o.masb_den,q.masb_di,p.giavethuong, p.giavethuonggia,b.hangmb
 	from 
     (select r.gioden,r.giodi,r.ngaydi, r.id, s.tinh as 'tinh_den',s.masanbay as 'masb_den' from chuyenbay r 
