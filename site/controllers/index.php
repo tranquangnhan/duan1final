@@ -346,6 +346,7 @@ if (isset($_GET['act'])) {
             break;
         case 'showve';
             $Array = array();
+            $showAllSanBay = showAllSanBay();
             $showSanBay = showsanbay();
             $diemDi = $_GET['diemdi'];
             $diemDen = $_GET['diemden'];
@@ -393,7 +394,7 @@ if (isset($_GET['act'])) {
                 }
             }
             ($Array) ?  $Array = json_encode($Array) :  $Array = 'Không có chuyến bay nào cả';
-            include 'views/timkiem.php';
+            include_once 'views/timkiem.php';
             break;
         case 'chonve':
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {

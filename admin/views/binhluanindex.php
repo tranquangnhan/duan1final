@@ -50,13 +50,10 @@
                                                     <td><strong><?=$id?></strong></td>
                                                    <td><strong><?=showTenKh($bl['idkh'])?></strong></td>
                                                    <td><strong><?=showTenbv($bl['idbaiviet'])?></strong></td>
-                                              
                                                     <td><?=$noidung?></td>   
                                                     <td><?=$star?></td>   
-                                                    <td><?= ($anhien==1)? "Dang hien":"dang an"; ?></td>
-                                                  
-                                                                                          
-                                                    <td><a href="<?=$linkdel?>"> <i onclick="return checkDelete()" class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
+                                                    <td><?= ($anhien==1)? "Dang hien":"dang an"; ?></td>                            
+                                                    <td><a onclick="checkDelete('<?php echo $linkdel; ?>')"> <i  class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
                                                 </tr>
                                             <?php }?>
                                         </tbody>

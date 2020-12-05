@@ -51,7 +51,7 @@
                                                     <td><?=$motbl['tacgia']?></td>
                                                     <td class="noidung"><?=substr($motbl['noidung'],0,100)?></td>
                                                     <td>
-                                                        <a href="<?=$linkdel?>"><i class="fa fa-trash mr-3" onclick="return checkDelete()"></i></a>
+                                                        <a onclick="checkDelete('<?php echo $linkdel; ?>')"><i class="fa fa-trash mr-3" ></i></a>
                                                         <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
                                                     </td>
                                                 </tr>
