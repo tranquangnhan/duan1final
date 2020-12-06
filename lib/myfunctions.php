@@ -133,17 +133,17 @@
     // biến thứ 1 truyền vào lỗi,
     //biến thứ 2 truyền vào tên function 
     //biến thứ 3 truyền vào tất cả các biến
-    function LogFile($ErrorMess, $Function, $Variable)
-    {
-        $Name = date('d-m-Y');
-        $Error = @fopen('D:\hoc-fpt\code-tren-lop\php\xampp3\htdocs\duan1final\site\log\/'. $Name . '.txt', 'a+');
-        @fwrite($Error, PHP_EOL . '--------------' . PHP_EOL);
-        @fwrite($Error, 'Error Date: ' . (print_r(date('d-m-Y h:i:s'), true)) . PHP_EOL);
-        @fwrite($Error, 'Error In: ' . (print_r($Function, true)) . PHP_EOL);
-        @fwrite($Error, 'Error Message: ' . (print_r($ErrorMess, true)) . PHP_EOL);
-        @fwrite($Error, 'Variable JSON: ' . (print_r($Variable, true)));
-        @fclose($Error);
-    }
+    // function LogFile($ErrorMess, $Function, $Variable)
+    // {
+    //     $Name = date('d-m-Y');
+    //     $Error = @fopen('D:\hoc-fpt\code-tren-lop\php\xampp3\htdocs\duan1final\site\log\/'. $Name . '.txt', 'a+');
+    //     @fwrite($Error, PHP_EOL . '--------------' . PHP_EOL);
+    //     @fwrite($Error, 'Error Date: ' . (print_r(date('d-m-Y h:i:s'), true)) . PHP_EOL);
+    //     @fwrite($Error, 'Error In: ' . (print_r($Function, true)) . PHP_EOL);
+    //     @fwrite($Error, 'Error Message: ' . (print_r($ErrorMess, true)) . PHP_EOL);
+    //     @fwrite($Error, 'Variable JSON: ' . (print_r($Variable, true)));
+    //     @fclose($Error);
+    // }
     // xoá session
     function unsetSs(){
         unset($_SESSION['idchuyenbay']);

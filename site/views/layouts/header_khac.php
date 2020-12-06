@@ -4,7 +4,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Poppins:300i,400,300,700,400i,500|Ubuntu:300i,400,300,700,400i,500|Raleway:400,500,600,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Poppins:300i,400,300,700,400i,500|Ubuntu:300i,400,300,700,400i,500|Raleway:400,500,600,700" rel="stylesheet"> -->
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="views/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="views/fontawesome-free-5.13.0-web/css/all.css">
@@ -16,7 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>  -->
   <link rel="stylesheet" href="views/css/long/animate.css"/>
   <link rel="stylesheet" href="views/css/long/about.css">
   <link rel="stylesheet" href="views/css/long/contact.css">
@@ -27,6 +27,8 @@
   
   <link rel="stylesheet" href="views/css/long/home.css">
   <link rel="stylesheet" href="views/css/long/home_khac.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <!-- end css -->
   <!-- include jquery -->
      <script src="views/jquery/jquery.js" type="text/javascript"></script>

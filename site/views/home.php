@@ -459,7 +459,7 @@
                 </div>
                 <div class="col-lg-6 te-al-left">
                     <div class="section-title-left mr-bot-70px">
-                        <h1 class="title fz-2vw"><span class="color_main">Travelz </span> Nói</h1>
+                        <h1 class="title fz-2vw"><span class="color_main">Khách Hàng </span> Nói Về Chúng Tôi</h1>
                         <span class="section-title-des fz-1vw">Hãy góp ý cho chúng tôi giúp chúng tôi phục vụ bạn tốt hơn</span>
                     </div>
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

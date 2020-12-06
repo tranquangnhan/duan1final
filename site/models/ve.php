@@ -139,6 +139,8 @@ function showVeSite($id)
     inner join chuyenbay r on d.id = r.idmaybay) as b
     
     on o.id=q.id and q.id=p.id and o.id=b.id where o.id='$id'";
+
+
     return result1(0,$sql);
 }
 

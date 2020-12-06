@@ -20,7 +20,7 @@
                             <input class="input--style-3" type="password" id="repassword2" placeholder="Nhập lại mật khẩu" name="email">
                         </div>
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit" id="signup">Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit" id="signup">Đăng Ký</button>
                         </div>
                 </div>
             </div>

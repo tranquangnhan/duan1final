@@ -130,36 +130,41 @@
                             <span>Bài viết liên quan</span>
                         </h4>
                         <div class="row">
-                        <?php foreach($getBlogByiddm as $blogByiddm) { ?>
+                        <?php foreach($getBlogByiddm as $blogByiddm) { ?>                            
                             <div class="col-lg-6">
-                                <div class="background-white">
-                                    <div class="post-img">
-                                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>">
-                                            <div class="img-in" style="background-image: url('<?=$pathimg.$blogByiddm['img']?>'); height: 240px;"></div>
-                                        </a>                                                                               
+                                <div class="blog-entry background-white border-grey-1 margin-bottom-35px">                                    
+                                    <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>">
+                                        <div class="img-in" style="background-image: url('<?=$pathimg.$blogByiddm['img']?>');">
+                                    </a>
+                                </div>
+                                    <!-- oadd -->
+                                <div class="pd-20-30-40-30  ">
+                                    <a class="d-block  text-capitalize fz-2vw line-height-35px text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$blogByiddm['id']?>&iddm=<?=$blogByiddm['iddm']?>" >
+                                        <?=$blogByiddm['name']?>
+                                    </a>
+                                    <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
+                                        <p class="webkit-line-clam blog-line-5-clamp l-mota-blog"><?=$blogByiddm['mota'];?></p>
                                     </div>
-                                    <div class="margin-top-30px">
-                                        <a href="" class="d-block text-dark text-uppercase text-medium margin-bottom-10px font-weight-700"></a>
-                                        <span class="margin-right-20px text-extra-small">
-                                            By :
-                                            <a href="#" class="text-main-color"><?=$blogByiddm['tacgia']?></a>
+                                    <div class="meta"> 
+                                        <span class="text-extra-small float-left">Tag :   
+                                            <a href="#" class="text-main-color"><?=$blogByiddm['tag']?></a>
                                         </span>
-                                        <span class="text-extra-small">
-                                            Date :
-                                            <a href="#" class="text-main-color"><?=$blogByiddm['date']?></a>
+                                        <span class="text-extra-small cl-blackgr float-right">Tác giả : 
+                                            <a href="#" class="cl-blackgr"><?=$blogByiddm['tacgia']?></a>
                                         </span>
-                                        <p class="margin-top-10px">
-                                            <?=$blogByiddm['mota']?>
-                                        </p>
+                                        <span class="text-extra-small cl-blackgr margin-right-20px float-right"> 
+                                            <?=$blogByiddm['date']?>
+                                        </span>                                      
                                     </div>
                                 </div>
-                            </div>    
+                            </div>
+                        </div>  
                         <?php } ?>                       
                         </div>
                     </div>
             </div>        
         <!-- cot email ben phai -->        
-        <div class="col-lg-4 col-md-8 sticky-content "  style=" position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+        <div class="col-lg-4 col-md-8 sticky-content div-right-inblogdt" style=" position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
             <div class="theiaStickySidebar " style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
                 <div class="widget">
                     <!-- tieu de -->
@@ -192,12 +197,18 @@
                     <ul class="last-posts">
                         <li>
                         <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="float-left margin-right-15px d-block width-60px">
-                            <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
+                        <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                         </a>
-                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase text-medium text-dark font-weight-700"><?=$bestBlog['name']?></a>
-                        <span class="text-extra-small">
-                            Date
-                            <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>
+                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700">
+                            <p class="webkit-line-clam blog-line-2-clamp fz_8vw mr-0px">
+                                <?=$bestBlog['name']?>
+                            </p>
+                        </a>
+                        <span class="text-extra-small cl-blackgr float-left mr-top-3px">Tác giả : 
+                            <a href="#" class="cl-blackgr"><?=$bestBlog['tacgia']?></a>
+                        </span>
+                        <span class="text-extra-small cl-blackgr margin-right-20px float-right mr-top-3px"> 
+                            <?=$bestBlog['date']?>
                         </span>
                     </ul>
                     <?php } ?>

@@ -37,12 +37,19 @@
                 </select>
               </div>
               <div class="form-ground">
-                        <!-- hạng ghế -->
-                  <input type="hidden" id="select_awe_tren-2" value="1">
+                <div>Hạng ghế</div>
+                <select name="" id="select_awe_tren-2" class="selectawe l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Phổ Thông">
+                        <option value="1"><i class="fas fa-fighter-jet" selected></i>Phổ thông</option>
+                        <option value="2"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                </select>         
+              </div>
+              <div class="form-ground">
                   <!-- Loại -->
                   <input type="hidden"  id="select_awe_tren-1" value="1">
                       <!-- người lớn  -->
-                  <input type="hidden" id="nguoilon" value="1">        
+                  <input type="hidden" id="nguoilon" value="1">  
+                  <input type="hidden" id="betren2" value="0">        
+                  <input type="hidden" id="beduoi2" value="0">       
               </div>
               <div class="form-ground">
                 <div>Ngày Đi</div>
@@ -53,7 +60,7 @@
                 <input type="text" name="khuhoi_ngayve" class="l-input l-date placeholder-icon" id="khuhoi_ngayve" placeholder="&#xf073; Ngày Về" style="font-family:Arial, FontAwesome"> 
               </div>
               <button type="submit" id="l-bt-searchkh" class="mt-3 W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>    
-          </div>      
+            </div>      
           <div class="background-white pd-35px pd-top-25px border-grey1 mr-top-30px">
             <div class="title-box-left color_main fz-12vw font-weight-bold text-center pd-bot-20px"><span>MỘT CHIỀU</span></div>
               <div class="form-ground">
@@ -79,37 +86,27 @@
                 </select>
               </div>
               <div class="form-ground">
-                        <!-- hạng ghế -->
-                  <input type="hidden" id="select_awe_tren-2" value="1">
+                <div>Hạng ghế</div>
+                <select name="" id="select_awe_tren-2" class="selectawe l-sl-option-tren" data-callback="my_callback_2" data-placeholder="Phổ Thông">
+                        <option value="1"><i class="fas fa-fighter-jet" selected></i>Phổ thông</option>
+                        <option value="2"><i class="fas fa-fighter-jet"></i>Thương gia</option>
+                </select>         
+              </div>
+              <div class="form-ground">
                   <!-- Loại(khứ hồi, một chiều) -->
                   <input type="hidden"  id="select_awe_tren-1" value="0">
                       <!-- người lớn  -->
                   <input type="hidden" id="nguoilon" value="1">        
+                  <input type="hidden" id="betren2" value="0">        
+                  <input type="hidden" id="beduoi2" value="0">         
               </div>
               <div class="form-ground">
                 <div>Ngày Đi</div>
                 <input type="text" name="motchieu-ngaydi" class="l-input l-date placeholder-icon" id="motchieu-ngaydi" placeholder="&#xf073; Ngày đi" style="font-family:Arial, FontAwesome">
               </div>
-              <button  id="l-bt-searchmc" type="submit" class="W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
-          </div>   
-          <div class="background-white pd-35px pd-top-25px border-grey1 mr-top-30px">
-            <div class="title-box-left color_main fz-12vw font-weight-bold text-center pd-bot-20px"><span>Mức Giá</span></div>
-            <form action="">
-              <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
-                <label class="custom-control-label" for="customRadio">500.000 VND</label>
-              </div>
-              <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
-                <label class="custom-control-label" for="customRadio2">1.000.000 VND</label>
-              </div>
-              <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="customRadio3" name="example" value="customEx">
-                <label class="custom-control-label" for="customRadio3">1.500.000 VND</label>
-              </div>
-              <button type="submit" class="W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
-            </form>
-          </div>   
+              <button  id="l-bt-searchmc" type="submit" class="mt-3 W-100 broder-none border-radius-2 pd-t-5px text-uppercase bg-cl-main cl-white fz-1vw font-weight-600"><i class="fas fa-search fz-0p9vw"></i>TÌM KIẾM</button>
+            </div>   
+            
         </div>
         <div class="box-right">
       <?php
@@ -178,7 +175,7 @@
                     <a class="text-medium padding-right-5px mr-4"><span class="mr-1"><?php if($loaiGhe == 1) echo 'Phổ thông'; else echo 'Thương gia';?>:</span class="text-line-through"><?=number_format($giaVe,0,",",".");?> <span class="mr-1">VNĐ</span></a>
                     
                     <i class="d-block padding-tb-8px l-cl-fw float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?=$Arr[$i]['0']['ngaydi'] ?></i>
-                    <i class="d-block padding-tb-8px l-cl-fw float-lg-right"><span class="mr-right-30px">Một chiều</span></i>
+                    <!-- <i class="d-block padding-tb-8px l-cl-fw float-lg-right"><span class="mr-right-30px">Một chiều</span></i> -->
                 </div>   
               </div>
             </div>

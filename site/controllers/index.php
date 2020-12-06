@@ -21,6 +21,8 @@ require_once "models/ve.php";
 require_once "models/hoadon.php";
 require_once "models/giamgia.php";
 
+require_once "models/timve.php";
+
 
 if (!$_GET['act']) {
     require_once "views/layouts/header_home.php";
@@ -70,23 +72,28 @@ if (isset($_GET['act'])) {
         require_once "views/layouts/header_khac.php";
     }
         switch ($act) {            
-            case 'home':                 
+            case 'home': 
+                unsetSs();             
                 // hãng máy bay                
                 // $blog = gettwoblog();
                 require_once "views/home.php";
                 break;
             case 'about':
+                unsetSs();
                 require_once "views/about.php";
                 break;
             case 'contact':
+                unsetSs();
                 require_once "views/contact.php";
                 break;
             case 'danhsachve':   // để sửa css
+                unsetSs();
                 $data = showDiemDi2();
                 $data1 = showDiemDen2();
                 require_once "views/danhsachve.php";
                 break;
             case 'blog':
+                unsetSs();
                 $page_num = 1;
                 $page_size = PAGE_SIZE;
                 $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
@@ -114,6 +121,7 @@ if (isset($_GET['act'])) {
                 require_once "views/blog.php";
                 break;
         case 'dtBlog':
+            unsetSs();
             if (isset($_GET['idbl']) == true) {
                 $id = $_GET['idbl'];
             } // id blog
@@ -141,16 +149,19 @@ if (isset($_GET['act'])) {
             require_once "views/blogdetail.php";
             break;
         case 'login':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/login.php";
             echo '<script src="views/jquery/login.js" type="text/javascript"></script>';
             break;
         case 'signup':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             require_once "views/signup.php";
             echo '<script src="views/jquery/signup.js" type="text/javascript"></script>';
             break;
         case 'user':
+            unsetSs();
             if (isset($_GET['logout']) && ($_GET['logout']) == 1) {
                 unset($_SESSION['sid']);
                 unset($_SESSION['suser']);
@@ -158,6 +169,7 @@ if (isset($_GET['act'])) {
             }
             break;
         case 'hsedit':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             $iduser = $_SESSION['sid'];
@@ -181,12 +193,14 @@ if (isset($_GET['act'])) {
             }
             break;
         case 'showhs':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
             $iduser = $_SESSION['sid'];
             $showhs = showhs($iduser);
             require_once "views/showhs.php";
             break;
         case 'kichhoat':
+            unsetSs();
             if (isset($_GET['id']) && isset($_GET['rd'])) {//rd -> random
                 $id = $_GET['id'];
                 $rd = $_GET['rd'];
@@ -204,6 +218,7 @@ if (isset($_GET['act'])) {
             require_once "views/userprofile.php";
             break;
         case 'thongbao':
+            unsetSs();
             if (isset($_SESSION['thongbao'])) {
                 $thongbao = $_SESSION['thongbao'];
                 unset($_SESSION['thongbao']);
@@ -259,6 +274,7 @@ if (isset($_GET['act'])) {
             require_once "views/quenmk.php";
             break;
         case 'checkin':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/long/trangthanhtoan.css">';
 
             if (isset($_POST['checkin']) && ($_POST['checkin'])) {
@@ -273,6 +289,7 @@ if (isset($_GET['act'])) {
             break;
             
         case 'datlaimk':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
@@ -299,7 +316,7 @@ if (isset($_GET['act'])) {
             require_once "views/datlaimk.php";
             break;
         case 'khuyenmai':
-            
+            unsetSs();
             $page_num = 1;
             $page_size = PAGE_SIZE;
 
@@ -319,6 +336,7 @@ if (isset($_GET['act'])) {
             require_once "views/dsvekhuyenmai.php";
             break;
         case 'userprofile':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="views/css/buton.scss">';
             $iduser = $_SESSION['sid'];
@@ -361,22 +379,65 @@ if (isset($_GET['act'])) {
             require_once "views/doimk.php";
             break;
         case 'showve';
-            $Array = array();
-            $showAllSanBay = showAllSanBay();
-            $showSanBay = showsanbay();
-            $diemDi = $_GET['diemdi'];
-            $diemDen = $_GET['diemden'];
-            $ngayDi = $_GET['ngaydi'];
-    
-            $urlve = http_build_query($_GET);
+        $Array = array();
+        $showAllSanBay = showAllSanBay();    
+        $diemDi = $_GET['diemdi'];
+        $diemDen = $_GET['diemden'];
+        $ngayDi = $_GET['ngaydi'];
+        $loaiGhe = $_GET['loaighe'];
 
+        $nguoiLon = $_GET['nguoilon'];
+        $treEm = $_GET['treem'];
+        $emBe = $_GET['embe'];
+
+        settype($diemDi,"int");
+        settype($diemDen,"int");
+        settype($loaiGhe,"int");
+        settype($nguoiLon,"int");
+        settype($treEm,"int");
+        settype($emBe,"int");
+       
+
+        if($diemDi == '')
+        {
+            $error = "Vui lòng chọn điểm đi.";
+        }
+        elseif($diemDen == '')
+        {
+            $error = "Vui lòng chọn điểm đến.";
+        }
+        elseif($loaiGhe == '')
+        {
+            $error = "Vui lòng chọn loại ghế.";
+        }
+        elseif($nguoiLon <= 0)
+        {
+            $error = "Số người phải lớn hơn 0.";
+        }
+        elseif($emBe>$nguoiLon)
+        {
+            $error = "Số em bé không được lớn hơn số người lớn.";
+        }elseif($treEm< 0)
+        {
+            $error = "Số trẻ em phải lớn hơn hoặc bằng 0";
+        }
+        elseif($emBe<0){
+            $error = "Số em bé phải lớn hơn hoặc bằng 0";
+        }
+        if($error){
+            echo $error;
+        }   
+        else{
+            $urlve = http_build_query($_GET);
+        
+            // lưu session
             if(isset($_GET['ngayve'])&&($_GET['ngayve'])){
                 $_SESSION['diemdi'] = $_GET['diemdi'];
                 $_SESSION['diemden'] = $_GET['diemden'];
                 $_SESSION['ngayve'] = $_GET['ngayve'];
                 $_SESSION['urlve'] = $urlve;
             }
-
+    
             if(isset($_GET['khuhoi'])&&($_GET['khuhoi'] == 1)){
                 $ngayDi = $_SESSION['ngayve'];
                 $diemDi = $_SESSION['diemden'];
@@ -385,13 +446,8 @@ if (isset($_GET['act'])) {
                 unset($_SESSION['diemdi']);
                 unset($_SESSION['diemden']);
             }
-
-            $loaiGhe = $_GET['loaighe'];
-
-            $nguoiLon = $_GET['nguoilon'];
-            $treEm = $_GET['treem'];
-            $emBe = $_GET['embe'];
-
+    
+        
             $soNguoi = $nguoiLon + $treEm;
             $showVeMotChieu = showVeMotChieu($diemDi, $diemDen, $ngayDi, $loaiGhe);
             if ($loaiGhe == 1) {
@@ -409,7 +465,29 @@ if (isset($_GET['act'])) {
                     }
                 }
             }
-            ($Array) ?  $Array = json_encode($Array) :  $Array = 'Không có chuyến bay nào cả';
+            if($Array){
+                if(!empty($Array)){
+                    $Array = json_encode($Array);
+                }
+            }else{
+                echo '<div class="col-lg-8">
+                        <div class="row mt-5">
+                            <div class="col-lg-12">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-6 pr-2 mr-2">
+                                        <h3>Không có chuyến bay nào cả</h3>
+                                    </div>
+                                    <div class="col-lg-2 pr-2 mr-2">
+                                        <div class="form-group">
+                                            <a href="index.php"><button type="submit" name="act" id="" value="showve" class="btn btn-submit text-center">Đổi chuyến</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+            } 
+        }
             include_once 'views/timkiem.php';
             break;
         case 'chonve':
@@ -429,9 +507,39 @@ if (isset($_GET['act'])) {
                 }
             }
             break;
+
         case 'thanhtoan':
+            print_r($_SESSION);
             require_once "views/thanhtoan.php";
             break;
+
+        case 'timve':
+            
+            if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {
+                $user = $_POST["user"];   
+                $sodienthoai = $_POST["sodienthoai"];
+  
+               // goi function
+               $timve = timve($user, $sodienthoai);
+                if($timve != '' ){     
+
+                    header("location: ./?act=thongtinve");
+                }else{
+                    header("location: ./?act=timve");
+                }
+            }else{
+                echo "Vui nhap thong tin";
+            }
+
+            require_once "views/timve.php";
+
+        break;
+
+        case 'thongtinve':
+            unsetSs();
+            require_once "views/thongtinve.php";
+            break;
+
         default:
             require_once "views/home.php";
             break;
