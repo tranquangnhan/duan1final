@@ -33,5 +33,8 @@ function checkinonl($macho){
         $sql ="select * from tuyenduong  where id = '$id'";
         return result1(1,$sql)['iddiemden'];
     } 
-
+    function setThanhCong($idhd){
+        $sql = "UPDATE hoadon SET trangthai = '2' WHERE id= '$idhd'";
+        return exec1($sql);
+    }
 ?>
