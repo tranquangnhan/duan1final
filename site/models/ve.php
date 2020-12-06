@@ -17,6 +17,25 @@ function setGhe($idGhe,$idChuyenBay,$loaiGhe,$ip)
     $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
     return exec1($sql);
 }
+function setGheThanhCong($idGhe,$idChuyenBay,$loaiGhe)
+{
+    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+    $result = result1(1,$sql)[$loaiGhe];
+    $arr =  explode(",",$result);
+    for ($i=0; $i < count($idGhe); $i++) { 
+        $vitri =($idGhe[$i]-1);
+        $temp = explode('-',$arr[$vitri]);
+
+        if($temp[0] == '2'){
+            $arr[$vitri] = 1 ;
+        }
+        $kq = implode(",",$arr);
+        $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+        exec1($sql);
+    }
+    return true;
+}
+
 
 function huyGhe($idGhe,$idChuyenBay,$loaiGhe,$ip)
 {
@@ -169,13 +188,29 @@ function showhangmb($id) {
     $sql ="SELECT * FROM chuyenbay cb INNER JOIN dsmaybay dsmb on dsmb.id = cb.idmaybay WHERE cb.id = '$id'";
         return result1(1,$sql)['hangmb'];
 }
-function showViTriGhe($idhd){
-    $sql = "SELECT vitringoi FROM hdchitiet WHERE idhd ='$idhd'";
-    $viTriNgoi =  result1(0,$sql);
-    for ($i=0; $i < count($viTriNgoi); $i++) { 
-        $vitri = ($viTriNgoi[$i] - 1);
-        
-    }
+// function showViTriGhe($idhd){
+//     $sql = "SELECT vitringoi,hangghe,idchuyenbay FROM hdchitiet WHERE idhd ='$idhd'";
 
-}
+//     $viTriNgoi =  result1(0,$sql);
+//     if($viTriNgoi['hangghe'] == 1){
+//         $loaiGhe = 'ttghethuong';
+//     }elseif($viTriNgoi['hangghe'] == 2){
+//         $loaiGhe = 'ttghethuonggia';
+//     }
+   
+//     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+//     $result = result1(1,$sql)[$loaiGhe];
+//     $arr =  explode(",",$result);
+//     for ($i=0; $i < count($viTriNgoi['vitringoi']); $i++) { 
+//         $vitri =($viTriNgoi['vitringoi'][$i]-1);
+//         $temp = explode('-',$arr[$vitri]);
+
+//         if($temp[0] == '2'){
+//             $arr[$vitri] = 1 ;
+//         }
+//         $kq = implode(",",$arr);
+//         $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+//         exec1($sql);
+//     }
+// }
 ?>
