@@ -13,7 +13,7 @@
         return result1(0,$sql);
     }
     function showallhd(){
-        $sql = "select * from hoadon where 1 limit 10";
+        $sql = "select * from hoadon order by id desc limit 10 ";
         return result1(0,$sql); 
     }
     function showAllSpAdmin(){

@@ -21,12 +21,16 @@
                     '1103344',
                     $options
                   );
-                  if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuonggia')){
+                  try {
+                    $ip =  get_client_ip();
+                  if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuonggia',$ip)){
                     $data['message'] = $id ;
                     $Return['StatusCode'] = 1; 
                     $pusher->trigger('my-channel', 'my-event', $data);
-                  }    
-
+                  }  
+                  } catch (TypeException $Error) {  
+                    LogFile($Error -> getMessage(), 'pusher', get_defined_vars());
+                  }  
                 echo json_encode($Return);
                 return;
                 break;
@@ -46,7 +50,8 @@
                   $options
                 );
                 try {
-                  if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuong')){
+                  $ip =  get_client_ip();
+                  if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuong',$ip)){
                     $data['message'] = $id ;
                     $Return['StatusCode'] = 1; 
                     $pusher->trigger('my-channel', 'my-event', $data);
@@ -115,7 +120,29 @@
               }
               echo json_encode($Array);
               return;
-              break;   
+              break;
+            case 'huyghe':
+              $Array = array();
+              $ip =  get_client_ip();
+              if(huyGhe($_POST['idghe'],$_POST['idcb'],'ttghethuong',$ip)){
+                $Array['StatusCode'] = 1;
+              }else{
+                $Array['StatusCode'] = 0;
+              }
+              echo json_encode($Array);
+              return;
+              break;
+            case 'huyghekh':
+              $Array = array();
+              $ip =  get_client_ip();
+              if(huyGhe($_POST['idghekh'],$_POST['idcbkh'],'ttghethuonggia',$ip)){
+                $Array['StatusCode'] = 1;
+              }else{
+                $Array['StatusCode'] = 0;
+              }
+              echo json_encode($Array);
+              return;
+              break;
             default:
                 # code...
                 break;

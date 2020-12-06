@@ -9,7 +9,6 @@
  * Cập nhật kết quả vào Database
  * Trả kết quả ghi nhận lại cho VNPAY
  */
-
 require_once("./config.php");
 $inputData = array();
 $returnData = array();

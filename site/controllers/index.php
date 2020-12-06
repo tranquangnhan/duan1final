@@ -217,16 +217,6 @@ if (isset($_GET['act'])) {
             }
             require_once "views/userprofile.php";
             break;
-        case 'thongbao':
-            unsetSs();
-            if (isset($_SESSION['thongbao'])) {
-                $thongbao = $_SESSION['thongbao'];
-                unset($_SESSION['thongbao']);
-            } else {
-                $thongbao = "Không có gì để thông báo";
-            }
-            // require_once "views/thongbao.php";
-            break;
         case 'quenmk':
             unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
@@ -285,8 +275,6 @@ if (isset($_GET['act'])) {
                 require_once "views/checkinonline.php";
             }
             require_once "views/checkinonline.php";
-
-
             break;
             
         case 'datlaimk':
@@ -492,6 +480,7 @@ if (isset($_GET['act'])) {
             include_once 'views/timkiem.php';
             break;
         case 'chonve':
+
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
                 
                 $idChuyenBay = $_GET['idcb'];        
@@ -510,36 +499,83 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thanhtoan':
-            $hoten = $_POST['hoten'];
-                $gioitinh = $_POST['gioitinh'];
-                $sodienthoai =$_POST['sodienthoai'];
-                $cmnd = $_POST['cmnd'];
-                thongtindatve($hoten,$gioitinh,$sodienthoai,$cmnd);
-
             require_once "views/thanhtoan.php";
             break;
-            case 'tinhtien':
-
-                break ;
-        case 'timve':
-            
-            if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {
-                $user = $_POST["user"];   
-                $sodienthoai = $_POST["sodienthoai"];
-  
-               // goi function
-               $timve = timve($user, $sodienthoai);
-                if($timve != '' ){     
-
-                    header("location: ./?act=thongtinve");
-                }else{
-                    header("location: ./?act=timve");
+        case 'tinhtien':
+            // print_r($_SESSION);
+            $tongTien = 0;
+            $Arr = showVeSite($_SESSION['idchuyenbay']);
+            for ($i=0; $i <count($_SESSION['vitrighe']); $i++) { 
+                if($_SESSION['hangghe'] == 1 ){
+                    $giaTien = $Arr['0']['giavethuong'];
                 }
-            }else{
-                echo "Vui nhap thong tin";
+                elseif($_SESSION['hangghe'] == 2){
+                    $giaTien = $Arr['0']['giavethuonggia'];
+                }
+                $tongTien += $giaTien;
             }
+            $ArrKh = showVeSite($_SESSION['idchuyenbaykh']);
+            for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
+                if($_SESSION['hangghekh'] == 1 ){
+                    $giaTienKh = $ArrKh['0']['giavethuong'];
+                }
+                elseif($_SESSION['hangghekh'] == 2){
+                    $giaTienKh = $ArrKh['0']['giavethuonggia'];
+                }
+                $tongTien += $giaTienKh;
+            }
+            $maThanhToan =md5(date("h:i:s"),FALSE);
+            require_once "views/vnpay.php";
+        break;
+        case 'ttthanhcong':
+            // print_r($_SESSION);
+            // print_r(showViTriGhe(210));
+            if(isset($_SESSION['idhd'])){
+                setThanhCong($_SESSION['idhd']);
+                if($_SESSION['hangghe'] == 1){
+                    $loaiGhe = 'ttghethuong';
+                }else{
+                    $loaiGhe = 'ttghethuonggia';
+                }
+                setGheThanhCong($_SESSION['vitrighe'],$_SESSION['idchuyenbay'],$loaiGhe);
+            }
+            if(isset($_SESSION['idhdkh'])){
+                setThanhCong($_SESSION['idhdkh']);
+                if($_SESSION['hangghekh'] == 1){
+                    $loaiGheKh = 'ttghethuong';
+                }else{
+                    $loaiGheKh = 'ttghethuonggia';
+                }
+                setGheThanhCong($_SESSION['vitrighekh'],$_SESSION['idchuyenbaykh'],$loaiGheKh);
+            }
+            // unset($_SESSION['idchuyenbay']);
+            // unset($_SESSION['hangghe']);
+            // unset($_SESSION['urlve']);
+            // unset($_SESSION['vitrighe']);
+            // unset($_SESSION['vitrighekh']);
+            // unset($_SESSION['idchuyenbaykh']);
+            // unset($_SESSION['hangghekh']);
+            // unset($_SESSION['idhd']);
+            // unset($_SESSION['idhdkh']);
+            require_once "views/vnpay_return.php";
+        break;
+        case 'timve':
 
-            require_once "views/timve.php";
+            if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {
+                $tenkh = $_POST["user"];
+                $dienthoai = $_POST["sodienthoai"];
+               // goi function
+               if($dienthoai == ''){
+                   echo "Vui Lòng Nhập số điện thoại";
+               }elseif($tenkh==""){
+                   echo "Vui Lòng Nhập Tên";
+               }else{
+                   $timve = showtimKH($dienthoai,$tenkh);
+                   require_once "views/thongtinve.php";
+               }
+            }
+            include "views/timve.php";
+
 
         break;
 

@@ -133,19 +133,20 @@
     // biến thứ 1 truyền vào lỗi,
     //biến thứ 2 truyền vào tên function 
     //biến thứ 3 truyền vào tất cả các biến
-    // function LogFile($ErrorMess, $Function, $Variable)
-    // {
-    //     $Name = date('d-m-Y');
-    //     $Error = @fopen('D:\hoc-fpt\code-tren-lop\php\xampp3\htdocs\duan1final\site\log\/'. $Name . '.txt', 'a+');
-    //     @fwrite($Error, PHP_EOL . '--------------' . PHP_EOL);
-    //     @fwrite($Error, 'Error Date: ' . (print_r(date('d-m-Y h:i:s'), true)) . PHP_EOL);
-    //     @fwrite($Error, 'Error In: ' . (print_r($Function, true)) . PHP_EOL);
-    //     @fwrite($Error, 'Error Message: ' . (print_r($ErrorMess, true)) . PHP_EOL);
-    //     @fwrite($Error, 'Variable JSON: ' . (print_r($Variable, true)));
-    //     @fclose($Error);
-    // }
+    function LogFile($ErrorMess, $Function, $Variable)
+    {
+        $Name = date('d-m-Y');
+        $Error = @fopen('D:\hoc-fpt\code-tren-lop\php\xampp3\htdocs\duan1final\site\log\/'. $Name . '.txt', 'a+');
+        @fwrite($Error, PHP_EOL . '--------------' . PHP_EOL);
+        @fwrite($Error, 'Error Date: ' . (print_r(date('d-m-Y h:i:s'), true)) . PHP_EOL);
+        @fwrite($Error, 'Error In: ' . (print_r($Function, true)) . PHP_EOL);
+        @fwrite($Error, 'Error Message: ' . (print_r($ErrorMess, true)) . PHP_EOL);
+        @fwrite($Error, 'Variable JSON: ' . (print_r($Variable, true)));
+        @fclose($Error);
+    }
     // xoá session
-    function unsetSs(){
+    function unsetSs()
+    {
         unset($_SESSION['idchuyenbay']);
         unset($_SESSION['hangghe']);
         unset($_SESSION['urlve']);
@@ -153,5 +154,25 @@
         unset($_SESSION['vitrighekh']);
         unset($_SESSION['idchuyenbaykh']);
         unset($_SESSION['hangghekh']);
+    }
+    // get ip user
+    function get_client_ip() 
+    {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if(getenv('HTTP_X_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if(getenv('HTTP_X_FORWARDED'))
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if(getenv('HTTP_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if(getenv('HTTP_FORWARDED'))
+           $ipaddress = getenv('HTTP_FORWARDED');
+        else if(getenv('REMOTE_ADDR'))
+            $ipaddress = getenv('REMOTE_ADDR');
+        else
+            $ipaddress = 'UNKNOWN';
+        return $ipaddress;
     }
 ?>

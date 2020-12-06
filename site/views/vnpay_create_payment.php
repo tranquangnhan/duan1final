@@ -57,4 +57,6 @@ if (isset($vnp_HashSecret)) {
 $returnData = array('code' => '00'
     , 'message' => 'success'
     , 'data' => $vnp_Url);
-echo json_encode($returnData);
+// echo json_encode($returnData);
+header('location: '.$vnp_Url.'');
+?>

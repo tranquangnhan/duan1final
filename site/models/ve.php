@@ -1,24 +1,59 @@
 <?php
 // set value seet admin = 1 or 0
-function setGhe($idGhe,$idChuyenBay,$loaiGhe)
+function setGhe($idGhe,$idChuyenBay,$loaiGhe,$ip)
 {
     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
     $result = result1(1,$sql)[$loaiGhe];
     $arr =  explode(",",$result);
     $vitri =($idGhe-1);
     
-    //Kiem tra so ghe da chon > 3 thi ko cho chon nua
-    
-    if($arr[$vitri] === '2'){
-        $arr[$vitri] = 0;
+    $temp = explode('-',$arr[$vitri]);
+
+    if($temp[0] == '0'){
+        $arr[$vitri] = 2 .'-'. $ip ;
     }
-    if($arr[$vitri] === '0')
-    {
-        $arr[$vitri] = 2;
-    }
+  
     $kq = implode(",",$arr);
     $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
     return exec1($sql);
+}
+function setGheThanhCong($idGhe,$idChuyenBay,$loaiGhe)
+{
+    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+    $result = result1(1,$sql)[$loaiGhe];
+    $arr =  explode(",",$result);
+    for ($i=0; $i < count($idGhe); $i++) { 
+        $vitri =($idGhe[$i]-1);
+        $temp = explode('-',$arr[$vitri]);
+
+        if($temp[0] == '2'){
+            $arr[$vitri] = 1 ;
+        }
+        $kq = implode(",",$arr);
+        $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+        exec1($sql);
+    }
+    return true;
+}
+
+
+function huyGhe($idGhe,$idChuyenBay,$loaiGhe,$ip)
+{
+    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+    $result = result1(1,$sql)[$loaiGhe];
+    $arr =  explode(",",$result);
+    for ($i=0; $i < count($idGhe); $i++) { 
+        $vitri =($idGhe[$i]-1);
+        $temp = explode('-',$arr[$vitri]);
+
+        if($temp[0] == '2'){
+            $arr[$vitri] = 0 .'-'. $ip ;
+        }
+        $kq = implode(",",$arr);
+        $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+        exec1($sql);
+    }
+    return true;
 }
 // render html to view
 function renderHtml($idChuyenBay,$loaiGhe)
@@ -38,8 +73,13 @@ function renderHtml($idChuyenBay,$loaiGhe)
     $bien = -2;
     for ($i=0; $i< count($slTT); $i++) {
         $bien ++;
-        if($slTT[$i] == 2){
-            $active = 'l-ghe-active';
+        $temp = explode("-",$slTT[$i]);
+        if($temp[0] == 2){
+            if($temp[1] === get_client_ip()){
+                $active = 'l-ghe-active';
+            }else{
+                $active = 'l-bg-gray';
+            }
         }
         if($slTT[$i] == 1){
             $active = 'l-bg-gray';
@@ -148,4 +188,29 @@ function showhangmb($id) {
     $sql ="SELECT * FROM chuyenbay cb INNER JOIN dsmaybay dsmb on dsmb.id = cb.idmaybay WHERE cb.id = '$id'";
         return result1(1,$sql)['hangmb'];
 }
+// function showViTriGhe($idhd){
+//     $sql = "SELECT vitringoi,hangghe,idchuyenbay FROM hdchitiet WHERE idhd ='$idhd'";
+
+//     $viTriNgoi =  result1(0,$sql);
+//     if($viTriNgoi['hangghe'] == 1){
+//         $loaiGhe = 'ttghethuong';
+//     }elseif($viTriNgoi['hangghe'] == 2){
+//         $loaiGhe = 'ttghethuonggia';
+//     }
+   
+//     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+//     $result = result1(1,$sql)[$loaiGhe];
+//     $arr =  explode(",",$result);
+//     for ($i=0; $i < count($viTriNgoi['vitringoi']); $i++) { 
+//         $vitri =($viTriNgoi['vitringoi'][$i]-1);
+//         $temp = explode('-',$arr[$vitri]);
+
+//         if($temp[0] == '2'){
+//             $arr[$vitri] = 1 ;
+//         }
+//         $kq = implode(",",$arr);
+//         $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+//         exec1($sql);
+//     }
+// }
 ?>

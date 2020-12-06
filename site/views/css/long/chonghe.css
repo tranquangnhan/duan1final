@@ -293,7 +293,7 @@
 .l-bt_next_fixed {
     position: absolute;
     top: 150px;
-    right: 420px;
+    right: 385px;
     padding: 20px;
     color: white;
     z-index: 19;
@@ -314,6 +314,33 @@
     transform: scale(1.1);
 }
 
+.l-position-absolute {
+    position: absolute!important;
+}
+
+.l-bt_close {
+    position: absolute;
+    top: 250px;
+    right: 385px;
+    padding: 20px;
+    color: rgb(255, 51, 51);
+    z-index: 19;
+}
+
+.l-bt_close a {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 60px;
+    color: white;
+}
+
+.l-bt_close a i {
+    transition: 0.5s;
+}
+
+.l-bt_close a:hover i {
+    transform: scale(1.1);
+}
 
 .l-position-absolute {
     position: absolute!important;
