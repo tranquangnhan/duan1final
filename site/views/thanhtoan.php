@@ -5,16 +5,19 @@
                <div class="col-lg-9">
                    <div class="p-2 flight-post background-white border-bottom-1 border-grey-1 with-hover box-shadow-hover margin-bottom-40px">
                    <?php    
-                            echo '  <div class="row mt-3 ml-3 pt-3"><h4>VÉ ĐI</h4></div>';  
+                            $tongTien = 0; 
                             $Arr = showVeSite($_SESSION['idchuyenbay']);
+                            
                             for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
                                 // chuyến đầu tiên
+                                
                                 if($_SESSION['hangghe'] == 1 ){
                                     $giaTien = $Arr['0']['giavethuong'];
                                 }
                                 elseif($_SESSION['hangghe'] == 2){
                                     $giaTien = $Arr['0']['giavethuonggia'];
                                 }
+                                $tongTien += $giaTien;
                                 if($Arr['0']['hangmb']==1){
                                     $hangMb = "VietJet Air";
                                     $img = 'views/img/vietjet.png';
@@ -66,24 +69,23 @@
                                        
                                     </div>';
                             } 
-                            $ArrKh = showVeSite($_SESSION['idchuyenbaykh']);
-                            echo '  <div class="row mt-3 ml-3"><h4>VÉ TRỞ LẠI</h4></div>';   
+                            $ArrKh = showVeSite($_SESSION['idchuyenbaykh']);  
                             for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
                                   // chuyến sau
-                                  if($_SESSION['hangghekh'] == 1 ){
+                                if($_SESSION['hangghekh'] == 1 ){
                                     $giaTienKh = $ArrKh['0']['giavethuong'];
                                 }
                                 elseif($_SESSION['hangghekh'] == 2){
                                     $giaTienKh = $ArrKh['0']['giavethuonggia'];
                                 }
-                               
-                                if($Arr['0']['hangmb']==1){
+                                $tongTien += $giaTienKh;
+                                if($ArrKh['0']['hangmb']==1){
                                     $hangMbKh = "VietJet Air";
                                     $imgKh = 'views/img/vietjet.png';
-                                }elseif($Arr['0']['hangmb']==2){
+                                }elseif($ArrKh['0']['hangmb']==2){
                                     $hangMbKh = "Vietnam Airlines";
                                     $imgKh = 'views/img/vietnamairlines.png';
-                                }elseif($Arr['0']['hangmb']==3){
+                                }elseif($ArrKh['0']['hangmb']==3){
                                     $hangMbKh = "Bamboo Airways";
                                     $imgKh = 'views/img/bamboo.png';
                                 } 
@@ -95,7 +97,7 @@
 
                                 echo '
                                 <!-- chuyến về -->
-                                <div class="row box_ve mr-bot-40px background-white mr-0px">
+                                <div class="mt-5 row box_ve mr-bot-40px background-white mr-0px">
                                       <div class="col-lg-4 bg-grey-2 text-center d-flex align-content-center flex-wrap justify-content-center">
                                           <div class="hotel-img position-relative line-height-150px">
                                               <img src="'.$imgKh.'" alt="">
@@ -126,53 +128,55 @@
                                           </div>  
                                         </div>
                                       </div>
-                                       
+                                      
                                     </div>
                                 ';
                             }
                           
-                            ?>
-
+                            ?>  
+                             <h3 class="text-right">Tổng tiền: <span class="text-third-color"><?=forMatTien($tongTien)?> Đ</span> </h3>
                        <div class="bg-white border border-grey-1 padding-30px margin-tb-30px">
                            <div class="text-uppercase text-medium font-weight-700 border-bottom-1 border-second-color  padding-bottom-8px">
                                Nhập thông tin đặt vé:
-                           </div>
+                           </div> 
+                         
                            <div class="pdt10px">
-                                <form action="<?=ROOT_URL?>/site/?act=thanhtoan" method="post">
 
                            <?php 
                            for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
                                 echo '<div class="form-row mt-3">
+                                        <div class="form-group col-md-12">
+                                            <label class="text-uppercase text-medium  text-third-color font-weight-700 border-bottom-1 border-second-color  padding-bottom-8px" for="name">Khách Hàng: '.($i+1).'</label>
+                                        </div>
                                         <div class="form-group col-md-6">
                                             <label for="name">Họ Và Tên:</label>
-                                            <input type="text" class="form-control" id="name" name="hoten" placeholder="TRAN QUANG NHAN">
+                                            <input type="text" class="form-control hotenkh" id="name" name="hoten" placeholder="TRAN QUANG NHAN">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="">Giới Tính</label>
-                                            <select class="form-control w-100" name="gioitinh" id="">
-                                                <option value="0" selected>Chọn</option>
-                                                <option value="1">Nam</option>
-                                                <option value="2" >Nữ</option>
-                                                <option value="3" >Khác</option>
+                                            <select class="form-control w-100 gioitinh" name="gioitinh" id="">
+                                                <option value="" selected>Chọn</option>
+                                                <option value="0">Nam</option>
+                                                <option value="1" >Nữ</option>
+                                                <option value="2" >Khác</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="sdt">Số điện thoại:</label>
-                                            <input type="text" class="form-control" name="sodienthoai" id="sdt" placeholder="0924698776">
+                                            <input type="text" class="form-control dienthoai" name="sodienthoai" id="sdt" placeholder="0924698776">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="diachi">CMND/Passport</label>
-                                            <input type="text" class="form-control" name="cmnd" id="diachi" placeholder="273122123">
+                                            <input type="text" class="form-control cmnd" name="cmnd" id="diachi" placeholder="273122123">
                                         </div>
                                     </div>
                                   ';
                             }
                             ?>
                                     <a href="<?=SITE_URL?>index.php" class="btn-sm btn-lg text-dark text-center uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
-                                    <button name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a href ="<?=ROOT_URL?>/site/?act=tinhtien">Đặt vé </a></button>
-                                </form>
+                                    <button  name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a id="themhd">Đặt vé </a></button>
                             </div>
 
                        </div>

@@ -19,7 +19,7 @@ $(document).ready(function() {
         center: true,
     });
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 70) {
+        if ($(this).scrollTop() > 30) {
             $('#l-menu-fixed').show();
             //$('#l-menu-fixed').fadeIn(600);
             $('#menu-main-fixed li a').css("color", "#494949");

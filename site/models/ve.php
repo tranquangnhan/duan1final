@@ -169,4 +169,5 @@ function showhangmb($id) {
     $sql ="SELECT * FROM chuyenbay cb INNER JOIN dsmaybay dsmb on dsmb.id = cb.idmaybay WHERE cb.id = '$id'";
         return result1(1,$sql)['hangmb'];
 }
+
 ?>

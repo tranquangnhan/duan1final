@@ -182,7 +182,6 @@ $("#tieptucthuong").click(function(e) {
                                         });
                                     }
                                 });
-
                             }
                         }
                     });

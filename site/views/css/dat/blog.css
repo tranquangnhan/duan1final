@@ -1,5 +1,5 @@
 body {
-    font-family: "Poppins";
+    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     line-height: 23px;
 }
@@ -291,8 +291,8 @@ p{
 }
 
 .widget ul.last-posts li {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
     border-bottom: solid 1px #eeeded;
 }
 
@@ -446,6 +446,62 @@ p{
     box-shadow: 0 6px 30px rgba(0,0,0,.1);
     margin-top: 0;
 }
-.fz-20px {
-    font-size: 20px;
+.fz-2vw {
+    font-size: 2vw;
+}
+
+.line-height-35px {
+    line-height: 35px;
+}
+
+.webkit-line-clam {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.blog-line-5-clamp {
+    -webkit-line-clamp: 5;
+}
+
+.blog-line-2-clamp {
+    -webkit-line-clamp: 2;
+}
+
+.pd-20-30-40-30 {
+    padding: 20px 30px 40px 30px;
+}
+
+.fz_8vw {
+    font-size: 0.8vw;
+}
+
+.l-mota-blog {
+    color: #616161;
+    /* font-weight: 400; */
+    font-size: 14px;
+}
+
+.cl-blackgr {
+    color: #8d8d8d;
+    transition: 0.5s;
+}
+
+.cl-blackgr:hover {
+    color: #2b2b2b;
+}
+
+.pd-b-7px {
+    padding-bottom: 7px;
+}
+
+.mr-top-3px {
+    margin-top: 3px;
+}
+
+.l-div-right-fixed {
+    position: fixed!important;
+    right: 145px;
+    width: 26.3513%;
+    top: -430px;
 }

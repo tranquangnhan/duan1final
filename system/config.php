@@ -1,5 +1,4 @@
 
-
 <?php
 define('HOST_DB','localhost');
 define('NAME_DB','qnhan_datvemaybay');
