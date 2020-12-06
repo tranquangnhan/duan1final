@@ -142,39 +142,40 @@
                                Nhập thông tin đặt vé:
                            </div>
                            <div class="pdt10px">
-                                <form action="">
+                                <form action="<?=ROOT_URL?>/site/?act=thanhtoan" method="post">
+
                            <?php 
                            for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
                                 echo '<div class="form-row mt-3">
                                         <div class="form-group col-md-6">
                                             <label for="name">Họ Và Tên:</label>
-                                            <input type="text" class="form-control" id="name" placeholder="TRAN QUANG NHAN">
+                                            <input type="text" class="form-control" id="name" name="hoten" placeholder="TRAN QUANG NHAN">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="">Giới Tính</label>
-                                            <select class="form-control w-100" name="" id="">
-                                                <option value="" selected>Chọn</option>
-                                                <option value="">Nam</option>
-                                                <option value="">Nữ</option>
-                                                <option value="">Khác</option>
+                                            <select class="form-control w-100" name="gioitinh" id="">
+                                                <option value="0" selected>Chọn</option>
+                                                <option value="1">Nam</option>
+                                                <option value="2" >Nữ</option>
+                                                <option value="3" >Khác</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="sdt">Số điện thoại:</label>
-                                            <input type="text" class="form-control" id="sdt" placeholder="0924698776">
+                                            <input type="text" class="form-control" name="sodienthoai" id="sdt" placeholder="0924698776">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="diachi">CMND/Passport</label>
-                                            <input type="text" class="form-control" id="diachi" placeholder="273122123">
+                                            <input type="text" class="form-control" name="cmnd" id="diachi" placeholder="273122123">
                                         </div>
                                     </div>
                                   ';
                             }
                             ?>
                                     <a href="<?=SITE_URL?>index.php" class="btn-sm btn-lg text-dark text-center uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
-                                    <a href="#" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px">Đặt vé</a>
+                                    <button name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a href ="<?=ROOT_URL?>/site/views/index.php">Đặt vé </a></button>
                                 </form>
                             </div>
 

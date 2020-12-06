@@ -228,6 +228,7 @@ if (isset($_GET['act'])) {
             // require_once "views/thongbao.php";
             break;
         case 'quenmk':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="scss/buton.scss">';
@@ -509,10 +510,17 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thanhtoan':
-            print_r($_SESSION);
+            $hoten = $_POST['hoten'];
+                $gioitinh = $_POST['gioitinh'];
+                $sodienthoai =$_POST['sodienthoai'];
+                $cmnd = $_POST['cmnd'];
+                thongtindatve($hoten,$gioitinh,$sodienthoai,$cmnd);
+
             require_once "views/thanhtoan.php";
             break;
+            case 'tinhtien':
 
+                break ;
         case 'timve':
             
             if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {

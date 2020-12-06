@@ -25,7 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="Nguyễn Quốc Hiếu" />
+    <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +87,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/site/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -94,6 +96,20 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\duan1final\site\views" />
+      <recent name="E:\xampp\htdocs\duan1final\site" />
+      <recent name="E:\xampp\htdocs\duan1final\system" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\duan1final\site\views" />
+      <recent name="E:\xampp\htdocs\duan1final\site" />
+      <recent name="E:\xampp\htdocs\duan1final\site\views\VNPAY_PHP" />
+      <recent name="E:\xampp\htdocs\duan1final\site\views\VNPAY_PHP\nbproject" />
+      <recent name="E:\xampp\htdocs\duan1final" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -117,7 +133,28 @@
       <workItem from="1606401011979" duration="15980000" />
       <workItem from="1606930344532" duration="1632000" />
       <workItem from="1606936024329" duration="268000" />
+      <workItem from="1607195198546" duration="12766000" />
+      <workItem from="1607208495619" duration="345000" />
+      <workItem from="1607228056528" duration="1322000" />
+      <workItem from="1607229408374" duration="12000" />
+      <workItem from="1607229444888" duration="11000" />
+      <workItem from="1607229624405" duration="975000" />
     </task>
+    <task id="LOCAL-00001" summary="Nguyễn Quốc Hiếu">
+      <created>1607205846586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607205846586</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Nguyễn Quốc Hiếu">
+      <created>1607230270254</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607230270254</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +187,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Nguyễn Quốc Hiếu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nguyễn Quốc Hiếu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="327" key="#Composer" timestamp="1606071085126">
@@ -164,16 +203,32 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605447941183" />
-    <state x="521" y="169" key="FileChooserDialogImpl" timestamp="1606071083854">
+    <state x="499" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607207576566">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="499" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1536.834@0.30.1536.834" timestamp="1607207576566" />
+    <state x="393" y="42" key="CommitChangelistDialog2" timestamp="1607230269231">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="393" y="42" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1607230269231" />
+    <state x="521" y="169" key="FileChooserDialogImpl" timestamp="1607229454229">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605448597913" />
-    <state x="521" y="169" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1606071083854" />
+    <state x="521" y="169" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1607229454229" />
     <state x="207" y="40" key="SettingsEditor" timestamp="1606930366064">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605425372532" />
     <state x="207" y="40" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1606930366064" />
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1607205872553">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1607205872553" />
+    <state x="478" y="239" key="git4idea.merge.GitPullDialog" timestamp="1607205866503">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="478" y="239" key="git4idea.merge.GitPullDialog/0.30.1536.834@0.30.1536.834" timestamp="1607205866503" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1605427578683">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
