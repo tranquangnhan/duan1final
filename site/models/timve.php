@@ -5,7 +5,7 @@ function timve($user,$sodienthoai) {
     return result1(1,$sql); 
     }
 
-    function ltt(){
+    function showtimKH($dienthoai,$tenkh){
         $sql ="SELECT o.id,o.gioden,o.giodi,o.ngaydi,o.tinh_den,q.tinh_di,o.masb_den,q.masb_di,p.giavethuong, p.giavethuonggia,b.hangmb,
         hd.tenkh,hd.dienthoai,hd.tongtien
        
@@ -35,7 +35,7 @@ function timve($user,$sodienthoai) {
         (select hdct.tenkh, hdct.idchuyenbay,hdct.dienthoai,hd.tongtien  from hoadon hd
         INNER JOIN hdchitiet hdct on hd.id = hdct.idhd) as hd
         
-        on o.id=q.id and q.id=p.id and o.id=b.id and o.id = hd.idchuyenbay";
-        return result1(1,$sql);
+        on o.id=q.id and q.id=p.id and o.id=b.id and o.id = hd.idchuyenbay where dienthoai = '$dienthoai' and  tenkh = '$tenkh'";
+        return result1(0,$sql);
     }
 ?>

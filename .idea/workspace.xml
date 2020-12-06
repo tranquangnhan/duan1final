@@ -26,8 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/views/vnpay_ipn.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/views/vnpay_ipn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/controllers/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/models/timve.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/models/timve.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/views/thongtinve.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/views/thongtinve.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +145,7 @@
       <workItem from="1607229444888" duration="11000" />
       <workItem from="1607229624405" duration="975000" />
       <workItem from="1607230617913" duration="2147000" />
+      <workItem from="1607266157107" duration="3698000" />
     </task>
     <task id="LOCAL-00001" summary="Nguyễn Quốc Hiếu">
       <created>1607205846586</created>

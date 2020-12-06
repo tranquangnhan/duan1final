@@ -522,24 +522,22 @@ if (isset($_GET['act'])) {
 
                 break ;
         case 'timve':
-            
+
             if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {
-                $user = $_POST["user"];   
-                $sodienthoai = $_POST["sodienthoai"];
-  
+                $tenkh = $_POST["user"];
+                $dienthoai = $_POST["sodienthoai"];
                // goi function
-               $timve = timve($user, $sodienthoai);
-                if($timve != '' ){     
-
-                    header("location: ./?act=thongtinve");
-                }else{
-                    header("location: ./?act=timve");
-                }
-            }else{
-                echo "Vui nhap thong tin";
+               if($dienthoai == ''){
+                   echo "Vui Lòng Nhập số điện thoại";
+               }elseif($tenkh==""){
+                   echo "Vui Lòng Nhập Tên";
+               }else{
+                   $timve = showtimKH($dienthoai,$tenkh);
+                   require_once "views/thongtinve.php";
+               }
             }
+            include "views/timve.php";
 
-            require_once "views/timve.php";
 
         break;
 
