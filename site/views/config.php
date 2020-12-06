@@ -7,5 +7,5 @@
  */
 $vnp_TmnCode = "WBXUAR2N"; //Mã website tại VNPAY
 $vnp_HashSecret = "MMNURKPPAXBRAMUAWRVQRIJBPWHEAVGA"; //Chuỗi bí mật
-$vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+$vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 $vnp_Returnurl = "http://duan1final.vn/site/index.php?act=ttthanhcong";

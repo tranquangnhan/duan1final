@@ -527,9 +527,6 @@ if (isset($_GET['act'])) {
             $maThanhToan =md5(date("h:i:s"),FALSE);
             require_once "views/vnpay.php";
         break;
-        case 'nhapma':
-            require_once "views/vnpay_create_payment.php";
-        break;
         case 'ttthanhcong':
             // print_r($_SESSION);
             // print_r(showViTriGhe(210));
