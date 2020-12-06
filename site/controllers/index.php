@@ -532,6 +532,7 @@ if (isset($_GET['act'])) {
         break;
         case 'ttthanhcong':
             // print_r($_SESSION);
+            print_r(showViTriGhe(210));
             if(isset($_SESSION['idhd'])){
                 setThanhCong($_SESSION['idhd']);
             }

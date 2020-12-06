@@ -169,5 +169,13 @@ function showhangmb($id) {
     $sql ="SELECT * FROM chuyenbay cb INNER JOIN dsmaybay dsmb on dsmb.id = cb.idmaybay WHERE cb.id = '$id'";
         return result1(1,$sql)['hangmb'];
 }
+function showViTriGhe($idhd){
+    $sql = "SELECT vitringoi FROM hdchitiet WHERE idhd ='$idhd'";
+    $viTriNgoi =  result1(0,$sql);
+    for ($i=0; $i < count($viTriNgoi); $i++) { 
+        $vitri = ($viTriNgoi[$i] - 1);
+        
+    }
 
+}
 ?>
