@@ -171,7 +171,7 @@
                             }
                             ?>
                                     <a href="<?=SITE_URL?>index.php" class="btn-sm btn-lg text-dark text-center uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
-                                    <button name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a href ="<?=ROOT_URL?>/site/?act=tinhtien">Đặt vé </a></button>
+                                    <button name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a href ="<?=ROOT_URL?>/site/views/index.php">Đặt vé </a></button>
                                 </form>
                             </div>
 

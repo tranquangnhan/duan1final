@@ -11,4 +11,5 @@ define('SITE_URL',ROOT_URL.'/site/');
 define('SYSTEM_PATH',ROOT_URL.'/system');
 define('PAGE_SIZE',6);
 date_default_timezone_set("Asia/Bangkok");
+
 ?>
