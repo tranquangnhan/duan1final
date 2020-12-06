@@ -547,7 +547,7 @@ if (isset($_GET['act'])) {
             unset($_SESSION['hangghekh']);
             unset($_SESSION['idhd']);
             unset($_SESSION['idhdkh']);
-            require_once "views/ttthanhcong.php";
+            require_once "views/vnpay_return.php";
         break;
         case 'timve':
             
