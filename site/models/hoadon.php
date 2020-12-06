@@ -33,5 +33,20 @@ function checkinonl($macho){
         $sql ="select * from tuyenduong  where id = '$id'";
         return result1(1,$sql)['iddiemden'];
     } 
-
+    function sendmailve($idhd){
+        $sql ="
+        select * , hdchitiet.idhd ,hoadon.id from hdchitiet 
+            inner join hoadon on hdchitiet.idhd = hoadon.id 
+            where hoadon.id = '$idhd'
+        ";
+        return result1(0,$sql);
+    }
+    function idmaybay($id){
+        $sql ="select * from chuyenbay  where id = '$id'";
+        return result1(1,$sql)['idmaybay'];
+    } 
+    function tenmaybay($id){
+        $sql ="select * from dsmaybay  where id = '$id'";
+        return result1(1,$sql)['name'];
+    }
 ?>
