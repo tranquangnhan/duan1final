@@ -492,6 +492,7 @@ if (isset($_GET['act'])) {
             include_once 'views/timkiem.php';
             break;
         case 'chonve':
+
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
 
                 $idChuyenBay = $_GET['idcb'];
@@ -519,8 +520,8 @@ if (isset($_GET['act'])) {
             require_once "views/thanhtoan.php";
             break;
             case 'tinhtien':
-
-                break ;
+                
+            break;
         case 'timve':
             
             if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {

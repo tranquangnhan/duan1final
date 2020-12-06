@@ -1,6 +1,6 @@
 async function chonVe(idChuyenBay) {
     var loaighe = $("#loaighe").val();
-    
+
     let Loading = Swal.fire({ // sweetAlert
         allowEscapeKey: false,
         title: 'Đang kiểm tra',
@@ -14,7 +14,76 @@ async function chonVe(idChuyenBay) {
         window.location.href = ('index.php?act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
     }
 }
+$("#huyghe").click(function(e) {
+    e.preventDefault();
+    Swal.fire({
+            title: 'Bạn Có Chắc Không?',
+            text: "Huỷ ghế đã chọn",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Lưu!'
+        })
+        .then(async(result) => {
+            if (result.isConfirmed == true) {
 
+                Swal.fire(
+                    'Đã lưu!',
+                    'Huỷ các ghế đã đặt.',
+                    'success'
+                )
+
+                .then(async(result) => {
+                    if (result.isConfirmed == true) {
+                        if ($(".l-ghe-phothong.l-ghe-active")) {
+
+                            var arr = [];
+                            let idchuyenbay = $("#idcb").val();
+
+                            $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
+                                var idGhe = $(this);
+                                idGhe = idGhe.html();
+                                arr.push(idGhe);
+                            });
+
+                            await $.ajax({
+                                type: "POST",
+                                url: "controllers/ajax/chonghe.php",
+                                data: { idghe: arr, Action: 'huyghe', idcb: idchuyenbay },
+                                success: function(response) {
+                                    if (JSON.parse(response).StatusCode == 1) {
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        }
+                        if ($(".l-ghe-thuonggia.l-ghe-active")) {
+                            var arrkh = [];
+                            let idchuyenbaykh = $("#idcb").val();
+
+                            $(".l-ghe-thuonggia.l-ghe-active").each(function(index, element) {
+                                var idGhe = $(this);
+                                idGhe = idGhe.html();
+                                arrkh.push(idGhe);
+                            });
+
+                            await $.ajax({
+                                type: "POST",
+                                url: "controllers/ajax/chonghe.php",
+                                data: { idghekh: arrkh, Action: 'huyghekh', idcbkh: idchuyenbaykh },
+                                success: async function(response) {
+                                    if (JSON.parse(response).StatusCode == 1) {
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        }
+                    }
+                })
+            }
+        })
+});
 // set session vé một chiều và vé khứ hồi
 $("#tieptucthuong").click(function(e) {
     e.preventDefault();
