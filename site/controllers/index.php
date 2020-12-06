@@ -228,6 +228,7 @@ if (isset($_GET['act'])) {
             // require_once "views/thongbao.php";
             break;
         case 'quenmk':
+            unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="scss/buton.scss">';

@@ -65,12 +65,14 @@
                     $_SESSION['idchuyenbay'] = $_GET['idedit'];
 
                 }else{
+            
+                        $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
+                        
+                        addTTVe($idMayBay,$idChuyenBay);
+                        
+                        addGiaTien($giaVeThuong,$giaVeThuongGia,$idChuyenBay);
 
-                    $idChuyenBay =  addve($idTuyenDuong,$idMayBay,$ngayDi,$gioDi,$gioDen);
                     
-                    addTTVe($idMayBay,$idChuyenBay);
-                    
-                    addGiaTien($giaVeThuong,$giaVeThuongGia,$idChuyenBay);
                     $_SESSION['idchuyenbay'] = $idChuyenBay;
                 }
                 
