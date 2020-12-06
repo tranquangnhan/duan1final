@@ -115,7 +115,6 @@ $("#themhd").click(async function(e) {
                         showCancelButton: false,
                         icon: "success"
                     });
-
                     window.location.href = ('?ctrl=hoadon&act=index');
                 }
             }
