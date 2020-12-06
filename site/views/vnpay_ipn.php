@@ -60,7 +60,8 @@ try {
                 //
                 //
                 //
-                //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công                
+                //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công
+
                 $returnData['RspCode'] = '00';
                 $returnData['Message'] = 'Confirm Success';
             } else {
