@@ -84,8 +84,12 @@
             </div>
             <div class="col-lg-8 border-grey1 pd-0px">
               <div class="pd-10px">
-          
-     <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"><a href="#" class="text-dark"><span class="mr-right-30px">  Từ:<?= $k['tinh_di']?> </span>Đến:<?= $k['tinh_den']?> </a></h3> 
+              <div class="l-w-tenduong">
+                  <a href="#" class="text-dark mr-lr-15px">
+                    <span class="mr-right-30px">  Từ:<?= $k['tinh_di']?> </span>Đến:<?= $k['tinh_den']?>
+                  </a>
+                </div>
+     <!-- <h3 class="text-uppercase font-family-poppins col-6 d-inline-block fz-1rem pd-top-13px"></h3>  -->
                 <a href="#" class="bt-booking float-lg-right btn-sm btn-lg text-center text-uppercase">Đặt Ngay</a>
                 <div class="date mr-lr-15px">
                   <a href="#" class="cl-te-grey text-uppercase fz-0p7rem">
@@ -101,7 +105,9 @@
                   </small>
                 </div>
                 <div class="text-uppercase border-top-grey-1 pd-top-10 mr-15px">
-                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold"><?= $k['giavethuong']?></strong>VNĐ
+                    <!-- <strong class="text-medium text-third-color padding-right-5px font-weight-bold"><?= $k['giavethuong']?></strong>VNĐ
+                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1">Giá:</span>2.100.000 <span class="mr-1">VNĐ</span></a> -->
+                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1">Giá:</span class="text-line-through"><?=number_format($k['giavethuonggia'],0,",",".");?> <span class="mr-1">VNĐ</span></a>
                     <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?= $k['ngaydi']?></i>
                 </div>                    
               </div>

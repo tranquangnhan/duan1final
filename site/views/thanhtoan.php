@@ -7,8 +7,12 @@
                    <?php    
                             echo '  <div class="row mt-3 ml-3 pt-3"><h4>VÉ ĐI</h4></div>';  
                             $Arr = showVeSite($_SESSION['idchuyenbay']);
+                            // print_r ($_SESSION['vitrighe']);
+                            // echo (count($_SESSION['vitrighe']));
+                            // exit();
                             for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
                                 // chuyến đầu tiên
+                                
                                 if($_SESSION['hangghe'] == 1 ){
                                     $giaTien = $Arr['0']['giavethuong'];
                                 }

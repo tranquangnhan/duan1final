@@ -29,7 +29,7 @@
                     <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
                         <div class="row">
                             <!-- noi dung ne may cha -->
-                            <?php foreach ($allBlog as $allB) { ?>
+                            <?php foreach ($allBlog as $allB) { ?>                                
                             <div class="col-lg-6">
                                 <div class="blog-entry background-white border-grey-1 margin-bottom-35px">                                    
                                     <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>">
@@ -37,20 +37,23 @@
                                     </a>
                                 </div>
                                     <!-- oadd -->
-                                <div class="padding-30px">
-                                    <a class="d-block  text-capitalize fz-20px text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
+                                <div class="pd-20-30-40-30  ">
+                                    <a class="d-block  text-capitalize fz-2vw line-height-35px text-dark font-weight-700 margin-bottom-10px" href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$allB['id']?>&iddm=<?=$allB['iddm']?>" >
                                         <?=$allB['name']?>
                                     </a>
                                     <div class="d-block text-up-small text-grey-2 margin-bottom-15px">
-                                        <?=$allB['mota'];?>
+                                        <p class="webkit-line-clam blog-line-5-clamp l-mota-blog"><?=$allB['mota'];?></p>
                                     </div>
                                     <div class="meta"> 
-                                        <span class="margin-right-20px text-extra-small">Tác giả : 
-                                            <a href="#" class="text-main-color"><?=$allB['tacgia']?></a>
-                                        </span>
-                                        <span class="text-extra-small">Tag :   
+                                        <span class="text-extra-small float-left">Tag :   
                                             <a href="#" class="text-main-color"><?=$allB['tag']?></a>
                                         </span>
+                                        <span class="text-extra-small cl-blackgr float-right">Tác giả : 
+                                            <a href="#" class="cl-blackgr"><?=$allB['tacgia']?></a>
+                                        </span>
+                                        <span class="text-extra-small cl-blackgr margin-right-20px float-right"> 
+                                            <?=$allB['date']?>
+                                        </span>                                      
                                     </div>
                                 </div>
                             </div>
@@ -127,10 +130,16 @@
                                 <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="float-left margin-right-15px d-block width-60px">
                                     <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                                 </a>
-                                <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700"><?=$bestBlog['name']?></a>
-                                <span class="text-extra-small">
-                                    Date
-                                    <a href="#" class="text-main-color"><?=$bestBlog['date']?></a>
+                                <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700">
+                                    <p class="webkit-line-clam blog-line-2-clamp fz_8vw mr-0px">
+                                        <?=$bestBlog['name']?>
+                                    </p>
+                                </a>
+                                <span class="text-extra-small cl-blackgr float-left mr-top-3px">Tác giả : 
+                                    <a href="#" class="cl-blackgr"><?=$bestBlog['tacgia']?></a>
+                                </span>
+                                <span class="text-extra-small cl-blackgr margin-right-20px float-right mr-top-3px"> 
+                                    <?=$bestBlog['date']?>
                                 </span>
                             </ul>
                         <?php } ?>
