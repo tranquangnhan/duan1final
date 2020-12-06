@@ -19,26 +19,30 @@
         <div class="container mr-bot-100px">
             <div class="row padding-30px mr-50px">
                 <div class="col-lg-6 col-md-6">
-                    <form>
+                    <form id="form_lienhe">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputName">Họ và tên</label>
-                                <input type="text" class="form-control" id="inputName4" placeholder="Họ và tên">
+                                <label for="hoten">Họ và tên</label>
+                                <input type="text" class="form-control" id="hoten" name="hoten" placeholder="Họ và tên">
+                                <div class="l-div-err color_red display-none" id="hotenerro">Vui lòng nhập họ tên <i class="fas fa-exclamation-circle"></i></div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"placeholder="Email">
+                                <div class="l-div-err color_red display-none" id="emailerro">Email không đúng định dạng <i class="fas fa-exclamation-circle"></i></div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputAddress">Địa chỉ</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="123 Cộng Hòa, P.11, Q.Tân Bình, Hồ Chí Minh">
+                            <label for="diachi">Địa chỉ</label>
+                            <input type="text" class="form-control" id="diachi" name="diachi" placeholder="123 Cộng Hòa, P.11, Q.Tân Bình, Hồ Chí Minh">
+                            <div class="l-div-err color_red display-none" id="diachierro">Vui lòng nhập địa chỉ <i class="fas fa-exclamation-circle"></i></div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="noidung">Message</label>
+                            <textarea class="form-control" name="noidung" id="noidung" rows="3"></textarea>
+                            <div class="l-div-err color_red display-none" id="noidungerro">Vui lòng nhập nội dung <i class="fas fa-exclamation-circle"></i></div>
                         </div>
-                        <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 pd-15px">Gửi</a>
+                        <button id="bt_lienhe" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 pd-15px">Gửi</button>
                     </form>
                 </div>
                 <div class="col-lg-6 col-md-6">
