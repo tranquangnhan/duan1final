@@ -17,7 +17,7 @@
     <body>
         <?php
 
-
+        require_once("./config.php");
         $vnp_SecureHash = $_GET['vnp_SecureHash'];
         $inputData = array();
         foreach ($_GET as $key => $value) {

@@ -527,27 +527,36 @@ if (isset($_GET['act'])) {
             $maThanhToan =md5(date("h:i:s"),FALSE);
             require_once "views/vnpay.php";
         break;
-        case 'nhapma':
-            require_once "views/vnpay_create_payment.php";
-        break;
         case 'ttthanhcong':
             // print_r($_SESSION);
-            print_r(showViTriGhe(210));
+            // print_r(showViTriGhe(210));
             if(isset($_SESSION['idhd'])){
                 setThanhCong($_SESSION['idhd']);
+                if($_SESSION['hangghe'] == 1){
+                    $loaiGhe = 'ttghethuong';
+                }else{
+                    $loaiGhe = 'ttghethuonggia';
+                }
+                setGheThanhCong($_SESSION['vitrighe'],$_SESSION['idchuyenbay'],$loaiGhe);
             }
             if(isset($_SESSION['idhdkh'])){
                 setThanhCong($_SESSION['idhdkh']);
+                if($_SESSION['hangghekh'] == 1){
+                    $loaiGheKh = 'ttghethuong';
+                }else{
+                    $loaiGheKh = 'ttghethuonggia';
+                }
+                setGheThanhCong($_SESSION['vitrighekh'],$_SESSION['idchuyenbaykh'],$loaiGheKh);
             }
-            unset($_SESSION['idchuyenbay']);
-            unset($_SESSION['hangghe']);
-            unset($_SESSION['urlve']);
-            unset($_SESSION['vitrighe']);
-            unset($_SESSION['vitrighekh']);
-            unset($_SESSION['idchuyenbaykh']);
-            unset($_SESSION['hangghekh']);
-            unset($_SESSION['idhd']);
-            unset($_SESSION['idhdkh']);
+            // unset($_SESSION['idchuyenbay']);
+            // unset($_SESSION['hangghe']);
+            // unset($_SESSION['urlve']);
+            // unset($_SESSION['vitrighe']);
+            // unset($_SESSION['vitrighekh']);
+            // unset($_SESSION['idchuyenbaykh']);
+            // unset($_SESSION['hangghekh']);
+            // unset($_SESSION['idhd']);
+            // unset($_SESSION['idhdkh']);
             require_once "views/vnpay_return.php";
         break;
         case 'timve':
