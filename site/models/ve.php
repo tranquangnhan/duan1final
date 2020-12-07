@@ -186,31 +186,11 @@ function showVeSite($id)
 
 function showhangmb($id) {
     $sql ="SELECT * FROM chuyenbay cb INNER JOIN dsmaybay dsmb on dsmb.id = cb.idmaybay WHERE cb.id = '$id'";
-        return result1(1,$sql)['hangmb'];
+    return result1(1,$sql)['hangmb'];
 }
-// function showViTriGhe($idhd){
-//     $sql = "SELECT vitringoi,hangghe,idchuyenbay FROM hdchitiet WHERE idhd ='$idhd'";
-
-//     $viTriNgoi =  result1(0,$sql);
-//     if($viTriNgoi['hangghe'] == 1){
-//         $loaiGhe = 'ttghethuong';
-//     }elseif($viTriNgoi['hangghe'] == 2){
-//         $loaiGhe = 'ttghethuonggia';
-//     }
-   
-//     $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
-//     $result = result1(1,$sql)[$loaiGhe];
-//     $arr =  explode(",",$result);
-//     for ($i=0; $i < count($viTriNgoi['vitringoi']); $i++) { 
-//         $vitri =($viTriNgoi['vitringoi'][$i]-1);
-//         $temp = explode('-',$arr[$vitri]);
-
-//         if($temp[0] == '2'){
-//             $arr[$vitri] = 1 ;
-//         }
-//         $kq = implode(",",$arr);
-//         $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
-//         exec1($sql);
-//     }
-// }
+function setThanhCong($idhd){
+    $sql = "UPDATE hoadon SET trangthai = '2' WHERE id = '$idhd'";
+    return exec1($sql);
+}
+ 
 ?>

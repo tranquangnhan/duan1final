@@ -90,16 +90,8 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CHUYẾN BAY
+                                        CHECKIN ONLINE
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Flights List View</a>
-                                        <a class="dropdown-item" href="#">Flights Grid View</a>
-                                        <a class="dropdown-item" href="#">Flights Grid View 2</a>
-                                        <a class="dropdown-item" href="#">Flights Details</a>
-                                        <a class="dropdown-item" href="#">Flights Booking</a>
-                                        <a class="dropdown-item" href="#">Flights Thanks page</a>
-                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
@@ -134,16 +126,8 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CHUYẾN BAY
+                                        CHECKIN ONLINE
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Flights List View</a>
-                                        <a class="dropdown-item" href="#">Flights Grid View</a>
-                                        <a class="dropdown-item" href="#">Flights Grid View 2</a>
-                                        <a class="dropdown-item" href="#">Flights Details</a>
-                                        <a class="dropdown-item" href="#">Flights Booking</a>
-                                        <a class="dropdown-item" href="#">Flights Thanks page</a>
-                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>

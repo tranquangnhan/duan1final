@@ -528,10 +528,12 @@ if (isset($_GET['act'])) {
             require_once "views/vnpay.php";
         break;
         case 'ttthanhcong':
-            // print_r($_SESSION);
+            print_r($_SESSION);
             // print_r(showViTriGhe(210));
             if(isset($_SESSION['idhd'])){
                 setThanhCong($_SESSION['idhd']);
+            }
+            if(isset($_SESSION['idchuyenbay'])){
                 if($_SESSION['hangghe'] == 1){
                     $loaiGhe = 'ttghethuong';
                 }else{
@@ -539,8 +541,11 @@ if (isset($_GET['act'])) {
                 }
                 setGheThanhCong($_SESSION['vitrighe'],$_SESSION['idchuyenbay'],$loaiGhe);
             }
+
             if(isset($_SESSION['idhdkh'])){
-                setThanhCong($_SESSION['idhdkh']);
+                setThanhCong($_SESSION['idhdkh']); 
+            }
+            if(isset($_SESSION['idchuyenbaykh'])){
                 if($_SESSION['hangghekh'] == 1){
                     $loaiGheKh = 'ttghethuong';
                 }else{
@@ -548,6 +553,7 @@ if (isset($_GET['act'])) {
                 }
                 setGheThanhCong($_SESSION['vitrighekh'],$_SESSION['idchuyenbaykh'],$loaiGheKh);
             }
+            // print_r($_SESSION);
             // unset($_SESSION['idchuyenbay']);
             // unset($_SESSION['hangghe']);
             // unset($_SESSION['urlve']);
