@@ -1,6 +1,15 @@
-
-    <section class="background-light-grey padding-tb-100px text-center text-lg-left ">
-        <div class="container" style="margin-top:70px; margin-bottom:80px;">
+<section class="background-grey-1 padding-tb-25px text-grey-4">        
+        <div class="container">
+            <h6 class="font-weight-300 text-capitalize float-md-left padding-tb-10px">Tìm Vé</h6>
+            <ol class="breadcrumb z-index-2 position-relative no-background padding-tb-10px padding-lr-0px  margin-0px float-md-right">
+                <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>                
+                <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Tìm Vé</div>   
+            </ol>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <section class="background-light-grey padding-tb-100px text-center text-lg-left pd-t-80px">
+        <div class="container">
             <div class="row justify-content-md-center">
 
                 <div class="col-lg-4">

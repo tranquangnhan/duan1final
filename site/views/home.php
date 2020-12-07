@@ -449,8 +449,8 @@
                             <div class="padding-20px h-123px">
                                 <a href="?act=dtBlog&idbl=<?= $bl['id'] ?>&iddm=<?= $bl['iddm'] ?>"
                                    class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8"><?= $bl['name'] ?></a>
-                                <span class="fz-07 mr-right-30px">By : <a href="#" class="color_main">Rabie Elkheir</a></span>
-                                <span class="fz-07">Date :  <a href="#" class="color_main"><?= $bl['date'] ?></a></span>
+                                <span class="fz-07 mr-right-30px">Tác giả : <a href="#" class="color_main"><?= $bl['tacgia'] ?></a></span>
+                                <span class="fz-07">Ngày :  <a href="#" class="color_main"><?= $bl['date'] ?></a></span>
                             </div>
                             <!-- <div class="clearfix"></div> -->
                         </div>

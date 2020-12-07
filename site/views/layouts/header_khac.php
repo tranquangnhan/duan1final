@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.css">
   <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
+  <link rel="stylesheet" href="views/css/long/timve.css">
   
   <link rel="stylesheet" href="views/css/long/home.css">
   <link rel="stylesheet" href="views/css/long/home_khac.css">

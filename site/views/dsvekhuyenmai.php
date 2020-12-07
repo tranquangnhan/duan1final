@@ -157,8 +157,8 @@
                   <?php 
                     $giamcon = ($k['giavethuonggia'] * (100 - $k['giamgia'])) / 100;
                   ?>
-                    <a class="text-medium padding-right-5px mr-4"><span class="mr-1 color_red">TG: </span class="text-line-through"><?=number_format($k['giavethuonggia'],0,",",".");?> <span class="mr-1">VNĐ</span></a>
-                    <a class="text-medium padding-right-5px"><span class="mr-1">Giảm Còn:</span><span class="color_red"><?=number_format($giamcon,0,",",".");?></span><span class="mr-1"> VNĐ</span></a>
+                    <a class="text-medi padding-right-5px mr-4"><span class="mr-1 color_red">TG: </span class="text-line-through"><?=number_format($k['giavethuonggia'],0,",",".");?> <span class="mr-1">VNĐ</span></a>
+                    <a class="text-medi padding-right-5px"><span class="mr-1">Giảm Còn:</span><span class="color_red"><?=number_format($giamcon,0,",",".");?></span><span class="mr-1"> VNĐ</span></a>
 
                     <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="mr-right-30px">Ngày đi</span> <?= showngaydi($k['idchuyenbay']) ?></i>
                 </div>   
