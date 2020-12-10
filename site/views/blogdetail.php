@@ -1,22 +1,13 @@
 <?php 
     session_start();
     $img = $pathimg.$getBlogbyid['img'];   
-    // //print_r ($getKhbyId);
-    // echo $user;
-    // exit();
-    // print_r ($getKhbyId);
-    // echo $getKhbyId[0]['avatar'];
-   // exit();
-//    print_r ($binhluan);
-//    exit();
-
 ?>
 
 <main>
     <!-- <div class="fixed-blog-bg" style="background-image: url('');"> -->
     <section class="background-grey-1 padding-tb-25px text-grey-4">        
         <div class="container">
-            <h6 class="font-weight-300 text-capitalize float-md-left font-2 padding-tb-10px">Chi tiết Blog</h6>
+            <h6 class="font-weight-300 float-md-left padding-tb-10px">BLOG CHI TIẾT</h6>
             <ol class="breadcrumb z-index-2 position-relative no-background padding-tb-10px padding-lr-0px  margin-0px float-md-right">
                 <div class="d-inline-block pd-right-10px"><a href="">Home</a></div>                
                 <div class="d-inline-block pd-right-10px"><i class="fas fa-chevron-right opacity-0p5 pd-right-10px"></i>Blog</div>   

@@ -566,7 +566,7 @@ if (isset($_GET['act'])) {
             require_once "views/vnpay_return.php";
         break;
         case 'timve':
-
+            include "views/timve.php";
             if(isset($_POST["submit"]) && $_POST["user"] != '' && $_POST["sodienthoai"] != '' ) {
                 $tenkh = $_POST["user"];
                 $dienthoai = $_POST["sodienthoai"];
@@ -580,7 +580,7 @@ if (isset($_GET['act'])) {
                    require_once "views/thongtinve.php";
                }
             }
-            include "views/timve.php";
+    
 
 
         break;

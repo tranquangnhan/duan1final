@@ -1,0 +1,97 @@
+.l-airline-img {
+    width: 10%;
+    height: auto;
+    text-align: center;
+}
+
+.l-airline-img img {
+    width: 70%;
+}
+
+.l-ten-airline {
+    font-size: 1vw;
+}
+
+.mr-0auto {
+    margin: 0 auto;
+}
+
+.d-inlblock {
+    display: inline-block;
+}
+
+.l-airline-time {
+    vertical-align: top;
+    width: 55%;
+    font-size: 0.9vw;
+}
+
+.l-aline {
+    width: 50%;
+    height: 2px;
+    background-color: black;
+}
+
+.l-air-diadiem {
+    width: 40%;
+    text-align: right;
+    vertical-align: top;
+}
+
+.l-text-al-left {
+    text-align: left;
+}
+
+.mr-lr-7pt {
+    margin: 0px 7%;
+}
+
+.l-div-ve {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px rgba(0,0,0,.1);
+}
+
+.l-airline-box {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.l-airline-finaltime {
+    vertical-align: top;
+}
+
+.l-airline-info {
+    text-align: right;
+    vertical-align: top;
+    width: 23%;
+    margin-right: 1%;
+}
+
+.l-div-ve {
+    padding: 0px;  
+}
+
+.container {
+    margin-bottom: 0px!important;
+}
+
+.pd-tb-80px {
+    padding: 80px 0px;
+}
+
+.pd-t-80px {
+    padding-top: 80px;
+}
+
+.l-airtime-span {
+    font-weight: 700;
+}
+
+.l-div-hover {
+    transition: 0.3s;
+}
+
+.l-div-hover:hover {
+    color: #F44336
+}

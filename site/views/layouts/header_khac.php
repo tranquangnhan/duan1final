@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.css">
   <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">
+  <link rel="stylesheet" href="views/css/long/timve.css">
   
   <link rel="stylesheet" href="views/css/long/home.css">
   <link rel="stylesheet" href="views/css/long/home_khac.css">
@@ -88,11 +89,11 @@
                                 <li class="nav-item active">
                                     <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CHECKIN ONLINE
-                                    </a>
-                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-item" href="<?=SITE_URL?>?act=timve" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="">
+                                            CHECK IN ONLINE
+                                        </a>
+                                    </li>
                                 <li class="nav-item">
                                     <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
                                 </li>
@@ -124,11 +125,11 @@
                                 <li class="nav-item active">
                                     <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CHECKIN ONLINE
-                                    </a>
-                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-item" href="<?=SITE_URL?>?act=timve" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="">
+                                            CHECK IN ONLINE
+                                        </a>
+                                    </li>
                                 <li class="nav-item">
                                     <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
                                 </li>

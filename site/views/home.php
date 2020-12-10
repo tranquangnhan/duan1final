@@ -45,8 +45,10 @@
                                     <li class="nav-item active">
                                         <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="" href="<?=SITE_URL?>index.php?act=timve">CHECKIN ONLINE <span class="sr-only">(current)</span></a>
+                                    <li class="nav-item">
+                                        <a class="nav-item" href="<?=SITE_URL?>?act=timve" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="">
+                                            CHECK IN ONLINE
+                                        </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
@@ -80,18 +82,10 @@
                                     <li class="nav-item active">
                                         <a class="" href="<?=SITE_URL?>index.php">HOME <span class="sr-only">(current)</span></a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            CHUYẾN BAY
+                                    <li class="nav-item">
+                                        <a class="nav-item" href="<?=SITE_URL?>?act=timve" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="">
+                                            CHECK IN ONLINE
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Flights List View</a>
-                                            <a class="dropdown-item" href="#">Flights Grid View</a>
-                                            <a class="dropdown-item" href="#">Flights Grid View 2</a>
-                                            <a class="dropdown-item" href="#">Flights Details</a>
-                                            <a class="dropdown-item" href="#">Flights Booking</a>
-                                            <a class="dropdown-item" href="#">Flights Thanks page</a>
-                                        </div>
                                     </li>
                                     <li class="nav-item">
                                         <a class="" href="<?=SITE_URL?>?act=khuyenmai">DÀNH CHO BẠN</a>
@@ -439,8 +433,8 @@
                             <div class="padding-20px h-123px">
                                 <a href="?act=dtBlog&idbl=<?= $bl['id'] ?>&iddm=<?= $bl['iddm'] ?>"
                                    class="d-block cl-te-black fz-09 font-weight-bold mr-bot-15px opacity-0p8"><?= $bl['name'] ?></a>
-                                <span class="fz-07 mr-right-30px">By : <a href="#" class="color_main">Rabie Elkheir</a></span>
-                                <span class="fz-07">Date :  <a href="#" class="color_main"><?= $bl['date'] ?></a></span>
+                                <span class="fz-07 mr-right-30px">Tác giả : <a href="#" class="color_main"><?= $bl['tacgia'] ?></a></span>
+                                <span class="fz-07">Ngày :  <a href="#" class="color_main"><?= $bl['date'] ?></a></span>
                             </div>
                             <!-- <div class="clearfix"></div> -->
                         </div>

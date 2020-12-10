@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="views/css/long/animate.css"/>
   <link rel="stylesheet" href="views/css/long/about.css">
   <link rel="stylesheet" href="views/css/long/contact.css">
-  <link rel="stylesheet" href="views/css/long/danhsachve.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.css">
   <link rel="stylesheet" href="views/css/dat/blog.css">
   <link rel="stylesheet" href="views/css/nhan/SweetAlert2.css">

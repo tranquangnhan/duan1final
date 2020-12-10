@@ -42,7 +42,7 @@
             </p>
             <div class="">
               <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietjet.png" alt=""></a></div>
-              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietnameairline.png" alt=""></a></div>
+              <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/vietnamairlines.png" alt=""></a></div>
               <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/pacific.png" alt=""></a></div>
               <div class="logo mr-bot-20px d-inline-block pd-right-50px"><a href="#"><img src="views/img/bambo.png" alt=""></a></div>            
             </div>
