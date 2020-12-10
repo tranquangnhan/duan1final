@@ -1,3 +1,8 @@
+<?php
+    ob_start();
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -82,8 +87,31 @@
                     <label >Kết quả:</label>
                     <label>
                         <?php
+
                         if ($secureHash == $vnp_SecureHash) {
                             if ($_GET['vnp_ResponseCode'] == '00') {
+                                $order_id = $_GET['vnp_TxnRef'];
+                                $money = $_GET['vnp_Amount']/100;
+                                $note = $_GET['vnp_OrderInfo'];
+                                $vnp_response_code = $_GET['vnp_ResponseCode'];
+                                $code_vnpay = $_GET['vnp_TransactionNo'];
+                                $code_bank = $_GET['vnp_BankCode'];
+                                $time = $_GET['vnp_PayDate'];
+                                $date_time = substr($time, 0, 4) . '-' . substr($time, 4, 2) . '-' . substr($time, 6, 2) . ' ' . substr($time, 8, 2) . ' ' . substr($time, 10, 2) . ' ' . substr($time, 12, 2);
+                                $conn = mysqli_connect('db.lmsq.vn', 'QNhan', '12345678', 'QNhan_datvemaybay') or die ('Không thể kết nối tới database');
+                                $idhdct = $_SESSION['idhd'];
+                                $sql = "SELECT * FROM payments WHERE order_id = '$order_id'";
+                                $query = mysqli_query($conn, $sql);
+                                $row = mysqli_num_rows($query);
+                                if ($row > 0) {
+                                    $sql = "UPDATE payments SET order_id = '$order_id', money = '$money', note = '$note', vnp_response_code = '$vnp_response_code', code_vnpay = '$code_vnpay', code_bank = '$code_bank' WHERE order_id = '$order_id'";
+
+                                    mysqli_query($conn, $sql);
+                                } else {
+                                    $sql = "INSERT INTO payments(order_id, idhd, money, note, vnp_response_code, code_vnpay, code_bank, time) VALUES ('$order_id', '   $idhdct ', '$money', '$note', '$vnp_response_code', '$code_vnpay', '$code_bank','$date_time')";
+                                    mysqli_query($conn, $sql);
+                                }
+
                                 echo "GD Thanh cong";
                             } else {
                                 echo "GD Khong thanh cong";
