@@ -26,10 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4580e2d2-8ed9-463e-bbf2-0d8b358e60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/site/models/luudb.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/controllers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/views/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/views/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/views/vnpay_return.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/views/vnpay_return.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +145,8 @@
       <workItem from="1607230617913" duration="2147000" />
       <workItem from="1607266157107" duration="3698000" />
       <workItem from="1607587158355" duration="4422000" />
+      <workItem from="1607591858750" duration="161000" />
+      <workItem from="1607622735914" duration="1057000" />
     </task>
     <task id="LOCAL-00001" summary="Nguyễn Quốc Hiếu">
       <created>1607205846586</created>
@@ -161,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607230270254</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Nguyễn Quốc Hiếu">
+      <created>1607591930527</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607591930527</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +210,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="578" y="327" key="#Composer/0.30.1536.834@0.30.1536.834" timestamp="1606071085126" />
+    <state x="361" y="76" key="#Inspections" timestamp="1607622903993">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="76" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1607622903993" />
     <state x="59" y="208" key="#SQL_Dialects" timestamp="1605427045744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -214,10 +226,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="499" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1536.834@0.30.1536.834" timestamp="1607207576566" />
-    <state x="393" y="12" key="CommitChangelistDialog2" timestamp="1607591894308">
+    <state x="393" y="12" key="CommitChangelistDialog2" timestamp="1607591929597">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="393" y="12" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1607591894308" />
+    <state x="393" y="12" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1607591929597" />
     <state x="393" y="42" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1607230269231" />
     <state x="521" y="169" key="FileChooserDialogImpl" timestamp="1607229454229">
       <screen x="0" y="30" width="1536" height="834" />
@@ -233,9 +245,10 @@
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605425372532" />
     <state x="207" y="40" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1606930366064" />
-    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1607205872553">
-      <screen x="0" y="30" width="1536" height="834" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1607591952109">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607591952109" />
     <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1607205872553" />
     <state x="478" y="239" key="git4idea.merge.GitPullDialog" timestamp="1607205866503">
       <screen x="0" y="30" width="1536" height="834" />
