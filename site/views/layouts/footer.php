@@ -118,5 +118,8 @@
   <script type="text/javascript" src="views/awesome-select-master/package/js/awselect.js"></script>
   <script src="views/jquery/hoadon.js"></script>
   <!-- select awesome js -->
+  <!-- js animtion text head -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- js animtion text head -->
 </body>
 </html>

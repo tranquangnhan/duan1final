@@ -154,7 +154,7 @@ li {
 }
 
 .nav-left {
-    min-height: 500px;
+    min-height: 655px;
 }
 
 .nav-link {
@@ -393,10 +393,6 @@ tr td .fa-edit {
     border-radius: 3px;
 }
 
-.l-box-thongke {
-    
-}
-
 .table td, .table th {
     padding: 1.7rem;
 }
@@ -406,4 +402,8 @@ tr td .fa-edit {
     border-radius: 4px;
     margin-top: 10px;
     padding: 15px 15px;
+}
+
+.w-8 {
+    width: 8%;
 }

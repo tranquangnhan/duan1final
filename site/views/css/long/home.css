@@ -1742,8 +1742,14 @@ input[type=number] {
     font-weight: 600;
     color: rgb(93 93 93);
 }
+
+
+
+
+
  /* reponsive home */
 @media only screen and (max-width:800px) {
 
     
   }
+

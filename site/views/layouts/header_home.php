@@ -11,6 +11,7 @@
   <!-- css  -->
   <!-- link css awselect -->
   <link href="views/awesome-select-master/package/css/awselect.css" rel="stylesheet" /> 
+
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="views/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">

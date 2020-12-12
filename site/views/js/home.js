@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     var heroSlider = $('#owl-1');
     heroSlider.owlCarousel({
         animateIn: 'fadeIn',
@@ -184,6 +186,7 @@ $(document).ready(function() {
     $("#khuhoi_ngayve").datepicker({
         dateFormat: 'yy-mm-dd',
         duration: "fast",
+        minDate: '0d',
         showAnim: "show",
         showOptions: { direction: "up" },
         onSelect: function() {
@@ -197,6 +200,8 @@ $(document).ready(function() {
             }
         }
     });
+    // Wrap every letter in a span
+    
 });
 
 // js đặt vé
@@ -235,7 +240,7 @@ function my_callback_2(value) {
 }
 
 
-function my_callback_tu(value) {
+function my_callback_tu(value) {  
     $(".l-tu").fadeOut(700, function() {
         $(".l-tu").html(value);
     });
@@ -251,7 +256,7 @@ function my_callback_den(value) {
 // text trong background head
 function my_callback_tu_motchieu(value) {
     $(".l-tu").fadeOut(700, function() {
-        $(".l-tu").html(value);
+        $(".l-tu").html(value);    
     });
     $(".l-tu").fadeIn(600);
 }
