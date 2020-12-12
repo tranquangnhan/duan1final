@@ -47,7 +47,7 @@
                 // $public = settype($public,"int");
                 if(isset($_SESSION['idedit'])&&($_SESSION['idedit'])){
                     $id = $_SESSION['idedit'];
-                    updateBlog($id,$name,$imgupload,$iddm,$date,$noidung,$tacgia,$tag,$mota,$public);
+                    updateBlog($id,$name,$imgupload,$iddm,$noidung,$tacgia,$tag,$mota,$public);
                     unset($_SESSION['idedit']);
                 }else{
                     echo $public;

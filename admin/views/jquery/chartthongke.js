@@ -16,7 +16,7 @@ $(document).ready(function() {
         var ngayketthuc1 = $('#ngayketthuc1').val();
         var ngaybatdau2 = $('#ngaybatdau2').val();
         var ngayketthuc2 = $('#ngayketthuc2').val();
-       // console.log('123123');
+
   
         if (kieubaocao == '') {
             chk = false;
@@ -178,7 +178,7 @@ $(document).ready(function() {
                     }
                 },
                 error: function() {
-                    
+                    alert('loi');
                 }   
             })     
                       
@@ -194,5 +194,71 @@ $(document).ready(function() {
             })
             
         }            
-    })
+    });
+    $("#ngaybatdau1").datepicker({
+        dateFormat: 'yy-mm-dd',
+        duration: "fast",
+        showAnim: "show",
+        showOptions: { direction: "up" },
+        onSelect: function() {
+            var ngayve = $('#ngayketthuc1').datepicker('getDate');
+            var newDate = $(this).datepicker('getDate');
+            if (newDate) { // Not null
+                newDate.setDate(newDate.getDate());
+            }
+            if (ngayve == null) {
+                $('#ngayketthuc1').datepicker('option', 'minDate', newDate); //datepicker('setDate', newDate).  setDate có thể set ngày vừa chọn vào datepicker thứ 2 theo id
+            }
+        }
+    });
+    $("#ngayketthuc1").datepicker({
+        dateFormat: 'yy-mm-dd',
+        duration: "fast",
+        showAnim: "show",
+        showOptions: { direction: "up" },
+        onSelect: function() {
+            var ngaydi = $('#ngaybatdau1').datepicker('getDate');
+            var newDate_z = $(this).datepicker('getDate');
+            if (newDate_z) { // Not null
+                newDate_z.setDate(newDate_z.getDate());
+            }
+            if (ngaydi == null) {
+                $('#ngaybatdau1').datepicker('option', 'maxDate', newDate_z); //datepicker('setDate', newDate).  setDate có thể set ngày vừa chọn vào datepicker thứ 2 theo id
+            }
+        }
+    });
+    $("#ngaybatdau2").datepicker({
+        dateFormat: 'yy-mm-dd',
+        duration: "fast",
+        showAnim: "show",
+        showOptions: { direction: "up" },
+        onSelect: function() {
+            var ngayve = $('#ngayketthuc2').datepicker('getDate');
+            var newDate = $(this).datepicker('getDate');
+            if (newDate) { // Not null
+                newDate.setDate(newDate.getDate());
+            }
+            if (ngayve == null) {
+                $('#ngayketthuc2').datepicker('option', 'minDate', newDate); //datepicker('setDate', newDate).  setDate có thể set ngày vừa chọn vào datepicker thứ 2 theo id
+            }
+        }
+    });
+    $("#ngayketthuc2").datepicker({
+        dateFormat: 'yy-mm-dd',
+        duration: "fast",
+        showAnim: "show",
+        showOptions: { direction: "up" },
+        onSelect: function() {
+            var ngaydi = $('#ngaybatdau2').datepicker('getDate');
+            var newDate_z = $(this).datepicker('getDate');
+            if (newDate_z) { // Not null
+                newDate_z.setDate(newDate_z.getDate());
+            }
+            if (ngaydi == null) {
+                $('#ngaybatdau2').datepicker('option', 'maxDate', newDate_z); //datepicker('setDate', newDate).  setDate có thể set ngày vừa chọn vào datepicker thứ 2 theo id
+            }
+        }
+    });
+
+
 })  

@@ -1,6 +1,7 @@
 
 <?php
 if(is_array($showbledit)){
+    
     $star  =$showbledit['star']; 
     $idkh = $showbledit['idkh'];  
     if($idkh== $showbledit['id']){
@@ -9,7 +10,10 @@ if(is_array($showbledit)){
         $chon = '';
     }
   
-    $idbaiviet=$showbledit['idbaiviet'] ;
+    $idbaiviet=$showbledit['idbaiviet'];
+    $tenbv = showtenbvbyid($idbaiviet);
+    $tenKH = showtenkh($idkh);
+
     $noidung  =$showbledit['noidung'];    
     $idsp =$showbledit['idsp'];   
     $anhien =  $showbledit['trangthai'];  
@@ -48,7 +52,7 @@ if(is_array($showbledit)){
                         <div class="col-lg-8">
                             <h3 class="mt-4 text-center">THÊM BÌNH LUẬN</h3>
                             <p class="text-center">Bạn có thể thêm bình luận ở đây!</p>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-3">
                                     <label for=""><strong>ALL Sản Phẩm</strong></label>
                                 </div>
@@ -58,7 +62,7 @@ if(is_array($showbledit)){
                                       
                                     </select>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Star</strong></label>
@@ -82,10 +86,8 @@ if(is_array($showbledit)){
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-control" name="idkh" id="" >
-                                        <option value="">Chọn</option>
-                                        <?php foreach ($showallkh as $motkh) {?>
-                                            <option <?=$chon?> value="<?=$motkh['id']?>"><?=$motkh['user']?></option>
-                                        <?php }?>
+                                        <option value="<?=$idkh?>"><?=$tenKH?></option>
+                                       
                                     </select>
                                 </div>
                             </div>
@@ -95,7 +97,7 @@ if(is_array($showbledit)){
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-control" name="idbaiviet" id="" >
-                                        <option value="">Chọn</option>
+                                        <option value="<?=$idbaiviet?>"><?=$tenbv?></option>
                                       
                                     </select>
                                 </div>
@@ -124,7 +126,7 @@ if(is_array($showbledit)){
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
                                             <div class="form-group">
-                                                <input type="submit" name="them" id="" value="Thêm Bình Luận"
+                                                <input type="submit" name="sua" id="" value="Thêm Bình Luận"
                                                     class="btn btn-submit text-center">
                                             </div>
                                         </div>

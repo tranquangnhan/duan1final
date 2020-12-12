@@ -124,7 +124,8 @@
         <div class="l-banner-content">
             <div class="l-tu display-inlineblock">SGN</div>
             <div class="display-inlineblock">TO</div>
-            <div class="l-den display-inlineblock">SBM</div>
+            <div class="l-den display-inlineblock ">SBM</div>
+            <!-- <h1 >SGN</h1> -->
         </div>      
     </div>
 </div>
@@ -344,7 +345,7 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 te-al-left">
                     <div class="section-title-left mr-bot-60px">
-                        <h1 class="title fz-2vw"><span class="color_main">Top</span> Cities</h1>
+                        <h1 class="title fz-2vw"><span class="color_main">Thành Phố</span> Lớn</h1>
                         <span class="section-title-des fz-1vw">
                   với một vài đất nước, dẫu cho nơi đây là lần đầu tiên người ta đến. </span>
                     </div>

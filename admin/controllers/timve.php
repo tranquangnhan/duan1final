@@ -31,7 +31,7 @@ switch ($act) {
         settype($nguoiLon,"int");
         settype($treEm,"int");
         settype($emBe,"int");
-
+        $tb = 'Thông báo';
         if($diemDi == '')
         {
             $error = "Vui lòng chọn điểm đi.";

@@ -7,8 +7,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
+<<<<<<< HEAD
     <base href="/duan1final/admin/">
+=======
+
+    <!-- <base href="/admin/"> -->
+
+>>>>>>> 2e8854b9eb4c84d36ef709db554ad80baf902d4c
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -21,6 +29,8 @@
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
     <link rel="stylesheet" href="views/css/style.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -182,7 +192,6 @@
                                     <div class="nav-main__text "><div id="bv" class="click_title">Liên Hệ</div>
                                         <div class="menu-alert">
                                             <ul>
-                                                <li><a href="index.php?ctrl=lienhe&act=add">Thêm Mới</a></li>
                                                 <li><a href="index.php?ctrl=lienhe&act=index">Danh Sách</a></li>
                                             </ul>
                                         </div>

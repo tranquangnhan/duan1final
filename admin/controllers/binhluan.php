@@ -29,9 +29,10 @@
             $showallkh = showallkh();
     
             if(isset($_GET['idedit'])&&($_GET['idedit']>0)){
-                $_SESSION['idedit'] = $_GET['idedit'];
+                // $_SESSION['idedit'] = $_GET['idedit'];
+                $id = $_GET['idedit'];
                 
-                $showBlEdit = showBlEdit($_SESSION['idedit']);
+                $showbledit = showBlEdit($_SESSION['idedit']);
                 if(isset($_POST['sua'])&&($_POST['sua'])){
              
                     $idbaiviet = $_POST['idbaiviet'];
@@ -39,6 +40,7 @@
                     $noidung = $_POST['noidung'];
                     $idkh = $_POST['idkh'];
                     $trangthai = $_POST['anhien'];
+
                     editBinhLuan($id,$star,$idkh,$idbaiviet,$noidung,$trangthai);
                     print_r ($id);
                     header("location: index.php?ctrl=binhluan&act=index");

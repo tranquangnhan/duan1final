@@ -155,8 +155,8 @@
                     </div>
             </div>        
         <!-- cot email ben phai -->        
-        <div class="col-lg-4 col-md-8 sticky-content div-right-inblogdt" style=" position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-            <div class="theiaStickySidebar " style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+        <div class="col-lg-4 col-md-8 sticky-content div-right-inblogdt">
+            <div class="theiaStickySidebar">
                 <div class="widget">
                     <!-- tieu de -->
                     <h4 class="widget-title clearfix">
@@ -186,11 +186,11 @@
                     </h4>
                     <?php foreach($getbestBlog as $bestBlog) { ?>
                     <ul class="last-posts">
-                        <li>
-                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="float-left margin-right-15px d-block width-60px">
+                        <li class="h-75px">
+                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="float-left margin-right-15px d-block w-80px">
                         <img src="<?=$pathimg.$bestBlog['img']?>" alt="">
                         </a>
-                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block  text-uppercase l-fontz-nor text-dark font-weight-700">
+                        <a href="<?=SITE_URL?>?act=dtBlog&idbl=<?=$bestBlog['id']?>&iddm=<?=$bestBlog['iddm']?>" class="d-block text-uppercase l-fontz-nor text-dark font-weight-600">
                             <p class="webkit-line-clam blog-line-2-clamp fz_8vw mr-0px">
                                 <?=$bestBlog['name']?>
                             </p>

@@ -22,6 +22,8 @@
     
     <script src="../site/views/jquery/SweetAlert2.js" type="text/javascript"></script>
     <script src="views/javascripts/datve.js"></script>
+    <script src="views/javascripts/timve.js"></script>
+    <script src="views/javascripts/timveerro.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" type="text/javascript"></script>
       

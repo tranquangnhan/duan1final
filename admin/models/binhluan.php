@@ -1,5 +1,5 @@
 <?php
-function  addBinhLuan($star,$idkh,$idbaiviet,$noidung,$trangthai){
+function addBinhLuan($star,$idkh,$idbaiviet,$noidung,$trangthai){
     $sql = "INSERT INTO binhluan (star,idkh,idbaiviet,noidung,trangthai) VALUES 
     ('{$star}', '{$idkh}', '{$idbaiviet}','{$noidung}','{$trangthai}')";
     exec1($sql);

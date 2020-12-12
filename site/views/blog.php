@@ -25,8 +25,8 @@
         <div class="container" style="transform: none;"> 
             <div class="row" style="transform: none;">
                 <!-- noidung1 -->
-                <div class="col-lg-8 col-md-8 sticky-content" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1540.2px;;">
-                    <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                <div class="col-lg-8 col-md-8 l-box-blog-left">
+                    <div class="">
                         <div class="row">
                             <!-- noi dung ne may cha -->
                             <?php foreach ($allBlog as $allB) { ?>                                

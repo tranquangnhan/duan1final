@@ -109,6 +109,7 @@
   <script src="views/jquery/lienhe.js" type="text/javascript"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" type="text/javascript"></script>
   <script src="views/js/blog.js" type="text/javascript"></script>  
+  <script src="views/js/blogdetail.js" type="text/javascript"></script>  
   <script src="views/jquery/maybay.js" type="text/javascript"></script>  
   <script src="views/jquery/rttrangthai.js" type="text/javascript"></script>
   <script src="views/jquery/timve.js" type="text/javascript"></script>
@@ -118,5 +119,8 @@
   <script type="text/javascript" src="views/awesome-select-master/package/js/awselect.js"></script>
   <script src="views/jquery/hoadon.js"></script>
   <!-- select awesome js -->
+  <!-- js animtion text head -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- js animtion text head -->
 </body>
 </html>
