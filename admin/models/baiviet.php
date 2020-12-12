@@ -28,8 +28,8 @@
         $sql = "SELECT * FROM dmbaiviet";
         return result1(0,$sql);
     }
-    function updateBlog($id,$name,$imgupload,$iddm,$date,$noidung,$tacgia,$tag,$mota,$public) {
-        $sql = "UPDATE baiviet SET name='$name', img='$imgupload', iddm='$iddm', date='$date', noidung='$noidung', tacgia='$tacgia', tag='$tag', mota='$mota', public='$public' where id='$id';";
+    function updateBlog($id,$name,$imgupload,$iddm,$noidung,$tacgia,$tag,$mota,$public) {
+        $sql = "UPDATE baiviet SET name='$name', img='$imgupload', iddm='$iddm', noidung='$noidung', tacgia='$tacgia', tag='$tag', mota='$mota', public='$public' where id='$id';";
         execute1($sql); 
     }  
 ?>

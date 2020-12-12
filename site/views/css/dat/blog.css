@@ -102,6 +102,12 @@ li{
     margin-right: -15px;
     margin-left: -15px;
 } */ 
+.theiaStickySidebar {
+    padding-top: 0px; 
+    padding-bottom: 1px; 
+    position: static; 
+    transform: none;
+}
 .theiaStickySidebar:after {
     content: "";
     display: table;
@@ -499,9 +505,37 @@ p{
     margin-top: 3px;
 }
 
+.div-right-inblogdt {
+    position: relative; 
+    overflow: visible; 
+    box-sizing: border-box; 
+    min-height: 1px;
+}
+/* blog detail */
 .l-div-right-fixed {
     position: fixed!important;
-    right: 145px;
-    width: 26.3513%;
-    top: -430px;
+    right: 7.5%;
+    width: 28.333%;
+    top: -500px;
+}
+.l-div-right-absolute {
+    position: absolute!important;
+    right: 7.5%;
+    width: 28.333%;
+}
+
+.w-80px {
+    width: 80px;
+}
+
+.h-75px {
+    height: 75px;
+}
+/* blog detail */
+
+.l-box-blog-left {
+    position: relative; 
+    overflow: visible; 
+    box-sizing: border-box; 
+    min-height: 1540.2px;;
 }
