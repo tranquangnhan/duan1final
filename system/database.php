@@ -22,8 +22,8 @@ function connect(){
 // Long
 function query($sql)   {
     $conn = connect();
-    $result = $conn->query($sql);        
-    return $result;
+    $conn->execute($sql);
+    return $conn->fetchAll();
 }
 
 

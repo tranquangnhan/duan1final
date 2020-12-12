@@ -15,6 +15,7 @@ async function chonVe(idChuyenBay) {
 }
 
 function ClickBtn() {
+
     $('.l-ghe-thuonggia').each(function() {
         let ThisBox = $(this);
         ThisBox.click(async function(Events) {
@@ -37,7 +38,6 @@ function ClickBtn() {
                 success: function(res) {
                     $("#kq").html(JSON.parse(res).html)
                     ClickBtn()
-
                 }
             });
         })
