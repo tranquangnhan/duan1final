@@ -20,11 +20,11 @@ function connect(){
     }
 }
 // Long
-function query($sql)   {
-    $conn = connect();
-    $conn->execute($sql);
-    return $conn->fetchAll();
-}
+// function query($sql)   {
+//     $conn = connect();
+//     $conn->execute($sql);
+//     return $conn->fetchAll();
+// }
 
 
 // hàm này có chức năng truy vấn dữ liệu

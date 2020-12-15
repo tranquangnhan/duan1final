@@ -7,21 +7,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<<<<<<< HEAD
-    <base href="/duan1final/admin/">
-=======
-<<<<<<< HEAD
-    
-    <!-- <base href="/admin/"> -->
 
-=======
     <base href="/duan1final/admin/">
->>>>>>> 461e77fbe34b37c697c7b4fb598b1d963bf93bef
->>>>>>> 2e8854b9eb4c84d36ef709db554ad80baf902d4c
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="views/css/style.css">
 </head>
 
 <body>

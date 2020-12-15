@@ -24,7 +24,7 @@ require_once "models/giamgia.php";
 require_once "models/timve.php";
 
 
-if (!$_GET['act']) {
+if (!$_GET['act'] || ($_GET['act'] == 'home')) {
     require_once "views/layouts/header_home.php";
     $blog = gettwoblog();
     $showAllSanBay = showAllSanBay();
