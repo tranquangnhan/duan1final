@@ -39,7 +39,7 @@ function checkinonl($macho){
             inner join hoadon on hdchitiet.idhd = hoadon.id 
             where hoadon.id = '$idhd'
         ";
-        // echo $sql;
+      
         return result1(0,$sql);
     }
     function idmaybay($id){
