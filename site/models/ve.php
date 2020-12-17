@@ -191,5 +191,5 @@ function setThanhCong($idhd){
     $sql = "UPDATE hoadon SET trangthai = '2' WHERE id = '$idhd'";
     return exec1($sql);
 }
- 
+
 ?>

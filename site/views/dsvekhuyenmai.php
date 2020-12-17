@@ -118,7 +118,7 @@
           } else if ($hangmb == 3) {
             $img = $pImg.'pacific.png';
           } else if ($hangmb == 4) {
-            $img = $pImg.'bambo.png';
+            $img = $pImg.'bamboo.png';
           }
         ?>
      

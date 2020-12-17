@@ -105,5 +105,21 @@ function setAutoChuyenBay(){
     }
     return true;
 }
+// set lại ghế trạng thái chưa đặt
+// function SelectGhe($loaiGhe){
+//     $sql = "SELECT * FROM `trangthaidatve` WHERE 1"; 
+//     $result = result1(0,$sql);
+    
+//     for ($i=0; $i < count($result); $i++) { 
+//         if(explode("-",$result[$i]['ttghethuong'])[0] == 2){
+//             // echo '1';
+//             // echo $i;
+//             // print_r($result[$i]['id']);
+//             print_r($result[$i]['ttghethuong']);
+//             print_r("<br>");
+//         }
+//     }
+// }
+// print_r(SelectGhe('ttghethuong'));
 
 ?>

@@ -122,5 +122,7 @@
   <!-- js animtion text head -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <!-- js animtion text head -->
+  <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.js"></script>
+  <script type="text/javascript" src="views/js/alan.app.js"> </script>
 </body>
 </html>
