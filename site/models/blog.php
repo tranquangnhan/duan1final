@@ -11,13 +11,25 @@
     }
     function countBlog() {
         $sql = "SELECT COUNT(*) AS numberRow FROM baiviet";
+<<<<<<< Updated upstream
         $row= result1(1,$sql);
+=======
+        // $kq = query($sql);
+        // $row = $kq -> fetch();
+        $row = result1(1,$sql);
+>>>>>>> Stashed changes
         $rowcount = $row['numberRow'];
         return $rowcount;
     }
     function countBlogbyiddm($iddm) {
         $sql = "SELECT COUNT(*) AS numberRow FROM baiviet where iddm=$iddm";
+<<<<<<< Updated upstream
         $row= result1(1,$sql);
+=======
+        // $kq = query($sql);
+        // $row= $kq -> fetch();
+        $row = result1(1,$sql);
+>>>>>>> Stashed changes
         $rowcount = $row['numberRow'];
         return $rowcount;
     }
@@ -93,7 +105,13 @@
     }
     function rowcountCmt($id) {
         $sql = "SELECT COUNT(*) AS numberRow FROM binhluan where idbaiviet=$id";
+<<<<<<< Updated upstream
         $row= result1(1,$sql);
+=======
+        // $kq = query($sql);
+        // $row= $kq -> fetch();
+        $row = result1(1,$sql);
+>>>>>>> Stashed changes
         $rowcount = $row['numberRow'];
         return $rowcount;
     }
