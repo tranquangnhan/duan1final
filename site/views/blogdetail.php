@@ -176,7 +176,7 @@
                     </h4>
                     <?php foreach($getDmblog as $dmBlog) { ?>
                     <ul>
-                        <li><a href="<?=$dmBlog['id']?>"><?=$dmBlog['name']?></a></li>
+                        <li><a href="<?=SITE?>?act=blog&iddm=<?=$dmBlog['id']?>"><?=$dmBlog['name']?></a></li>
                     </ul>
                     <?php } ?>
                 </div>

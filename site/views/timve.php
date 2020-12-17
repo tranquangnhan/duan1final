@@ -8,7 +8,7 @@
             <div class="clearfix"></div>
         </div>
     </section>
-    <section class="background-light-grey padding-tb-100px text-center text-lg-left pd-t-80px">
+    <section class="background-light-grey padding-tb-100px text-center text-lg-left pd-tb-80px">
         <div class="container">
             <div class="row justify-content-md-center">
 
