@@ -1,4 +1,7 @@
-window.onload = function() {
+$(document).ready(function() {
+    ClickBtn();
+    ClickBtn2();
+})
     function fireErr(text) {
         Swal.fire({
             icon: 'error',
@@ -24,8 +27,8 @@ window.onload = function() {
 
 
             let ThisBox = $(this);
-            ThisBox.click(async function() {
-
+            ThisBox.click(async function(Events) {
+                Events.preventDefault();
                 let MaxSheet = $('.l-ghe-active.l-ghe-thuongia').length;
 
                 let IsRemoveSelected = (ThisBox.hasClass('l-bg-gray'));
@@ -55,32 +58,20 @@ window.onload = function() {
                         contentType: false,
                         processData: false,
                         data: setGhe,
-                        success: function(Data) {
-                            showGheThuongGia();
-                        }
+                        success: function(Data) {}
                     })
-                    Pusher.logToConsole = true;
-
-                    var pusher = new Pusher('166bbd5af4fcbf088045', {
-                        cluster: 'ap1'
-                    });
-
-                    var channel = pusher.subscribe('my-channel');
-                    channel.bind('my-event', async function(data) {
-                        showGheThuongGia()
-                    });
                 }
 
             })
         })
     }
-    ClickBtn();
+ 
 
     function ClickBtn2() {
         $('.l-ghe-phothong').each(function() {
             let ThisBox = $(this);
-            ThisBox.click(async function() {
-
+            ThisBox.click(async function(Events) {
+                Events.preventDefault();
                 let MaxSheet = $('.l-ghe-active.l-ghe-phothong').length;
 
                 let IsRemoveSelected = (ThisBox.hasClass('l-bg-gray'));
@@ -99,7 +90,6 @@ window.onload = function() {
 
                     let ID = ThisBox.text();
                     let idChuyenBay = $("#idcb").val();
-
                     var setGhe = new FormData();
                     setGhe.append('Action', 'setghethuong');
                     setGhe.append('idghe', ID);
@@ -113,90 +103,10 @@ window.onload = function() {
                         contentType: false,
                         processData: false,
                         data: setGhe,
-                        success: async function(Data) {
-                            if (Data.StatusCode == 1) {
-                                showGheThuong()
-                            }
-                        }
-                    });
-                    Pusher.logToConsole = true;
-
-                    var pusher = new Pusher('166bbd5af4fcbf088045', {
-                        cluster: 'ap1'
-                    });
-
-                    var channel = pusher.subscribe('my-channel');
-                    channel.bind('my-event', async function(data) {
-                        showGheThuong()
+                        success: function(Data) {}
                     });
                 }
             })
         })
     }
-    ClickBtn2()
 
-    async function showGheThuong() {
-        let Loading = Swal.fire({ // sweetAlert
-            allowEscapeKey: false,
-            title: 'Đang kiểm tra',
-            allowOutsideClick: false,
-            showConfirmButton: false,
-            text: 'Vui lòng chờ trong giây lát...',
-            imageUrl: 'views/img/Default/Loading.gif',
-        });
-
-        let idChuyenBay = $("#idcb").val();
-        var showGhe = new FormData();
-
-        showGhe.append('Action', 'showghethuong');
-        showGhe.append('idcb', idChuyenBay);
-        await $.ajax({
-            type: "POST",
-            url: 'controllers/ajax/chonghe.php',
-            dataType: 'JSON',
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: showGhe,
-            success: function(response) {
-                if (response.StatusCode === 1) {
-                    $("#ghethuong").html(response.html);
-                    ClickBtn2();
-                    Loading.close();
-                }
-            }
-        });
-    }
-    async function showGheThuongGia() {
-        var Loading = Swal.fire({ // sweetAlert
-            allowEscapeKey: false,
-            title: 'Đang kiểm tra',
-            allowOutsideClick: false,
-            showConfirmButton: false,
-            text: 'Vui lòng chờ trong giây lát...',
-            imageUrl: 'views/img/Default/Loading.gif',
-        });
-
-        let idChuyenBay = $("#idcb").val();
-        var showGhe = new FormData();
-
-        showGhe.append('Action', 'showghetg');
-        showGhe.append('idcb', idChuyenBay);
-        await $.ajax({
-            type: "POST",
-            url: 'controllers/ajax/chonghe.php',
-            dataType: 'JSON',
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: showGhe,
-            success: function(response) {
-                if (response.StatusCode === 1) {
-                    $("#ghetg").html(response.html);
-                    ClickBtn();
-                    Loading.close();
-                }
-            }
-        });
-    }
-}
