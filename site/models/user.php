@@ -86,7 +86,6 @@
     }
     function setPass($email){
         $sql = "UPDATE khachhang SET pass='123456'  WHERE email='{$email}'";
-        echo $sql;
         execute1($sql);
     }
 ?>

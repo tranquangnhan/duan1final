@@ -23,6 +23,7 @@
                   );
                   try {
                     $ip =  get_client_ip();
+
                   if(setGhe($_POST['idghe'],$_POST['idcb'],'ttghethuonggia',$ip)){
                     $data['message'] = $id ;
                     $Return['StatusCode'] = 1; 
