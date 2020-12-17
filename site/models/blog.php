@@ -11,15 +11,17 @@
     }
     function countBlog() {
         $sql = "SELECT COUNT(*) AS numberRow FROM baiviet";
-        $kq = query($sql);
-        $row= $kq -> fetch();
+        // $kq = query($sql);
+        // $row = $kq -> fetch();
+        $row = result1(1,$sql);
         $rowcount = $row['numberRow'];
         return $rowcount;
     }
     function countBlogbyiddm($iddm) {
         $sql = "SELECT COUNT(*) AS numberRow FROM baiviet where iddm=$iddm";
-        $kq = query($sql);
-        $row= $kq -> fetch();
+        // $kq = query($sql);
+        // $row= $kq -> fetch();
+        $row = result1(1,$sql);
         $rowcount = $row['numberRow'];
         return $rowcount;
     }
@@ -95,8 +97,9 @@
     }
     function rowcountCmt($id) {
         $sql = "SELECT COUNT(*) AS numberRow FROM binhluan where idbaiviet=$id";
-        $kq = query($sql);
-        $row= $kq -> fetch();
+        // $kq = query($sql);
+        // $row= $kq -> fetch();
+        $row = result1(1,$sql);
         $rowcount = $row['numberRow'];
         return $rowcount;
     }

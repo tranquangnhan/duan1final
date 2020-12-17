@@ -1,5 +1,5 @@
 <?php 
-    // session_start();     
+    session_start();     
     function checkUser($user,$pass,$remember){
         if($remember) {
             $_COOKIE['sessionId'] = session_id();
@@ -78,7 +78,7 @@
     }
     function showNameUser($iduser){
         $sql = "select * from khachhang where id='{$iduser}'";
-        return result1(1,$sql)['user'];
+        return result1(1,$sql)['tenKH'];
     } 
     function setThanhVien($id,$rd){
         $sql = "UPDATE khachhang SET kichhoat='1'  WHERE id=".$id;

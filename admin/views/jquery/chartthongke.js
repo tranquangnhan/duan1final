@@ -1,6 +1,9 @@
+
 $(document).ready(function() {
     var dieukienchart = '';
     var chk = true;  
+
+
     $('#showthongke').click(async function (e) { 
         e.preventDefault();        
     // });  
@@ -16,7 +19,6 @@ $(document).ready(function() {
         var ngayketthuc1 = $('#ngayketthuc1').val();
         var ngaybatdau2 = $('#ngaybatdau2').val();
         var ngayketthuc2 = $('#ngayketthuc2').val();
-
   
         if (kieubaocao == '') {
             chk = false;
@@ -184,13 +186,20 @@ $(document).ready(function() {
                       
         }
     });
+    
     $('#save_bt').click(function() {  
+        var ngaybatdau1 = $('#ngaybatdau1').val();
+        var ngayketthuc1 = $('#ngayketthuc1').val();
+        var ngaybatdau2 = $('#ngaybatdau2').val();
+        var ngayketthuc2 = $('#ngayketthuc2').val();
+        var kieubaocao = $('#kieubaocao').val();
+        console.log(ngayketthuc1);
         $('#mychart').get(0).toBlob(function(blob) {
-            saveAs(blob, 'chart_1.png');
+            saveAs(blob, kieubaocao + ngaybatdau1 + ' / ' + ngayketthuc1);
         })
         if (dieukienchart == 1) {
             $('#mychart2').get(0).toBlob(function(blob) {
-                saveAs(blob, 'chart_2.png');
+                saveAs(blob, kieubaocao + ngaybatdau2 + ' / ' + ngayketthuc2);
             })
             
         }            

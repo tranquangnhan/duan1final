@@ -7,13 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-<<<<<<< HEAD
     <base href="/duan1final/admin/">
-=======
-
-    <!-- <base href="/admin/"> -->
-
->>>>>>> 2e8854b9eb4c84d36ef709db554ad80baf902d4c
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 

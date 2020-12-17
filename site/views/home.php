@@ -5,7 +5,7 @@
                 <div class="bg-white-op"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm d-none d-sm-block text-white line_h_28">Đẳng cấp là đây</div>
+                        <div class="col-sm d-none d-sm-block text-white line_h_28">Một Phút Là Xong</div>
                         <div class="col-sm">
                             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
                                 <li class="list-inline-item"><a class="facebook text-white" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -18,14 +18,29 @@
                         </div>
                         <div class="col-sm d-none d-sm-block line_h_28">
                             <ul class="float-right margin-0px text-white mr-0">
-                                <?php 
-                                if(isset($_SESSION['sid'])){
-                                    echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=showhs"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
-                                    <li class="list-inline-item"><a class="text-white" href="?act=user&logout=1"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
-                                }else{
-                                    echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
-                                    <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
-                                } ?>
+                                <?php if(isset($_SESSION['sid'])) { $nameus = showNameUser($_SESSION['sid']);?>
+                                    <li class="list-inline-item  padding-right-10px">
+                                        <a class="text-white" href="?act=showhs">
+                                            <i class="fas fa-user"></i> <?=$nameus?>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="text-white" href="?act=user&logout=1">
+                                            Đăng Xuất  <i class="fas fa-sign-out-alt"></i>
+                                        </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="list-inline-item  padding-right-10px">
+                                        <a class="text-white" href="?act=signup">
+                                            <i class="fa fa-lock padding-right-5px"></i> Đăng Ký
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="text-white" href="?act=login">
+                                            <i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập
+                                        </a>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -104,14 +119,13 @@
                                             <i class="far fa-user-circle"></i>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <?php 
-                                            if(isset($_SESSION['sid'])){
-                                                echo '<a class="dropdown-item" href="?act=showhs">'.$_SESSION['suser'].'</a>
-                                                    <a class="dropdown-item" href="?act=user&logout=1">Đăng xuất</a>';
-                                            }else{
-                                                echo '<a class="dropdown-item" href="?act=signup">Đăng ký</a>
-                                                    <a class="dropdown-item" href="?act=login">Đăng nhập</a>';
-                                            } ?>
+                                            <?php if (isset($_SESSION['sid'])) { ?>
+                                                <a class="dropdown-item" href="?act=showhs"><?=$nameus?></a>
+                                                <a class="dropdown-item" href="?act=user&logout=1">Đăng xuất</a>
+                                            <?php } else { ?>
+                                                <a class="dropdown-item" href="?act=signup">Đăng ký</a>
+                                                <a class="dropdown-item" href="?act=login">Đăng nhập</a>
+                                            <?php } ?>
                                         </div>
                                     </li>
                                 </ul>
@@ -458,9 +472,8 @@
                                 <div class="float-left mr-right-20px"><img src="views/img/avt-1.jpg" alt=""></div>
                                 <h5 class="text-medium cl-te-black text-uppercase">Rabie Elkheir</h5>
                                 <i class="text-extra-small">Chức vụ: <span class="color_main">Quản lý</span></i>
-                                <i class="d-block mr-tb-20px text-medium text-grey-4">Với những thứ tốt nhất có thể.
-                                    Chúng tôi đưa bạn đến những nơi xa xôi trên mảnh Đất Việt này và chúng tôi cam kết.
-                                    Ở đâu rẻ hơn, chúng tôi hoàn tiền </i>
+                                <i class="d-block mr-tb-20px text-medium text-grey-4">Travelz đưa các bạn tới khắp nơi trên Việt Nam. Với những thứ tốt nhất có thể. Chúng tôi đưa bạn đến những nơi xa xôi trên mảnh Đất Việt này và chúng tôi cam kết.
+                                Ở đâu rẻ hơn, chúng tôi hoàn tiền </i>
                             </div>
                             <div class="carousel-item background-white padding-30px border">
                                 <div class="float-left mr-right-20px"><img src="views/img/avt-2.png" alt=""></div>

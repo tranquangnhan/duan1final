@@ -128,8 +128,9 @@ function showvekm($page_num, $page_size){
 
 function countvekm() {
     $sql = "SELECT COUNT(*) AS numberRow FROM giave WHERE giamgia";
-    $kq = query($sql);
-    $row = $kq -> fetch();
+    // $kq = query($sql);
+    // $row = $kq -> fetch();
+    $row = result1(1,$sql);
     $rowcount = $row['numberRow'];
     return $rowcount;
 }

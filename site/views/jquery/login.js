@@ -16,7 +16,10 @@ window.onload = function() {
         let passWord = $("#password").val();
         let remember = $("#remember").val();
 
+        console.log(userName);
 
+        console.log(passWord);
+        console.log(remember);
         let Loading = Swal.fire({ // sweetAlert
             allowEscapeKey: false,
             title: 'Đang kiểm tra',
