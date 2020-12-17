@@ -128,11 +128,6 @@ function showvekm($page_num, $page_size){
 
 function countvekm() {
     $sql = "SELECT COUNT(*) AS numberRow FROM giave WHERE giamgia";
-<<<<<<< Updated upstream
-=======
-    // $kq = query($sql);
-    // $row = $kq -> fetch();
->>>>>>> Stashed changes
     $row = result1(1,$sql);
     $rowcount = $row['numberRow'];
     return $rowcount;
@@ -197,7 +192,7 @@ function setThanhCong($idhd){
     return exec1($sql);
 }
 function addradom($id,$random){
-    $sql = "INSERT INTO hdchitiet(random) values('{$random}') where id =$id ";
+    $sql = "INSERT INTO hdchitiet(random) values('{$random}') where id ='$id' ";
     exec1($sql);
 }
  

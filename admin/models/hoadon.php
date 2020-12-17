@@ -27,9 +27,9 @@
       
         return getLastId($sql);
     }
-    function addHoaDonChiTiet($lastId,$idChuyenBay,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd,$gmail){
-        $sql = "INSERT INTO hdchitiet (idhd,idchuyenbay,vitringoi,hangghe,giatien,tenkh,gioitinh,dienthoai,cmnd,gmail) VALUES 
-        ('$lastId','$idChuyenBay','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd','$gmail')";
+    function addHoaDonChiTiet($lastId,$idChuyenBay,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd,$gmail,$random){
+        $sql = "INSERT INTO hdchitiet (idhd,idchuyenbay,vitringoi,hangghe,giatien,tenkh,gioitinh,dienthoai,cmnd,gmail,random) VALUES 
+        ('$lastId','$idChuyenBay','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd','$gmail','$random')";
      return exec1($sql);
     }
     // admin delete product

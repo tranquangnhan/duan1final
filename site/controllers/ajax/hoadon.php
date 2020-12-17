@@ -27,6 +27,8 @@
                 if(!isset($_SESSION['idchuyenbay'])){
                     $idChuyenBay = $_SESSION['idchuyenbaykh'];
 
+                    $random = rand(1,1000000);
+
                     $hangGhe = $_SESSION['hangghekh'];
     
                     if($hangGhe == 1){
@@ -42,7 +44,7 @@
                     $_SESSION['idhd'] =  $lastId ;
 
                     for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i],$random)) ? 1 : 0;
                     }
                 }
                
@@ -54,7 +56,8 @@
                     $idChuyenBay = $_SESSION['idchuyenbay'];
 
                     $hangGhe = $_SESSION['hangghe'];
-    
+
+                    $random = rand(1,1000000);
                     if($hangGhe == 1){
                         $giaTien = showGiaVe($_SESSION['idchuyenbay'])['giavethuong'];
                     }
@@ -68,7 +71,7 @@
                     $_SESSION['idhd'] =  $lastId;
 
                     for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i],$random)) ? 1 : 0;
                     }
 
                     //add lượt về
@@ -90,7 +93,7 @@
 
                     $_SESSION['idhdkh'] =  $lastIdKh;
                     for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastIdKh,$idChuyenBayKh,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastIdKh,$idChuyenBayKh,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i],$random)) ? 1 : 0;
                     }
                 }
                 // unset($_SESSION['idchuyenbay']);

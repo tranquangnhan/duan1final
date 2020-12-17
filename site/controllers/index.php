@@ -533,15 +533,15 @@ if (isset($_GET['act'])) {
             if(isset($_SESSION['idhd'])){
                 setThanhCong($_SESSION['idhd']);
                 $id=$_SESSION['idhd'];
-                $random = rand(1,1000000);
+           
                 $sendmalve=sendmailve($_SESSION['idhd']);
-                addradom($id,$random);
+             
                 $email=$sendmalve['email'];
             
                 // start mail
-                $userName = 'datvemaybayy@gmail.com';
-                $passWord = 'Datvemaybay123';
-                $from = 'datvemaybayy@gmail.com';
+                $userName = 'tranquangnhan1606@gmail.com';
+                $passWord = 'Tranquangnhan@1606';
+                $from = 'tranquangnhan1606@gmail.com';
                 $title = 'Thông Tin Vé';
                 $subject = 'Thông Tin Vé';
                 $linkKH = '<body>
@@ -609,7 +609,7 @@ if (isset($_GET['act'])) {
                 </div>
             </body>
                     ';
-                $linkKH = sprintf($linkKH, $idUser, $randomKey);
+                $linkKH = sprintf($linkKH);
                 $body = "<h4>Thông Tin Chuyến Bay</h4>Thông Tin Chuyến Bay: " . $linkKH;
                 sendMail($userName, $passWord, $from, $email, $user, $title, $subject, $body);
             
