@@ -171,12 +171,16 @@
                                             <label for="diachi">CMND/Passport</label>
                                             <input type="text" class="form-control cmnd" name="cmnd" id="diachi" placeholder="273122123">
                                         </div>
+                                        <div class="form-group col-md-6">
+                                             <label for="diachi">Gmail</label>
+                                            <input type="text" class="form-control gmail" name="gmail" id="gmail" placeholder="tranquangnhan@gmail.com">
+                                        </div>
                                     </div>
                                   ';
                             }
                             ?>
                                     <a href="<?=SITE_URL?>index.php" class="btn-sm btn-lg text-dark text-center uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Về trang chủ</a>
-                                    <button  name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a id="themhd">Đặt vé </a></button>
+                                    <button id="themhd" name="them" class="btn-sm btn-lg  background-main-color text-white text-center text-uppercase rounded-0 padding-tb-10px padding-lr-30px"><a >Đặt vé </a></button>
                             </div>
 
                        </div>

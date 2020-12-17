@@ -18,6 +18,8 @@
                 $Array['dienthoai'] = explode(',',$_POST['dienthoai']);
 
                 $Array['cmnd'] = explode(',',$_POST['cmnd']);
+
+                $Array['gmail'] = explode(',',$_POST['gmail']);
                 
                 $ngayDatVe = date('Y-m-d H:i:s');
 
@@ -40,7 +42,7 @@
                     $_SESSION['idhd'] =  $lastId ;
 
                     for ($i=0; $i < count($_SESSION['vitrighekh']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i])) ? 1 : 0;
                     }
                 }
                
@@ -66,7 +68,7 @@
                     $_SESSION['idhd'] =  $lastId;
 
                     for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastId,$idChuyenBay,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i])) ? 1 : 0;
                     }
 
                     //add lượt về
@@ -88,7 +90,7 @@
 
                     $_SESSION['idhdkh'] =  $lastIdKh;
                     for ($i=0; $i < count($_SESSION['vitrighe']); $i++) { 
-                        $Array['StatusCode'] = (addHoaDonChiTiet($lastIdKh,$idChuyenBayKh,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i])) ? 1 : 0;
+                        $Array['StatusCode'] = (addHoaDonChiTiet($lastIdKh,$idChuyenBayKh,$_SESSION['vitrighekh'][$i],$hangGhe,$giaTien,$Array['hotenkh'][$i],$Array['gioitinh'][$i],$Array['dienthoai'][$i],$Array['cmnd'][$i],$Array['gmail'][$i])) ? 1 : 0;
                     }
                 }
                 // unset($_SESSION['idchuyenbay']);

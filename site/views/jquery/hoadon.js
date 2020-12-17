@@ -1,5 +1,5 @@
 let PhoneRegex = /((09|03|07|08|05)+([0-9]{8})\b)/i;
-
+let MailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 $("#themhd").click(async function(e) {
     e.preventDefault();
     let Loading = Swal.fire({
@@ -25,11 +25,13 @@ $("#themhd").click(async function(e) {
     var arrGioiTinh = [];
     var arrDienThoai = [];
     var arrCmnd = [];
+    var arrGmail = [];
 
     let flag1 = false;
     let flag2 = false;
     let flag3 = false;
     let flag4 = false;
+    let flag5 = false;
     $(".hotenkh").each(function(index, element) {
         if ($(this).val() === '') {
             fireErr('Vui lòng nhập họ tên.');
@@ -45,6 +47,7 @@ $("#themhd").click(async function(e) {
             flag1 = true;
         }
     });
+   
 
     $(".gioitinh").each(function(index, element) {
         if ($(this).val() === '') {
@@ -86,14 +89,28 @@ $("#themhd").click(async function(e) {
             flag4 = true;
         }
     });
+    $(".gmail").each(function(index, element) {
+        if ($(this).val() === '') {
+            fireErr('Vui lòng nhập gmail.');
+            flag5 = false;
+        }
+        else if (MailRegex.test($(this).val()) === false) {
+            fireErr('Gmail đã nhập không hợp lệ.');
+            flag5 = false;
+            return;
+        } else {
+            arrGmail.push($(this).val());
+            flag5 = true;
+        }
+    });
     // alert(arrHoten);
-    if (flag1 == true && flag2 == true && flag3 == true && flag4 == true && arrHoten.length === $(".hotenkh").length && arrGioiTinh.length === $(".gioitinh").length && arrDienThoai.length === $(".dienthoai").length && arrGioiTinh.length === $(".gioitinh").length) {
+    if (flag1 == true && flag2 == true && flag3 == true && flag4 == true &&flag5 == true && arrHoten.length === $(".hotenkh").length && arrGioiTinh.length === $(".gioitinh").length && arrDienThoai.length === $(".dienthoai").length && arrGioiTinh.length === $(".gioitinh").length&& arrGmail.length === $(".gmail").length) {
         let form = new FormData();
-
         form.append('hotenkh', arrHoten);
         form.append('gioitinh', arrGioiTinh);
         form.append('dienthoai', arrDienThoai);
         form.append('cmnd', arrCmnd);
+        form.append('gmail', arrGmail);
         form.append('Action', 'hoadon');
         await $.ajax({
             type: 'POST',
@@ -106,15 +123,6 @@ $("#themhd").click(async function(e) {
             success: function(response) {
                 if (response.StatusCode == 1) {
                     Loading.close();
-                    // Swal.fire({
-                    //     timer: 3000,
-                    //     type: 'success',
-                    //     title: 'Thành công',
-                    //     text: 'Thêm hoá đơn thành công, đang chuyển hướng về danh sách hoá đơn.',
-                    //     showConfirmButton: false,
-                    //     showCancelButton: false,
-                    //     icon: "success"
-                    // });
                     window.location.href = ('index.php?act=tinhtien');
                 }
             }

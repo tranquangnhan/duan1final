@@ -27,10 +27,10 @@
       
         return getLastId($sql);
     }
-    function addHoaDonChiTiet($lastId,$idChuyenBay,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd){
-        $sql = "INSERT INTO hdchitiet (idhd,idchuyenbay,vitringoi,hangghe,giatien,tenkh,gioitinh,dienthoai,cmnd) VALUES 
-        ('$lastId','$idChuyenBay','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd')";
-       return exec1($sql);
+    function addHoaDonChiTiet($lastId,$idChuyenBay,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd,$gmail){
+        $sql = "INSERT INTO hdchitiet (idhd,idchuyenbay,vitringoi,hangghe,giatien,tenkh,gioitinh,dienthoai,cmnd,gmail) VALUES 
+        ('$lastId','$idChuyenBay','$viTriGhe','$hangGhe','$giaTien','$hoTenKh','$gioiTinh','$soDienThoai','$cmnd','$gmail')";
+     return exec1($sql);
     }
     // admin delete product
     function xoahoadon($id){
