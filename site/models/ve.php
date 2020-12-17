@@ -191,5 +191,9 @@ function setThanhCong($idhd){
     $sql = "UPDATE hoadon SET trangthai = '2' WHERE id = '$idhd'";
     return exec1($sql);
 }
+function   addradom($id,$random){
+    $sql = "INSERT INTO hdchitiet(random) values('{$random}') where id =$id ";
+    exec1($sql);
+}
  
 ?>
