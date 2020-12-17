@@ -201,6 +201,9 @@ if (isset($_GET['act'])) {
             break;
         case 'kichhoat':
             unsetSs();
+            echo ' <link rel="stylesheet" href="views/css/phuong/showhs.css">';
+            $iduser = $_SESSION['sid'];
+            $showhs = showhs($iduser);
             if (isset($_GET['id']) && isset($_GET['rd'])) {//rd -> random
                 $id = $_GET['id'];
                 $rd = $_GET['rd'];
@@ -215,7 +218,7 @@ if (isset($_GET['act'])) {
                     header("location: index.php?act=userprofile");
                 }
             }
-            require_once "views/userprofile.php";
+            require_once "views/showhs.php";
             break;
         case 'quenmk':
             unsetSs();
@@ -535,26 +538,25 @@ if (isset($_GET['act'])) {
                 $id=$_SESSION['idhd'];
            
                 $sendmalve=sendmailve($_SESSION['idhd']);
-             
-                $email=$sendmalve['email'];
-            
+               
+                // $email=$sendmalve;
+                
                 // start mail
                 $userName = 'tranquangnhan1606@gmail.com';
                 $passWord = 'Tranquangnhan@1606';
                 $from = 'tranquangnhan1606@gmail.com';
                 $title = 'Thông Tin Vé';
                 $subject = 'Thông Tin Vé';
-                $linkKH = '<body>
+                $linkKH = '
+                <body>
                 <div class="row" style=" width: 40%;">
                     <h2>Vé Điện Tư Và Xác Nhận Hành Trình</h2>
                     <p style="font-size: 1.2em; font-family: sans-serif;">1.Thông tin đật chổ</p>
                     <p style="color: red;font-size: 1.2em; font-weight: bold; font-family: sans-serif;">Vui lòng thanh toán trước 09:30 1/12/2013 sau khi hêt hạn vé sẽ bị hủy</p>
-                    <table style="text-align: center;">
-                        <?php
-                            foreach ($sendmalve as $m ) {
-              
-                        ?>
-                        <tr>
+                    <table style="text-align: center;"> ';
+                      
+                foreach ($sendmalve as $m ) {
+                    $linkKH .= '<tr>
                             <th style="float:left;">Mã Đặt Chổ</th>
                             <th style="width: 20%;">Trạng Thái Đặt Chổ</th>
                             <th>Thông Tin</th>
@@ -603,16 +605,17 @@ if (isset($_GET['act'])) {
                             <td style="text-align: center; ">'.  showtensanbay(showiddiemdi(showidtuyenduong($k['idchuyenbay']))).'</td>
                             <td style="text-align: center; ">'.  showtensanbay(showiddiemden(showidtuyenduong($k['idchuyenbay']))).'</td>
                             <td style="text-align: center; ">'. showgiodi($k['idchuyenbay']).'</td>
-                        </tr>
-                            <?php } ?>
-                    </table>
-                </div>
-            </body>
-                    ';
-                $linkKH = sprintf($linkKH);
+                        </tr>';
+                }
+                    $linkKH .='</table>
+                    </div>
+                </body>';
+                   
+                // $linkKH = sprintf($linkKH);
                 $body = "<h4>Thông Tin Chuyến Bay</h4>Thông Tin Chuyến Bay: " . $linkKH;
-                sendMail($userName, $passWord, $from, $email, $user, $title, $subject, $body);
-            
+                foreach ($sendmalve as $mail) {
+                  echo  sendMail($userName,$passWord,$from,$mail['gmail'],'nhân',$title,$subject,$body);
+                }
             }
             if(isset($_SESSION['idchuyenbay'])){
                 if($_SESSION['hangghe'] == 1){

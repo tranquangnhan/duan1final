@@ -105,48 +105,31 @@ function setAutoChuyenBay(){
     }
     return true;
 }
-// set lại ghế trạng thái chưa đặt
-function SelectGhe($loaiGhe){
-    $sql = "SELECT * FROM `trangthaidatve` WHERE 1"; 
-    $result = result1(0,$sql);
-    $arr = array();
-    for ($i=0; $i < count($result); $i++) { 
-    //    $kq =  explode(",",$result[$i]['ttghethuong']);
-    //    $arr[] = $kq;
-        
+// set lại ghế trạng thái chưa đặt cho những ghế sau khi quá thời gian 5p
+function setLaiTTGhe($loaiGhe,$idChuyenBay){  
+    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+    $result = result1(1,$sql)[$loaiGhe];
+    $arr =  explode(",",$result);
+  
+    for ($i=0; $i < count($arr); $i++) { 
+        $temp = explode('-',$arr[$i]);
+
+        if($temp[0] == '2'){
+            $arr[$i] = 0 ;
+        }
+        $kq = implode(",",$arr);
+        $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+        exec1($sql);
     }
-    // print_r($arr);
-    // for ($i=0; $i < count($arr['idghe']); $i++) { 
-    //     for ($j=0; $j < count($arr['idghe'][$i]); $j++) { 
-    //        if(explode("-",$arr['idghe'][$i][$j])[0] == 2){
-    //         print_r($i);
-    //         print_r("<br>");
-    //        }
-    //     }
-    // }
-   
-   
-    // $arr2 = array();
-    // for ($i=0; $i < count($arr[1]); $i++) { 
-    //     $arr2 = explode("-",$arr[1][$i]);
-    // }
-    // for ($i=0; $i < count($arr2); $i++) { 
-    //     // if(explode("-",$arr2[$i])[$i] == 2){
-    //     //     echo '111';
-    //     // }
-    //     echo $arr2;
-    // }
-    // print_r( $result[1]['ttghethuong']);
-    // foreach ($result as $motGhe) {
-    //     print_r($motGhe['ttghethuong']);
-    //     print_r("<br>");
-    // }
-    // for ($i=0; $i < count($result); $i++) { 
-
-    //     print_r($result[$i]['ttghethuong']);
-
-    // }
 }
-print_r(SelectGhe('ttghethuong'));
+function selectCb(){
+    $sql = "SELECT id FROM chuyenbay WHERE trangthai = 0";
+    $idCb = result1(0,$sql);
+    foreach ($idCb as $motcb) {
+        setLaiTTGhe('ttghethuong',$motcb['id']);
+        setLaiTTGhe('ttghethuonggia',$motcb['id']);
+    }
+}
+// selectCb()
 
 ?>

@@ -24,7 +24,6 @@
     function addhoadon($ngayDatVe,$trangThai,$tongTien){
         $sql = "INSERT INTO hoadon (ngaydatve,trangthai,tongtien) VALUES 
         ('$ngayDatVe','$trangThai','$tongTien')";
-      
         return getLastId($sql);
     }
     function addHoaDonChiTiet($lastId,$idChuyenBay,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd,$gmail,$random){
