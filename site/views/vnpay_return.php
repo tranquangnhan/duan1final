@@ -30,7 +30,7 @@
         }
         unset($inputData['vnp_SecureHashType']);
         unset($inputData['vnp_SecureHash']);
-        ksort($inputData);
+        // ksort($inputData);
         $i = 0;
         $hashData = "";
         foreach ($inputData as $key => $value) {

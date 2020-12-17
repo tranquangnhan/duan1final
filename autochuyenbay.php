@@ -106,20 +106,47 @@ function setAutoChuyenBay(){
     return true;
 }
 // set lại ghế trạng thái chưa đặt
-// function SelectGhe($loaiGhe){
-//     $sql = "SELECT * FROM `trangthaidatve` WHERE 1"; 
-//     $result = result1(0,$sql);
-    
-//     for ($i=0; $i < count($result); $i++) { 
-//         if(explode("-",$result[$i]['ttghethuong'])[0] == 2){
-//             // echo '1';
-//             // echo $i;
-//             // print_r($result[$i]['id']);
-//             print_r($result[$i]['ttghethuong']);
-//             print_r("<br>");
-//         }
-//     }
-// }
-// print_r(SelectGhe('ttghethuong'));
+function SelectGhe($loaiGhe){
+    $sql = "SELECT * FROM `trangthaidatve` WHERE 1"; 
+    $result = result1(0,$sql);
+    $arr = array();
+    for ($i=0; $i < count($result); $i++) { 
+    //    $kq =  explode(",",$result[$i]['ttghethuong']);
+    //    $arr[] = $kq;
+        
+    }
+    // print_r($arr);
+    // for ($i=0; $i < count($arr['idghe']); $i++) { 
+    //     for ($j=0; $j < count($arr['idghe'][$i]); $j++) { 
+    //        if(explode("-",$arr['idghe'][$i][$j])[0] == 2){
+    //         print_r($i);
+    //         print_r("<br>");
+    //        }
+    //     }
+    // }
+   
+   
+    // $arr2 = array();
+    // for ($i=0; $i < count($arr[1]); $i++) { 
+    //     $arr2 = explode("-",$arr[1][$i]);
+    // }
+    // for ($i=0; $i < count($arr2); $i++) { 
+    //     // if(explode("-",$arr2[$i])[$i] == 2){
+    //     //     echo '111';
+    //     // }
+    //     echo $arr2;
+    // }
+    // print_r( $result[1]['ttghethuong']);
+    // foreach ($result as $motGhe) {
+    //     print_r($motGhe['ttghethuong']);
+    //     print_r("<br>");
+    // }
+    // for ($i=0; $i < count($result); $i++) { 
+
+    //     print_r($result[$i]['ttghethuong']);
+
+    // }
+}
+print_r(SelectGhe('ttghethuong'));
 
 ?>
