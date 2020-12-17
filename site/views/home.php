@@ -18,6 +18,7 @@
                         </div>
                         <div class="col-sm d-none d-sm-block line_h_28">
                             <ul class="float-right margin-0px text-white mr-0">
+<<<<<<< HEAD
                                 <?php if(isset($_SESSION['sid'])) { $nameus = showNameUser($_SESSION['sid']);?>
                                     <li class="list-inline-item  padding-right-10px">
                                         <a class="text-white" href="?act=showhs">
@@ -41,6 +42,16 @@
                                         </a>
                                     </li>
                                 <?php } ?>
+=======
+                                <?php 
+                                if(isset($_SESSION['sid'])){
+                                    echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=showhs"><i class="fa fa-user-circle-o"></i> '.$_SESSION['suser'].'</a></li>
+                                    <li class="list-inline-item"><a class="text-white" href="?act=user&logout=1"><i class="fas fa-sign-out-alt"></i>  Đăng Xuất</a></li>';
+                                }else{
+                                    echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
+                                    <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
+                                } ?>
+>>>>>>> e7eeaa6498a8c1eed77122727cb07d43fe8232e0
                             </ul>
                         </div>
                     </div>

@@ -20,7 +20,7 @@
     </head>
     <body>
         <?php
-        require_once("./config.php");
+        require_once("configvnpay.php");
         $vnp_SecureHash = $_GET['vnp_SecureHash'];
         $inputData = array();
         foreach ($_GET as $key => $value) {
@@ -65,22 +65,22 @@
                     <label >Nội dung thanh toán:</label>
                     <label><?php echo $_GET['vnp_OrderInfo'] ?></label>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label >Mã phản hồi (vnp_ResponseCode):</label>
                     <label><?php echo $_GET['vnp_ResponseCode'] ?></label>
                 </div>
                 <div class="form-group">
                     <label >Mã GD Tại VNPAY:</label>
                     <label><?php echo $_GET['vnp_TransactionNo'] ?></label>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label >Mã Ngân hàng:</label>
                     <label><?php echo $_GET['vnp_BankCode'] ?></label>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label >Thời gian thanh toán:</label>
                     <label><?php echo $_GET['vnp_PayDate'] ?></label>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label >Kết quả:</label>
                     <label>

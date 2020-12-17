@@ -1,7 +1,7 @@
 <div class="long-lien-he-header-out">
     <div class="bg-black long-div-center-head"></div>
     <div class="te-center">
-        <div class="ct-us">CONTACT US</div>
+        <div class="ct-us">LIÊN HỆ</div>
         <div class="cl-te-grey2">Nếu bạn gặp khó khăn hay bạn cần hỗ trợ của Travelz thì bạn hãy gọi đến số điện thoại đường dây nóng của Travelz 19001221 để nhận được hỗ trợ trực tiếp từ nhân viên tổng đài hỗ trợ cả người bán hàng và người mua 24/7.        Thời gian làm việc của hotlime tổng đài Travelz là 24/7 kể cả thứ 7, Chủ Nhật. Riêng với các ngày lễ/tết thì sẽ có lịch thông báo riêng hoặc làm việc từ 8h00 – 17h00.</div>
     </div>
     <div class="link">

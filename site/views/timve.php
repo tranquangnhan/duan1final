@@ -26,7 +26,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="submit" class="col-form-label"></label>
-                                <button type="submit" id="submit" name="submit"  class="btn btn-primary btn-lg background-main-color">Large button</button>
+                                <button type="submit" id="submit" name="submit"  class="btn btn-primary btn-lg background-main-color">Tìm kiếm</button>
                                 <!-- <input type="submit" class="form-control rounded-0 btn btn-primary btn-block rounded-0 background-main-color" id="submit" name="submit"> -->
                             </div>
      

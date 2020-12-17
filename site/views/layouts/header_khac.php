@@ -65,8 +65,8 @@
                         <ul class="float-right margin-0px text-white mr-0">
                             <?php 
                             if(isset($_SESSION['sid'])){
-                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=showhs"><i class="fa fa-lock padding-right-5px"></i>'.$_SESSION['suser'].'</a></li>
-                                <li class="list-inline-item"><a class="text-white" href="?act=user&logout=1"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Xuất</a></li>';
+                                echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=showhs"><i class="fa fa-user-circle-o"></i> '.$_SESSION['suser'].'</a></li>
+                                <li class="list-inline-item"><a class="text-white" href="?act=user&logout=1"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a></li>';
                             }else{
                                 echo '<li class="list-inline-item  padding-right-10px"><a class="text-white" href="?act=signup"><i class="fa fa-lock padding-right-5px"></i> Đăng Ký</a></li>
                                 <li class="list-inline-item"><a class="text-white" href="?act=login"><i class="fa fa-user-plus padding-right-5px"></i> Đăng Nhập</a></li>';
