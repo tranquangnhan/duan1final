@@ -3,7 +3,8 @@ var COMMANDS = {
     HELLO : 'hello',
     LOGIN : 'login',
     HOME: 'home',
-    SIGNUP: 'signup'
+    SIGNUP: 'signup',
+    BLOG: 'blog'
 }
 
 var alanBtnInstance = alanBtn({
@@ -22,6 +23,9 @@ var alanBtnInstance = alanBtn({
         if(commandData.command === COMMANDS.HOME){
             home();
         }
+        if(commandData.command === COMMANDS.BLOG){
+            blog();
+        }
     },
     rootEl: document.getElementById("alan-btn"),
 });
@@ -36,4 +40,7 @@ function home() {
 }
 function signup(){
     window.location.href= 'index.php?act=signup';
+}
+function blog(){
+    window.location.href= 'index.php?act=blog';
 }

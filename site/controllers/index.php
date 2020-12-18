@@ -610,11 +610,10 @@ if (isset($_GET['act'])) {
                     $linkKH .='</table>
                     </div>
                 </body>';
-                   
-                // $linkKH = sprintf($linkKH);
+
                 $body = "<h4>Thông Tin Chuyến Bay</h4>Thông Tin Chuyến Bay: " . $linkKH;
                 foreach ($sendmalve as $mail) {
-                  echo  sendMail($userName,$passWord,$from,$mail['gmail'],'nhân',$title,$subject,$body);
+                  sendMail($userName,$passWord,$from,$mail['gmail'],'nhân',$title,$subject,$body);
                 }
             }
             if(isset($_SESSION['idchuyenbay'])){
