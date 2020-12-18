@@ -531,8 +531,9 @@ if (isset($_GET['act'])) {
             require_once "views/vnpay.php";
         break;
         case 'ttthanhcong':
-            // print_r($_SESSION);
+            //  print_r($_SESSION);
             // print_r(showViTriGhe(210));
+           
             if(isset($_SESSION['idhd'])){
                 setThanhCong($_SESSION['idhd']);
                 $id=$_SESSION['idhd'];
@@ -542,9 +543,12 @@ if (isset($_GET['act'])) {
                 // $email=$sendmalve;
                 
                 // start mail
-                $userName = 'tranquangnhan1606@gmail.com';
-                $passWord = 'Tranquangnhan@1606';
-                $from = 'tranquangnhan1606@gmail.com';
+                // $userName = 'tranquangnhan1606@gmail.com';
+                // $passWord = 'Tranquangnhan@1606';
+                // $from = 'tranquangnhan1606@gmail.com';
+                $userName = 'datvemaybayy@gmail.com';
+                $passWord = 'Datvemaybay123';
+                $from = 'datvemaybayy@gmail.com';
                 $title = 'Thông Tin Vé';
                 $subject = 'Thông Tin Vé';
                 $linkKH = '
