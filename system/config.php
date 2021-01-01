@@ -4,7 +4,7 @@ define('HOST_DB','remotemysql.com');
 define('NAME_DB','PigYimI1vP');
 define('USER_DB','PigYimI1vP');
 define('PASS_DB','poNc0KxCUw');// anh em dung nho xoa dum pass
-define('ROOT_URL','/duan1final');
+define('ROOT_URL','');
 define('ADMIN_URL',ROOT_URL.'/admin');
 define('SITE_URL',ROOT_URL.'/site/');   
 define('SYSTEM_PATH',ROOT_URL.'/system');
