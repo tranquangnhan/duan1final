@@ -82,7 +82,7 @@
       </div>
       <div class="row border-top-grey-1 pd-tb-30px">
         <div class="col-4">
-          <p class="text-lg-left"><span class="text-third-color">Travelz</span> | Copyright © 2020 Travelz</p>
+          <p class="text-lg-left"><span class="text-third-color">Travelz</span> | Copyright © by FWB team</p>
         </div>
         <div class="col-4">
           <div class="text-center"><img src="views/img/cardspay.png" alt=""></div>

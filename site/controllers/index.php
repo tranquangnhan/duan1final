@@ -543,26 +543,26 @@ if (isset($_GET['act'])) {
                 // $email=$sendmalve;
                 
                 // start mail
-                // $userName = 'tranquangnhan1606@gmail.com';
-                // $passWord = 'Tranquangnhan@1606';
-                // $from = 'tranquangnhan1606@gmail.com';
-                $userName = 'datvemaybayy@gmail.com';
-                $passWord = 'Datvemaybay123';
-                $from = 'datvemaybayy@gmail.com';
+                $userName = 'tranquangnhan1606@gmail.com';
+                $passWord = 'Tranquangnhan@1606';
+                $from = 'tranquangnhan1606@gmail.com';
+                // $userName = 'datvemaybayy@gmail.com';
+                // $passWord = 'Datvemaybay123';
+                // $from = 'datvemaybayy@gmail.com';
                 $title = 'Thông Tin Vé';
                 $subject = 'Thông Tin Vé';
+             
                 $linkKH = '
                 <body>
-                <div class="row" style=" width: 40%;">
+                <div class="row" style=" width: 60%; color: #000;">
                     <h2>Vé Điện Tư Và Xác Nhận Hành Trình</h2>
                     <p style="font-size: 1.2em; font-family: sans-serif;">1.Thông tin đật chổ</p>
-                    <p style="color: red;font-size: 1.2em; font-weight: bold; font-family: sans-serif;">Vui lòng thanh toán trước 09:30 1/12/2013 sau khi hêt hạn vé sẽ bị hủy</p>
                     <table style="text-align: center;"> ';
                       
                 foreach ($sendmalve as $m ) {
                     $linkKH .= '<tr>
                             <th style="float:left;">Mã Đặt Chổ</th>
-                            <th style="width: 20%;">Trạng Thái Đặt Chổ</th>
+                            <th style="width: 25%;">Trạng Thái Đặt Chổ</th>
                             <th>Thông Tin</th>
                         </tr>
                         <tr>
@@ -587,37 +587,40 @@ if (isset($_GET['act'])) {
                     <table>
                         <tr>
                             <th style="float: left;">Tên Khách Hàng</th>
-                            <th style=" width: 22%;">Ghế Ngồi</th>
+                            <th style=" width: 25%;">Ghế Ngồi</th>
                         </tr>
                         <tr>
                             <td style="float: left;">'.$m['tenkh'].'</td>
                             <td>Hàng Ghế:'.$m['hangghe'].' Vị Trí: '.$m['vitringoi'].'</td>
                         </tr>
                     </table>
-                    <p style="font-size: 1.2em; font-family: sans-serif;">3.Thông tin Chuyến Bay</p>\
+                    <p style="font-size: 1.2em; font-family: sans-serif;">3.Thông tin Chuyến Bay</p>
                     <table>
                         <tr>
                             <th style="float: left;">Chuyến Bay</th>
-                            <th style=" width: 6%;">Ngày</th>
+                            <th style=" width: 10%;">Ngày</th>
                             <th>Khởi Hành</th>
                             <th>Đến</th> 
-                            <th>Thời Guan Khởi Hành</th>
+                            <th>Thời Gian Khởi Hành</th>
                         </tr>
                         <tr>
                             <td>'.tenmaybay(idmaybay($m['idchuyenbay'])).' </td>
                             <td style="text-align: center; ">'.showngaydi($m['idchuyenbay']).'</td>
-                            <td style="text-align: center; ">'.  showtensanbay(showiddiemdi(showidtuyenduong($k['idchuyenbay']))).'</td>
-                            <td style="text-align: center; ">'.  showtensanbay(showiddiemden(showidtuyenduong($k['idchuyenbay']))).'</td>
-                            <td style="text-align: center; ">'. showgiodi($k['idchuyenbay']).'</td>
+                            <td style="text-align: center; ">'. showtensanbay(showiddiemdi(showidtuyenduong($m['idchuyenbay']))).'</td>
+                            <td style="text-align: center; ">'.showtensanbay(showiddiemden(showidtuyenduong($m['idchuyenbay']))).'</td>
+                            <td style="text-align: center; ">'.showgiodi($m['idchuyenbay']).'</td>
                         </tr>';
                 }
                     $linkKH .='</table>
                     </div>
                 </body>';
-
-                $body = "<h4>Thông Tin Chuyến Bay</h4>Thông Tin Chuyến Bay: " . $linkKH;
+                
+                  
+                   
+                // $linkKH = sprintf($linkKH);
+                $body = "<h4>Thông Tin Chuyến Bay</h4> " . $linkKH;
                 foreach ($sendmalve as $mail) {
-                  sendMail($userName,$passWord,$from,$mail['gmail'],'nhân',$title,$subject,$body);
+                 sendMail($userName,$passWord,$from,$mail['gmail'],'nhân',$title,$subject,$body);
                 }
             }
             if(isset($_SESSION['idchuyenbay'])){
@@ -627,18 +630,6 @@ if (isset($_GET['act'])) {
                     $loaiGhe = 'ttghethuonggia';
                 }
                 setGheThanhCong($_SESSION['vitrighe'],$_SESSION['idchuyenbay'],$loaiGhe);
-            }
-
-            if(isset($_SESSION['idhdkh'])){
-                setThanhCong($_SESSION['idhdkh']); 
-            }
-            if(isset($_SESSION['idchuyenbaykh'])){
-                if($_SESSION['hangghekh'] == 1){
-                    $loaiGheKh = 'ttghethuong';
-                }else{
-                    $loaiGheKh = 'ttghethuonggia';
-                }
-                setGheThanhCong($_SESSION['vitrighekh'],$_SESSION['idchuyenbaykh'],$loaiGheKh);
             }
             // print_r($_SESSION);
             // unset($_SESSION['idchuyenbay']);

@@ -1,9 +1,9 @@
 
 <?php
-define('HOST_DB','localhost');
-define('NAME_DB','qnhan_datvemaybay');
-define('USER_DB','root');
-define('PASS_DB','');// anh em dung nho xoa dum pass
+define('HOST_DB','remotemysql.com');
+define('NAME_DB','PigYimI1vP');
+define('USER_DB','PigYimI1vP');
+define('PASS_DB','poNc0KxCUw');// anh em dung nho xoa dum pass
 define('ROOT_URL','/duan1final');
 define('ADMIN_URL',ROOT_URL.'/admin');
 define('SITE_URL',ROOT_URL.'/site/');   

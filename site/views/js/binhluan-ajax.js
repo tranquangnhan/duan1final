@@ -30,7 +30,7 @@ $(document).ready(function(){
                     $('#form_cmt')[0].reset();
                     $('#l-box-binhluan').css('display','none');
                     $('#l-box-binhluan-display').css("display", "block");
-                    console.log(response.datetim);
+                    console.log(response.content);
                     var data = response.content;
                     var kq = '<span>'+response.countCmt+' Bình luận</span>';
                     for (let i = 0; i < data.length; i++) {
@@ -44,7 +44,7 @@ $(document).ready(function(){
                         kq += '<img src="../uploads/avatar.png" alt="">'
                         kq += '</div>'
                         kq += '<div class="noidungbinhluan">';
-                        kq += '<div class="tenKH">Nguyen quoc hieu</div>';
+                        kq += '<div class="tenKH">'+data[i].user+'</div>';
                         kq += '<div class="noidung">'+data[i].noidung+'</div>'
                         kq += '<div class="l-bt">';
                         kq += '<div class="like">Like</div>';

@@ -91,6 +91,10 @@
         $sql = "SELECT * FROM binhluan  WHERE idbaiviet='$id' ORDER BY thoigian DESC";
         return result1(0,$sql);
     }
+    function showbinhluan($id) {
+        $sql = "SELECT * FROM `binhluan` bl inner join khachhang kh on bl.idkh = kh.id WHERE bl.idbaiviet = $id order by thoigian DESC";
+        return result1(0,$sql);
+    }
     function rowcountCmt($id) {
         $sql = "SELECT COUNT(*) AS numberRow FROM binhluan where idbaiviet=$id";
         $row= result1(1,$sql);
