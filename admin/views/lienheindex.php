@@ -41,7 +41,7 @@
                                     <td><?=$lh['email']?></td>
                                     <td><?=$lh['noidung']?></td>
                                     <td>
-                                        <a onclick="checkDelete('<?php echo $linkdel; ?>')"><i class="fa fa-trash mr-3"></i></a>
+                                        <a onclick='checkDelete("<?=$linkdel?>")'><i class="fa fa-trash mr-3"></i></a>
                                     </td>
                                 </tr>
                                 <?php } ?>

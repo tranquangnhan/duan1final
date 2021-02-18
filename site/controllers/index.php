@@ -45,6 +45,7 @@ if (!$_GET['act'] || ($_GET['act'] == 'home')) {
     $giamgia_3 = ($bammbo['giavethuonggia'] * (100 - $bammbo['giamgia'])) / 100;
     $giamgia_4 = ($pacific['giavethuonggia'] * (100 - $pacific['giamgia'])) / 100;
 
+    if($vietject && $vietnameairline && $bammbo &&$pacific){
     $vjdiemdi = timSanBay($vietject['iddiemdi']);
     $vjdiemden = timSanBay($vietject['iddiemden']);
     $vndiemdi = timSanBay($vietnameairline['iddiemdi']);
@@ -61,7 +62,8 @@ if (!$_GET['act'] || ($_GET['act'] == 'home')) {
     $maSb_bb_den = explode("/",$bbdiemdi['masanbay'])[1];
     $maSb_bb_di = explode("/",$bbdiemden['masanbay'])[1];
     $maSb_pcf_den = explode("/",$pcfdiemdi['masanbay'])[1];
-    $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];   
+    $maSb_pcf_di = explode("/",$pcfidiemden['masanbay'])[1];  
+    } 
 }
 
 if (isset($_GET['act'])) {   

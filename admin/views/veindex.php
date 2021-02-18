@@ -73,7 +73,7 @@
                                         <td class="gioden"><?= $ve['gioden'] ?></td>
                                         <td class="trangthai"><?=$trangthai?></td>
                                         <td>
-                                            <a href="<?= $linkdel ?>" onclick="return checkDelete()"><i class="fa fa-trash mr-3" ></i></a>
+                                            <a onclick='checkDelete("<?=$linkdel?>")'><i class="fa fa-trash mr-3" ></i></a>
                                             <a href="<?= $linkedit ?>"><i class="fa fa-edit"></i></a>
                                         </td>
                                     </tr>  

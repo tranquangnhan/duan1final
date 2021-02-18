@@ -1,4 +1,3 @@
-
 <?php
 define('HOST_DB','remotemysql.com');
 define('NAME_DB','PigYimI1vP');

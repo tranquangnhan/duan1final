@@ -6,7 +6,7 @@ function showveedit($id)
 }
 function showAllve()
 {
-    $sql = "select * from chuyenbay where 1 limit 10";
+    $sql = "select * from chuyenbay where 1";
     return result1(0, $sql);
 }
 function showTenmaybay($id){

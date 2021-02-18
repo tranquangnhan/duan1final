@@ -60,7 +60,7 @@
                         <td><?=$kh['diachi']?></td>
                         <td><?=$kh['thanhpho']?></td>
                         <td>
-                            <a onclick="checkDelete('<?php echo $linkdel; ?>')"><i class="fa fa-trash mr-3" ></i></a>
+                            <a onclick='checkDelete("<?=$linkdel?>")'><i class="fa fa-trash mr-3" ></i></a>
                             <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
                         </td>
                     </tr>

@@ -53,7 +53,7 @@
                                         <td><?=$noidung?></td>   
                                         <td><?=$star?></td>   
                                         <td><input type="radio" <?=$anhien?>> </td>                     
-                                        <td><a onclick="checkDelete('<?php echo $linkdel; ?>')"> <i  class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
+                                        <td><a onclick='checkDelete("<?=$linkdel?>")'> <i  class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
                                     </tr>
                                 <?php }?>
                             </tbody>

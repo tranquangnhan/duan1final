@@ -1,6 +1,10 @@
 let UserLoginRegex = /^[a-zA-Z0-9]+$/i;
 let MailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 let PhoneRegex = /((09|03|07|08|05)+([0-9]{8})\b)/i;
+// giới hạn đầu số
+// tìm một số từ 0-9 8 số
+// tìm một từ giống vậy không phân biệt hoa thường 
+
 
 // validate user, phone, mail
 

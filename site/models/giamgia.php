@@ -4,7 +4,7 @@
         INNER JOIN tuyenduong td on td.id = cb.idtuyenduong
         WHERE cb.ngaydi > CURDATE() 
         HAVING gv.giamgia > 0 AND cb.idmaybay = $idmaybay
-        ORDER BY giamgia DESC LIMIT 1";
+        LIMIT 1";
         return result1(1,$sql); 
     }
     function timSanBay($id) {

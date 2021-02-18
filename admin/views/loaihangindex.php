@@ -47,7 +47,7 @@
                                         <td><?=$motdm['name']?></td>
                                         <td><input type="radio" <?=$anhien?>> </td>
                                         <td>
-                                            <a href="<?=$linkdel?>"><i class="fa fa-trash mr-3" onclick="return checkDelete()"></i></a>
+                                            <a onclick='checkDelete("<?=$linkdel?>")'><i class="fa fa-trash mr-3"></i></a>
                                             <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
                                         </td>
                                     </tr>

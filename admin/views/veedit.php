@@ -38,7 +38,7 @@ if (is_array($showveedit)) {
                                             foreach ($showMb as $mb) {
                                                 $sl = "selected";
                                                 $idmb = $showveedit['idmaybay'];
-                                                if($mb['idmaybay'] == $idmb){
+                                                if($mb['id'] == $idmb){
                                                     $showMayBay .= '<option value="'.$mb['id'].'"'.$sl.'>'.$mb['name'].'</option>';
                                                 }
                                                 else{
@@ -128,7 +128,7 @@ if (is_array($showveedit)) {
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
                                             <div class="form-group">
-                                                <input type="submit" name="them" id="" value="Thêm Vé"
+                                                <input type="submit" name="them" id="" value="Sửa Vé"
                                                     class="btn btn-submit text-center">
                                             </div>
                                         </div>

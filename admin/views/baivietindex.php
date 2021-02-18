@@ -24,7 +24,6 @@
                                     <th>ID</th>
                                     <th width="100">Ảnh</th>
                                     <th width="200">Tên Sản Phẩm</th>
-                                    <th>Trạng Thái</th>
                                     <th>Tác Giả</th>
                                     <th width="450">Nội Dung</th>
                                     <th>Trang Thái</th>
@@ -48,13 +47,12 @@
                                 <tr>
                                     <td><?=$motbl['id']?></td>
                                     <td width="100"><img width="100" src="<?=$img?>"></td>
-                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?></a> </td>      
-                                    <td> <?=$anhien?></td>                                                                       
+                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?></a> </td>                                                                           
                                     <td><?=$motbl['tacgia']?></td>
                                     <td class="noidung"><?=substr($motbl['noidung'],0,100)?></td>
                                     <td><input type="radio" <?=$anhien?>> </td>
                                     <td>
-                                        <a onclick="checkDelete('<?php echo $linkdel; ?>')"><i class="fa fa-trash mr-3" ></i></a>
+                                        <a onclick='checkDelete("<?=$linkdel?>")'><i class="fa fa-trash mr-3" ></i></a>
                                         <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
